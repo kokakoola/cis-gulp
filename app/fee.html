@@ -148,9 +148,12 @@
   <i class="mdi-content-add"></i>
 </a>
 <h4 class="header white-text text-darken-2">Fee</h4>
-<div class="card large lighten-2">
-  <div class="card-content" >
-    <div class="row">
+
+<div id="placeholder-fee-filter" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
+  <div class="card large lighten-2">
+    <div class="card-content" >
+      <div class="row">
   <div class="col s12 m2 right">
     <ul id="dropdownStatus" class="dropdown-content simplified">
         <li><a href="#!">Drafts<i class="status draft"></i></a></li>
@@ -165,28 +168,28 @@
   </div>
   <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">
-    <label for="caseNumber">Case number</label>
+    <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
   <div class="col s12 m2 right">
     <select>
-      <option value="" disabled selected>Case type</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
+      {{#each Filter.CaseType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
   <div class="input-field col s12 m2 right">
     <input id="claimant" type="text" >
-    <label for="claimant">Claimant</label>
+    <label for="claimant">{{Filter.Claimant}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
     <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">From</label>
+    <label for="startDate">{{Filter.From}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">To</label>
+    <label for="endDate">{{Filter.To}}</label>
     <input id="endDate" type="text" class="datepicker">
   </div>
 </div>
@@ -195,41 +198,42 @@
 <div class="row collapse" id="moreFields">
   <div class="col s12 m3 right">
     <select>
-      <option value="" disabled selected>Court type</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
+      {{#each Filter.CourtType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
   <div class="input-field col s12 m3 right">
     <input id="judge" type="text">
-    <label for="judge">Judge</label>
+    <label for="judge">{{Filter.Judge}}</label>
   </div>
   <div class="input-field col s12 m3 right">
     <input id="payer" type="text">
-    <label for="payer">Payer</label>
+    <label for="payer">{{Filter.Payer}}</label>
   </div>
     <div class="input-field col s12 m3 right">
     <input id="recipt" type="text">
-    <label for="recipt">Receipt</label>
+    <label for="recipt">{{Filter.Receipt}}</label>
   </div>
 </div>
+    </div>
   </div>
-</div>
-<div class="filter-action left">
-  <button class="btn bg-orange waves-effect waves-light" type="submit" name="search">
-    Search
-    <i class="mdi-action-search right"></i>
-  </button>
-  <button class="btn bg-mauve waves-effect waves-light" type="button" data-toggle="collapse" data-target="#moreFields">
-    More fields
-    <i class="mdi-navigation-expand-more right"></i>
-  </button>
-  <button class="btn bg-mauve waves-effect waves-light" type="button" name="clear">
-    Clear all
-    <i class="mdi-navigation-close right"></i>
-  </button>
-</div>
+  <div class="filter-action left">
+    <button class="btn bg-orange waves-effect waves-light" type="submit" name="search">
+      {{Filter.ButtonSearch}}
+      <i class="mdi-action-search right"></i>
+    </button>
+    <button class="btn bg-mauve waves-effect waves-light" type="button" data-toggle="collapse" data-target="#moreFields">
+      {{Filter.ButtonSearch}}
+      <i class="mdi-navigation-expand-more right"></i>
+    </button>
+    <button class="btn bg-mauve waves-effect waves-light" type="button" name="clear">
+      {{Filter.ButtonSearch}}
+      <i class="mdi-navigation-close right"></i>
+    </button>
+  </div>
+</script>
         </div>
       </div>
     </div>
@@ -240,43 +244,42 @@
       <form action="">
   <div id="placeholder-fee-table" class="template-placeholder"></div>
 
-  <script type="text/x-handlebars-template" id="fee-table-template" class="template">
+  <script type="text/x-handlebars-template" id="fee-table-template" class="template" data-lang="data/fee/table">
     <table class="hoverable bordered data">
       <thead>
         <th data-field="select">&nbsp;</th>
-        <th data-field="status" class="sorting">Status</th>
-        <th data-field="date" class="sorting">Date</th>
-        <th data-field="receipt">Receipt</th>
-        <th data-field="payer">Payer</th>
-        <th data-field="sum">Sum</th>
-        <th data-field="claimants">Claimant</th>
-        <th data-field="courttype">Court type</th>
-        <th data-field="casetype" class="sorting">Case type</th>
-        <th data-field="casenumber" class="sorting">Case number</th>
+        <th data-field="status" class="sorting">{{Texts.Status}}</th>
+        <th data-field="date" class="sorting">{{Texts.Date}}</th>
+        <th data-field="receipt">{{Texts.Receipt}}</th>
+        <th data-field="payer">{{Texts.Payer}}</th>
+        <th data-field="sum">{{Texts.Sum}}</th>
+        <th data-field="claimants">{{Texts.Claimant}}</th>
+        <th data-field="courttype">{{Texts.CourtType}}</th>
+        <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
+        <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
       </thead>
       <tbody>
       {{#each Cases}}
         <tr>
           <td class="center">
-            <input type="checkbox" id="select" />
-            <label for="select"></label>
+            <input type="checkbox" id="select_{{@index}}" />
+            <label for="select_{{@index}}"></label>
           </td>
           <td class="center">
             <i class="status {{Status}}"></i>
           </td>
           <td>{{Date}}</td>
-          <td>{{CaseNumber}}</td>
+          <td>{{Receipt}}</td>
+          <td>{{Payer}}</td>
+          <td>{{Sum}}</td>
+          <td>{{Claimant}} </td>
+          <td>{{CourtType}}</td>
           <td>{{CaseType}}</td>
-          <td>{{Claimant}}</td>
-          <td>{{Defendant}} </td>
-          <td>{{Participants}}</td>
-          <td>{{Judge}}</td>
-          <td>{{Participants}}</td>
+          <td>{{CaseNumber}}</td>
         </tr>
         {{/each}}
       </tbody>
     </table>
-
   </script>
 </form>
     </div>

@@ -9998,11 +9998,9 @@ blockquote {
 
 i.left {
   float: right;
-  margin-left: 15px;
 }
 i.right {
   float: left;
-  margin-right: 15px;
 }
 
 td, th {

@@ -251,18 +251,18 @@
       <form action="">
   <div id="placeholder-registry-table" class="template-placeholder"></div>
 
-  <script type="text/x-handlebars-template" id="registry-table-template" class="template">
+  <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
 
     <table class="hoverable bordered data">
         <thead>
-          <th data-field="status" class="sorting">Status</th>
-          <th data-field="date" class="sorting">Date</th>
-          <th data-field="casenumber" class="sorting">Case number</th>
-          <th data-field="casetype" class="sorting">Case type</th>
-          <th data-field="claimants">Claimant</th>
-          <th data-field="defendants">Defendant</th>
-          <th data-field="paticipants">Participants</th>
-          <th data-field="judge">Judge</th>
+          <th data-field="status" class="sorting">{{Texts.Status}}</th>
+          <th data-field="date" class="sorting">{{Texts.Date}}</th>
+          <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+          <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
+          <th data-field="claimants">{{Texts.Claimant}}</th>
+          <th data-field="defendants">{{Texts.Defendant}}</th>
+          <th data-field="paticipants">{{Texts.Participants}}</th>
+          <th data-field="judge">{{Texts.Judge}}</th>
         </thead>
         <tbody>
         {{#each Cases}}
@@ -280,7 +280,7 @@
         </tbody>
       </table>
 
-      </script>
+  </script>
 </form>
     </div>
   </div>
