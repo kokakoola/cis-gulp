@@ -1,5 +1,19 @@
 <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="registry.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">New case</h4>
+
+<div class="row no-marg-bot">
+  @@include('./registry-form-general.html')
+</div>
+
+<div class="row no-marg-bot">
+    <!-- Dropdown Trigger -->
+  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan lighten-2 trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+  @@include('./registry-form-claimant.html', {"person":"claimant"})
+  @@include('./registry-form-claimant.html', {"person":"defendant"})
+  @@include('./registry-form-claimant.html', {"person":"participant"})
+  @@include('./registry-form-documents.html')
+</div>
+
 <div class="card large white">
   <div class="card-content">
     @@include('./registry-form.html')
@@ -19,5 +33,23 @@
       <i class="mdi-content-save"></i>
     </a>
 
+  </div>
+</div>
+
+<!-- Dropdown Structure -->
+<ul id='add' class='dropdown-content'>
+  <li><a href="#!" data-datacontainer="#claimants" class="js-addDataRow">Claimant</a></li>
+  <li><a href="#!">Defendant</a></li>
+  <li><a href="#!">Participant</a></li>
+</ul>
+
+<!-- Alert modal Structure -->
+<div id="modal1" class="modal">
+  <h4>Hei!</h4>
+  <p>You are about to delete the claimant. Are you sure? </p>
+  <hr>
+  <div class="right">
+    <a href="#" class="waves-effect btn-flat modal-close">No</a>
+    <a href="#" class="waves-effect btn teal modal-close">Yes</a>
   </div>
 </div>

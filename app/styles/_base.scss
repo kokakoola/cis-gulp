@@ -1,14 +1,13 @@
 // MATERIALIZE OVERRIDES
 // **************************************
 html {
-  overflow: auto;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family:  "Roboto", "NotoKufi", sans-serif;
 }
 
 .container {
-  width: 85%;
+  width: 80%;
   max-width: none;
 }
 
@@ -28,6 +27,10 @@ html {
   &:hover {
     color: inherit;
   }
+}
+
+.dropdown-content {
+  height: auto;
 }
 
 
@@ -62,7 +65,7 @@ main {
 }
 
 .full-bg {
-  background: url('../images/Suleymania.jpg');
+  background: url('../images/suleymania.jpg');
   // url('assets/images/bg-10.jpg');
   // linear-gradient(116deg, #dadf19, #e1ab3e, #ee7009);
   // background-size: 600% 600%;
@@ -156,7 +159,7 @@ animation: second 30s ease infinite;
 // CONTENT
 // *********************************
 .main-banner {
-  background:  url('../images/Suleymania.jpg') no-repeat center center;
+  background:  url('../images/bg-11.jpg') no-repeat center center;
   background-size: cover;
   margin-top: -64px;
   height: 210px;
@@ -173,6 +176,10 @@ animation: second 30s ease infinite;
     display: inline-block;
     @include padding-left(15px);
   }
+}
+
+.trigger-add {
+  margin-bottom: -55.5px;
 }
 
 .card.large {
@@ -286,13 +293,19 @@ table {
   padding: 0 35px;
 }
 
-.status.bullet {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 50%;
-}
+// .status.bullet {
+//   display: inline-block;
+//   width: 10px;
+//   height: 10px;
+//   background-color: #ddd;
+//   border-radius: 50%;
+//   &.draft {
+//     background-color: #FF9800;
+//   }
+//   &.draft {
+//     background-color: #FF9800;
+//   }
+// }
 
 i.status {
   color: #ddd;
@@ -326,11 +339,15 @@ i.status {
   &.rejected {
     color: color("grey", "darken-4");
   }
+
 }
+
+// i.tiny-xs {
+//   font-size: 0.8rem;
+// }
 
 // Filter
 // *************
-
 .dropdown-content.simplified {
   margin-top: 3.9rem;
   & li > a {

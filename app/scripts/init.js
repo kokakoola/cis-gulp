@@ -52,6 +52,7 @@
     }
 
       $(".dropdown-button").dropdown({
+        constrain_width: false,
         hover: false
       });
 
