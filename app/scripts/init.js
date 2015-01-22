@@ -30,7 +30,7 @@
     });
 
     function loadDataTable() {
-      $('table.registry').DataTable({
+      $('table.data').DataTable({
         searching: false,
         lengthChange: false,
         'iDisplayLength': 100,

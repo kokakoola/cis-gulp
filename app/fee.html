@@ -144,16 +144,30 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light cyan lighten-1 adds-form" href="registry-new-case.html"><i class="mdi-content-add"></i></a>
-<h4 class="header orange-text text-darken-2">Fee</h4>
+          <a class="btn-floating btn-large waves-effect waves-light cyan darken-3 adds-form" href="registry-new-case.html">
+  <i class="mdi-content-add"></i>
+</a>
+<h4 class="header white-text text-darken-2">Fee</h4>
 <div class="card large lighten-2">
   <div class="card-content" >
     <div class="row">
+  <div class="col s12 m2 right">
+    <ul id="dropdownStatus" class="dropdown-content simplified">
+        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
+        <li><a href="#!">Pending <i class="status pending"></i></a></li>
+        <li><a href="#!">Registered<i class="status registered"></i></a></li>
+        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
+        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
+        <li><a href="#!">Closed<i class="status closed"></i></a></li>
+        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
+      </ul>
+      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
+  </div>
   <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">Case number</label>
   </div>
-  <div class="col s12 m3 right">
+  <div class="col s12 m2 right">
     <select>
       <option value="" disabled selected>Case type</option>
       <option value="1">Option 1</option>
@@ -161,18 +175,24 @@
       <option value="3">Option 3</option>
     </select>
   </div>
-  <div class="input-field col s12 m3 right">
+  <div class="input-field col s12 m2 right">
     <input id="claimant" type="text" >
     <label for="claimant">Claimant</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <i class="mdi-notification-event-note prefix"></i>
+    <input id="startDate" type="date" class="datepicker">
+    <label for="startDate">From</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <i class="mdi-notification-event-note prefix"></i>
+    <label for="endDate">To</label>
+    <input id="endDate" type="text" class="datepicker">
   </div>
 </div>
 
 <!-- hidden by toggle -->
 <div class="row collapse" id="moreFields">
-  <div class="input-field col s12 m3 right">
-    <input id="claimant" type="text">
-    <label for="claimant">Judge</label>
-  </div>
   <div class="col s12 m3 right">
     <select>
       <option value="" disabled selected>Court type</option>
@@ -181,22 +201,33 @@
       <option value="3">Option 3</option>
     </select>
   </div>
-  <div class="input-field col s12 m2 right">
+  <div class="input-field col s12 m3 right">
+    <input id="judge" type="text">
+    <label for="judge">Judge</label>
+  </div>
+  <div class="input-field col s12 m3 right">
     <input id="payer" type="text">
     <label for="payer">Payer</label>
+  </div>
+    <div class="input-field col s12 m3 right">
+    <input id="recipt" type="text">
+    <label for="recipt">Receipt</label>
   </div>
 </div>
   </div>
 </div>
 <div class="filter-action left">
-  <button class="btn bg-orange waves-effect waves-light" type="submit" name="action">Search
+  <button class="btn bg-orange waves-effect waves-light" type="submit" name="search">
+    Search
     <i class="mdi-action-search right"></i>
   </button>
-  <button class="btn bg-mauve waves-effect waves-light" type="submit" name="action" data-toggle="collapse" data-target="#moreFields">
-    More fields <i class="mdi-navigation-expand-more"></i>
+  <button class="btn bg-mauve waves-effect waves-light" type="button" data-toggle="collapse" data-target="#moreFields">
+    More fields
+    <i class="mdi-navigation-expand-more"></i>
   </button>
-  <button class="btn bg-mauve waves-effect waves-light" type="submit" name="action">
-    Clear all <i class="mdi-navigation-close"></i>
+  <button class="btn bg-mauve waves-effect waves-light" type="button" name="clear">
+    Clear all
+    <i class="mdi-navigation-close"></i>
   </button>
 </div>
         </div>
@@ -210,42 +241,34 @@
   <div id="placeholder-fee-table" class="template-placeholder"></div>
 
   <script type="text/x-handlebars-template" id="fee-table-template" class="template">
-      <table class="hoverable bordered registry">
-        <thead>
-          <th data-field="status" class="sorting">
-            <a class="dropdown-button" href="#!" data-activates="status">Status<i class="mdi-navigation-arrow-drop-down right"></i></a>
-             <ul id='status' class='dropdown-content'>
-              <li><a href=""><span class="new badge orange">Drafts</span></a></li>
-              <li><a href="#!"><span class="new badge green">What is this?</span></a></li>
-              <li class="divider"></li>
-              <li><a href="#!"><span class="new badge red">Drafts</span></a></li>
-            </ul>
-          </th>
-          <th data-field="casenumber" class="sorting">Date</th>
-          <th data-field="casenumber" class="sorting">Case number</th>
-          <th data-field="casetype" class="sorting">Case type</th>
-          <th data-field="claimants">Claimant</th>
-          <th data-field="defendants">Defendant</th>
-          <th data-field="paticipants">Participants</th>
-          <th data-field="judge">Judge</th>
-        </thead>
-        <tbody>
-        {{#each Cases}}
-          <tr>
-            <td class="center"><span class="status bullet {{Status}}"></span></td>
-            <td>{{Date}}</td>
-            <td>{{CaseNumber}}</td>
-            <td>{{CaseType}}</td>
-            <td>{{Claimant}}</td>
-            <td>{{Defendant}} </td>
-            <td>{{Participants}}</td>
-            <td>{{Judge}}</td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
+    <table class="hoverable bordered data">
+      <thead>
+        <th data-field="status" class="sorting">Status</th>
+        <th data-field="date" class="sorting">Date</th>
+        <th data-field="casenumber" class="sorting">Case number</th>
+        <th data-field="casetype" class="sorting">Case type</th>
+        <th data-field="claimants">Claimant</th>
+        <th data-field="defendants">Defendant</th>
+        <th data-field="paticipants">Participants</th>
+        <th data-field="judge">Judge</th>
+      </thead>
+      <tbody>
+      {{#each Cases}}
+        <tr>
+          <td class="center"><i class="status {{Status}}"></i></td>
+          <td>{{Date}}</td>
+          <td>{{CaseNumber}}</td>
+          <td>{{CaseType}}</td>
+          <td>{{Claimant}}</td>
+          <td>{{Defendant}} </td>
+          <td>{{Participants}}</td>
+          <td>{{Judge}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
 
-      </script>
+  </script>
 </form>
     </div>
   </div>
