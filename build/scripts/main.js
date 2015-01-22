@@ -61,11 +61,25 @@
       in_duration: 300, // Transition in duration
       out_duration: 200
     });
+
+    if ($('body').hasClass('login')) {
+      $('.login').pagepiling({
+        touchSensitivity: 5,
+        sectionSelector: '.pagepiling',
+        verticalCentered: true,
+        menu: '#menu',
+        anchors: ['Start', 'page2', 'page3'],
+        navigation: false
+      });
+    }
+
+    $('.language').language({
+      complete: function () {
+        loadDataTable();
+      }
+    });
   }); // end of document ready
 })(jQuery); // end of jQuery name space
-$(function() {
-  $('.language').language();
-});
 /* jshint strict: true */
 ;(function ($) {
   'use strict';
@@ -83,15 +97,21 @@ $(function() {
         $.cookie(options.cookieName, selected);
       };
 
-      obj.click(function () {
-        obj.changeLanguage();
+      obj.changeStylesheet = function() {
+        var stylesheet;
 
-        location.reload();
-      });
+        if(options.ltr.indexOf(lang) >= 0) {
+          stylesheet = 'ltr';
+        } else {
+          stylesheet = 'rtl';
+        }
+
+        $('link[rel=stylesheet]').attr({href : 'styles/app-' + stylesheet + '.css'});
+      }
 
       obj.initLanguage = function() {
         if(lang === undefined)
-          $.cookie(options.cookieName, options.defaultLang);
+          lang = options.defaultLang;
 
         $.getJSON('./languages/' + lang + '.json', function(response){
           var element = $(options.template);
@@ -101,15 +121,22 @@ $(function() {
 
           element.prev().html(html);
 
-          bindUI();
+          options.complete.call(this);
         });
       };
+
+      obj.click(function () {
+        obj.changeLanguage();
+
+        location.reload();
+      });
 
       $(document).ready(function() {
         if(lang === undefined)
           $.cookie(options.cookieName, options.defaultLang);
 
         obj.initLanguage();
+        obj.changeStylesheet();
       });
     });
   };
@@ -118,7 +145,10 @@ $(function() {
     cookieName: 'cis-language',
     defaultLang: 'ku',
     placeholder: '.template-placeholder',
-    template: '.template'
+    template: '.template',
+    ltr: ['en'],
+    rtl: ['ku'],
+    complete: function () {}
   };
 })(jQuery);
 // Animate css functions
@@ -372,7 +402,6 @@ $(window).scroll(function() {
     }
 });
 /* jshint devel:true */
-var activeLanguage = 'rtl';
 
 // NOTiFICATION
 $(".notificationLink").click(function(){
@@ -389,10 +418,6 @@ $(window).scroll(function() {
         $("nav").removeClass("scrolled");
     }
 });
-
-var swapStylesheet = function(){
-  $("link[rel=stylesheet]").attr({href : 'assets/stylesheets/app-'+activeLanguage+'.css'});
-};
 
 // START DOCREADY
   $(document).ready(function() {
