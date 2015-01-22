@@ -1,0 +1,30 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "fee-add-new",
+  "htmlClass": "fee-add-new",
+  "title": "New fee"
+})
+
+@@include('./layout/header.html')
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          @@include('./layout/fee/fee-card-with-form.html',
+          {
+            "formName": "New fee"
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')

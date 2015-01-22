@@ -1,6 +1,6 @@
 (function($){
   $(function(){
-    $(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
+    //$(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
 
     $(".dropdown-button").dropdown({
       hover: false
@@ -15,7 +15,7 @@
 
     $('#initiate-form .collapse').collapse('show');
 
-    $(".button-collapse").sideNav();
+    //$(".button-collapse").sideNav();
 
     // wow.js init
     new WOW().init();

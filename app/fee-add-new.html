@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="fee">
+<html lang="" class="fee-add-new">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Fee</title>
+    <title>CIS | New fee</title>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -25,7 +25,7 @@
     <!-- endbower -->
     <!-- endbuild -->
   </head>
-  <body class="fee">
+  <body class="fee-add-new">
 
 
 <div class="navbar-fixed">
@@ -144,141 +144,24 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light cyan darken-3 adds-form" href="fee-add-new.html">
-  <i class="mdi-content-add"></i>
-</a>
-<h4 class="header white-text text-darken-2">Fee</h4>
-<div class="card large lighten-2">
-  <div class="card-content" >
-    <div class="row">
-  <div class="col s12 m2 right">
-    <ul id="dropdownStatus" class="dropdown-content simplified">
-        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
-        <li><a href="#!">Pending <i class="status pending"></i></a></li>
-        <li><a href="#!">Registered<i class="status registered"></i></a></li>
-        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
-        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
-        <li><a href="#!">Closed<i class="status closed"></i></a></li>
-        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
-      </ul>
-      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="caseNumber" type="text">
-    <label for="caseNumber">Case number</label>
-  </div>
-  <div class="col s12 m2 right">
-    <select>
-      <option value="" disabled selected>Case type</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="claimant" type="text" >
-    <label for="claimant">Claimant</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">From</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">To</label>
-    <input id="endDate" type="text" class="datepicker">
-  </div>
-</div>
+          <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="fee.html"><i class="mdi-navigation-close"></i></a>
+<h4 class="header white-text text-darken-2">New fee</h4>
+<div class="card large white">
+  <div class="card-content">
 
-<!-- hidden by toggle -->
-<div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
-    <select>
-      <option value="" disabled selected>Court type</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
   </div>
-  <div class="input-field col s12 m3 right">
-    <input id="judge" type="text">
-    <label for="judge">Judge</label>
+
+  <div class="card-action">
+    <button class="btn bg-orange waves-effect waves-light" type="submit" name="action">Cancel
+      <i class="mdi-navigation-cancel right"></i>
+    </button>
+    <button class="btn bg-water waves-effect waves-dark" type="submit" name="action">Accept
+      <i class="mdi-content-save right"></i>
+    </button>
   </div>
-  <div class="input-field col s12 m3 right">
-    <input id="payer" type="text">
-    <label for="payer">Payer</label>
-  </div>
-    <div class="input-field col s12 m3 right">
-    <input id="recipt" type="text">
-    <label for="recipt">Receipt</label>
-  </div>
-</div>
-  </div>
-</div>
-<div class="filter-action left">
-  <button class="btn bg-orange waves-effect waves-light" type="submit" name="search">
-    Search
-    <i class="mdi-action-search right"></i>
-  </button>
-  <button class="btn bg-mauve waves-effect waves-light" type="button" data-toggle="collapse" data-target="#moreFields">
-    More fields
-    <i class="mdi-navigation-expand-more right"></i>
-  </button>
-  <button class="btn bg-mauve waves-effect waves-light" type="button" name="clear">
-    Clear all
-    <i class="mdi-navigation-close right"></i>
-  </button>
 </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="with-table card">
-    <div class="row">
-      <form action="">
-  <div id="placeholder-fee-table" class="template-placeholder"></div>
-
-  <script type="text/x-handlebars-template" id="fee-table-template" class="template">
-    <table class="hoverable bordered data">
-      <thead>
-        <th data-field="select">&nbsp;</th>
-        <th data-field="status" class="sorting">Status</th>
-        <th data-field="date" class="sorting">Date</th>
-        <th data-field="receipt">Receipt</th>
-        <th data-field="payer">Payer</th>
-        <th data-field="sum">Sum</th>
-        <th data-field="claimants">Claimant</th>
-        <th data-field="courttype">Court type</th>
-        <th data-field="casetype" class="sorting">Case type</th>
-        <th data-field="casenumber" class="sorting">Case number</th>
-      </thead>
-      <tbody>
-      {{#each Cases}}
-        <tr>
-          <td class="center">
-            <input type="checkbox" id="select" />
-            <label for="select"></label>
-          </td>
-          <td class="center">
-            <i class="status {{Status}}"></i>
-          </td>
-          <td>{{Date}}</td>
-          <td>{{CaseNumber}}</td>
-          <td>{{CaseType}}</td>
-          <td>{{Claimant}}</td>
-          <td>{{Defendant}} </td>
-          <td>{{Participants}}</td>
-          <td>{{Judge}}</td>
-          <td>{{Participants}}</td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-
-  </script>
-</form>
     </div>
   </div>
 </main>

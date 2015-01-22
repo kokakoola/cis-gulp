@@ -287,11 +287,9 @@ blockquote {
 i {
   &.left {
     @include float(left);
-    @include margin-right(15px);
   }
   &.right {
     @include float(right);
-    @include margin-left(15px);
   }
 }
 td, th{
