@@ -23,7 +23,7 @@ gulp.task('jshint', function () {
 });
 
 gulp.task('fileinclude', function () {
-  return gulp.src('app/templates/**/*.tpl.html')
+  return gulp.src(['!app/templates/base{,/**}', 'app/templates/*.tpl.html'])
     .pipe($.fileInclude())
     .pipe($.rename({
       extname: ''

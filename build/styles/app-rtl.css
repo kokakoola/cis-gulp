@@ -10658,14 +10658,13 @@ table.dataTable td {
   }
 }
 html {
-  overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", "NotoKufi", sans-serif;
 }
 
 .container {
-  width: 85%;
+  width: 80%;
   max-width: none;
 }
 
@@ -10685,6 +10684,10 @@ html {
 }
 .card a:hover {
   color: inherit;
+}
+
+.dropdown-content {
+  height: auto;
 }
 
 main {
@@ -10716,7 +10719,7 @@ main {
 }
 
 .full-bg {
-  background: url("../images/Suleymania.jpg");
+  background: url("../images/suleymania.jpg");
   background-size: cover;
 }
 .full-bg input[type=text],
@@ -10762,7 +10765,7 @@ main {
   }
 }
 .main-banner {
-  background: url("../images/Suleymania.jpg") no-repeat center center;
+  background: url("../images/bg-11.jpg") no-repeat center center;
   background-size: cover;
   margin-top: -64px;
   height: 210px;
@@ -10779,6 +10782,10 @@ main {
 .card-onbanner h4 {
   display: inline-block;
   padding-right: 15px;
+}
+
+.trigger-add {
+  margin-bottom: -55.5px;
 }
 
 .card.large {
@@ -10864,14 +10871,6 @@ table thead {
 
 .with-table {
   padding: 0 35px;
-}
-
-.status.bullet {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 50%;
 }
 
 i.status {

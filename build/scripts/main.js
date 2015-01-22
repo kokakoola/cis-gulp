@@ -52,6 +52,7 @@
     }
 
       $(".dropdown-button").dropdown({
+        constrain_width: false,
         hover: false
       });
 
@@ -96,6 +97,7 @@
     });
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
 /* jshint strict: true */
 ;(function ($) {
   'use strict';
@@ -171,6 +173,7 @@
     complete: function () {}
   };
 })(jQuery);
+
 // Animate css functions
 // http://www.telegraphicsinc.com/2013/07/how-to-use-animate-css/
 function animationHover(element, animation){
