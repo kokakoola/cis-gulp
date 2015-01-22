@@ -55,6 +55,12 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('build/font'));
 });
 
+gulp.task('languages', function () {
+  return gulp.src([
+      'app/languages/**/*.*'
+    ]).pipe(gulp.dest('build/languages'));
+});
+
 gulp.task('clean', require('del').bind(null, ['.tmp', 'build']));
 
 gulp.task('connect', ['styles'], function () {
@@ -95,7 +101,7 @@ gulp.task('watch', ['connect'], function () {
 });
 
 //include jshint task if strict javascript is necessary
-gulp.task('build', ['fileinclude', 'html', 'images', 'fonts'], function () {
+gulp.task('build', ['fileinclude', 'html', 'images', 'fonts', 'languages'], function () {
   return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
