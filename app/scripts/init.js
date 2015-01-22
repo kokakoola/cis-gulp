@@ -3,6 +3,7 @@
     //$(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
 
     $(".dropdown-button").dropdown({
+      constrain_width: false,
       hover: false
     });
 

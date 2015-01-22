@@ -1,0 +1,39 @@
+<div class="col s12">
+  <div class="card">
+    <div class="card-content">
+      <div class="row"> 
+        <div class="col s12 m1 check-inline right">
+          <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
+        </div>
+        <div class="col s12 m2 check-inline right">
+          <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <select required>
+            <option value="" disabled selected>Judge default</option>
+            <option value="1">Judge Else (6)</option>
+            <option value="2">Judge Other (14)</option>
+            <option value="3">Judge Judge (22)</option> 
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="claimValue" type="text" class="validate">
+          <label for="claimValue">Case value</label>
+        </div>
+        <div class="col s12 m6">
+          <select required>
+            <option value="" disabled selected>Case type </option>
+            <option value="1">استملاك</option>
+            <option value="2">property aquizition </option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="col s12 m6">
+          <input type="date" id="date" class="datepicker today">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

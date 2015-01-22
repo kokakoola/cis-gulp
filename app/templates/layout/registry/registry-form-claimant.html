@@ -1,66 +1,82 @@
-<div id="claimants">
+<div id="@@persons">
   <div>
-    <div class="row">
-      <div class="input-field col s12 m7 right"  id="the-basics">
-        <input id="claimant" type="text" class="validate"  value="">
-        <label for="claimant">Claimants full name</label>
-<!--         <label id="claimant-error" class="error" for="claimant">This field is required.</label> -->
-      </div>
-      <div class="switch col s12 m5 right">
-        <br>
-        <label>
-          <input type="checkbox">
-          <span class="lever"></span>
-        </label>
-        <span>&nbsp;Legal entity</span>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+        <span class="card-title grey-text text-darken-4">@@person <i class="mdi-navigation-close left"></i></span>
+          
+          <div class="divider"></div>
+          <div >
+            <div>
+              <div class="row">
+                <div class="input-field col s12 right"  id="the-basics">
+                  <input id="@@person" type="text" class="validate"  value="">
+                  <label for="@@person">@@persons full name</label>
+                </div>
+                <div class="switch col s12 right">
+                  <br>
+                  <label>
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                  </label>
+                  <span>&nbsp;Legal entity</span>
+                </div>
+                <div class="input-field col s12 right">
+                  <input id="@@personAddress" type="text" class="validate" value="">
+                  <label for="@@personAddress">@@persons address</label>
+                </div>
+                <div class="input-field col s12 right">
+                  <input id="@@personId" type="text">
+                  <label for="@@personId">Document number</label>
+                </div>
+                <div class="input-field col s12 right">
+                  <input id="@@personPhone" type="text">
+                  <label for="@@personPhone">@@persons phone</label>
+                </div>
+                
+
+              </div>
+              
+              <div class="row collapse" id="toggleRepresentative">
+              <span class="card-title grey-text text-darken-4">Representative</span>
+                <div class="divider"></div>
+
+                <div class="col s12 right">
+                  <select>
+                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+                    <option value="1">Lawyer</option>
+                    <option value="2">Parent</option>
+                    <option value="3">Legal guardian</option>
+                    <option value="4">Other</option>
+                  </select>
+                </div>
+                
+
+                <div class="input-field col s12 right">
+                  <input id="parent" type="text" class="validate" value="">
+                  <label for="parent">Representatives full name</label>
+                </div>
+                <div class="input-field col s12 right">
+                  <input id="parentId" type="text">
+                  <label for="parentId">Representatives ID</label>
+                </div>
+                <div class="input-field col s12 right">
+                  <input id="parentPhone" type="text">
+                  <label for="parentPhone">Representatives Phone</label>
+                </div>
+                <div class="input-field col s12 right">
+                  <input id="parentAddress" type="text" value="">
+                  <label for="parentAddress">Representatives address</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="input-field col s12 m7 right">
-        <input id="claimantAddress" type="text" class="validate" value="">
-        <label for="claimantAddress">Claimants address</label>
-      </div>
-      <div class="input-field col s12 m2 right">
-        <input id="claimantId" type="text">
-        <label for="claimantId">Document number</label>
-<!--         <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label> -->
-      </div>
-      <div class="input-field col s12 m2 right">
-        <input id="claimantPhone" type="text">
-        <label for="claimantPhone">Claimants phone</label>
-      </div>
-      <div class="col s12 m7 right">
-        <select>
-          <option value="" selected>No representative <i class="mdi-content-add"></i> </option>
-          <option value="1">Lawyer</option>
-          <option value="2" selected>Parent</option>
-          <option value="3">Legal guardian</option>
-          <option value="4">Other</option>
-        </select>
-      </div>
-    </div>
-
-    @@include('./registry-form-parent.html')
-
-    <div class="row">
-      <div class="col s12">
-        <a href="#modal1" class="btn btn-floating waves-effect waves-dark grey lighten-1 removeClaimant modal-trigger left">
-          <i class="mdi-navigation-close animated rotateIn"></i>
-        </a>
-        <div class="divider"></div>
-      </div>
-    </div>
-
   </div>
 </div>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <h4>Hei!</h4>
-    <p>You are about to delete the claimant. Are you sure? </p>
-    <hr>
-<div class="right">
-  <a href="#" class="waves-effect btn-flat modal-close">No</a>
-  <a href="#" class="waves-effect btn teal modal-close">Yes</a>
-</div>
-  </div>
