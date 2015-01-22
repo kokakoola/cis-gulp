@@ -1,0 +1,289 @@
+{
+  "texts" :
+  {
+    "casenumber" : "رقم القضية (GT)",
+    "CaseType" : "نوع القضية (GT)",
+    "Claimant" : "المدعي (GT)",
+    "Defendant" : "المدعى عليه (GT)",
+    "Judge" : "القاضي (GT)",
+    "Rejected" : "مرفوض (GT)",
+    "All" : "جميع (GT)",
+    "Status" : "وضع شرعي (GT)",
+    "Data" : "معطيات (GT)",
+    "Participants"  : "المشاركين (GT)",
+    "About" : "حول (GT)"
+  },
+
+  "Filter" : [
+    {
+      "CaseType" : [
+        {
+          "Value0" : "نوع القضية (GT)",
+          "Value1" : "1 الخيار",
+          "Value2" : "2 الخيار",
+          "Value3" : "3 الخيار"
+        }
+      ]
+    }
+  ],
+
+  "Cases" : [
+
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+      {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+      {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+      {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "draft",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+      {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "True",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        }
+  ],
+
+  "About" : [
+    {
+      "AboutText" : "هذا هو النموذج الأولي للمشروع المحكمة معلومات النظام. في حال كنت تجد شيئا لتحسين، ودفع ردود الفعل على زر أزرق هنا وكتابة التحسينات الخاصة بك. في هذه الطريقة سوف تساعدنا على بناء أداة أفضل بالنسبة لك. (GT)"
+    }
+  ]
+}

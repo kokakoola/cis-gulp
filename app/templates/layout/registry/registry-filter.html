@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="input-field col s12 m2 right">
+    <input id="caseNumber" type="text">
+    <label for="caseNumber">Case number</label>
+  </div>
+  <div class="col s12 m3 right">
+    <select>
+      <option value="" disabled selected>Case type </option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+  </div>
+  <div class="input-field col s12 m3 right">
+    <input id="claimant" type="text" >
+    <label for="claimant">Judge</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <i class="mdi-notification-event-note prefix"></i>
+    <input id="startDate" type="date" class="datepicker">
+    <label for="startDate">From</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <i class="mdi-notification-event-note prefix"></i>
+    <label for="endDate">To</label>
+    <input id="endDate" type="text" class="datepicker">
+    
+  </div>
+</div>
+
+<!-- hidden by toggle -->
+<div class="row collapse" id="moreFields">
+  <div class="col s12 m2 right">
+  <div class="check-inline">
+    <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
+  </div>
+  <br>
+  <div class="check-inline">
+    <input type="checkbox" id="aid" /><label for="aid">Judical aid</label>
+  </div>
+  </div>
+
+  <div class="col s12 m3 right">
+    <div class="row">
+      <div class="col s12">
+        <label for="">Case value</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="fromSum" type="text">
+        <label for="fromSum">From</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="toSum" type="text" >
+        <label for="toSum">To</label>
+      </div>
+    </div>
+  </div>
+  <div class="input-field col s12 m3 right">
+    <input id="claimant" type="text">
+    <label for="claimant">Claimant</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="defendant" type="text">
+    <label for="defendant">Defendant</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="participant" type="text">
+    <label for="participant">Participant</label>
+  </div>
+</div>
+
+
+
+
+

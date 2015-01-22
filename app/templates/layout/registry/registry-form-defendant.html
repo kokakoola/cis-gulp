@@ -1,0 +1,49 @@
+<div id="defendants">
+  <div class="row">
+    <div class="input-field col s12 m7">
+      <input id="defendant" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+      <label for="defendant">defendants full name</label>
+      <label id="defendant-error" class="error" for="defendant">This field is required.</label>
+    </div>
+    <div class="switch col s12 m3">
+      <br>
+      <label>
+        <input type="checkbox">
+        <span class="lever"></span>
+      </label>
+      <span>&nbsp;Legal entity</span>
+    </div>
+    <div class="input-field col s12 m7">
+      <input id="defendantAddress" type="text" class="validate" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+      <label for="defendantAddress">defendants address</label>
+    </div>
+    <div class="input-field col s12 m2">
+      <input id="defendantId" type="text">
+      <label for="defendantId">Document number</label>
+      <label id="defendant-success" class="success" for="defendantAddress">This field is success.</label>
+    </div>
+    <div class="input-field col s12 m2">
+      <input id="defendantPhone" type="text">
+      <label for="defendantPhone">defendants phone</label>
+    </div>
+    <!-- First person will not get it. Only second and following -->
+    <div class="col s1">
+      <button class="btn btn-floating waves-effect waves-dark blue-grey right" type="button" class="removedefendant">
+        <i class="mdi-content-remove animated rotateIn"></i>
+      </button>
+    </div>
+    <!-- End remark -->
+    <div class="col s12 m7">
+      <select>
+        <option value="" >No representative <i class="mdi-content-add"></i> </option>
+        <option value="1">Lawyer</option>
+        <option value="2" selected>Parent</option>
+        <option value="3">Legal guardian</option>
+        <option value="4">Other</option>
+      </select>
+    </div>
+  </div>
+
+  @@include('./registry-form-parent.html')
+
+</div>

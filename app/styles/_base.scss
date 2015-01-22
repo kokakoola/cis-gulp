@@ -1,0 +1,302 @@
+// MATERIALIZE OVERRIDES
+// **************************************
+html {
+  overflow: auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:  "Roboto", "NotoKufi", sans-serif;
+}
+
+.container {
+  width: 85%;
+  max-width: none;
+}
+
+.container.wide {
+  width: 95%;
+}
+
+.select-wrapper span.select-dropdown {
+  height: 4rem;
+  line-height: 5rem;
+}
+
+
+// FRAME
+// ****************************************
+main {
+  background: #cfd8dc;
+}
+
+// fixed footer flex
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+main {
+   flex: 1 0 auto;
+}
+
+.with-table {
+  background: #fff;
+}
+
+// FRONTPAGE
+// ***************************************
+.front-fullscreen {
+ position: fixed;
+ top: 20px;
+ left: 40px;
+ font-size: 4rem;
+}
+
+.full-bg {
+  background: url('../images/frontbg.png');
+  // url('assets/images/bg-10.jpg');
+  // linear-gradient(116deg, #dadf19, #e1ab3e, #ee7009);
+  // background-size: 600% 600%;
+//   -webkit-animation: second 30s ease infinite;
+//   -moz-animation: second 30s ease infinite;
+//   -o-animation: second 30s ease infinite;
+//   animation: second 30s ease infinite;
+//   @-webkit-keyframes second {
+//     0%{background-position:0% 51%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 51%}
+// }
+// @-moz-keyframes second {
+//     0%{background-position:0% 51%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 51%}
+// }
+// @-o-keyframes second {
+//     0%{background-position:0% 51%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 51%}
+// }
+// @keyframes second {
+//     0%{background-position:0% 51%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 51%}
+// }
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  // background-blend-mode: luminosity;
+  // background-blend-mode: multiply;
+
+  input[type=text],
+  input[type=password] {
+    padding:4px 15px;
+    border:1px solid $color-light;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 0.6;
+    height: 2rem;
+    max-width: 400px;
+  }
+  input[type=text]:focus {border-color:#333; }
+
+}
+
+.second-background {
+background: linear-gradient(229deg, #a24bcf, #4b79cf, #4bc5cf);
+background-size: 600% 600%;
+-webkit-animation: second 30s ease infinite;
+-moz-animation: second 30s ease infinite;
+-o-animation: second 30s ease infinite;
+animation: second 30s ease infinite;
+@-webkit-keyframes second {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes second {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-o-keyframes second {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes second {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+}
+
+// .section.pagepiling {
+//   height: 100%;
+//   position: absolute;
+//   width: 100%;
+//   display: table;
+
+
+// }
+
+
+
+// CONTENT
+// *********************************
+.main-banner {
+  background:  url('../images/frontbg.png') no-repeat center center;
+  background-size: cover;
+  margin-top: -64px;
+  height: 210px;
+}
+
+.card-onbanner {
+  margin-top: -200px;
+  a.adds-form {
+    vertical-align: middle;
+    @include margin-left(25px);
+    z-index: 6000;
+  }
+  h4 {
+    display: inline-block;
+    @include padding-left(15px);
+  }
+}
+
+.card.large {
+  padding: 10px 30px;
+  .row {
+    margin-bottom: 15px;
+    &.title {
+      // margin-top: 20px;
+    button {
+        @include margin-right (20px);
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.check-inline {
+  [type="checkbox"]:not(:checked) + label:before {
+    top: 15px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    padding-top: 15px;
+  }
+  [type="checkbox"]:checked + label:before {
+    top: 7px;
+  }
+}
+
+input[type=text].valid,
+input[type=password].valid,
+input[type=email].valid,
+input[type=date].valid,
+textarea.valid {
+  border-bottom: 1px solid $success-color;
+  @include box-shadow(0 1px 0 0 $success-color);
+}
+
+  input[type=text].input-validation-error,
+  input[type=password].input-validation-error,
+  input[type=email].input-validation-error,
+  input[type=date].input-validation-error,
+  input[type=tel].input-validation-error,
+  input[type=number].input-validation-error,
+  textarea.input-validation-error,
+  textarea.materialize-textarea.input-validation-error {
+  border-bottom: 1px solid $error-color;
+  @include box-shadow(0 1px 0 0 $error-color);
+  }
+
+.input-field label {
+  color: #444;
+  &span.field-validation-error,
+  &.success {
+    display: none;
+    @include right(0.75rem);
+    @include left(auto);
+    top: 50px;
+    font-weight: strong;
+    font-size: 12px;
+  }
+  &span.field-validation-error {
+    color: $error-color;
+  }
+  &.success {
+    color: $success-color;
+  }
+}
+
+.switch.col {
+  height: 3rem;
+}
+
+.removeClaimant {
+  margin-top: -72px;
+}
+// .adds-form {
+//   top: 0.6rem;
+//   position: absolute;
+//   right: 30rem;
+//   z-index: 5000;
+// }
+
+
+// .rotate-45 {
+//   -webkit-transform: rotate(45deg);
+//   -moz-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   -o-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+
+// Table style
+// **********************
+table {
+
+  th.sorting_desc .btn-flat i {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+    }
+
+  a { white-space: nowrap }
+  thead {
+    border-bottom: 1px solid #9E9E9E !important;
+  }
+}
+
+.with-table {
+  padding: 0 35px;
+}
+
+.status.bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  &.draft {
+    background-color: #FF9800;
+  }
+    &.draft {
+    background-color: #FF9800;
+  }
+}
+
+// Filter
+// *************
+.filter-action {
+  margin-top: -35px;
+}
+
+.input-field .prefix {
+  opacity: 0.8;
+}

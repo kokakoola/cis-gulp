@@ -1,0 +1,464 @@
+// BIAPP ADJUSTMENTS 19.01.14
+
+// waves
+.waves-ripple {
+  @include margin-left(-5px);
+}
+
+.waves-input-wrapper {
+.waves-button-input {
+      @include left(0);
+  }
+}
+
+// tooltip
+.material-tooltip {
+  @include left(0);
+  @include rtl {
+    will-change: top, right;
+  }
+  @include ltr {
+    will-change: top, left;
+  }
+}
+
+// toast
+#toast-container {
+  @media #{$medium-only} {
+    @include left(5%);
+  }
+  @media #{$large-and-up} {
+    @include right(7%);
+  }
+}
+.toast {
+  .btn, .btn-flat {
+    @include margin-left(3rem);
+  }
+
+  @media #{$medium-only} {
+    @include float(left);
+  }
+  @media #{$large-and-up} {
+    @include float(right);
+  }
+}
+
+// tabs
+ul.tabs li.tab {
+  @include float(left);
+}
+
+.indicator {
+  @include rtl {
+    will-change: right, left;
+  }
+  @include ltr {
+    will-change: left, right;
+  }
+}
+
+// table of co
+ul.table-of-contents {
+  a {
+    @include padding-left(20px);
+    &:hover {
+      color: lighten(#757575, 20%);
+      @include padding-left(19px);
+      @include border-left(1px solid lighten(color("materialize-red", "base"),10%));
+    }
+    &.active {
+      @include padding-left(18px);
+      @include border-left(2px solid lighten(color("materialize-red", "base"),10%));
+    }
+  }
+}
+
+// slider
+.slider ul.slides {
+    li {
+    @include left(0);
+    .caption {
+      @include left(15%);
+    }
+  }
+}
+
+// sidenav
+@media only screen and (max-width: 992px) {
+  ul.side-nav {
+    @include left(-1 * ($sidenav-width + 10));
+    @include rtl {
+      will-change: right;
+    }
+    @include ltr {
+      will-change: left;
+    }
+    // Right Align
+    &.right-aligned {
+    @include rtl {
+      will-change: left;
+    }
+    @include ltr {
+      will-change: right;
+    }
+      @include right( -1 * ($sidenav-width + 10));
+      @include left(auto);
+    }
+  }
+}
+
+ul.side-nav.full,
+ul.side-nav.fixed  {
+  @include left(-1 * ($sidenav-width + 10));
+    @include rtl {
+      will-change: right;
+    }
+    @include ltr {
+      will-change: left;
+    }
+
+  // Right Align
+  &.right-aligned {
+    @include rtl {
+      will-change: left;
+    }
+    @include ltr {
+      will-change: right;
+    }
+      @include right( -1 * ($sidenav-width + 10));
+    @include left(auto);
+  }
+}
+
+ul.side-nav.fixed {
+  @include left(0);
+  &.right-aligned {
+    @include right(0);
+    @include left(auto);
+    @include rtl {
+      will-change: left;
+    }
+    @include ltr {
+      will-change: right;
+    }
+  }
+}
+
+@media #{$medium-and-down} {
+  ul.side-nav.fixed {
+    @include left( -1 * ($sidenav-width + 10));
+
+    &.right-aligned {
+      @include right(-1 * ($sidenav-width + 10));
+      @include left(auto);
+    }
+  }
+}
+
+// navbar
+nav a.button-collapse {
+  @include float(left);
+}
+
+nav .brand-logo {
+  @media #{$medium-and-down} {
+    @include left(0);
+  }
+
+  &.right {
+    @include right(0.5rem);
+  }
+}
+
+nav ul {
+  @include float(right);
+  li {
+    @include float(left);
+  }
+  &.left {
+    @include float(left);
+  }
+}
+
+nav .input-field {
+  input {
+    @include padding-left(2rem);
+  }
+  label {
+    @include left(0);
+  }
+}
+
+.materialboxed:hover:not(.active) {
+    @include rtl {
+      will-change: right, top, width, height;
+    }
+    @include ltr {
+      will-change: left, top, width, height;
+    }
+
+}
+
+// grid
+.row {
+  .col {
+    @include float(left);
+    $i: 1;
+    @while $i <= $num-cols {
+      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      &.s#{$i} {
+        width: $perc;
+        @include margin-left(0);
+      }
+      $i: $i + 1;
+    }
+    $i: 1;
+    @while $i <= $num-cols {
+      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      &.offset-s#{$i} {
+        @include margin-left($perc);
+      }
+      $i: $i + 1;
+    }
+
+    @media #{$medium-and-up} {
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.m#{$i} {
+          width: $perc;
+          @include margin-left(0);
+        }
+        $i: $i + 1;
+      }
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.offset-m#{$i} {
+          @include margin-left($perc);
+        }
+        $i: $i + 1;
+      }
+
+    }
+
+    @media #{$large-and-up} {
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.l#{$i} {
+          width: $perc;
+          @include margin-left(0);
+        }
+        $i: $i + 1;
+      }
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.offset-l#{$i} {
+          @include margin-left($perc);
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+}
+
+// global
+.left-align {
+  @include text-align(left);
+}
+.right-align {
+  @include text-align(right);
+}
+.left {
+  @include float(left);
+}
+.right {
+  @include float(right);
+}
+blockquote {
+  @include padding-left(1.5rem);
+  @include border-left(5px solid color("red", "lighten-3"));
+}
+i {
+  &.left {
+    @include float(left);
+    @include margin-right(15px);
+  }
+  &.right {
+    @include float(right);
+    @include margin-left(15px);
+  }
+}
+td, th{
+  @include  text-align(left);
+}
+
+// Responsive Table
+@media #{$medium-and-down} {
+  table {
+    thead {
+      @include  float(left);
+      @include rtl {
+         border-left: 1px solid $table-border-color;;
+      }
+      @include ltr {
+         border-right: 1px solid $table-border-color;
+         }
+         &.bordered {
+          th {
+            @include  border-left(0);
+          }
+          tbody tr {
+                        @include rtl {
+               border-left: 1px solid $table-border-color;;
+            }
+            @include ltr {
+               border-right: 1px solid $table-border-color;
+             }
+          }
+        }
+
+      tr {
+        @include rtl {
+           padding: 0 0 0 10px;
+        }
+        @include ltr {
+           padding: 0 10px 0 0;
+        }
+      }
+    }
+    th {
+      @include text-align(right);
+    }
+    td {
+      @include text-align(left);
+    }
+  }
+}
+
+.collection {
+  &.with-header {
+    .collection-item {
+     @include padding-left(30px);
+    }
+  }
+  .secondary-content {
+    @include float(right);
+  }
+}
+
+span.badge {
+  @include float(right);
+}
+
+.video-container {
+  iframe, object, embed {
+    @include  left(0);
+  }
+}
+
+
+// form
+.input-field label {
+    @include left($gutter-width / 2);
+  }
+
+.input-field label.error {
+    @include right($gutter-width / 2);
+  }
+
+.input-field .prefix ~ input,
+.input-field .prefix ~ label {
+  @include margin-left(3rem);
+}
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label,
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  @include padding-left(35px);
+}
+
+[type="radio"] + label:before,
+[type="radio"] + label:after,
+[type="checkbox"] + label:before,
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  @include left(0);
+}
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked,
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  @include left(-9999px);
+}
+form p {
+  @include text-align(left);
+}
+
+[type="checkbox"]:checked + label:before {
+  @include left(-3px);
+}
+
+input[type=range] + .thumb {
+  @include margin-left(-6px);
+  &.active {
+    border-radius: 50% 50% 50% 0;
+    .value {
+      @include margin-left(-1px);
+    }
+  }
+}
+
+.select-wrapper span.select-dropdown {
+  &:after {
+    @include right(0);
+    @include text-align(right);
+  }
+}
+
+.switch label .lever,
+.switch label input[type=checkbox][disabled]:first-child + .lever {
+    @include margin-left(5px);
+    @include margin-right(10px);
+  }
+
+.switch label .lever:after {
+  @include left(-5px);
+      @include rtl {
+      transition: right 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+    }
+    @include ltr {
+      transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+    }
+}
+
+.switch label input[type=checkbox]:first-child:checked + .lever:after {
+    @include left(30px);
+}
+
+// collapsible
+.collapsible-header {
+  i {
+    @include float(left);
+    @include margin-right(1rem);
+  }
+}
+
+// cards
+.card {
+  .card-image {
+    .card-title {
+      @include left(0);
+    }
+  }
+  a {
+    @include margin-right($card-padding);
+  }
+}

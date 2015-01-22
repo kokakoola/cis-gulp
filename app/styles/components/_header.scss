@@ -1,0 +1,105 @@
+
+// HEADER
+// ****************************************
+
+// MATERIALIZE OVERRIDES
+// **************************************
+span.badge.new:after {
+  content: " ";
+}
+
+@media only screen and (min-width: 601px) {
+  nav .nav-wrapper i {
+  font-size: 1.8rem;
+  }
+}
+
+// STYLING
+// **************************************
+nav .brand-logo {
+  @include float(left);
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: $navbar-height;
+  background: transparent url('../images/cis-logo.svg') no-repeat center center;
+  background-size: 35px 35px;
+  // text-indent: 65px;
+  // @include margin-right(40px);
+}
+
+.no-svg nav .brand-logo {
+  background-image: url('../images/cis-logo.png') no-repeat;
+}
+
+nav .responsive-img {
+  padding-top: 5px;
+}
+
+@media only screen and (min-width: 601px) {
+  nav,
+  nav .nav-wrapper i,
+  nav a.button-collapse,
+  nav a.button-collapse i {
+    background: transparent;
+    box-shadow: none;
+    // border-bottom: 1px solid darken($color-light, 30%);
+    transition: 0.3s;
+    height: $navbar-height;
+    line-height: $navbar-height;
+    &.scrolled {
+      background: #37474f;
+      border-bottom-color: transparent;
+      height: $navbar-height-after;
+      line-height: $navbar-height-after;
+    }
+  }
+}
+
+.navbar.dropdown-content {
+  top: $navbar-height !important;
+}
+
+:-webkit-full-screen .mdi-navigation-fullscreen:before {
+  content: "\e8a0";
+}
+:-moz-full-screen .mdi-navigation-fullscreen:before {
+  content: "\e8a0";
+}
+
+// for notification count to position normally
+nav ul a {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  top: 10px;
+  @include left(58%);
+  background: #35BAC4;
+  padding: 0px 5px;
+  border-radius: 30px;
+  color: #FFF;
+  line-height: 16px;
+  z-index: 9999;
+  text-align: center;
+  font-size: 11px;
+}
+
+.notification-container {
+  width: auto;
+  min-width: 380px;
+  top: $navbar-height;
+  &:before {
+    content: '';
+    display: block;
+    position: fixed;
+    width: 0;
+    height: 0;
+    color: transparent;
+    border: 10px solid black;
+    border-color: transparent transparent white;
+    margin-top: -18px;
+    margin-left: 185px;
+  }
+}

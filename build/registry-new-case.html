@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>cis</title>
+
+    
+
+    <link rel="stylesheet" href="styles/app.css">
+
+  </head>
+  <body>
+
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper container">
+      <ul>
+        <li>Civil Primary Court</li>
+      </ul>
+      <ul class="side-nav" id="nav-mobile">
+        <!-- <li class="active">
+          <a href="#!" id="Kurdish" data-value="rtl" class="btn-medium waves-effect language">sorani</a>
+        </li>
+        <li>
+          <a href="#!" id="English" data-value="ltr" class="btn-medium waves-effect language">english</a>
+        </li> -->
+        <li>
+          <a href="#" data-activates="slide-out" class="callSlideout"><i class="mdi-av-equalizer"></i></a>
+        </li>
+        <li>
+          <a href="#!" onclick="toggleFullScreen()"><i class="mdi-navigation-fullscreen"></i></a>
+        </li>
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="languageDropdown"><i class="mdi-action-language"></i></a>
+        </li>
+        <li><a class="dropdown-button notificationLink" href="#!" data-activates="notificationsDropdown"><i class="mdi-social-notifications"></i><span class="count" id="notification_count">6</span></a>
+        </li>
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="personDropdown"><!-- <img class="responsive-img circle" src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"> -->Halat Ahmed<i class="mdi-navigation-arrow-drop-down right"></i></a>
+        </li>
+        <li>
+          <a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+</div>
+
+<!-- Dropdown Structure -->
+
+<!-- language dropdown -->
+<ul id="languageDropdown" class="navbar dropdown-content">
+  <li class="active">
+    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
+  </li>
+  <li>
+    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
+  </li>
+</ul>
+
+<!-- profile dropdown -->
+<ul id="personDropdown" class="navbar dropdown-content">
+  <li><a href="#!">Profile</a></li>
+  <li><a href="#!">Settings</a></li>
+  <li class="divider"></li>
+  <li><a href="#!"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+</ul>
+
+<!-- notifications dropdown -->
+<div class="navbar dropdown-content notification-container" id="notificationsDropdown">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Notifications</h5></li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge orange">Drafts</span> <small>1 hour ago <br>You have 4 new drafts to finish</small>
+      </a></div>
+    </li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge green">What is this?</span> <small>1 hour ago <br>You have 4 new drafts to finish</small>
+      </a></div>
+    </li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge red">Drafts</span> <small>1 hour ago <br>You have 4 new drafts to finish </small>
+      </a><a href="#!" class="secondary-content"><i class="mdi-action-alarm-on text-red"></i></a></div>
+    </li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge pink">Drafts</span> <small>1 hour ago <br>You have 4 new drafts to finish</small>
+      </a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- slide out panel -->
+<ul id="slide-out" class="side-nav full">
+  <li>
+    
+<!-- <div id="skillset" class="column"> </div> -->
+  </li>
+  <li><a href="#!">First Sidebar Link</a></li>
+  <li><a href="#!">Second Sidebar Link</a></li>
+  <li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+      <li>
+        <div class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></div>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="#!">First Dropdown Link</a></li>
+            <li><a href="#!">Second Dropdown Link</a></li>
+            <li><a href="#!">Third Dropdown Link</a></li>
+            <li><a href="#!">Fourth Dropdown Link</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+
+          <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="registry.html"><i class="mdi-navigation-close"></i></a>
+<h4 class="header orange-text text-darken-2">New case</h4>
+<div class="card large white">
+  <div class="card-content">
+    <!-- <div class="row title">
+  <div class="col s12">
+    <span class="card-title grey-text text-darken-4">New case </span>
+    <div class="divider"></div>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col s12 m1 check-inline">
+    <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
+  </div>
+  <div class="col s12 m2 check-inline">
+    <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
+  </div>
+  <div class="col s12 m3">
+    <select required>
+      <option value="" disabled selected>Judge default</option>
+      <option value="1">Judge Else (6)</option>
+      <option value="2">Judge Other (14)</option>
+      <option value="3">Judge Judge (22)</option>
+    </select>
+  </div>
+  <div class="input-field col s12 m2">
+    <input id="claimValue" type="text" class="validate">
+    <label for="claimValue">Case value</label>
+  </div>
+  <div class="col s12 m2">
+    <select required>
+      <option value="" disabled selected>Case type </option>
+      <option value="1">استملاك</option>
+      <option value="2">property aquizition </option>
+      <option value="3">Option 3</option>
+    </select>
+  </div>
+  <div class="col s12 m2">
+    <input type="date" id="date" class="datepicker today">
+  </div>
+</div>
+
+<div class="row title">
+  <div class="col s12">
+    <button class="btn btn-floating waves-effect waves-dark cyan lighten-2 js-addDataRow" type="button" data-datacontainer="#claimants">
+      <i class="mdi-content-add animated rotateIn"></i>
+    </button>
+    <span class="card-title grey-text text-darken-4">Claimant </span>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<div id="claimants">
+  <div>
+    <div class="row">
+      <div class="input-field col s12 m7 right"  id="the-basics">
+        <input id="claimant" type="text" class="typeahead validate"  value="">
+        <label for="claimant">Claimants full name</label>
+        <label id="claimant-error" class="error" for="claimant">This field is required.</label>
+      </div>
+      <div class="switch col s12 m5 right">
+        <br>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>&nbsp;Legal entity</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m7 right">
+        <input id="claimantAddress" type="text" class="validate" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+        <label for="claimantAddress">Claimants address</label>
+      </div>
+      <div class="input-field col s12 m2 right">
+        <input id="claimantId" type="text">
+        <label for="claimantId">Document number</label>
+        <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label>
+      </div>
+      <div class="input-field col s12 m2 right">
+        <input id="claimantPhone" type="text">
+        <label for="claimantPhone">Claimants phone</label>
+      </div>
+      <div class="col s12 m7 right">
+        <select>
+          <option value="" >No representative <i class="mdi-content-add"></i> </option>
+          <option value="1">Lawyer</option>
+          <option value="2" selected>Parent</option>
+          <option value="3">Legal guardian</option>
+          <option value="4">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+  <div class="col s12 m1 right">
+    <label for="">Represented by parent</label>
+  </div>
+  <div class="input-field col s12 m6 right">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12 m6 offset-m1 right">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+
+</div>
+
+<!-- <div class="row">
+  <div class="input-field col s12 m7">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m3">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+</div> -->
+
+    <div class="row">
+      <div class="col s12">
+        <a href="#modal1" class="btn btn-floating waves-effect waves-dark grey lighten-1 removeClaimant modal-trigger left">
+          <i class="mdi-navigation-close animated rotateIn"></i>
+        </a>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Hei!</h4>
+    <p>You are about to delete the claimant. Are you sure? </p>
+    <hr>
+<div class="right">
+  <a href="#" class="waves-effect btn-flat modal-close">No</a>
+  <a href="#" class="waves-effect btn teal modal-close">Yes</a>
+</div>
+  </div>
+
+<div class="row title">
+  <div class="col s12">
+    <button class="btn btn-floating waves-effect waves-dark cyan lighten-2 lighten-1" type="button" id="addInputClaimant">
+        <i class="mdi-content-add animated rotateIn"></i>
+      </button>
+    <span class="card-title grey-text text-darken-4">Defendant </span>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<div id="claimants">
+  <div>
+    <div class="row">
+      <div class="input-field col s12 m7 right"  id="the-basics">
+        <input id="claimant" type="text" class="typeahead validate"  value="">
+        <label for="claimant">Claimants full name</label>
+        <label id="claimant-error" class="error" for="claimant">This field is required.</label>
+      </div>
+      <div class="switch col s12 m5 right">
+        <br>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>&nbsp;Legal entity</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m7 right">
+        <input id="claimantAddress" type="text" class="validate" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+        <label for="claimantAddress">Claimants address</label>
+      </div>
+      <div class="input-field col s12 m2 right">
+        <input id="claimantId" type="text">
+        <label for="claimantId">Document number</label>
+        <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label>
+      </div>
+      <div class="input-field col s12 m2 right">
+        <input id="claimantPhone" type="text">
+        <label for="claimantPhone">Claimants phone</label>
+      </div>
+      <div class="col s12 m7 right">
+        <select>
+          <option value="" >No representative <i class="mdi-content-add"></i> </option>
+          <option value="1">Lawyer</option>
+          <option value="2" selected>Parent</option>
+          <option value="3">Legal guardian</option>
+          <option value="4">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+  <div class="col s12 m1 right">
+    <label for="">Represented by parent</label>
+  </div>
+  <div class="input-field col s12 m6 right">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12 m6 offset-m1 right">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+
+</div>
+
+<!-- <div class="row">
+  <div class="input-field col s12 m7">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m3">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+</div> -->
+
+    <div class="row">
+      <div class="col s12">
+        <a href="#modal1" class="btn btn-floating waves-effect waves-dark grey lighten-1 removeClaimant modal-trigger left">
+          <i class="mdi-navigation-close animated rotateIn"></i>
+        </a>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Hei!</h4>
+    <p>You are about to delete the claimant. Are you sure? </p>
+    <hr>
+<div class="right">
+  <a href="#" class="waves-effect btn-flat modal-close">No</a>
+  <a href="#" class="waves-effect btn teal modal-close">Yes</a>
+</div>
+  </div>
+
+<div class="row title">
+  <div class="col s12 ">
+    <span class="card-title grey-text text-darken-4">Participants </span>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m5 right">
+    <select>
+      <option value="" selected>No participant </option>
+      <option value="1">Witness</option>
+      <option value="2">Expert</option>
+      <option value="3">Third party</option>
+      <option value="4">Other</option>
+    </select>
+  </div>
+</div>
+
+  <!-- <div class="col s1">
+    <button class="btn btn-floating waves-effect waves-dark blue-grey right" type="button" id="addInputDefendant">
+      <i class="mdi-content-add animated rotateIn"></i>
+    </button>
+  </div> -->
+
+
+
+<!-- <div class="row">
+
+  <div class="col s12 m5">
+    <select required>
+      <option value="" disabled selected>Judge Roman </option>
+      <option value="1">Judge Else</option>
+      <option value="2">Judge Other</option>
+      <option value="3">Judge Judge</option>
+    </select>
+  </div>
+  <div class="input-field col s12 m5">
+    <input id="claimValue" type="text" class="validate">
+    <label for="claimValue">Claim value</label>
+  </div>
+</div> -->
+
+<div class="row title">
+  <div class="col s12">
+    <span class="card-title grey-text text-darken-4">Documents </span>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row no-pad-bot">
+  <div class="col s12 center">
+    <div class="card-panel bg-light valign-wrapper">
+        <span ><h5><i class="mdi-file-file-upload"></i> Drop files here to upload</h5> or click here</span>
+    </div>
+  </div>
+</div>
+
+<div class="row title">
+  <div class="col s12">
+    <span class="card-title grey-text text-darken-4">Notes </span>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <textarea class="materialize-textarea"></textarea>
+    <label><i class="mdi-content-create small"></i></label>
+  </div>
+</div>
+
+
+
+  </div>
+
+  <div class="card-action right">
+
+    <a class="waves-effect waves-blue-gray btn-flat">Cancel</a>
+
+    <button class="btn bg-orange waves-effect waves-light" type="submit" name="action">Send to judge
+      <i class="mdi-content-send"></i>
+    </button>
+    <button class="btn bg-water waves-effect waves-dark" type="submit" name="action">Register
+      <i class="mdi-editor-border-color"></i>
+    </button>
+    <a class="btn bg-mauve waves-effect waves-dark" id="saveFor" data-toggle="collapse" href="#formEntry">Save for later
+      <i class="mdi-content-save"></i>
+    </a>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Help center</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Other important numbers</h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text lighten-3" href="http://netgroup.ee">Netgroup</a>
+      </div>
+    </div>
+  </footer>
+
+    <script src="scripts/vendor.js"></script>
+
+<!--
+    <script>
+          $('.home').pagepiling({
+          touchSensitivity: 5,
+          sectionSelector: '.pagepiling',
+          verticalCentered: true,
+          menu: '#menu',
+          anchors: ['Start', 'page2', 'page3'],
+          navigation: false
+        });
+    </script>
+-->
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

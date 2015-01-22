@@ -1,0 +1,132 @@
+<!-- <div class="row title">
+  <div class="col s12">
+    <span class="card-title grey-text text-darken-4">New case </span>
+    <div class="divider"></div>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col s12 m1 check-inline">
+    <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
+  </div>
+  <div class="col s12 m2 check-inline">
+    <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
+  </div>
+  <div class="col s12 m3">
+    <select required>
+      <option value="" disabled selected>Judge default</option>
+      <option value="1">Judge Else (6)</option>
+      <option value="2">Judge Other (14)</option>
+      <option value="3">Judge Judge (22)</option>
+    </select>
+  </div>
+  <div class="input-field col s12 m2">
+    <input id="claimValue" type="text" class="validate">
+    <label for="claimValue">Case value</label>
+  </div>
+  <div class="col s12 m2">
+    <select required>
+      <option value="" disabled selected>Case type </option>
+      <option value="1">استملاك</option>
+      <option value="2">property aquizition </option>
+      <option value="3">Option 3</option>
+    </select>
+  </div>
+  <div class="col s12 m2">
+    <input type="date" id="date" class="datepicker today">
+  </div>
+</div>
+
+<div class="row title">
+  <div class="col s12">
+    <button class="btn btn-floating waves-effect waves-dark cyan lighten-2 js-addDataRow" type="button" data-datacontainer="#claimants">
+      <i class="mdi-content-add animated rotateIn"></i>
+    </button>
+    <span class="card-title grey-text text-darken-4">Claimant </span>
+    <div class="divider"></div>
+  </div>
+</div>
+
+@@include('./registry-form-claimant.html')
+
+<div class="row title">
+  <div class="col s12">
+    <button class="btn btn-floating waves-effect waves-dark cyan lighten-2 lighten-1" type="button" id="addInputClaimant">
+        <i class="mdi-content-add animated rotateIn"></i>
+      </button>
+    <span class="card-title grey-text text-darken-4">Defendant </span>
+    <div class="divider"></div>
+  </div>
+</div>
+
+@@include('./registry-form-claimant.html')
+
+<div class="row title">
+  <div class="col s12 ">
+    <span class="card-title grey-text text-darken-4">Participants </span>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m5 right">
+    <select>
+      <option value="" selected>No participant </option>
+      <option value="1">Witness</option>
+      <option value="2">Expert</option>
+      <option value="3">Third party</option>
+      <option value="4">Other</option>
+    </select>
+  </div>
+</div>
+
+  <!-- <div class="col s1">
+    <button class="btn btn-floating waves-effect waves-dark blue-grey right" type="button" id="addInputDefendant">
+      <i class="mdi-content-add animated rotateIn"></i>
+    </button>
+  </div> -->
+
+
+
+<!-- <div class="row">
+
+  <div class="col s12 m5">
+    <select required>
+      <option value="" disabled selected>Judge Roman </option>
+      <option value="1">Judge Else</option>
+      <option value="2">Judge Other</option>
+      <option value="3">Judge Judge</option>
+    </select>
+  </div>
+  <div class="input-field col s12 m5">
+    <input id="claimValue" type="text" class="validate">
+    <label for="claimValue">Claim value</label>
+  </div>
+</div> -->
+
+<div class="row title">
+  <div class="col s12">
+    <span class="card-title grey-text text-darken-4">Documents </span>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row no-pad-bot">
+  <div class="col s12 center">
+    <div class="card-panel bg-light valign-wrapper">
+        <span ><h5><i class="mdi-file-file-upload"></i> Drop files here to upload</h5> or click here</span>
+    </div>
+  </div>
+</div>
+
+<div class="row title">
+  <div class="col s12">
+    <span class="card-title grey-text text-darken-4">Notes </span>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <textarea class="materialize-textarea"></textarea>
+    <label><i class="mdi-content-create small"></i></label>
+  </div>
+</div>
+
+

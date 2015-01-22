@@ -1,0 +1,35 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "login",
+  "htmlClass": "login"
+})
+
+<main>
+  <div class="section pagepiling full-bg" id="login">
+    <a href="#!" class="front-fullscreen" onclick="toggleFullScreen()"><i class="mdi-navigation-fullscreen"></i></a>
+    <div class="container">
+
+      <div class="col s5 m5 center">
+        <h3 class="white-text">
+          <img src="images/cis-logo.svg" alt="" width="70" height="70">
+          <br>
+          <span style="font-size: 55%;">Welcome to Sulaymaniah</span>
+          <br>
+          Court Info System
+        </h3>
+        <div class="divider white"></div>
+        <h6 class="white-text">Please login:</h6>
+        <br>
+        <input type="text" value="" placeholder="Name">
+        <br>
+        <input type="password" value="" placeholder="Password">
+        <br>
+        <button onclick="location.href='registry.html'" class="btn-large waves-effect waves-dark deep-orange darken-4 wow rotateIn" type="button">Login</button>
+        <br>
+        <a href="">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+@@include('./base/footer.tpl.html')

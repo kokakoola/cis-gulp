@@ -1,0 +1,17 @@
+{
+  "name": "cis",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "materialize": "~0.95.0",
+    "pagepiling.js": "~0.0.9",
+    "wowjs": "~1.0.3",
+    "fullscreen": "*",
+    "bi-app-sass": "*",
+    "handlebars": "~2.0.0",
+    "DataTables": "~1.10.4",
+    "bootstrap-sass-official": "~3.3.3",
+    "animate.css": "~3.2.0",
+    "jquery-cookie": "~1.4.1"
+  }
+}
