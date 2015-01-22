@@ -2,18 +2,11 @@
   <div id="placeholder-registry-table" class="template-placeholder"></div>
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template">
-      <table class="hoverable bordered registry">
+
+    <table class="hoverable bordered registry">
         <thead>
-          <th data-field="status" class="sorting">
-            <a class="dropdown-button" href="#!" data-activates="status">Status<i class="mdi-navigation-arrow-drop-down right"></i></a>
-             <ul id='status' class='dropdown-content'>
-              <li><a href=""><span class="new badge orange">Drafts</span></a></li>
-              <li><a href="#!"><span class="new badge green">What is this?</span></a></li>
-              <li class="divider"></li>
-              <li><a href="#!"><span class="new badge red">Drafts</span></a></li>
-            </ul>
-          </th>
-          <th data-field="casenumber" class="sorting">Date</th>
+          <th data-field="status" class="sorting">Status</th>
+          <th data-field="date" class="sorting">Date</th>
           <th data-field="casenumber" class="sorting">Case number</th>
           <th data-field="casetype" class="sorting">Case type</th>
           <th data-field="claimants">Claimant</th>
@@ -24,7 +17,7 @@
         <tbody>
         {{#each Cases}}
           <tr>
-            <td class="center"><span class="status bullet {{Status}}"></span></td>
+            <td class="center"><i class="status {{Status}}"></i></td>
             <td>{{Date}}</td>
             <td>{{CaseNumber}}</td>
             <td>{{CaseType}}</td>

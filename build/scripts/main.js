@@ -6,7 +6,14 @@
       hover: false
     });
 
+    $(".dropdown-button-simplified").dropdown({
+      constrain_width: false,
+      hover: false
+    });
+
     $('.collapsible').collapsible();
+
+    $('#initiate-form .collapse').collapse('show');
 
     $(".button-collapse").sideNav();
 
@@ -360,11 +367,11 @@ function toggleFullScreen() {
 }
 
 // keydown event handler
-document.addEventListener('keydown', function(e) {
-  if (e.keyCode == 13) { // F or Enter key  || e.keyCode == 70
-    toggleFullScreen();
-  }
-}, false);
+//document.addEventListener('keydown', function(e) {
+//  if (e.keyCode == 13) { // F or Enter key  || e.keyCode == 70
+//    toggleFullScreen();
+//  }
+//}, false);
 var object = [
   {
     'headline':'HTML & CSS',

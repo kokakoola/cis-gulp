@@ -60,7 +60,7 @@ table.dataTable thead .sorting_asc:before {
 }
 table.dataTable thead .sorting_desc:before {
   font-family: "Material-Design-Icons";
-  content: " ";
+  content: "\e89d";
   font-size: 1.5rem;
   vertical-align: middle;
 }
@@ -73,7 +73,7 @@ table.dataTable thead .sorting_asc_disabled:before {
 }
 table.dataTable thead .sorting_desc_disabled:before {
   font-family: "Material-Design-Icons";
-  content: "\e89d";
+  content: " ";
   font-size: 1.5rem;
   vertical-align: middle;
   color: #ddd;

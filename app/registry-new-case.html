@@ -140,15 +140,262 @@
         <div class="col s12">
 
           <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="registry.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header orange-text text-darken-2">New case</h4>
+<h4 class="header white-text text-darken-2">New case</h4>
 <div class="card large white">
   <div class="card-content">
-    <!-- <div class="row title">
+    <div class="panel-group" id="initiate-form" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h5 class="panel-title">
+        <a data-toggle="collapse" data-parent="#initiate-form" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="btn-floating btn waves-effect waves-light" type="submit" name="action"><i class="mdi-navigation-arrow-drop-down"></i></button>
+          <small>Claimant(s):</small> Foo Fafaa, Hei Ho Hohoo
+        </a>
+            <button class="btn btn-floating waves-effect waves-dark cyan lighten-2 js-addDataRow" type="button" data-datacontainer="#claimants">
+      <i class="mdi-content-add animated rotateIn"></i>
+    </button>
+      </h5>
+
+      <div class="divider"></div>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div id="claimants">
+  <div>
+    <div class="row">
+      <div class="input-field col s12 m7 right"  id="the-basics">
+        <input id="claimant" type="text" class="validate"  value="">
+        <label for="claimant">Claimants full name</label>
+<!--         <label id="claimant-error" class="error" for="claimant">This field is required.</label> -->
+      </div>
+      <div class="switch col s12 m5 right">
+        <br>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>&nbsp;Legal entity</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m7 right">
+        <input id="claimantAddress" type="text" class="validate" value="">
+        <label for="claimantAddress">Claimants address</label>
+      </div>
+      <div class="input-field col s12 m2 right">
+        <input id="claimantId" type="text">
+        <label for="claimantId">Document number</label>
+<!--         <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label> -->
+      </div>
+      <div class="input-field col s12 m2 right">
+        <input id="claimantPhone" type="text">
+        <label for="claimantPhone">Claimants phone</label>
+      </div>
+      <div class="col s12 m7 right">
+        <select>
+          <option value="" selected>No representative <i class="mdi-content-add"></i> </option>
+          <option value="1">Lawyer</option>
+          <option value="2" selected>Parent</option>
+          <option value="3">Legal guardian</option>
+          <option value="4">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+  <div class="col s12 m1 right">
+    <label for="">Represented by parent</label>
+  </div>
+  <div class="input-field col s12 m6 right">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12 m6 offset-m1 right">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+
+</div>
+
+<!-- <div class="row">
+  <div class="input-field col s12 m7">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m3">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+</div> -->
+
+    <div class="row">
+      <div class="col s12">
+        <a href="#modal1" class="btn btn-floating waves-effect waves-dark grey lighten-1 removeClaimant modal-trigger left">
+          <i class="mdi-navigation-close animated rotateIn"></i>
+        </a>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Hei!</h4>
+    <p>You are about to delete the claimant. Are you sure? </p>
+    <hr>
+<div class="right">
+  <a href="#" class="waves-effect btn-flat modal-close">No</a>
+  <a href="#" class="waves-effect btn teal modal-close">Yes</a>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#initiate-form" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="btn-floating btn waves-effect waves-light" type="submit" name="action"><i class="mdi-navigation-arrow-drop-down"></i></button>
+         <small>Defendant(s):</small> Foo Fafaa, Hei Ho Hohoo
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <div id="defendants">
+  <div class="row">
+    <div class="input-field col s12 m7">
+      <input id="defendant" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+      <label for="defendant">defendants full name</label>
+      <label id="defendant-error" class="error" for="defendant">This field is required.</label>
+    </div>
+    <div class="switch col s12 m3">
+      <br>
+      <label>
+        <input type="checkbox">
+        <span class="lever"></span>
+      </label>
+      <span>&nbsp;Legal entity</span>
+    </div>
+    <div class="input-field col s12 m7">
+      <input id="defendantAddress" type="text" class="validate" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+      <label for="defendantAddress">defendants address</label>
+    </div>
+    <div class="input-field col s12 m2">
+      <input id="defendantId" type="text">
+      <label for="defendantId">Document number</label>
+      <label id="defendant-success" class="success" for="defendantAddress">This field is success.</label>
+    </div>
+    <div class="input-field col s12 m2">
+      <input id="defendantPhone" type="text">
+      <label for="defendantPhone">defendants phone</label>
+    </div>
+    <!-- First person will not get it. Only second and following -->
+    <div class="col s1">
+      <button class="btn btn-floating waves-effect waves-dark blue-grey right" type="button" class="removedefendant">
+        <i class="mdi-content-remove animated rotateIn"></i>
+      </button>
+    </div>
+    <!-- End remark -->
+    <div class="col s12 m7">
+      <select>
+        <option value="" >No representative <i class="mdi-content-add"></i> </option>
+        <option value="1">Lawyer</option>
+        <option value="2" selected>Parent</option>
+        <option value="3">Legal guardian</option>
+        <option value="4">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col s12 m1 right">
+    <label for="">Represented by parent</label>
+  </div>
+  <div class="input-field col s12 m6 right">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12 m6 offset-m1 right">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+
+</div>
+
+<!-- <div class="row">
+  <div class="input-field col s12 m7">
+    <input id="parent" type="text" class="validate" value="ڕۆژه‌ كمال احمد حسن">
+    <label for="parent">Parents full name</label>
+  </div>
+  <div class="input-field col s12 m2">
+    <input id="parentId" type="text">
+    <label for="parentId">Parents ID</label>
+  </div>
+  <div class="input-field col s12 m3">
+    <input id="parentPhone" type="text">
+    <label for="parentPhone">Parents Phone</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="parentAddress" type="text" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+    <label for="parentAddress">Parents address</label>
+  </div>
+</div> -->
+
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#initiate-form" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <button class="btn-floating btn waves-effect waves-light" type="submit" name="action"><i class="mdi-navigation-arrow-drop-down"></i></button>
+          <small>Participant(s):</small> Foo Fafaa, Hei Ho Hohoo
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row title">
   <div class="col s12">
     <span class="card-title grey-text text-darken-4">New case </span>
     <div class="divider"></div>
   </div>
 </div> -->
+
 <div class="row">
   <div class="col s12 m1 check-inline">
     <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
@@ -195,9 +442,9 @@
   <div>
     <div class="row">
       <div class="input-field col s12 m7 right"  id="the-basics">
-        <input id="claimant" type="text" class="typeahead validate"  value="">
+        <input id="claimant" type="text" class="validate"  value="">
         <label for="claimant">Claimants full name</label>
-        <label id="claimant-error" class="error" for="claimant">This field is required.</label>
+<!--         <label id="claimant-error" class="error" for="claimant">This field is required.</label> -->
       </div>
       <div class="switch col s12 m5 right">
         <br>
@@ -210,13 +457,13 @@
     </div>
     <div class="row">
       <div class="input-field col s12 m7 right">
-        <input id="claimantAddress" type="text" class="validate" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+        <input id="claimantAddress" type="text" class="validate" value="">
         <label for="claimantAddress">Claimants address</label>
       </div>
       <div class="input-field col s12 m2 right">
         <input id="claimantId" type="text">
         <label for="claimantId">Document number</label>
-        <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label>
+<!--         <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label> -->
       </div>
       <div class="input-field col s12 m2 right">
         <input id="claimantPhone" type="text">
@@ -224,7 +471,7 @@
       </div>
       <div class="col s12 m7 right">
         <select>
-          <option value="" >No representative <i class="mdi-content-add"></i> </option>
+          <option value="" selected>No representative <i class="mdi-content-add"></i> </option>
           <option value="1">Lawyer</option>
           <option value="2" selected>Parent</option>
           <option value="3">Legal guardian</option>
@@ -312,9 +559,9 @@
   <div>
     <div class="row">
       <div class="input-field col s12 m7 right"  id="the-basics">
-        <input id="claimant" type="text" class="typeahead validate"  value="">
+        <input id="claimant" type="text" class="validate"  value="">
         <label for="claimant">Claimants full name</label>
-        <label id="claimant-error" class="error" for="claimant">This field is required.</label>
+<!--         <label id="claimant-error" class="error" for="claimant">This field is required.</label> -->
       </div>
       <div class="switch col s12 m5 right">
         <br>
@@ -327,13 +574,13 @@
     </div>
     <div class="row">
       <div class="input-field col s12 m7 right">
-        <input id="claimantAddress" type="text" class="validate" value="سلێمانى /  تووى مه‌ليك/  نزيك مزگه‌وتى حمه‌ صالح بۆسكانى">
+        <input id="claimantAddress" type="text" class="validate" value="">
         <label for="claimantAddress">Claimants address</label>
       </div>
       <div class="input-field col s12 m2 right">
         <input id="claimantId" type="text">
         <label for="claimantId">Document number</label>
-        <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label>
+<!--         <label id="claimant-success" class="success" for="claimantAddress">This field is success.</label> -->
       </div>
       <div class="input-field col s12 m2 right">
         <input id="claimantPhone" type="text">
@@ -341,7 +588,7 @@
       </div>
       <div class="col s12 m7 right">
         <select>
-          <option value="" >No representative <i class="mdi-content-add"></i> </option>
+          <option value="" selected>No representative <i class="mdi-content-add"></i> </option>
           <option value="1">Lawyer</option>
           <option value="2" selected>Parent</option>
           <option value="3">Legal guardian</option>

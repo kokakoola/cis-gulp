@@ -21,6 +21,15 @@ html {
   line-height: 5rem;
 }
 
+.card a {
+  color: inherit;
+  @include margin-right(inherit);
+  text-transform: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
 
 // FRAME
 // ****************************************
@@ -53,7 +62,7 @@ main {
 }
 
 .full-bg {
-  background: url('../images/frontbg.png');
+  background: url('../images/Suleymania.jpg');
   // url('assets/images/bg-10.jpg');
   // linear-gradient(116deg, #dadf19, #e1ab3e, #ee7009);
   // background-size: 600% 600%;
@@ -147,7 +156,7 @@ animation: second 30s ease infinite;
 // CONTENT
 // *********************************
 .main-banner {
-  background:  url('../images/frontbg.png') no-repeat center center;
+  background:  url('../images/Suleymania.jpg') no-repeat center center;
   background-size: cover;
   margin-top: -64px;
   height: 210px;
@@ -283,16 +292,61 @@ table {
   height: 10px;
   background-color: #ddd;
   border-radius: 50%;
-  &.draft {
-    background-color: #FF9800;
+}
+
+i.status {
+  color: #ddd;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-size: 0.8;
+  &:before {
+    font-family: "Material-Design-Icons";
+    font-style: normal;
+    content: "\e7da";
+
   }
-    &.draft {
-    background-color: #FF9800;
+  &.draft {
+    color: color("amber", "darken-3");
+  }
+  &.pending {
+    color: color("red", "darken-4");
+  }
+  &.registered {
+    color: color("light-blue", "lighten-1");
+  }
+  &.in-proceedings {
+    color: color("teal", "lighten-1");
+  }
+  &.in-next {
+    color: color("light-green", "base");
+  }
+  &.closed {
+    color: color("grey", "base");
+  }
+  &.rejected {
+    color: color("grey", "darken-4");
   }
 }
 
 // Filter
 // *************
+
+.dropdown-content.simplified {
+  margin-top: 3.9rem;
+  & li > a {
+    color: inherit;
+    font-size: 1rem;
+  }
+}
+
+.dropdown-button-simplified {
+  display: block;
+  padding: 0px 15px;
+  line-height: 5rem;
+  height: 4rem;
+  border-bottom: 1px solid color("grey", "base");
+}
+
 .filter-action {
   margin-top: -35px;
 }

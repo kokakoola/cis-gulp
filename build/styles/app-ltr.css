@@ -10199,7 +10199,7 @@ table.dataTable thead .sorting_asc:before {
 
 table.dataTable thead .sorting_desc:before {
   font-family: "Material-Design-Icons";
-  content: " ";
+  content: "\e89d";
   font-size: 1.5rem;
   vertical-align: middle;
 }
@@ -10214,7 +10214,7 @@ table.dataTable thead .sorting_asc_disabled:before {
 
 table.dataTable thead .sorting_desc_disabled:before {
   font-family: "Material-Design-Icons";
-  content: "\e89d";
+  content: " ";
   font-size: 1.5rem;
   vertical-align: middle;
   color: #ddd;
@@ -10681,6 +10681,15 @@ html {
   line-height: 5rem;
 }
 
+.card a {
+  color: inherit;
+  margin-right: inherit;
+  text-transform: inherit;
+}
+.card a:hover {
+  color: inherit;
+}
+
 main {
   background: #cfd8dc;
 }
@@ -10710,7 +10719,7 @@ main {
 }
 
 .full-bg {
-  background: url("../images/frontbg.png");
+  background: url("../images/Suleymania.jpg");
   background-size: cover;
 }
 .full-bg input[type=text],
@@ -10756,7 +10765,7 @@ main {
   }
 }
 .main-banner {
-  background: url("../images/frontbg.png") no-repeat center center;
+  background: url("../images/Suleymania.jpg") no-repeat center center;
   background-size: cover;
   margin-top: -64px;
   height: 210px;
@@ -10867,11 +10876,54 @@ table thead {
   background-color: #ddd;
   border-radius: 50%;
 }
-.status.bullet.draft {
-  background-color: #FF9800;
+
+i.status {
+  color: #ddd;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-size: 0.8;
 }
-.status.bullet.draft {
-  background-color: #FF9800;
+i.status:before {
+  font-family: "Material-Design-Icons";
+  font-style: normal;
+  content: "\e7da";
+}
+i.status.draft {
+  color: #ff8f00;
+}
+i.status.pending {
+  color: #B71C1C;
+}
+i.status.registered {
+  color: #29b6f6;
+}
+i.status.in-proceedings {
+  color: #26a69a;
+}
+i.status.in-next {
+  color: #8bc34a;
+}
+i.status.closed {
+  color: #9e9e9e;
+}
+i.status.rejected {
+  color: #212121;
+}
+
+.dropdown-content.simplified {
+  margin-top: 3.9rem;
+}
+.dropdown-content.simplified li > a {
+  color: inherit;
+  font-size: 1rem;
+}
+
+.dropdown-button-simplified {
+  display: block;
+  padding: 0px 15px;
+  line-height: 5rem;
+  height: 4rem;
+  border-bottom: 1px solid #9e9e9e;
 }
 
 .filter-action {

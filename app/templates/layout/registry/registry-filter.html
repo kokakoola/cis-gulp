@@ -1,9 +1,21 @@
 <div class="row">
+  <div class="col s12 m2 right">
+    <ul id="dropdownStatus" class="dropdown-content simplified">
+        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
+        <li><a href="#!">Pending <i class="status pending"></i></a></li>
+        <li><a href="#!">Registered<i class="status registered"></i></a></li>
+        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
+        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
+        <li><a href="#!">Closed<i class="status closed"></i></a></li>
+        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
+      </ul>
+      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
+  </div>
   <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">Case number</label>
   </div>
-  <div class="col s12 m3 right">
+  <div class="col s12 m2 right">
     <select>
       <option value="" disabled selected>Case type </option>
       <option value="1">Option 1</option>
@@ -11,7 +23,7 @@
       <option value="3">Option 3</option>
     </select>
   </div>
-  <div class="input-field col s12 m3 right">
+  <div class="input-field col s12 m2 right">
     <input id="claimant" type="text" >
     <label for="claimant">Judge</label>
   </div>
@@ -24,7 +36,7 @@
     <i class="mdi-notification-event-note prefix"></i>
     <label for="endDate">To</label>
     <input id="endDate" type="text" class="datepicker">
-    
+
   </div>
 </div>
 
@@ -68,8 +80,3 @@
     <label for="participant">Participant</label>
   </div>
 </div>
-
-
-
-
-

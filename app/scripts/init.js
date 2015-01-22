@@ -6,7 +6,14 @@
       hover: false
     });
 
+    $(".dropdown-button-simplified").dropdown({
+      constrain_width: false,
+      hover: false
+    });
+
     $('.collapsible').collapsible();
+
+    $('#initiate-form .collapse').collapse('show');
 
     $(".button-collapse").sideNav();
 
