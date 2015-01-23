@@ -195,22 +195,20 @@
   <div>
     <div class="col s12 m6">
 
-
-
-
-
       <div class="card">
-        <div class="card-content" id="headingClaimant">
-         <a class="card-title grey-text text-darken-4" data-toggle="collapse" data-parent="#initiate-form" href="collapseClaimant"><i class="mdi-navigation-more-vert"></i>Claimant <i class="mdi-navigation-close left"></i></a>
-         <div class="divider"></div>
-        </div>
-        <div class="card-content collapse" id="collapseClaimant">
+        <div class="card-content">
+          <div id="headingClaimant">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapseClaimant" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>Claimant <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
           <div class="row">
             <div class="input-field col s12 right"  id="the-basics">
               <input id="Claimant" type="text" class="validate"  value="">
               <label for="Claimant">Claimants full name</label>
             </div>
-          
+          </div>
+          <div class="collapse" id="collapseClaimant">
+            <div class="row">
               <div class="switch col s12 right">
                 <br>
                 <label>
@@ -232,12 +230,12 @@
                 <label for="ClaimantPhone">Claimants phone</label>
               </div>
             </div>
-          
-          
+            
+            
             <div class="row collapse" id="toggleRepresentative">
-            <span class="card-title grey-text text-darken-4">Representative</span>
+              <span class="card-title grey-text text-darken-4">Representative</span>
               <div class="divider"></div>
-                      
+
               <div class="col s12 right">
                 <select>
                   <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
@@ -247,8 +245,8 @@
                   <option value="4">Other</option>
                 </select>
               </div>
-              
-                      
+
+
               <div class="input-field col s12 right">
                 <input id="parent" type="text" class="validate" value="">
                 <label for="parent">Representatives full name</label>
@@ -266,10 +264,12 @@
                 <label for="parentAddress">Representatives address</label>
               </div>
             </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
+            </div>
+          </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -280,22 +280,20 @@
   <div>
     <div class="col s12 m6">
 
-
-
-
-
       <div class="card">
-        <div class="card-content" id="headingDefendant">
-         <a class="card-title grey-text text-darken-4" data-toggle="collapse" data-parent="#initiate-form" href="collapseDefendant"><i class="mdi-navigation-more-vert"></i>Defendant <i class="mdi-navigation-close left"></i></a>
-         <div class="divider"></div>
-        </div>
-        <div class="card-content collapse" id="collapseDefendant">
+        <div class="card-content">
+          <div id="headingDefendant">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapseDefendant" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>Defendant <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
           <div class="row">
             <div class="input-field col s12 right"  id="the-basics">
               <input id="Defendant" type="text" class="validate"  value="">
               <label for="Defendant">Defendants full name</label>
             </div>
-          
+          </div>
+          <div class="collapse" id="collapseDefendant">
+            <div class="row">
               <div class="switch col s12 right">
                 <br>
                 <label>
@@ -317,12 +315,12 @@
                 <label for="DefendantPhone">Defendants phone</label>
               </div>
             </div>
-          
-          
+            
+            
             <div class="row collapse" id="toggleRepresentative">
-            <span class="card-title grey-text text-darken-4">Representative</span>
+              <span class="card-title grey-text text-darken-4">Representative</span>
               <div class="divider"></div>
-                      
+
               <div class="col s12 right">
                 <select>
                   <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
@@ -332,8 +330,8 @@
                   <option value="4">Other</option>
                 </select>
               </div>
-              
-                      
+
+
               <div class="input-field col s12 right">
                 <input id="parent" type="text" class="validate" value="">
                 <label for="parent">Representatives full name</label>
@@ -351,10 +349,12 @@
                 <label for="parentAddress">Representatives address</label>
               </div>
             </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
+            </div>
+          </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -365,22 +365,20 @@
   <div>
     <div class="col s12 m6">
 
-
-
-
-
       <div class="card">
-        <div class="card-content" id="headingParticipant">
-         <a class="card-title grey-text text-darken-4" data-toggle="collapse" data-parent="#initiate-form" href="collapseParticipant"><i class="mdi-navigation-more-vert"></i>Participant <i class="mdi-navigation-close left"></i></a>
-         <div class="divider"></div>
-        </div>
-        <div class="card-content collapse" id="collapseParticipant">
+        <div class="card-content">
+          <div id="headingParticipant">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapseParticipant" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>Participant <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
           <div class="row">
             <div class="input-field col s12 right"  id="the-basics">
               <input id="Participant" type="text" class="validate"  value="">
               <label for="Participant">Participants full name</label>
             </div>
-          
+          </div>
+          <div class="collapse" id="collapseParticipant">
+            <div class="row">
               <div class="switch col s12 right">
                 <br>
                 <label>
@@ -402,12 +400,12 @@
                 <label for="ParticipantPhone">Participants phone</label>
               </div>
             </div>
-          
-          
+            
+            
             <div class="row collapse" id="toggleRepresentative">
-            <span class="card-title grey-text text-darken-4">Representative</span>
+              <span class="card-title grey-text text-darken-4">Representative</span>
               <div class="divider"></div>
-                      
+
               <div class="col s12 right">
                 <select>
                   <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
@@ -417,8 +415,8 @@
                   <option value="4">Other</option>
                 </select>
               </div>
-              
-                      
+
+
               <div class="input-field col s12 right">
                 <input id="parent" type="text" class="validate" value="">
                 <label for="parent">Representatives full name</label>
@@ -436,10 +434,12 @@
                 <label for="parentAddress">Representatives address</label>
               </div>
             </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
+            </div>
+          </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -512,6 +512,7 @@
   </div>
 </div>
 
+<!-- Testing collapse accordion -->
 <div  id="initiate-formi" >
   <div id="headingOne">
     <a data-toggle="collapse" data-parent="#initiate-formi" href="#collapseOne" >

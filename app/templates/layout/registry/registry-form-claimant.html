@@ -2,22 +2,20 @@
   <div>
     <div class="col s12 m6">
 
-
-
-
-
       <div class="card">
-        <div class="card-content" id="heading@@person">
-         <a class="card-title grey-text text-darken-4" data-toggle="collapse" data-parent="#initiate-form" href="collapse@@person"><i class="mdi-navigation-more-vert"></i>@@person <i class="mdi-navigation-close left"></i></a>
-         <div class="divider"></div>
-        </div>
-        <div class="card-content collapse" id="collapse@@person">
+        <div class="card-content">
+          <div id="heading@@person">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapse@@person" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>@@person <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
           <div class="row">
             <div class="input-field col s12 right"  id="the-basics">
               <input id="@@person" type="text" class="validate"  value="">
               <label for="@@person">@@persons full name</label>
             </div>
-          
+          </div>
+          <div class="collapse" id="collapse@@person">
+            <div class="row">
               <div class="switch col s12 right">
                 <br>
                 <label>
@@ -39,12 +37,12 @@
                 <label for="@@personPhone">@@persons phone</label>
               </div>
             </div>
-          
-          
+            
+            
             <div class="row collapse" id="toggleRepresentative">
-            <span class="card-title grey-text text-darken-4">Representative</span>
+              <span class="card-title grey-text text-darken-4">Representative</span>
               <div class="divider"></div>
-                      
+
               <div class="col s12 right">
                 <select>
                   <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
@@ -54,8 +52,8 @@
                   <option value="4">Other</option>
                 </select>
               </div>
-              
-                      
+
+
               <div class="input-field col s12 right">
                 <input id="parent" type="text" class="validate" value="">
                 <label for="parent">Representatives full name</label>
@@ -73,10 +71,12 @@
                 <label for="parentAddress">Representatives address</label>
               </div>
             </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
+            </div>
+          </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
