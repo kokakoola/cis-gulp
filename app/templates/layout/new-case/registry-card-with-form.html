@@ -5,13 +5,12 @@
   @@include('./registry-form-general.html')
 
     <!-- Dropdown Trigger -->
-  
 
   <div class="panel-group" id="initiate-form">
     
-    @@include('./registry-form-claimant.html', {"person":"Claimant", "trigger": "true"})
-    @@include('./registry-form-claimant.html', {"person":"Defendant"})
-    @@include('./registry-form-claimant.html', {"person":"Participant"})
+    @@include('./registry-form-claimant.html', {"person":"Claimant", "trigger": "true", "representative": true })
+    @@include('./registry-form-claimant.html', {"person":"Defendant", "representative": true})
+    @@include('./registry-form-claimant.html', {"person":"Participant", "representative": false})
   </div>
   @@include('./registry-form-documents.html')
   @@include('./registry-form-notes.html')
@@ -45,22 +44,3 @@
   </div>
 </div>
 
-<!-- Testing collapse accordion -->
-<div  id="initiate-formi" >
-  <div id="headingOne">
-    <a data-toggle="collapse" data-parent="#initiate-formi" href="#collapseOne" >
-      <small>Claimant(s):</small> Foo Fafaa, Hei Ho Hohoo
-    </a>
-  </div>
-  <div id="collapseOne" class=" collapse in">
-    hei
-  </div>
-  <div id="headingTwo">
-    <a class="collapsed" data-toggle="collapse" data-parent="#initiate-formi" href="#collapseTwo">
-     HOHOO
-    </a>
-  </div>
-  <div id="collapseTwo" class="collapse">
-    mjau
-  </div>
-</div>
