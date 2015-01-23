@@ -1,7 +1,9 @@
 <div id="@@persons">
   <div>
-    <div class="col s12 m6">
-
+    <div class="col s12 m6 trigger-wrapper">
+      @@if ("trigger" === "true") {
+      <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+      }
       <div class="card">
         <div class="card-content">
           <div id="heading@@person">
@@ -17,12 +19,12 @@
           <div class="collapse" id="collapse@@person">
             <div class="row">
               <div class="switch col s12 right">
-                <br>
+                <span>Legal entity</span>
                 <label>
                   <input type="checkbox">
                   <span class="lever"></span>
                 </label>
-                <span>&nbsp;Legal entity</span>
+                <span>Natural person</span>
               </div>
               <div class="input-field col s12 right">
                 <input id="@@personAddress" type="text" class="validate" value="">

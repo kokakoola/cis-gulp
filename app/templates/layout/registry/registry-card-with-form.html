@@ -5,10 +5,11 @@
   @@include('./registry-form-general.html')
 
     <!-- Dropdown Trigger -->
-  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan lighten-2 trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+  
 
   <div class="panel-group" id="initiate-form">
-    @@include('./registry-form-claimant.html', {"person":"Claimant"})
+    
+    @@include('./registry-form-claimant.html', {"person":"Claimant", "trigger": "true"})
     @@include('./registry-form-claimant.html', {"person":"Defendant"})
     @@include('./registry-form-claimant.html', {"person":"Participant"})
   </div>

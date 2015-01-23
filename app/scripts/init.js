@@ -4,7 +4,7 @@
 
     $('.collapsible').collapsible();
 
-    // $('#initiate-form .collapse').collapse('show');
+    $('#initiate-form .collapse').collapse('show');
 
 
     //$(".button-collapse").sideNav();

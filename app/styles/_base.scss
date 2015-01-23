@@ -55,6 +55,23 @@ main {
   background: #fff;
 }
 
+// COMPONENTS
+// ***************************************
+.trigger-wrapper {
+  position: relative;
+}
+
+.btn-floating.trigger {
+  position: absolute;
+  top: -7px;
+  @include left(-7px);
+}
+
+.switch label {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 // FRONTPAGE
 // ***************************************
 .front-fullscreen {
@@ -371,3 +388,5 @@ i.status {
 .input-field .prefix {
   opacity: 0.8;
 }
+
+

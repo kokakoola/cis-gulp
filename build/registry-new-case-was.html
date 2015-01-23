@@ -101,7 +101,7 @@
 <!-- slide out panel -->
 <ul id="slide-out" class="side-nav full">
   <li>
-
+    
 <!-- <div id="skillset" class="column"> </div> -->
   </li>
   <li><a href="#!">First Sidebar Link</a></li>
@@ -134,326 +134,6 @@
 
           <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="registry.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">New case</h4>
-
-<div class="row no-marg-bot">
-  <div class="col s12">
-  <div class="card">
-    <div class="card-content">
-      <div class="row">
-        <div class="col s12 m1 check-inline right">
-          <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
-        </div>
-        <div class="col s12 m2 check-inline right">
-          <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m6">
-          <select required>
-            <option value="" disabled selected>Judge default</option>
-            <option value="1">Judge Else (6)</option>
-            <option value="2">Judge Other (14)</option>
-            <option value="3">Judge Judge (22)</option>
-          </select>
-        </div>
-        <div class="input-field col s12 m6">
-          <input id="claimValue" type="text" class="validate">
-          <label for="claimValue">Case value</label>
-        </div>
-        <div class="col s12 m6">
-          <select required>
-            <option value="" disabled selected>Case type </option>
-            <option value="1">استملاك</option>
-            <option value="2">property aquizition </option>
-            <option value="3">Option 3</option>
-          </select>
-        </div>
-        <div class="col s12 m6">
-          <input type="date" id="date" class="datepicker today">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<div class="row no-marg-bot">
-    <!-- Dropdown Trigger -->
-  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan lighten-2 trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-  <div id="claimants">
-  <div>
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-content">
-        <span class="card-title grey-text text-darken-4">claimant <i class="mdi-navigation-close left"></i></span>
-
-          <div class="divider"></div>
-          <div >
-            <div>
-              <div class="row">
-                <div class="input-field col s12 right"  id="the-basics">
-                  <input id="claimant" type="text" class="validate"  value="">
-                  <label for="claimant">claimants full name</label>
-                </div>
-                <div class="switch col s12 right">
-                  <br>
-                  <label>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                  </label>
-                  <span>&nbsp;Legal entity</span>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="claimantAddress" type="text" class="validate" value="">
-                  <label for="claimantAddress">claimants address</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="claimantId" type="text">
-                  <label for="claimantId">Document number</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="claimantPhone" type="text">
-                  <label for="claimantPhone">claimants phone</label>
-                </div>
-
-
-              </div>
-
-              <div class="row collapse" id="toggleRepresentative">
-              <span class="card-title grey-text text-darken-4">Representative</span>
-                <div class="divider"></div>
-
-                <div class="col s12 right">
-                  <select>
-                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-                    <option value="1">Lawyer</option>
-                    <option value="2">Parent</option>
-                    <option value="3">Legal guardian</option>
-                    <option value="4">Other</option>
-                  </select>
-                </div>
-
-
-                <div class="input-field col s12 right">
-                  <input id="parent" type="text" class="validate" value="">
-                  <label for="parent">Representatives full name</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentId" type="text">
-                  <label for="parentId">Representatives ID</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentPhone" type="text">
-                  <label for="parentPhone">Representatives Phone</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentAddress" type="text" value="">
-                  <label for="parentAddress">Representatives address</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <div id="defendants">
-  <div>
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-content">
-        <span class="card-title grey-text text-darken-4">defendant <i class="mdi-navigation-close left"></i></span>
-
-          <div class="divider"></div>
-          <div >
-            <div>
-              <div class="row">
-                <div class="input-field col s12 right"  id="the-basics">
-                  <input id="defendant" type="text" class="validate"  value="">
-                  <label for="defendant">defendants full name</label>
-                </div>
-                <div class="switch col s12 right">
-                  <br>
-                  <label>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                  </label>
-                  <span>&nbsp;Legal entity</span>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="defendantAddress" type="text" class="validate" value="">
-                  <label for="defendantAddress">defendants address</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="defendantId" type="text">
-                  <label for="defendantId">Document number</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="defendantPhone" type="text">
-                  <label for="defendantPhone">defendants phone</label>
-                </div>
-
-
-              </div>
-
-              <div class="row collapse" id="toggleRepresentative">
-              <span class="card-title grey-text text-darken-4">Representative</span>
-                <div class="divider"></div>
-
-                <div class="col s12 right">
-                  <select>
-                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-                    <option value="1">Lawyer</option>
-                    <option value="2">Parent</option>
-                    <option value="3">Legal guardian</option>
-                    <option value="4">Other</option>
-                  </select>
-                </div>
-
-
-                <div class="input-field col s12 right">
-                  <input id="parent" type="text" class="validate" value="">
-                  <label for="parent">Representatives full name</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentId" type="text">
-                  <label for="parentId">Representatives ID</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentPhone" type="text">
-                  <label for="parentPhone">Representatives Phone</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentAddress" type="text" value="">
-                  <label for="parentAddress">Representatives address</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <div id="participants">
-  <div>
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-content">
-        <span class="card-title grey-text text-darken-4">participant <i class="mdi-navigation-close left"></i></span>
-
-          <div class="divider"></div>
-          <div >
-            <div>
-              <div class="row">
-                <div class="input-field col s12 right"  id="the-basics">
-                  <input id="participant" type="text" class="validate"  value="">
-                  <label for="participant">participants full name</label>
-                </div>
-                <div class="switch col s12 right">
-                  <br>
-                  <label>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                  </label>
-                  <span>&nbsp;Legal entity</span>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="participantAddress" type="text" class="validate" value="">
-                  <label for="participantAddress">participants address</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="participantId" type="text">
-                  <label for="participantId">Document number</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="participantPhone" type="text">
-                  <label for="participantPhone">participants phone</label>
-                </div>
-
-
-              </div>
-
-              <div class="row collapse" id="toggleRepresentative">
-              <span class="card-title grey-text text-darken-4">Representative</span>
-                <div class="divider"></div>
-
-                <div class="col s12 right">
-                  <select>
-                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-                    <option value="1">Lawyer</option>
-                    <option value="2">Parent</option>
-                    <option value="3">Legal guardian</option>
-                    <option value="4">Other</option>
-                  </select>
-                </div>
-
-
-                <div class="input-field col s12 right">
-                  <input id="parent" type="text" class="validate" value="">
-                  <label for="parent">Representatives full name</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentId" type="text">
-                  <label for="parentId">Representatives ID</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentPhone" type="text">
-                  <label for="parentPhone">Representatives Phone</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentAddress" type="text" value="">
-                  <label for="parentAddress">Representatives address</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <div id="@@persons">
-  <div>
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Documents </span>
-
-          <div class="divider"></div>
-          <div class="row">
-            <div class="col s12 center">
-              <div class="card-panel bg-light valign-wrapper">
-                  <span ><h5><i class="mdi-file-file-upload"></i> Drop files here to upload</h5> or click here</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div>
-
 <div class="card large white">
   <div class="card-content">
     <div class="panel-group" id="initiate-form" role="tablist" aria-multiselectable="true">
@@ -476,80 +156,82 @@
         <div id="@@persons">
   <div>
     <div class="col s12 m6">
+
       <div class="card">
         <div class="card-content">
-        <span class="card-title grey-text text-darken-4">@@person <i class="mdi-navigation-close left"></i></span>
-
-          <div class="divider"></div>
-          <div >
-            <div>
-              <div class="row">
-                <div class="input-field col s12 right"  id="the-basics">
-                  <input id="@@person" type="text" class="validate"  value="">
-                  <label for="@@person">@@persons full name</label>
-                </div>
-                <div class="switch col s12 right">
-                  <br>
-                  <label>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                  </label>
-                  <span>&nbsp;Legal entity</span>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personAddress" type="text" class="validate" value="">
-                  <label for="@@personAddress">@@persons address</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personId" type="text">
-                  <label for="@@personId">Document number</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personPhone" type="text">
-                  <label for="@@personPhone">@@persons phone</label>
-                </div>
-
-
+          <div id="heading@@person">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapse@@person" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>@@person <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 right"  id="the-basics">
+              <input id="@@person" type="text" class="validate"  value="">
+              <label for="@@person">@@persons full name</label>
+            </div>
+          </div>
+          <div class="collapse" id="collapse@@person">
+            <div class="row">
+              <div class="switch col s12 right">
+                <br>
+                <label>
+                  <input type="checkbox">
+                  <span class="lever"></span>
+                </label>
+                <span>&nbsp;Legal entity</span>
               </div>
-
-              <div class="row collapse" id="toggleRepresentative">
+              <div class="input-field col s12 right">
+                <input id="@@personAddress" type="text" class="validate" value="">
+                <label for="@@personAddress">@@persons address</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="@@personId" type="text">
+                <label for="@@personId">Document number</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="@@personPhone" type="text">
+                <label for="@@personPhone">@@persons phone</label>
+              </div>
+            </div>
+            
+            
+            <div class="row collapse" id="toggleRepresentative">
               <span class="card-title grey-text text-darken-4">Representative</span>
-                <div class="divider"></div>
+              <div class="divider"></div>
 
-                <div class="col s12 right">
-                  <select>
-                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-                    <option value="1">Lawyer</option>
-                    <option value="2">Parent</option>
-                    <option value="3">Legal guardian</option>
-                    <option value="4">Other</option>
-                  </select>
-                </div>
-
-
-                <div class="input-field col s12 right">
-                  <input id="parent" type="text" class="validate" value="">
-                  <label for="parent">Representatives full name</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentId" type="text">
-                  <label for="parentId">Representatives ID</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentPhone" type="text">
-                  <label for="parentPhone">Representatives Phone</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentAddress" type="text" value="">
-                  <label for="parentAddress">Representatives address</label>
-                </div>
+              <div class="col s12 right">
+                <select>
+                  <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+                  <option value="1">Lawyer</option>
+                  <option value="2">Parent</option>
+                  <option value="3">Legal guardian</option>
+                  <option value="4">Other</option>
+                </select>
               </div>
+
+
+              <div class="input-field col s12 right">
+                <input id="parent" type="text" class="validate" value="">
+                <label for="parent">Representatives full name</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentId" type="text">
+                <label for="parentId">Representatives ID</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentPhone" type="text">
+                <label for="parentPhone">Representatives Phone</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentAddress" type="text" value="">
+                <label for="parentAddress">Representatives address</label>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
             </div>
           </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -731,80 +413,82 @@
 <div id="@@persons">
   <div>
     <div class="col s12 m6">
+
       <div class="card">
         <div class="card-content">
-        <span class="card-title grey-text text-darken-4">@@person <i class="mdi-navigation-close left"></i></span>
-
-          <div class="divider"></div>
-          <div >
-            <div>
-              <div class="row">
-                <div class="input-field col s12 right"  id="the-basics">
-                  <input id="@@person" type="text" class="validate"  value="">
-                  <label for="@@person">@@persons full name</label>
-                </div>
-                <div class="switch col s12 right">
-                  <br>
-                  <label>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                  </label>
-                  <span>&nbsp;Legal entity</span>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personAddress" type="text" class="validate" value="">
-                  <label for="@@personAddress">@@persons address</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personId" type="text">
-                  <label for="@@personId">Document number</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personPhone" type="text">
-                  <label for="@@personPhone">@@persons phone</label>
-                </div>
-
-
+          <div id="heading@@person">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapse@@person" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>@@person <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 right"  id="the-basics">
+              <input id="@@person" type="text" class="validate"  value="">
+              <label for="@@person">@@persons full name</label>
+            </div>
+          </div>
+          <div class="collapse" id="collapse@@person">
+            <div class="row">
+              <div class="switch col s12 right">
+                <br>
+                <label>
+                  <input type="checkbox">
+                  <span class="lever"></span>
+                </label>
+                <span>&nbsp;Legal entity</span>
               </div>
-
-              <div class="row collapse" id="toggleRepresentative">
+              <div class="input-field col s12 right">
+                <input id="@@personAddress" type="text" class="validate" value="">
+                <label for="@@personAddress">@@persons address</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="@@personId" type="text">
+                <label for="@@personId">Document number</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="@@personPhone" type="text">
+                <label for="@@personPhone">@@persons phone</label>
+              </div>
+            </div>
+            
+            
+            <div class="row collapse" id="toggleRepresentative">
               <span class="card-title grey-text text-darken-4">Representative</span>
-                <div class="divider"></div>
+              <div class="divider"></div>
 
-                <div class="col s12 right">
-                  <select>
-                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-                    <option value="1">Lawyer</option>
-                    <option value="2">Parent</option>
-                    <option value="3">Legal guardian</option>
-                    <option value="4">Other</option>
-                  </select>
-                </div>
-
-
-                <div class="input-field col s12 right">
-                  <input id="parent" type="text" class="validate" value="">
-                  <label for="parent">Representatives full name</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentId" type="text">
-                  <label for="parentId">Representatives ID</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentPhone" type="text">
-                  <label for="parentPhone">Representatives Phone</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentAddress" type="text" value="">
-                  <label for="parentAddress">Representatives address</label>
-                </div>
+              <div class="col s12 right">
+                <select>
+                  <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+                  <option value="1">Lawyer</option>
+                  <option value="2">Parent</option>
+                  <option value="3">Legal guardian</option>
+                  <option value="4">Other</option>
+                </select>
               </div>
+
+
+              <div class="input-field col s12 right">
+                <input id="parent" type="text" class="validate" value="">
+                <label for="parent">Representatives full name</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentId" type="text">
+                <label for="parentId">Representatives ID</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentPhone" type="text">
+                <label for="parentPhone">Representatives Phone</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentAddress" type="text" value="">
+                <label for="parentAddress">Representatives address</label>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
             </div>
           </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -825,80 +509,82 @@
 <div id="@@persons">
   <div>
     <div class="col s12 m6">
+
       <div class="card">
         <div class="card-content">
-        <span class="card-title grey-text text-darken-4">@@person <i class="mdi-navigation-close left"></i></span>
-
-          <div class="divider"></div>
-          <div >
-            <div>
-              <div class="row">
-                <div class="input-field col s12 right"  id="the-basics">
-                  <input id="@@person" type="text" class="validate"  value="">
-                  <label for="@@person">@@persons full name</label>
-                </div>
-                <div class="switch col s12 right">
-                  <br>
-                  <label>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                  </label>
-                  <span>&nbsp;Legal entity</span>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personAddress" type="text" class="validate" value="">
-                  <label for="@@personAddress">@@persons address</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personId" type="text">
-                  <label for="@@personId">Document number</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="@@personPhone" type="text">
-                  <label for="@@personPhone">@@persons phone</label>
-                </div>
-
-
+          <div id="heading@@person">
+            <a data-toggle="collapse" data-parent="#initiate-form" href="collapse@@person" class="card-title grey-text text-darken-4" ><i class="mdi-navigation-more-vert"></i>@@person <i class="mdi-navigation-close left"></i></a>
+            <div class="divider"></div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 right"  id="the-basics">
+              <input id="@@person" type="text" class="validate"  value="">
+              <label for="@@person">@@persons full name</label>
+            </div>
+          </div>
+          <div class="collapse" id="collapse@@person">
+            <div class="row">
+              <div class="switch col s12 right">
+                <br>
+                <label>
+                  <input type="checkbox">
+                  <span class="lever"></span>
+                </label>
+                <span>&nbsp;Legal entity</span>
               </div>
-
-              <div class="row collapse" id="toggleRepresentative">
+              <div class="input-field col s12 right">
+                <input id="@@personAddress" type="text" class="validate" value="">
+                <label for="@@personAddress">@@persons address</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="@@personId" type="text">
+                <label for="@@personId">Document number</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="@@personPhone" type="text">
+                <label for="@@personPhone">@@persons phone</label>
+              </div>
+            </div>
+            
+            
+            <div class="row collapse" id="toggleRepresentative">
               <span class="card-title grey-text text-darken-4">Representative</span>
-                <div class="divider"></div>
+              <div class="divider"></div>
 
-                <div class="col s12 right">
-                  <select>
-                    <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-                    <option value="1">Lawyer</option>
-                    <option value="2">Parent</option>
-                    <option value="3">Legal guardian</option>
-                    <option value="4">Other</option>
-                  </select>
-                </div>
-
-
-                <div class="input-field col s12 right">
-                  <input id="parent" type="text" class="validate" value="">
-                  <label for="parent">Representatives full name</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentId" type="text">
-                  <label for="parentId">Representatives ID</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentPhone" type="text">
-                  <label for="parentPhone">Representatives Phone</label>
-                </div>
-                <div class="input-field col s12 right">
-                  <input id="parentAddress" type="text" value="">
-                  <label for="parentAddress">Representatives address</label>
-                </div>
+              <div class="col s12 right">
+                <select>
+                  <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+                  <option value="1">Lawyer</option>
+                  <option value="2">Parent</option>
+                  <option value="3">Legal guardian</option>
+                  <option value="4">Other</option>
+                </select>
               </div>
+
+
+              <div class="input-field col s12 right">
+                <input id="parent" type="text" class="validate" value="">
+                <label for="parent">Representatives full name</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentId" type="text">
+                <label for="parentId">Representatives ID</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentPhone" type="text">
+                <label for="parentPhone">Representatives Phone</label>
+              </div>
+              <div class="input-field col s12 right">
+                <input id="parentAddress" type="text" value="">
+                <label for="parentAddress">Representatives address</label>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
             </div>
           </div>
         </div>
-        <div class="card-action">
-          <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
-        </div>
+
       </div>
     </div>
   </div>
@@ -993,24 +679,6 @@
       <i class="mdi-content-save"></i>
     </a>
 
-  </div>
-</div>
-
-<!-- Dropdown Structure -->
-<ul id='add' class='dropdown-content'>
-  <li><a href="#!" data-datacontainer="#claimants" class="js-addDataRow">Claimant</a></li>
-  <li><a href="#!">Defendant</a></li>
-  <li><a href="#!">Participant</a></li>
-</ul>
-
-<!-- Alert modal Structure -->
-<div id="modal1" class="modal">
-  <h4>Hei!</h4>
-  <p>You are about to delete the claimant. Are you sure? </p>
-  <hr>
-  <div class="right">
-    <a href="#" class="waves-effect btn-flat modal-close">No</a>
-    <a href="#" class="waves-effect btn teal modal-close">Yes</a>
   </div>
 </div>
 
