@@ -8,9 +8,9 @@
 
   <div class="panel-group" id="initiate-form">
     
-    @@include('./registry-form-claimant.html', {"person":"Claimant", "trigger": "true", "representative": true })
-    @@include('./registry-form-claimant.html', {"person":"Defendant", "representative": true})
-    @@include('./registry-form-claimant.html', {"person":"Participant", "representative": false})
+    @@include('./registry-form-claimant.html', {"person":"Claimant" })
+    @@include('./registry-form-defendant.html', {"person":"Defendant"})
+    @@include('./registry-form-participant.html', {"person":"Participant"})
   </div>
   @@include('./registry-form-documents.html')
   @@include('./registry-form-notes.html')
