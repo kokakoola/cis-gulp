@@ -2,15 +2,6 @@
   $(function(){
     //$(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
 
-    $(".dropdown-button").dropdown({
-      hover: false
-    });
-
-    $(".dropdown-button-simplified").dropdown({
-      constrain_width: false,
-      hover: false
-    });
-
     $('.collapsible').collapsible();
 
     $('#initiate-form .collapse').collapse('show');
@@ -29,33 +20,51 @@
       out_duration: 200
     });
 
-    function loadDataTable() {
-      $('table.data').DataTable({
-        searching: false,
-        lengthChange: false,
-        'iDisplayLength': 100,
-        columnDefs: [
-          { "orderable": false, "targets": 0 }
-        ]
-      });
+    function bindDataTable() {
+      if ($.fn.dataTable.isDataTable('table.data')) {
+        $('table.data').DataTable();
+      }
+      else {
+        $('table.data').DataTable({
+          searching: false,
+          lengthChange: false,
+          'iDisplayLength': 100,
+          columnDefs: [
+            { "orderable": false, "targets": 0 }
+          ]
+        });
+      }
     }
 
-    loadDataTable();
+    function bindFormsUi() {
+      // pickadate init with preset Today
+      $('.datepicker.today').pickadate({
+        onStart: function ()
+        {
+          var date = new Date();
+          this.set('select', [date.getFullYear(), date.getMonth() + 1, date.getDate()]);
+        }
+      });
 
-    $('select').material_select();
+      $('.datepicker').pickadate();
+
+      $('select').material_select();
+    }
+
+      $(".dropdown-button").dropdown({
+        constrain_width: false,
+        hover: false
+      });
+
+      $(".dropdown-button-simplified").dropdown({
+        constrain_width: false,
+        hover: false
+      });
+
+    bindDataTable();
+    bindFormsUi();
 
     $('.collapsible').collapsible();
-
-    // pickadate init with preset Today
-    $('.datepicker.today').pickadate({
-      onStart: function ()
-      {
-        var date = new Date();
-        this.set('select', [date.getFullYear(), date.getMonth() + 1, date.getDate()]);
-      }
-    });
-
-    $('.datepicker').pickadate();
 
     // wow.js init
     new WOW().init();
@@ -80,13 +89,15 @@
       });
     }
 
-    $('.language').language({
+    $('#languageDropdown').language({
       complete: function () {
-        loadDataTable();
+        bindDataTable();
+        bindFormsUi();
       }
     });
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
 /* jshint strict: true */
 ;(function ($) {
   'use strict';
@@ -98,9 +109,7 @@
       var obj = $(this);
       var lang = $.cookie('cis-language');
 
-      obj.changeLanguage = function() {
-        var selected = obj.attr('data-value');
-
+      obj.changeLanguage = function(selected) {
         $.cookie(options.cookieName, selected);
       };
 
@@ -120,25 +129,31 @@
         if(lang === undefined)
           lang = options.defaultLang;
 
-        $.getJSON('./languages/' + lang + '.json', function(response){
-          var element = $(options.template);
+        $(options.template).each(function() {
+          var element = $(this);
           var source  = element.html();
-          var template = Handlebars.compile(source);
-          var html = template(response);
+          var json = element.data('lang');
 
-          element.prev().html(html);
+          $.getJSON('./languages/' + json + '_' + lang + '.json', function(response){
+            var template = Handlebars.compile(source);
+            var html = template(response);
 
-          options.complete.call(this);
+            element.prev().html(html);
+
+            options.complete.call(this);
+          });
         });
       };
 
-      obj.click(function () {
-        obj.changeLanguage();
+      obj.find('a').click(function () {
+        var selected = $(this).attr('data-value');
+
+        obj.changeLanguage(selected);
 
         location.reload();
       });
 
-      $(document).ready(function() {
+      $(window).load(function() {
         if(lang === undefined)
           $.cookie(options.cookieName, options.defaultLang);
 
@@ -158,6 +173,7 @@
     complete: function () {}
   };
 })(jQuery);
+
 // Animate css functions
 // http://www.telegraphicsinc.com/2013/07/how-to-use-animate-css/
 function animationHover(element, animation){

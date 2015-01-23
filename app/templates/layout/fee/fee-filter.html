@@ -13,28 +13,28 @@
   </div>
   <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">
-    <label for="caseNumber">Case number</label>
+    <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
   <div class="col s12 m2 right">
     <select>
-      <option value="" disabled selected>Case type</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
+      {{#each Filter.CaseType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
   <div class="input-field col s12 m2 right">
     <input id="claimant" type="text" >
-    <label for="claimant">Claimant</label>
+    <label for="claimant">{{Filter.Claimant}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
     <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">From</label>
+    <label for="startDate">{{Filter.From}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">To</label>
+    <label for="endDate">{{Filter.To}}</label>
     <input id="endDate" type="text" class="datepicker">
   </div>
 </div>
@@ -43,22 +43,22 @@
 <div class="row collapse" id="moreFields">
   <div class="col s12 m3 right">
     <select>
-      <option value="" disabled selected>Court type</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
+      {{#each Filter.CourtType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
   <div class="input-field col s12 m3 right">
     <input id="judge" type="text">
-    <label for="judge">Judge</label>
+    <label for="judge">{{Filter.Judge}}</label>
   </div>
   <div class="input-field col s12 m3 right">
     <input id="payer" type="text">
-    <label for="payer">Payer</label>
+    <label for="payer">{{Filter.Payer}}</label>
   </div>
     <div class="input-field col s12 m3 right">
     <input id="recipt" type="text">
-    <label for="recipt">Receipt</label>
+    <label for="recipt">{{Filter.Receipt}}</label>
   </div>
 </div>

@@ -2,16 +2,6 @@
   $(function(){
     //$(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
 
-    $(".dropdown-button").dropdown({
-      constrain_width: false,
-      hover: false
-    });
-
-    $(".dropdown-button-simplified").dropdown({
-      constrain_width: false,
-      hover: false
-    });
-
     $('.collapsible').collapsible();
 
     $('#initiate-form .collapse').collapse('show');
@@ -30,33 +20,51 @@
       out_duration: 200
     });
 
-    function loadDataTable() {
-      $('table.data').DataTable({
-        searching: false,
-        lengthChange: false,
-        'iDisplayLength': 100,
-        columnDefs: [
-          { "orderable": false, "targets": 0 }
-        ]
-      });
+    function bindDataTable() {
+      if ($.fn.dataTable.isDataTable('table.data')) {
+        $('table.data').DataTable();
+      }
+      else {
+        $('table.data').DataTable({
+          searching: false,
+          lengthChange: false,
+          'iDisplayLength': 100,
+          columnDefs: [
+            { "orderable": false, "targets": 0 }
+          ]
+        });
+      }
     }
 
-    loadDataTable();
+    function bindFormsUi() {
+      // pickadate init with preset Today
+      $('.datepicker.today').pickadate({
+        onStart: function ()
+        {
+          var date = new Date();
+          this.set('select', [date.getFullYear(), date.getMonth() + 1, date.getDate()]);
+        }
+      });
 
-    $('select').material_select();
+      $('.datepicker').pickadate();
+
+      $('select').material_select();
+    }
+
+      $(".dropdown-button").dropdown({
+        constrain_width: false,
+        hover: false
+      });
+
+      $(".dropdown-button-simplified").dropdown({
+        constrain_width: false,
+        hover: false
+      });
+
+    bindDataTable();
+    bindFormsUi();
 
     $('.collapsible').collapsible();
-
-    // pickadate init with preset Today
-    $('.datepicker.today').pickadate({
-      onStart: function ()
-      {
-        var date = new Date();
-        this.set('select', [date.getFullYear(), date.getMonth() + 1, date.getDate()]);
-      }
-    });
-
-    $('.datepicker').pickadate();
 
     // wow.js init
     new WOW().init();
@@ -81,9 +89,10 @@
       });
     }
 
-    $('.language').language({
+    $('#languageDropdown').language({
       complete: function () {
-        loadDataTable();
+        bindDataTable();
+        bindFormsUi();
       }
     });
   }); // end of document ready

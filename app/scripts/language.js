@@ -9,9 +9,7 @@
       var obj = $(this);
       var lang = $.cookie('cis-language');
 
-      obj.changeLanguage = function() {
-        var selected = obj.attr('data-value');
-
+      obj.changeLanguage = function(selected) {
         $.cookie(options.cookieName, selected);
       };
 
@@ -31,25 +29,31 @@
         if(lang === undefined)
           lang = options.defaultLang;
 
-        $.getJSON('./languages/' + lang + '.json', function(response){
-          var element = $(options.template);
+        $(options.template).each(function() {
+          var element = $(this);
           var source  = element.html();
-          var template = Handlebars.compile(source);
-          var html = template(response);
+          var json = element.data('lang');
 
-          element.prev().html(html);
+          $.getJSON('./languages/' + json + '_' + lang + '.json', function(response){
+            var template = Handlebars.compile(source);
+            var html = template(response);
 
-          options.complete.call(this);
+            element.prev().html(html);
+
+            options.complete.call(this);
+          });
         });
       };
 
-      obj.click(function () {
-        obj.changeLanguage();
+      obj.find('a').click(function () {
+        var selected = $(this).attr('data-value');
+
+        obj.changeLanguage(selected);
 
         location.reload();
       });
 
-      $(document).ready(function() {
+      $(window).load(function() {
         if(lang === undefined)
           $.cookie(options.cookieName, options.defaultLang);
 
