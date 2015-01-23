@@ -164,9 +164,12 @@
         <div class="col s12">
           <a class="btn-floating btn-large waves-effect waves-light cyan darken-3 adds-form" href="registry-new-case.html"><i class="mdi-content-add"></i></a>
 <h4 class="header white-text text-darken-2">Prime registry</h4>
-<div class="filter-body card large lighten-2">
-  <div class="card-content" >
-    <div class="row">
+
+<div id="placeholder-registry-filter" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
+  <div class="filter-body card large lighten-2">
+    <div class="card-content" >
+      <div class="row">
   <div class="col s12 m2 right">
     <ul id="dropdownStatus" class="dropdown-content simplified">
         <li><a href="#!">Drafts<i class="status draft"></i></a></li>
@@ -181,28 +184,28 @@
   </div>
   <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">
-    <label for="caseNumber">Case number</label>
+    <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
   <div class="col s12 m2 right">
     <select>
-      <option value="" disabled selected>Case type </option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
+      {{#each Filter.CaseType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
   <div class="input-field col s12 m2 right">
     <input id="claimant" type="text" >
-    <label for="claimant">Judge</label>
+    <label for="claimant">{{Filter.Judge}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
     <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">From</label>
+    <label for="startDate">{{Filter.From}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">To</label>
+    <label for="endDate">{{Filter.To}}</label>
     <input id="endDate" type="text" class="datepicker">
 
   </div>
@@ -212,58 +215,59 @@
 <div class="row collapse" id="moreFields">
   <div class="col s12 m2 right">
   <div class="check-inline">
-    <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
+    <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
   </div>
   <br>
   <div class="check-inline">
-    <input type="checkbox" id="aid" /><label for="aid">Judical aid</label>
+    <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
   </div>
   </div>
 
   <div class="col s12 m3 right">
     <div class="row">
       <div class="col s12">
-        <label for="">Case value</label>
+        <label for="">{{Filter.CaseValue.Label}}</label>
       </div>
       <div class="input-field col s12 m6">
         <input id="fromSum" type="text">
-        <label for="fromSum">From</label>
+        <label for="fromSum">{{Filter.CaseValue.From}}</label>
       </div>
       <div class="input-field col s12 m6">
         <input id="toSum" type="text" >
-        <label for="toSum">To</label>
+        <label for="toSum">{{Filter.CaseValue.To}}</label>
       </div>
     </div>
   </div>
   <div class="input-field col s12 m3 right">
     <input id="claimant" type="text">
-    <label for="claimant">Claimant</label>
+    <label for="claimant">{{Filter.Claimant}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <input id="defendant" type="text">
-    <label for="defendant">Defendant</label>
+    <label for="defendant">{{Filter.Defendant}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <input id="participant" type="text">
-    <label for="participant">Participant</label>
+    <label for="participant">{{Filter.Participant}}</label>
   </div>
 </div>
+    </div>
   </div>
-</div>
-<div class="filter-action left">
-  <button class="btn bg-orange waves-effect waves-light" type="submit" name="action">
-    Search
-    <i class="mdi-action-search right"></i>
-  </button>
-  <button class="btn bg-mauve waves-effect waves-light" data-toggle="collapse" data-target="#moreFields">
-    More fields
-    <i class="mdi-navigation-expand-more right"></i>
-  </button>
-  <button class="btn bg-mauve waves-effect waves-light">
-    Clear all
-    <i class="mdi-navigation-close right"></i>
-  </button>
-</div>
+  <div class="filter-action left">
+    <button class="btn bg-orange waves-effect waves-light" type="submit" name="action">
+      {{Filter.ButtonSearch}}
+      <i class="mdi-action-search right"></i>
+    </button>
+    <button class="btn bg-mauve waves-effect waves-light" data-toggle="collapse" data-target="#moreFields">
+      {{Filter.ButtonMoreFields}}
+      <i class="mdi-navigation-expand-more right"></i>
+    </button>
+    <button class="btn bg-mauve waves-effect waves-light">
+      {{Filter.ButtonClearAll}}
+      <i class="mdi-navigation-close right"></i>
+    </button>
+  </div>
+</script>
         </div>
       </div>
     </div>

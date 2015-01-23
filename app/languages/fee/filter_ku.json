@@ -13,14 +13,10 @@
           ]
         },
         "CaseNumber" : "رقم القضية (GT)",
-        "Status" : [
-            {
-                "Value0" : "وضع (GT)",
-                "Value1" : "غير مدفوع",
-                "Value2" : "مدفوع",
-                "Value3" : "دققنا"
-            }
-        ],
+        "Status" : {
+          "Label" : "وضع (GT)",
+          "Values": ["غير مدفوع", "مدفوع", "دققنا"]
+        },
         "CourtType": {
           "Label": "نوع المحكمة (GT)",
           "Values": [
