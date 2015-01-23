@@ -48,7 +48,7 @@ nav .responsive-img {
     height: $navbar-height;
     line-height: $navbar-height;
     &.scrolled {
-      background: #37474f;
+      background: color("blue-grey", "darken-4");
       border-bottom-color: transparent;
       height: $navbar-height-after;
       line-height: $navbar-height-after;

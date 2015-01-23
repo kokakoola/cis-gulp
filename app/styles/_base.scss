@@ -82,7 +82,7 @@ main {
 }
 
 .full-bg {
-  background: url('../images/suleymania.jpg');
+  background: url('../images/Suleymania2.jpg');
   // url('assets/images/bg-10.jpg');
   // linear-gradient(116deg, #dadf19, #e1ab3e, #ee7009);
   // background-size: 600% 600%;
@@ -176,22 +176,52 @@ animation: second 30s ease infinite;
 // CONTENT
 // *********************************
 .main-banner {
-  background:  url('../images/bg-11.jpg') no-repeat center center;
+  background:  url('../images/Suleymania2.jpg') no-repeat center center;
   background-size: cover;
   margin-top: -64px;
-  height: 210px;
+  height: 255px;
+  border-bottom: 15px solid #fff;
 }
 
 .card-onbanner {
-  margin-top: -200px;
-  a.adds-form {
+  margin-top: -185px;
+  a.round-top {
     vertical-align: middle;
-    @include margin-left(25px);
-    z-index: 6000;
+    @include margin-left(-65px);
+    z-index: 200;
+    &.add {
+      background-color: color("cyan", "darken-1");
+    }
+    &.remove {
+      background-color: color("indigo", "darken-4");
+    }
   }
   h4 {
     display: inline-block;
     @include padding-left(15px);
+  }
+}
+
+.btn.submit {
+  background-color: color("cyan", "darken-2");
+}
+
+.btn.save {
+  background-color: color("cyan", "darken-1");
+}
+
+.btn.save-light {
+  background-color: color("cyan", "base");
+} 
+
+.btn.cancel {
+  color: color("grey-text", "text-darken-2");
+}
+
+.btn.cancel-light {
+  background-color: color("grey", "lighten-5");
+  i {
+    color: color("grey-text", "text-darken-2");
   }
 }
 
@@ -270,15 +300,6 @@ textarea.valid {
   height: 3rem;
 }
 
-.removeClaimant {
-  margin-top: -72px;
-}
-// .adds-form {
-//   top: 0.6rem;
-//   position: absolute;
-//   right: 30rem;
-//   z-index: 5000;
-// }
 
 
 // .rotate-45 {

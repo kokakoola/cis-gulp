@@ -6,24 +6,19 @@
         "Claimant" : "Claimant",
         "CaseType" : {
           "Label" : "Case type",
-          "Values": ["Case type", "Option 1", "Option 2", "Option 3"]
+          "Values": ["Option 1", "Option 2", "Option 3"]
         },
         "CaseNumber" : "Case number",
-        "Status" : [
-            {
-                "Value0" : "Status",
-                "Value1" : "Unpaid",
-                "Value2" : "Paid",
-                "Value3" : "Audited"
-            }
-        ],
+        "Status" : {
+          "Label" : "Status",
+          "Values": ["Unpaid", "Paid", "Audited"]
+        },
         "Receipt" : "Receipt",
         "Payer" : "Payer",
         "Judge" : "Judge",
         "CourtType" : {
           "Label" : "Court type",
           "Values" : [
-            "Court type",
             "Primary court",
             "Labour court",
             "Personal Status court",

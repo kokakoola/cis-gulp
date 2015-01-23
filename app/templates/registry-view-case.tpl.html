@@ -1,0 +1,23 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "registry-new-case",
+  "htmlClass": "registry-new-case",
+  "title": "New case"
+})
+
+@@include('./layout/header.html')
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+          @@include('./layout/new-case/registry-card-with-form-registered.html')
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')

@@ -5,7 +5,7 @@
     $('.collapsible').collapsible();
 
     $('#initiate-form .collapse').collapse('show');
-
+    $('#toggleRepresentative').collapse('hide');
 
     //$(".button-collapse").sideNav();
 

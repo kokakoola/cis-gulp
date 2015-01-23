@@ -16,6 +16,8 @@ $(window).scroll(function() {
     }
 });
 
+var table = $('#placeholder-fee-table').DataTable();
+ 
 // START DOCREADY
   $(document).ready(function() {
 //    loadLanguage();

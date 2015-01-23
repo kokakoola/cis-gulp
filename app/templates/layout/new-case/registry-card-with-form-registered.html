@@ -1,30 +1,30 @@
 <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="registry.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header white-text text-darken-2">New case</h4>
+<h4 class="header white-text text-darken-2">Case no 246/43/3465</h4>
 
 <div class="row">
   @@include('./registry-form-general.html')
 
     <!-- Dropdown Trigger -->
 
-  <div class="panel-group" id="initiate-form">
+  <div class="panel-group" id="initiate-form-registered">
     
     @@include('./registry-form-claimant.html', {"person":"Claimant" })
     @@include('./registry-form-defendant.html', {"person":"Defendant"})
     @@include('./registry-form-participant.html', {"person":"Participant"})
   </div>
-  @@include('./registry-form-documents.html')
-  @@include('./registry-form-notes.html')
+  @@include('./registry-documents-included.html')
+  @@include('./registry-form-note-filled.html')
 </div>
 
 <div class="row">
   <div class="col s12">
-    <hr>
-    <button class="btn-flat waves-effect waves-light">Cancel</button>
-    <button class="btn bg-orange waves-effect waves-light">Send to judge<i class="mdi-content-send"></i></button>
-    <button class="btn bg-water waves-effect waves-dark">Register<i class="mdi-editor-border-color"></i></button>
-    <button class="btn bg-mauve waves-effect waves-dark">Save for later<i class="mdi-editor-border-color"></i></button>
+    <button class="btn btn-large waves-effect waves-light submit right">Send to judge</button>
+    <button class="btn btn-large waves-effect waves-light save right">Register</button>
+    <button class="btn btn-large waves-effect waves-light save-light right">Save</button>
+    <button class="btn btn-flat btn-large waves-effect waves-light cancel right" type="submit" name="action" ><i class="mdi-content-clear"></i></button>
   </div>
 </div>
+
 
 <!-- Dropdown Structure -->
 <ul id='add' class='dropdown-content'>

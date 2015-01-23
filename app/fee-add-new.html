@@ -98,9 +98,11 @@
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="registry.html">Prime registry</a></li>
   <li><a href="registry-new-case.html">Add case</a></li>
+  <li><a href="registry-view-case.html">View case</a></li>
   <li class="divider"></li>
   <li><a href="fee.html">Fee</a></li>
   <li><a href="fee-add-new.html">Add fee</a></li>
+  <li><a href="fee-edit.html">View fee</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -162,167 +164,150 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="fee.html"><i class="mdi-navigation-close"></i></a>
+          <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="fee.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">New fee</h4>
 
 <div class="row">
+  <div class="col s12">
+    <div class="card">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
+    <div class="col s12 m3 check-inline">
+      <input type="checkbox" id="grantJudicialAid" />
+      <label for="grantJudicialAid">Grant judicial aid</label>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col s12 m6">
+        <select required>
+          <option value="" disabled selected>Court</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
+        <label for="payer">Payer</label>
+      </div>
+      <div class="col s12 m6">
+        <select required>
+          <option value="" disabled selected>Case type </option>
+          <option value="1">استملاك</option>
+          <option value="2">property aquizition </option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+      <div class="input-field col s12 m6">
+        <label for="paymentDate">Payment date</label>
+        <input id="paymentDate" type="text" class="datepicker today">
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
   <div class="col s12 m6">
     <div class="card">
       <div class="card-content">
         <span class="card-title grey-text text-darken-4">Claimants</span>
         <div class="divider"></div>
-        <div class="section">
-          <p>Forename Middlename Surname</p>
-          <p>Forename Middlename Surname</p>
-          <p>Forename Surname</p>
-          <p>Forename Middlename Surname</p>
-          <p>Forename Fathers Name Surname</p>
-          <p>Forename Middlename Surname</p>
-          <p>Forename Middlename Surname</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Claim document</span>
-        <div class="divider"></div>
-        <br>
-        <div class="col s12 m10 offset-m2">
-           <div class="row valign-wrapper">
-             <div class="col s2">
-               <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-             </div>
-             <div class="col s10">
-               <span class="black-text">
-                 This is a pdf preview of the claim. Add more information if relevant.
-               </span>
-             </div>
-           </div>
-          </div>
+        <ul>
+          <li>Forename Middlename Surname</li>
+          <li>Forename Middlename Surname</li>
+          <li>Forename Surname</li>
+          <li>Forename Fathers Name Surname</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <div class="col s12 m6">
     <div class="card">
-      <div class="card-content">
-        <div class="row">
-          <div class="col s12 right">
-            <span class="card-title grey-text text-darken-4">Case</span>
-            <div class="col s12 m6 check-inline">
-              <input type="checkbox" id="grantJudicialAid" />
-              <label for="grantJudicialAid">Grant judicial aid</label>
-            </div>
-            <div class="divider"></div>
-          </div>
-<!--           <div class="input-field col s12">
-            <input id="case_nr" type="text">
-            <label for="case_nr">Case number</label>
-          </div> -->
-          <div class="input-field col s12">
-            <select>
-              <option value="" disabled selected>Case type </option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-          </div>
-          <div class="input-field col s12">
-            <select>
-              <option value="" disabled selected>Court type</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-          </div>
-          <div class="input-field col s12">
-            <i class="mdi-notification-event-note prefix"></i>
-            <label for="paymentDate">Payment date</label>
-            <input id="paymentDate" type="text" class="datepicker today">
-          </div>
-          <div class="input-field col s12">
-            <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
-            <label for="payer">Payer</label>
-          </div>
-        </div>
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Claim document</span>
+    <div class="divider"></div>
+    <br>
+    <div class="col s12 m10 offset-m2">
+       <div class="row valign-wrapper">
+         <div class="col s2">
+           <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
+         </div>
+         <div class="col s10">
+           <span class="black-text">
+             This is a pdf preview of the claim. Add more information if relevant.
+           </span>
+         </div>
+       </div>
       </div>
-    </div>
   </div>
-    <div class="col s12 m6  trigger-wrapper">
-  <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-  <div class="card">
-    <div class="card-content">
-      <div class="row">
-        <div class="col s12">
-          <span class="card-title grey-text text-darken-4">Fee</span>
-          <div class="divider"></div>
-        </div>
-        <div class="section">
-          <div class="input-field col s12">
-            <input id="sum" type="text">
-            <label for="sum">Sum</label>
-          </div>
-          <div class="input-field col s12">
-            <select>
-              <option value="" disabled selected>Fee type</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-          </div>
-        </div>
+</div>
+  </div>
+
+<div class="col s12 m6  trigger-wrapper">
+    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+<div class="card brown lighten-5">
+  <div class="card-content">
+    <div class="row">
+<!--       <div class="col s12">
+        <span class="card-title grey-text text-darken-4">Fee</span>
+        
+        <div class="divider"></div>
+      </div> -->
+      <div class="input-field col s4">
+        <input id="sum" type="text">
+        <label for="sum">Sum</label>
+      </div>
+      <div class="col s8">
+        <select>
+          <option value="" disabled selected>Fee type</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
       </div>
     </div>
   </div>
 </div>
 
 </div>
+</div>
 
-<hr>
-
-<button class="btn btn-flat waves-effect waves-light" type="submit" name="action">Cancel
-  <i class="mdi-navigation-cancel"></i>
-</button>
-<button class="btn bg-water waves-effect waves-dark" type="submit" name="action">Save
-  <i class="mdi-content-save"></i>
-</button>
-<button class="btn bg-orange waves-effect waves-dark" type="submit" name="action">Accept payment
-  <i class="mdi-action-done"></i>
-</button>
-
+<button class="btn btn-large waves-effect waves-light submit right" type="submit" name="action">Accept payment</button>
+<button class="btn btn-large waves-effect waves-light save right" type="submit" name="action">Save</button>
+<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" type="submit" name="action" ><i class="mdi-content-clear"></i></button>
         </div>
       </div>
     </div>
   </div>
 </main>
 
-  <footer class="grey darken-3">
+<footer class="page-footer blue-grey darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+      </div>
+      <!-- <div class="col l3 s12">
+        <h5 class="white-text">Help center</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Other important numbers</h5>
+      </div> -->
+    </div>
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About</h5>
-          <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Help center</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Other important numbers</h5>
-        </div>
-      </div>
+    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text lighten-3" href="http://netgroup.ee">Netgroup</a>
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
