@@ -10711,6 +10711,21 @@ main {
   background: #fff;
 }
 
+.trigger-wrapper {
+  position: relative;
+}
+
+.btn-floating.trigger {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+}
+
+.switch label {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 .front-fullscreen {
   position: fixed;
   top: 20px;

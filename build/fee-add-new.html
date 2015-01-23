@@ -101,7 +101,7 @@
 <!-- slide out panel -->
 <ul id="slide-out" class="side-nav full">
   <li>
-
+    
 <!-- <div id="skillset" class="column"> </div> -->
   </li>
   <li><a href="#!">First Sidebar Link</a></li>
@@ -136,16 +136,16 @@
 
 <div class="row">
   <div class="col s12 m5">
-    <div class="card large white">
+    <div class="card">
       <div class="card-content">
         <span class="card-title grey-text text-darken-4">Claimants</span>
         <div class="divider"></div>
         <div class="section">
-          <p>Stuff</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eros lorem. Integer luctus et arcu a gravida. Aliquam porta mi vitae ipsum ultrices, eu eleifend dui rutrum.</p>
         </div>
       </div>
     </div>
-    <div class="card large white">
+    <div class="card">
       <div class="card-content">
         <span class="card-title grey-text text-darken-4">Claim</span>
         <div class="divider"></div>
@@ -156,11 +156,13 @@
     </div>
   </div>
   <div class="col s12 m7">
-    <div class="card large white">
+    <div class="card">
       <div class="card-content">
         <div class="row">
-          <span class="card-title grey-text text-darken-4">Case</span>
-          <div class="divider"></div>
+          <div class="col s12">
+            <span class="card-title grey-text text-darken-4">Case</span>
+            <div class="divider"></div>
+          </div>
           <div class="section">
             <div class="input-field col s12">
               <input id="case_nr" type="text">
@@ -182,11 +184,15 @@
                 <option value="3">Option 3</option>
               </select>
             </div>
+            <div class="col s12 check-inline">
+              <input type="checkbox" id="grantJudicialAid" />
+              <label for="grantJudicialAid">Grant judicial aid</label>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="card large white">
+    <div class="card">
       <div class="card-content">
         <div class="row">
           <div class="col s12">
@@ -208,12 +214,46 @@
   </div>
 </div>
 
-<button class="btn bg-orange waves-effect waves-light" type="submit" name="action">Cancel
+<div class="row">
+  <div class="col s3">
+  <div class="card">
+    <div class="card-content">
+      <div class="row">
+        <div class="col s12">
+          <span class="card-title grey-text text-darken-4">Fee</span>
+          <div class="divider"></div>
+        </div>
+        <div class="section">
+          <div class="input-field col s12">
+            <input id="sum" type="text">
+            <label for="sum">Sum</label>
+          </div>
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Fee type</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<button class="btn bg-mauve waves-effect waves-light" type="submit" name="action">Cancel
   <i class="mdi-navigation-cancel right"></i>
 </button>
-<button class="btn bg-water waves-effect waves-dark" type="submit" name="action">Accept
+<button class="btn bg-water waves-effect waves-dark" type="submit" name="action">Save
   <i class="mdi-content-save right"></i>
 </button>
+<button class="btn bg-orange waves-effect waves-dark" type="submit" name="action">Accept payment
+  <i class="mdi-action-done right"></i>
+</button>
+
         </div>
       </div>
     </div>

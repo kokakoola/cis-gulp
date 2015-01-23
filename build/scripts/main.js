@@ -6,6 +6,7 @@
 
     $('#initiate-form .collapse').collapse('show');
 
+
     //$(".button-collapse").sideNav();
 
     // wow.js init
