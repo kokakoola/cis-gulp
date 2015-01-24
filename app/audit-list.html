@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="case-list">
+<html lang="" class="audit-list">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Case list</title>
+    <title>CIS | Audit list</title>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -25,7 +25,7 @@
     <!-- endbower -->
     <!-- endbuild -->
   </head>
-  <body class="case-list">
+  <body class="audit-list">
 
 
 <div class="navbar-fixed">
@@ -164,14 +164,14 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-            <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html"><i class="mdi-content-add"></i></a>
-            <h4 class="header white-text text-darken-2">Prime registry</h4>
+            <a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html"><i class="mdi-content-add"></i></a>
+            <h4 class="header white-text text-darken-2">Auditor list view</h4>
 
-          <div id="placeholder-fee-filter" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
-  <div class="card">
-    <div class="card-content" >
-      <div class="row no-marg-bot">
+            <div id="placeholder-registry-filter" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
+    <div class="card">
+      <div class="card-content" >
+        <div class="row">
   <div class="col s12 m2 right">
     <ul id="dropdownStatus" class="dropdown-content simplified">
         <li><a href="#!">Drafts<i class="status draft"></i></a></li>
@@ -198,7 +198,7 @@
   </div>
   <div class="input-field col s12 m2 right">
     <input id="claimant" type="text" >
-    <label for="claimant">{{Filter.Claimant}}</label>
+    <label for="claimant">{{Filter.Judge}}</label>
   </div>
   <div class="input-field col s12 m2 right">
     <i class="mdi-notification-event-note prefix"></i>
@@ -209,37 +209,53 @@
     <i class="mdi-notification-event-note prefix"></i>
     <label for="endDate">{{Filter.To}}</label>
     <input id="endDate" type="text" class="datepicker">
+
   </div>
 </div>
 
 <!-- hidden by toggle -->
 <div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
-      {{#each Filter.CourtType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
+  <div class="col s12 m2 right">
+  <div class="check-inline">
+    <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
   </div>
-  <div class="input-field col s12 m3 right">
-    <input id="judge" type="text">
-    <label for="judge">{{Filter.Judge}}</label>
+  <br>
+  <div class="check-inline">
+    <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
   </div>
-  <div class="input-field col s12 m3 right">
-    <input id="payer" type="text">
-    <label for="payer">{{Filter.Payer}}</label>
   </div>
-    <div class="input-field col s12 m3 right">
-    <input id="recipt" type="text">
-    <label for="recipt">{{Filter.Receipt}}</label>
-  </div>
-</div>
 
+  <div class="col s12 m3 right">
+    <div class="row">
+      <div class="col s12">
+        <label for="">{{Filter.CaseValue.Label}}</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="fromSum" type="text">
+        <label for="fromSum">{{Filter.CaseValue.From}}</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="toSum" type="text" >
+        <label for="toSum">{{Filter.CaseValue.To}}</label>
+      </div>
     </div>
   </div>
-
-  <div class=" filter-action left">
+  <div class="input-field col s12 m3 right">
+    <input id="claimant" type="text">
+    <label for="claimant">{{Filter.Claimant}}</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="defendant" type="text">
+    <label for="defendant">{{Filter.Defendant}}</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="participant" type="text">
+    <label for="participant">{{Filter.Participant}}</label>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class=" filter-action left">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -252,10 +268,7 @@
     <i class="mdi-content-clear "></i>
   </button>
 </div>
-
-</script>
-
-
+  </script>
 
         </div>
       </div>
