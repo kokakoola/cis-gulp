@@ -96,12 +96,12 @@
 
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
-  <li><a href="registry.html">Prime registry</a></li>
-  <li><a href="registry-new-case.html">Add case</a></li>
-  <li><a href="registry-view-case.html">View case</a></li>
+  <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-new.html">Add case</a></li>
+  <li><a href="case-edit.html">View case</a></li>
   <li class="divider"></li>
-  <li><a href="fee.html">Fee</a></li>
-  <li><a href="fee-add-new.html">Add fee</a></li>
+  <li><a href="fee-list.html">Fee list</a></li>
+  <li><a href="fee-new.html">Add fee</a></li>
   <li><a href="fee-edit.html">View fee</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
@@ -162,10 +162,9 @@
 
   <div class="card-onbanner">
     <div class="container">
-          <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="registry.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header white-text text-darken-2">Case no 246/43/3465</h4>
-
-<div class="row">
+      <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+<h4 class="header white-text text-darken-2">New case</h4>
+      <div class="row">
   <div class="col s12">
   <div class="card">
     <div class="card-content">
@@ -213,7 +212,7 @@
 
     <!-- Dropdown Trigger -->
 
-  <div class="panel-group" id="initiate-form-registered">
+  <div class="panel-group" id="initiate-form">
     
     <div id="Claimants">
   <div>
@@ -429,67 +428,54 @@
 
 
   </div>
-  <div class="col s12 m6 trigger-wrapper">
+  
+<div class="col s12 m6">
   <div class="card">
     <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Claim document</span>
+    <span class="card-title grey-text text-darken-4">Documents </span>
+      
       <div class="divider"></div>
-      <br>
-      <div class="col s12 m10 offset-m2">
-         <div class="row valign-wrapper">
-           <div class="col s2">
-             <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
-           </div>
-          <div class="col s2">
-             <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
-           </div>
-           <div class="col s8">
-             <span class="black-text">
-               This is a pdf preview of the claim. Add more information if relevant.
-             </span>
-           </div>
-         </div>
+      <div class="row">
+        <div class="col s12 center">
+          <div class="card-panel bg-light valign-wrapper">
+              <span ><h5><i class="mdi-file-file-upload"></i> Drop files here to upload</h5> or click here</span>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
+
+
   
 <div class="col s12 m6 trigger-wrapper">
   <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a>
   <div class="card cyan lighten-5">
     <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Note</span>
+    <span class="card-title grey-text text-darken-4">Note</span>
       <div class="divider"></div>
-      <div class="col s12 m10 offset-m2">
-        <div class="row valign-wrapper">
-         <div class="col s2">
-           <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
-         </div>
-         <div class="col s10">
-           <span class="black-text">
-             This is note by a specific person. Can we use identicons? Visual helpers are always good ana it should be easy to implement.
-           </span>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
 
 
 </div>
 
 <div class="row">
   <div class="col s12">
-    <button class="btn btn-large waves-effect waves-light submit right">Send to judge</button>
-    <button class="btn btn-large waves-effect waves-light save right">Register</button>
-    <button class="btn btn-large waves-effect waves-light save-light right">Save</button>
-    <button class="btn btn-flat btn-large waves-effect waves-light cancel right" type="submit" name="action" ><i class="mdi-content-clear"></i></button>
+    <hr>
+    <button class="btn-flat waves-effect waves-light" onclick="window.location.href='case-list.html'">Cancel</button>
+    <button class="btn bg-orange waves-effect waves-light" onclick="window.location.href='case-list.html'">Send to judge<i class="mdi-content-send"></i></button>
+    <button class="btn bg-water waves-effect waves-dark" onclick="window.location.href='case-list.html'">Register<i class="mdi-editor-border-color"></i></button>
+    <button class="btn bg-mauve waves-effect waves-dark" onclick="window.location.href='case-list.html'">Save for later<i class="mdi-editor-border-color"></i></button>
   </div>
 </div>
-
 
 <!-- Dropdown Structure -->
 <ul id='add' class='dropdown-content'>
@@ -568,3 +554,4 @@
     <!-- endbuild -->
   </body>
 </html>
+

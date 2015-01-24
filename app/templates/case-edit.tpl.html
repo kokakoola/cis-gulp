@@ -13,7 +13,12 @@
 
   <div class="card-onbanner">
     <div class="container">
-          @@include('./layout/new-case/registry-card-with-form.html')
+      @@include('./layout/common/round-top-back.html')
+      @@include('./layout/case/case-new.html',
+      {
+        "formName": "Edit case",
+        "backTo": "case-list.html"
+      })
     </div>
   </div>
 </main>

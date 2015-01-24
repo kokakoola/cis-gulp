@@ -1,0 +1,46 @@
+<a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+<h4 class="header white-text text-darken-2">Case no 246/43/3465</h4>
+
+<div class="row">
+  @@include('./case-cards/case-form-general.html')
+
+    <!-- Dropdown Trigger -->
+
+  <div class="panel-group" id="initiate-form-registered">
+    
+    @@include('./case-cards/case-form-claimant.html', {"person":"Claimant" })
+    @@include('./case-cards/case-form-defendant.html', {"person":"Defendant"})
+    @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
+  </div>
+  @@include('./case-cards/case-card-documents.html')
+  @@include('./case-cards/case-card-note.html')
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">Send to judge</button>
+    <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='case-list.html'">Register</button>
+    <button class="btn btn-large waves-effect waves-light save-light right" onclick="window.location.href='case-list.html'">Save</button>
+    <button class="btn btn-flat btn-large waves-effect waves-light cancel right" type="submit" name="action" onclick="window.location.href='case-list.html'"><i class="mdi-content-clear"></i></button>
+  </div>
+</div>
+
+
+<!-- Dropdown Structure -->
+<ul id='add' class='dropdown-content'>
+  <li><a href="#!" data-datacontainer="#Claimants" class="js-addDataRow">Add a claimant</a></li>
+  <li><a href="#!" data-datacontainer="#Defendants" class="js-addDataRow">Add a defendant</a></li>
+  <li><a href="#!" data-datacontainer="#Participants" class="js-addDataRow">Add a participant</a></li>
+</ul>
+
+<!-- Alert modal Structure -->
+<div id="modal1" class="modal">
+  <h4>Hei!</h4>
+  <p>You are about to delete the claimant. Are you sure? </p>
+  <hr>
+  <div class="right">
+    <a href="#" class="waves-effect btn-flat modal-close">No</a>
+    <a href="#" class="waves-effect btn teal modal-close">Yes</a>
+  </div>
+</div>
+

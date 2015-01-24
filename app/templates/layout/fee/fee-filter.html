@@ -1,64 +1,12 @@
-<div class="row">
-  <div class="col s12 m2 right">
-    <ul id="dropdownStatus" class="dropdown-content simplified">
-        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
-        <li><a href="#!">Pending <i class="status pending"></i></a></li>
-        <li><a href="#!">Registered<i class="status registered"></i></a></li>
-        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
-        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
-        <li><a href="#!">Closed<i class="status closed"></i></a></li>
-        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
-      </ul>
-      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
+<div id="placeholder-fee-filter" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
+  <div class="card">
+    <div class="card-content" >
+      @@include('./fee-filter-content.html')
+    </div>
   </div>
-  <div class="input-field col s12 m2 right">
-    <input id="caseNumber" type="text">
-    <label for="caseNumber">{{Filter.CaseNumber}}</label>
-  </div>
-  <div class="col s12 m2 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
-      {{#each Filter.CaseType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="claimant" type="text" >
-    <label for="claimant">{{Filter.Claimant}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">{{Filter.From}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">{{Filter.To}}</label>
-    <input id="endDate" type="text" class="datepicker">
-  </div>
-</div>
 
-<!-- hidden by toggle -->
-<div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
-      {{#each Filter.CourtType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m3 right">
-    <input id="judge" type="text">
-    <label for="judge">{{Filter.Judge}}</label>
-  </div>
-  <div class="input-field col s12 m3 right">
-    <input id="payer" type="text">
-    <label for="payer">{{Filter.Payer}}</label>
-  </div>
-    <div class="input-field col s12 m3 right">
-    <input id="recipt" type="text">
-    <label for="recipt">{{Filter.Receipt}}</label>
-  </div>
-</div>
+  @@include('../common/list-filter-action.html')
+
+</script>
+

@@ -1,7 +1,7 @@
 @@include('./base/header.tpl.html',
 {
-  "bodyClass": "fee-add-new",
-  "htmlClass": "fee-add-new",
+  "bodyClass": "fee-new",
+  "htmlClass": "fee-new",
   "title": "New fee"
 })
 
@@ -15,9 +15,12 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          @@include('./layout/fee/fee-card-with-form.html',
+          @@include('./layout/common/round-top-back.html')
+
+          @@include('./layout/fee/fee-new.html',
           {
-            "formName": "New fee"
+            "formName": "New fee",
+            "backTo": "fee-list.html"
           })
         </div>
       </div>

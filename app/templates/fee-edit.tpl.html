@@ -15,9 +15,12 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          @@include('./layout/fee/fee-card-with-form.html',
+          @@include('./layout/common/round-top-back.html')
+          
+          @@include('./layout/fee/fee-new.html',
           {
-            "formName": "View fee"
+            "formName": "View fee",
+            "backTo": "fee-list.html"
           })
         </div>
       </div>

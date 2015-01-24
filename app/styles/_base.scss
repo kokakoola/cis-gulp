@@ -31,6 +31,10 @@ html {
 
 .dropdown-content {
   height: auto;
+  li {
+    font-size: 1rem;
+    color: $off-black;
+  }
 }
 
 
@@ -53,6 +57,7 @@ main {
 
 .with-table {
   background: #fff;
+  margin-top: -20px;
 }
 
 // COMPONENTS
@@ -180,7 +185,7 @@ animation: second 30s ease infinite;
   background-size: cover;
   margin-top: -64px;
   height: 255px;
-  border-bottom: 15px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .card-onbanner {
@@ -220,12 +225,13 @@ animation: second 30s ease infinite;
 
 .btn.cancel-light {
   background-color: color("grey", "lighten-5");
+  
   i {
-    color: color("grey-text", "text-darken-2");
+    color: $off-black;
   }
 }
 
-.trigger-add {
+.btn.trigger-add {
   margin-bottom: -55.5px;
 }
 
@@ -312,6 +318,9 @@ textarea.valid {
 
 // Table style
 // **********************
+table.dataTable {
+  margin-top: 15px;
+}
 table {
 
   th.sorting_desc .btn-flat i {
@@ -402,9 +411,9 @@ i.status {
   border-bottom: 1px solid color("grey", "base");
 }
 
-.filter-action {
-  margin-top: -35px;
-}
+// .filter-action {
+//   margin-top: -35px;
+// }
 
 .input-field .prefix {
   opacity: 0.8;
