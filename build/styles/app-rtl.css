@@ -10689,6 +10689,14 @@ html {
 .dropdown-content {
   height: auto;
 }
+.dropdown-content li {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+footer.page-footer {
+  margin-top: 0;
+}
 
 main {
   background: #cfd8dc;
@@ -10709,6 +10717,7 @@ main {
 
 .with-table {
   background: #fff;
+  margin-top: -20px;
 }
 
 .trigger-wrapper {
@@ -10734,7 +10743,7 @@ main {
 }
 
 .full-bg {
-  background: url("../images/suleymania.jpg");
+  background: url("../images/Suleymania2.jpg");
   background-size: cover;
 }
 .full-bg input[type=text],
@@ -10780,26 +10789,52 @@ main {
   }
 }
 .main-banner {
-  background: url("../images/bg-11.jpg") no-repeat center center;
+  background: url("../images/Suleymania2.jpg") no-repeat center center;
   background-size: cover;
   margin-top: -64px;
-  height: 210px;
+  height: 255px;
+  border-bottom: 3px solid #fff;
 }
 
 .card-onbanner {
-  margin-top: -200px;
+  margin-top: -185px;
 }
-.card-onbanner a.adds-form {
+.card-onbanner a.round-top {
   vertical-align: middle;
-  margin-right: 25px;
-  z-index: 6000;
+  margin-right: -65px;
+  z-index: 200;
+}
+.card-onbanner a.round-top.add {
+  background-color: #00acc1;
+}
+.card-onbanner a.round-top.remove {
+  background-color: #1a237e;
 }
 .card-onbanner h4 {
   display: inline-block;
   padding-right: 15px;
 }
 
-.trigger-add {
+.btn.submit, .submit.btn-large {
+  background-color: #0097a7;
+}
+
+.btn.save, .save.btn-large {
+  background-color: #00acc1;
+}
+
+.btn.save-light, .save-light.btn-large {
+  background-color: #00bcd4;
+}
+
+.btn.cancel-light, .cancel-light.btn-large {
+  background-color: #fafafa;
+}
+.btn.cancel-light i, .cancel-light.btn-large i {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.btn.trigger-add, .trigger-add.btn-large {
   margin-bottom: -55.5px;
 }
 
@@ -10868,8 +10903,8 @@ textarea.materialize-textarea.input-validation-error {
   height: 3rem;
 }
 
-.removeClaimant {
-  margin-top: -72px;
+table.dataTable {
+  margin-top: 15px;
 }
 
 table th.sorting_desc .btn-flat i {
@@ -10935,10 +10970,6 @@ i.status.rejected {
   line-height: 5rem;
   height: 4rem;
   border-bottom: 1px solid #9e9e9e;
-}
-
-.filter-action {
-  margin-top: -35px;
 }
 
 .input-field .prefix {
@@ -11374,7 +11405,7 @@ nav .responsive-img {
   nav .nav-wrapper i.scrolled,
   nav a.button-collapse.scrolled,
   nav a.button-collapse i.scrolled {
-    background: #37474f;
+    background: #263238;
     border-bottom-color: transparent;
     height: 46px;
     line-height: 46px;
