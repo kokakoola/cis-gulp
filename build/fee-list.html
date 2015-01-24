@@ -83,11 +83,13 @@
 
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
-  <li><a href="registry.html">Prime registry</a></li>
-  <li><a href="registry-new-case.html">Add case</a></li>
+  <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-new.html">Add case</a></li>
+  <li><a href="case-edit.html">View case</a></li>
   <li class="divider"></li>
-  <li><a href="fee.html">Fee</a></li>
-  <li><a href="fee-add-new.html">Add fee</a></li>
+  <li><a href="fee-list.html">Fee list</a></li>
+  <li><a href="fee-new.html">Add fee</a></li>
+  <li><a href="fee-edit.html">View fee</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -149,16 +151,15 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light cyan darken-3 adds-form" href="fee-add-new.html">
-  <i class="mdi-content-add"></i>
-</a>
-<h4 class="header white-text text-darken-2">Fee</h4>
-
-<div id="placeholder-fee-filter" class="template-placeholder"></div>
+          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="fee-new.html">
+            <i class="mdi-content-add"></i>
+          </a>
+          <h4 class="header white-text text-darken-2">Fee</h4>
+          <div id="placeholder-fee-filter" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
-  <div class="card large lighten-2">
+  <div class="card">
     <div class="card-content" >
-      <div class="row">
+      <div class="row no-marg-bot">
   <div class="col s12 m2 right">
     <ul id="dropdownStatus" class="dropdown-content simplified">
         <li><a href="#!">Drafts<i class="status draft"></i></a></li>
@@ -225,22 +226,25 @@
 
     </div>
   </div>
-  <div class="filter-action left">
-    <button class="btn bg-orange waves-effect waves-light" type="submit" name="search">
-      {{Filter.ButtonClearAll}}
-      <i class="mdi-action-search right"></i>
-    </button>
-    <button class="btn bg-mauve waves-effect waves-light" type="button" data-toggle="collapse" data-target="#moreFields">
-      {{Filter.ButtonMoreFields}}
-      <i class="mdi-navigation-expand-more right"></i>
-    </button>
-    <button class="btn bg-mauve waves-effect waves-light" type="button" name="clear">
-      {{Filter.ButtonSearch}}
-      <i class="mdi-navigation-close right"></i>
-    </button>
-  </div>
+
+  <div class=" filter-action left">
+  <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
+    {{Filter.ButtonSearch}}
+    <i class="mdi-navigation-search right"></i>
+  </button>
+  <button class="btn btn-large waves-effect waves-light save left" type="button" data-toggle="collapse" data-target="#moreFields">
+    {{Filter.ButtonMoreFields}}
+    <i class="mdi-navigation-expand-more right"></i>
+  </button>
+  <button class="btn btn-large waves-effect waves-light cancel-light left" name="clear">
+    <i class="mdi-content-clear "></i>
+  </button>
+</div>
+
 </script>
 
+
+          
         </div>
       </div>
     </div>
@@ -267,7 +271,7 @@
       </thead>
       <tbody>
       {{#each Cases}}
-        <tr>
+        <tr onClick="parent.location='fee-edit.html'">
           <td class="center">
             <input type="checkbox" id="select_{{@index}}" />
             <label for="select_{{@index}}"></label>
@@ -294,34 +298,42 @@
   </div>
 </main>
 
-  <footer class="grey darken-3">
+<footer class="page-footer blue-grey darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+      </div>
+      <!-- <div class="col l3 s12">
+        <h5 class="white-text">Help center</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Other important numbers</h5>
+      </div> -->
+    </div>
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About</h5>
-          <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Help center</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Other important numbers</h5>
-        </div>
-      </div>
+    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text lighten-3" href="http://netgroup.ee">Netgroup</a>
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
 
-    <script src="scripts/vendor.js"></script>
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="scripts/vendor/jquery.cookie.js"></script>
+    <script src="scripts/vendor/materialize.min.js"></script>
+    <script src="scripts/vendor/jquery.pagepiling.min.js"></script>
+    <script src="scripts/vendor/wow.min.js"></script>
+    <script src="scripts/vendor/fullscreen.min.js"></script>
+    <script src="scripts/vendor/handlebars.min.js"></script>
+    <script src="scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="scripts/vendor/bootstrap.js"></script>
 
     <script src="scripts/main.js"></script>
   </body>

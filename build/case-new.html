@@ -83,11 +83,13 @@
 
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
-  <li><a href="registry.html">Prime registry</a></li>
-  <li><a href="registry-new-case.html">Add case</a></li>
+  <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-new.html">Add case</a></li>
+  <li><a href="case-edit.html">View case</a></li>
   <li class="divider"></li>
-  <li><a href="fee.html">Fee</a></li>
-  <li><a href="fee-add-new.html">Add fee</a></li>
+  <li><a href="fee-list.html">Fee list</a></li>
+  <li><a href="fee-new.html">Add fee</a></li>
+  <li><a href="fee-edit.html">View fee</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -147,10 +149,9 @@
 
   <div class="card-onbanner">
     <div class="container">
-          <a class="btn-floating btn-large waves-effect waves-light grey darken-2 adds-form" href="registry.html"><i class="mdi-navigation-close"></i></a>
+      <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">New case</h4>
-
-<div class="row">
+      <div class="row">
   <div class="col s12">
   <div class="card">
     <div class="card-content">
@@ -186,8 +187,9 @@
             <option value="3">Option 3</option>
           </select>
         </div>
-        <div class="col s12 m6">
-          <input type="date" id="date" class="datepicker today">
+        <div class="input-field col s12 m6">
+          <label for="paymentDate">Registered at</label>
+          <input id="paymentDate" type="text" class="datepicker today">
         </div>
       </div>
     </div>
@@ -290,8 +292,10 @@
         <div class="card-content">
           <div>
             <a data-toggle="collapse" href="#collapseDefendant" class="card-title grey-text text-darken-4">
-              <i class="mdi-navigation-more-vert"></i>Defendant <i class="mdi-navigation-close left"></i></a>
+              <i class="mdi-navigation-more-vert"></i>Defendant </a>
+              <a href="#!" class="card-title grey-text text-darken-4" onclick="toast('<span>Card deleted</span><a class=&quot;btn-flat yellow-text&quot; href=&quot;#!&quot;>Undo</a>', 5000)"><i class="mdi-navigation-close left"></i></a>
             <div class="divider"></div>
+
           </div>
           <div class="row">
             <div class="input-field col s12 right"  id="the-basics">
@@ -452,11 +456,10 @@
 
 <div class="row">
   <div class="col s12">
-    <hr>
-    <button class="btn-flat waves-effect waves-light">Cancel</button>
-    <button class="btn bg-orange waves-effect waves-light">Send to judge<i class="mdi-content-send"></i></button>
-    <button class="btn bg-water waves-effect waves-dark">Register<i class="mdi-editor-border-color"></i></button>
-    <button class="btn bg-mauve waves-effect waves-dark">Save for later<i class="mdi-editor-border-color"></i></button>
+    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">Send to judge</button>
+    <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='case-list.html'">Register</button>
+    <button class="btn btn-large waves-effect waves-light save-light right" onclick="window.location.href='case-list.html'">Save</button>
+    <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='case-list.html'" ><i class="mdi-content-clear"></i></button>
   </div>
 </div>
 
@@ -483,35 +486,44 @@
   </div>
 </main>
 
-  <footer class="grey darken-3">
+<footer class="page-footer blue-grey darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+      </div>
+      <!-- <div class="col l3 s12">
+        <h5 class="white-text">Help center</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Other important numbers</h5>
+      </div> -->
+    </div>
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About</h5>
-          <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Help center</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Other important numbers</h5>
-        </div>
-      </div>
+    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text lighten-3" href="http://netgroup.ee">Netgroup</a>
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
 
-    <script src="scripts/vendor.js"></script>
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="scripts/vendor/jquery.cookie.js"></script>
+    <script src="scripts/vendor/materialize.min.js"></script>
+    <script src="scripts/vendor/jquery.pagepiling.min.js"></script>
+    <script src="scripts/vendor/wow.min.js"></script>
+    <script src="scripts/vendor/fullscreen.min.js"></script>
+    <script src="scripts/vendor/handlebars.min.js"></script>
+    <script src="scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="scripts/vendor/bootstrap.js"></script>
 
     <script src="scripts/main.js"></script>
   </body>
 </html>
+
