@@ -1,0 +1,33 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "audit-new",
+  "htmlClass": "audit-new",
+  "title": "New audit"
+})
+
+@@include('./layout/header.html')
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          @@include('./layout/common/round-top-back.html')
+
+          @@include('./layout/audit/audit-new.html',
+          {
+            "formName": "New audit",
+            "backTo": "audit-list.html"
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')

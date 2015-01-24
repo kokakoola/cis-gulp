@@ -15,10 +15,13 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-            <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html"><i class="mdi-content-add"></i></a>
-            <h4 class="header white-text text-darken-2">Prime registry</h4>
 
-          @@include('./layout/fee/fee-filter.html')
+          @@include('./layout/common/round-top-fw.html')
+          @@include('./layout/case/case-filter.html',
+          {
+            "formName": "Prime registry",
+            "fwTo": "case-new.html"
+          })
 
         </div>
       </div>
@@ -27,7 +30,10 @@
 
   <div class="with-table card">
     <div class="row">
-      @@include('./layout/case/case-table.html')
+      @@include('./layout/case/case-table.html',
+      {
+        "ffwTo": "case-edit.html"
+      })
     </div>
   </div>
 </main>

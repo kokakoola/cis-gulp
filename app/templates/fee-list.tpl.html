@@ -15,12 +15,15 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="fee-new.html">
-            <i class="mdi-content-add"></i>
-          </a>
-          <h4 class="header white-text text-darken-2">Fee</h4>
-          @@include('./layout/fee/fee-filter.html')
-          
+
+          @@include('./layout/common/round-top-fw.html')
+          @@include('./layout/fee/fee-filter.html',
+          {
+            "formName": "Fee",
+            "fwTo": "fee-new.html",
+            "ffwTo": "fee-edit.html"
+          })
+
         </div>
       </div>
     </div>
@@ -28,7 +31,10 @@
 
   <div class="with-table card">
     <div class="row">
-      @@include('./layout/fee/fee-table.html')
+      @@include('./layout/fee/fee-table.html',
+      {
+        "ffwTo": "fee-edit.html"
+      })
     </div>
   </div>
 </main>

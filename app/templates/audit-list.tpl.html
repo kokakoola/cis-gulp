@@ -15,10 +15,13 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-            <a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html"><i class="mdi-content-add"></i></a>
-            <h4 class="header white-text text-darken-2">Auditor list view</h4>
 
-          @@include('./layout/case/case-filter.html')
+          @@include('./layout/common/round-top-fw.html')
+          @@include('./layout/fee/fee-filter.html',
+          {
+            "formName": "Auditor list view",
+            "fwTo": "audit-new.html"
+          })
 
         </div>
       </div>
@@ -27,7 +30,10 @@
 
   <div class="with-table card">
     <div class="row">
-      @@include('./layout/case/case-table.html')
+      @@include('./layout/fee/fee-table.html',
+      {
+        "ffwTo": "audit-edit.html"
+      })
     </div>
   </div>
 </main>
