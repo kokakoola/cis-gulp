@@ -1,19 +1,39 @@
-<a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header white-text text-darken-2">Case no 246/43/3465</h4>
-
 <div class="row">
   @@include('./case-cards/case-form-general.html')
 
     <!-- Dropdown Trigger -->
 
-  <div class="panel-group" id="initiate-form-registered">
-    
-    @@include('./case-cards/case-form-claimant.html', {"person":"Claimant" })
-    @@include('./case-cards/case-form-defendant.html', {"person":"Defendant"})
-    @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
+  <div class="panel-group" id="caseCard">
+    <div id="Claimants">
+      <div>
+        <div class="col s12 m6">
+          @@include('./case-cards/case-form-claimant.html', {"person":"Claimant" })
+        </div>
+      </div>
+    </div>
+    <div id="Defendants">
+      <div>
+        <div class="col s12 m6 trigger-wrapper">
+          <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+         @@include('./case-cards/case-form-defendant.html', {"person":"Defendant"})
+        </div>
+      </div>
+    </div>
+    <div id="Participants">
+      <div>
+        <div class="col s12 m6">
+          @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
+        </div>
+      </div>
+    </div>
   </div>
-  @@include('./case-cards/case-card-documents.html')
-  @@include('./case-cards/case-card-note.html')
+  <div class="col s12 m6">
+    @@include('../common/common-cards/case-card-documents.html')
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a>
+      @@include('../common/common-cards/case-card-note.html')
+  </div>
 </div>
 
 <div class="row">

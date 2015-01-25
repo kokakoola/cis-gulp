@@ -1,38 +1,27 @@
 <div class="row">
   <div class="col s12">
-    @@include('./audit-cards/audit-form-intro.html')
+    @@include('../common/common-cards/fee-audit-form-general.html')
   </div>
 
   <div class="col s12 m6">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Payment</span>
-        <div class="divider"></div>
-        <div class="input-field col s12">
-          <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
-          <label for="payer">Payer</label>
-        </div>
-        <div class="input-field col s12">
-          <label for="paymentDate">Payment date</label>
-          <input id="paymentDate" type="text" class="datepicker today">
-        </div>
-        <div class="input-field col s12">
-          <input id="receiptNo" type="text" >
-          <label for="receiptNo">Receipt No</label>
-        </div>
-      </div>
-    </div>
+    @@include('./audit-cards/audit-card-payment.html')
   </div>
+
 
   <div class="col s12 m6">
-    @@include('./audit-cards/audit-card-documents.html')
+    @@include('../common/common-cards/fee-audit-card-claim-pdf.html')
   </div>
 
-<div class="col s12 m6  trigger-wrapper">
-    @@include('./audit-cards/audit-form-add-audit.html')
-</div>
+    <div class="col s12 m6  trigger-wrapper">
+    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+    @@include('../fee/fee-cards/fee-form-add-fee.html')
+  </div>
+
+    <div class="col s12  trigger-wrapper">
+      @@include('../common/common-cards/case-form-note.html')
+  </div>
 </div>
 
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Accept payment</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Save</button>
+<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Confirm</button>
+<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Reject</button>
 <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>

@@ -7,22 +7,16 @@
     <title>CIS | New audit</title>
 
     <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
-    <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/app-rtl.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="styles/app-rtl.css">
-    <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/app-ltr.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="styles/app-ltr.css">
-    <!-- endbower -->
     <!-- endbuild -->
   </head>
   <body class="audit-new">
@@ -181,7 +175,7 @@
       <label for="grantJudicialAid">Grant judicial aid</label>
     </div>
     <div class="divider"></div>
-    <div class="row">
+    <div class="row no-marg-bot">
       <div class="input-field col s12 m6">
         <select required>
           <option value="" disabled selected>Court</option>
@@ -216,24 +210,27 @@
 
   <div class="col s12 m6">
     <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Payment</span>
-        <div class="divider"></div>
-        <div class="input-field col s12">
-          <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
-          <label for="payer">Payer</label>
-        </div>
-        <div class="input-field col s12">
-          <label for="paymentDate">Payment date</label>
-          <input id="paymentDate" type="text" class="datepicker today">
-        </div>
-        <div class="input-field col s12">
-          <input id="receiptNo" type="text" >
-          <label for="receiptNo">Receipt No</label>
-        </div>
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Payment</span>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
+        <label for="payer">Payer</label>
+      </div>
+      <div class="input-field col s12">
+        <label for="paymentDate">Payment date</label>
+        <input id="paymentDate" type="text" class="datepicker today">
+      </div>
+      <div class="input-field col s12">
+        <input id="receiptNo" type="text" >
+        <label for="receiptNo">Receipt No</label>
       </div>
     </div>
   </div>
+</div>
+  </div>
+
 
   <div class="col s12 m6">
     <div class="card">
@@ -248,7 +245,7 @@
          </div>
          <div class="col s10">
            <span class="black-text">
-             This is a pdf preview of the claim. Add more information if relevant.
+             This is a pdf preview of the claim. 
            </span>
          </div>
        </div>
@@ -257,12 +254,12 @@
 </div>
   </div>
 
-<div class="col s12 m6  trigger-wrapper">
+    <div class="col s12 m6  trigger-wrapper">
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-<div class="card brown lighten-5">
+    <div class="card brown lighten-5">
   <div class="card-content">
     <div class="row">
-<!--       <div class="col s12">
+  <!--       <div class="col s12">
         <span class="card-title grey-text text-darken-4">Fee</span>
         
         <div class="divider"></div>
@@ -283,11 +280,30 @@
   </div>
 </div>
 
-</div>
+
+  </div>
+
+    <div class="col s12  trigger-wrapper">
+      <div class="card cyan lighten-5">
+  <div class="card-content">
+  <span class="card-title grey-text text-darken-4">Note</span>
+    <div class="divider"></div>
+    <div class="row no-marg-bot">
+      <div class="input-field col s12">
+        <textarea class="materialize-textarea"></textarea>
+        <label><i class="mdi-content-create tiny"></i></label>
+      </div>
+    </div>
+  </div>
 </div>
 
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='audit-list.html'">Accept payment</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='audit-list.html'">Save</button>
+
+
+  </div>
+</div>
+
+<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='audit-list.html'">Confirm</button>
+<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='audit-list.html'">Reject</button>
 <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='audit-list.html'" ><i class="mdi-content-clear"></i></button>
         </div>
       </div>
@@ -322,20 +338,34 @@
   </div>
 </footer>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
+    <!-- build:js scripts/vendor/jquery.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.cookie.js -->
     <script src="../bower_components/jquery-cookie/jquery.cookie.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/materialize.min.js -->
     <script src="../bower_components/materialize/dist/js/materialize.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.pagepiling.min.js -->
     <script src="../bower_components/pagepiling.js/jquery.pagepiling.min.js"></script>
-    <script src="../bower_components/wowjs/dist/wow.js"></script>
-    <script src="../bower_components/fullscreen/fullscreen.js"></script>
-    <script src="../bower_components/handlebars/handlebars.js"></script>
-    <script src="../bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/wow.min.js -->
+    <script src="../bower_components/wowjs/dist/wow.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/fullscreen.min.js -->
+    <script src="../bower_components/fullscreen/fullscreen.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/handlebars.min.js -->
+    <script src="../bower_components/handlebars/handlebars.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.dataTables.min.js -->
+    <script src="../bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/bootstrap.js -->
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-    <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->

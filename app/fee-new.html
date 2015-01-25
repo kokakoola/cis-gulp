@@ -175,20 +175,14 @@
       <label for="grantJudicialAid">Grant judicial aid</label>
     </div>
     <div class="divider"></div>
-    <div class="row">
-      <div class="col s12 m6">
+    <div class="row no-marg-bot">
+      <div class="input-field col s12 m6">
         <select required>
           <option value="" disabled selected>Court</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
-      </div>
-      <div class="input-field col s12 m6">
-        <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
-        <label for="payer">Payer</label>
-      </div>
-      <div class="col s12 m6">
         <select required>
           <option value="" disabled selected>Case type </option>
           <option value="1">استملاك</option>
@@ -196,10 +190,19 @@
           <option value="3">Option 3</option>
         </select>
       </div>
-      <div class="input-field col s12 m6">
-        <label for="paymentDate">Payment date</label>
-        <input id="paymentDate" type="text" class="datepicker today">
+      <div class="col s12 m6">
+        <br>
+        <h6>Claimants</h6>
+        <hr>
+        <ul>
+          <li>Forename Middlename Surname</li>
+          <li>Forename Middlename Surname</li>
+          <li>Forename Surname</li>
+          <li>Forename Fathers Name Surname</li>
+        </ul>
       </div>
+
+      
     </div>
   </div>
 </div>
@@ -233,7 +236,7 @@
          </div>
          <div class="col s10">
            <span class="black-text">
-             This is a pdf preview of the claim. Add more information if relevant.
+             This is a pdf preview of the claim. 
            </span>
          </div>
        </div>
@@ -243,11 +246,11 @@
   </div>
 
 <div class="col s12 m6  trigger-wrapper">
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-<div class="card brown lighten-5">
+  <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+  <div class="card brown lighten-5">
   <div class="card-content">
     <div class="row">
-<!--       <div class="col s12">
+  <!--       <div class="col s12">
         <span class="card-title grey-text text-darken-4">Fee</span>
         
         <div class="divider"></div>
@@ -267,6 +270,7 @@
     </div>
   </div>
 </div>
+
 
 </div>
 </div>

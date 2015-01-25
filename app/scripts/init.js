@@ -4,8 +4,10 @@
 
     $('.collapsible').collapsible();
 
-    $('#initiate-form .collapse').collapse('show');
+    $('#caseForm .collapse').collapse('show');
+    $('#caseCard').collapse('hide');
     $('#toggleRepresentative').collapse('hide');
+
 
     //$(".button-collapse").sideNav();
 
