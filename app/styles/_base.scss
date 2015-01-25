@@ -221,7 +221,7 @@ animation: second 30s ease infinite;
 
 .btn.save-light {
   background-color: color("cyan", "base");
-} 
+}
 
 .btn.cancel {
   color: color("grey-text", "text-darken-2");
@@ -229,7 +229,7 @@ animation: second 30s ease infinite;
 
 .btn.cancel-light {
   background-color: color("grey", "lighten-5");
-  
+
   i {
     color: $off-black;
   }
@@ -424,3 +424,9 @@ i.status {
 }
 
 
+// DataCol
+// *************
+
+div[data-datacol-model] {
+  display: none;
+}

@@ -10976,6 +10976,10 @@ i.status.rejected {
   opacity: 0.8;
 }
 
+div[data-datacol-model] {
+  display: none;
+}
+
 .row {
   margin-left: auto;
   margin-right: auto;

@@ -210,17 +210,22 @@
           <div class="card">
   <div class="card-content">
     <div>
-      <a data-toggle="collapse" href="#collapseClaimant" class="card-title grey-text text-darken-4">
-        <i class="mdi-navigation-more-vert"></i>Claimant <i class="mdi-navigation-close left"></i></a>
+      <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-more-vert"></i>
+        Claimant
+      </a>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
       <div class="divider"></div>
     </div>
     <div class="row">
       <div class="input-field col s12 right"  id="the-basics">
-        <input id="Claimant" type="text" class="validate"  value="">
-        <label for="Claimant">Claimants full name</label>
+        <input id="Claimant_0" type="text" class="validate"  value="">
+        <label for="Claimant_0">Claimants full name</label>
       </div>
     </div>
-    <div class="collapse" id="collapseClaimant">
+    <div class="collapse in" id="collapseClaimant_0">
       <div class="row">
         <div class="switch col s12 right">
           <span>Legal entity</span>
@@ -231,24 +236,24 @@
           <span>Natural person</span>
         </div>
         <div class="input-field col s12 right">
-          <input id="ClaimantAddress" type="text" class="validate" value="">
-          <label for="ClaimantAddress">Claimants address</label>
+          <input id="ClaimantAddress_0" type="text" class="validate" value="">
+          <label for="ClaimantAddress_0">Claimants address</label>
         </div>
         <div class="input-field col s12 right">
-          <input id="ClaimantId" type="text">
-          <label for="ClaimantId">Document number</label>
+          <input id="ClaimantId_0" type="text">
+          <label for="ClaimantId_0">Document number</label>
         </div>
         <div class="input-field col s12 right">
-          <input id="ClaimantPhone" type="text">
-          <label for="ClaimantPhone">Claimants phone</label>
+          <input id="ClaimantPhone_0" type="text">
+          <label for="ClaimantPhone_0">Claimants phone</label>
         </div>
       </div>
-        <div class="row collapse" id="toggleRepresentative">
+        <div class="row collapse in" id="toggleRepresentative_0">
   <span class="card-title grey-text text-darken-4">Representative</span>
   <div class="divider"></div>
 
   <div class="col s12 right">
-    <select>
+    <select id="type_0">
       <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
       <option value="1">Lawyer</option>
       <option value="2">Parent</option>
@@ -258,20 +263,20 @@
   </div>
 
   <div class="input-field col s12 right">
-    <input id="parent" type="text" class="validate" value="">
-    <label for="parent">Representatives full name</label>
+    <input id="parent_0" type="text" class="validate" value="">
+    <label for="parent_0">Representatives full name</label>
   </div>
   <div class="input-field col s12 right">
-    <input id="parentId" type="text">
-    <label for="parentId">Representatives ID</label>
+    <input id="parentId_0" type="text">
+    <label for="parentId_0">Representatives ID</label>
   </div>
   <div class="input-field col s12 right">
-    <input id="parentPhone" type="text">
-    <label for="parentPhone">Representatives Phone</label>
+    <input id="parentPhone_0" type="text">
+    <label for="parentPhone_0">Representatives Phone</label>
   </div>
   <div class="input-field col s12 right">
-    <input id="parentAddress" type="text" value="">
-    <label for="parentAddress">Representatives address</label>
+    <input id="parentAddress_0" type="text" value="">
+    <label for="parentAddress_0">Representatives address</label>
   </div>
 </div>
 
@@ -280,7 +285,6 @@
 <!--             <div class="card-action">
         <a href='#!' class="btn blue-light white-text" data-toggle="collapse" data-target="#toggleRepresentative">Add representative</a>
       </div> -->
-
 </div>
 
 
@@ -294,19 +298,22 @@
          <div class="card">
   <div class="card-content">
     <div>
-      <a data-toggle="collapse" href="#collapseDefendant" class="card-title grey-text text-darken-4">
-        <i class="mdi-navigation-more-vert"></i>Defendant </a>
-        <a href="#!" class="card-title grey-text text-darken-4" onclick="toast('<span>Card deleted</span><a class=&quot;btn-flat yellow-text&quot; href=&quot;#!&quot;>Undo</a>', 5000)"><i class="mdi-navigation-close left"></i></a>
+      <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-more-vert"></i>
+        Defendant
+      </a>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
       <div class="divider"></div>
-
     </div>
     <div class="row">
       <div class="input-field col s12 right"  id="the-basics">
-        <input id="Defendant" type="text" class="validate"  value="">
-        <label for="Defendant">Defendants full name</label>
+        <input id="Defendant_0" type="text" class="validate"  value="">
+        <label for="Defendant_0">Defendants full name</label>
       </div>
     </div>
-    <div class="collapse" id="collapseDefendant">
+    <div class="collapse in" id="collapseDefendant_0">
       <div class="row">
         <div class="switch col s12 right">
           <span>Legal entity</span>
@@ -317,24 +324,24 @@
           <span>Natural person</span>
         </div>
         <div class="input-field col s12 right">
-          <input id="DefendantAddress" type="text" class="validate" value="">
-          <label for="DefendantAddress">Defendants address</label>
+          <input id="DefendantAddress_0" type="text" class="validate" value="">
+          <label for="DefendantAddress_0">Defendants address</label>
         </div>
         <div class="input-field col s12 right">
-          <input id="DefendantId" type="text">
-          <label for="DefendantId">Document number</label>
+          <input id="DefendantId_0" type="text">
+          <label for="DefendantId_0">Document number</label>
         </div>
         <div class="input-field col s12 right">
-          <input id="DefendantPhone" type="text">
-          <label for="DefendantPhone">Defendants phone</label>
+          <input id="DefendantPhone_0" type="text">
+          <label for="DefendantPhone_0">Defendants phone</label>
         </div>
       </div>
-        <div class="row collapse" id="toggleRepresentative">
+        <div class="row collapse in" id="toggleRepresentative_0">
   <span class="card-title grey-text text-darken-4">Representative</span>
   <div class="divider"></div>
 
   <div class="col s12 right">
-    <select>
+    <select id="type_0">
       <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
       <option value="1">Lawyer</option>
       <option value="2">Parent</option>
@@ -344,20 +351,20 @@
   </div>
 
   <div class="input-field col s12 right">
-    <input id="parent" type="text" class="validate" value="">
-    <label for="parent">Representatives full name</label>
+    <input id="parent_0" type="text" class="validate" value="">
+    <label for="parent_0">Representatives full name</label>
   </div>
   <div class="input-field col s12 right">
-    <input id="parentId" type="text">
-    <label for="parentId">Representatives ID</label>
+    <input id="parentId_0" type="text">
+    <label for="parentId_0">Representatives ID</label>
   </div>
   <div class="input-field col s12 right">
-    <input id="parentPhone" type="text">
-    <label for="parentPhone">Representatives Phone</label>
+    <input id="parentPhone_0" type="text">
+    <label for="parentPhone_0">Representatives Phone</label>
   </div>
   <div class="input-field col s12 right">
-    <input id="parentAddress" type="text" value="">
-    <label for="parentAddress">Representatives address</label>
+    <input id="parentAddress_0" type="text" value="">
+    <label for="parentAddress_0">Representatives address</label>
   </div>
 </div>
 
@@ -365,8 +372,6 @@
   </div>
 
 </div>
-
-
         </div>
       </div>
     </div>
@@ -376,17 +381,22 @@
           <div class="card">
   <div class="card-content">
     <div>
-      <a data-toggle="collapse" href="#collapseParticipant" class="card-title grey-text text-darken-4">
-        <i class="mdi-navigation-more-vert"></i>Participant <i class="mdi-navigation-close left"></i></a>
+      <a data-toggle="collapse" href="#collapseParticipant_0" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-more-vert"></i>
+        Participant
+      </a>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
       <div class="divider"></div>
     </div>
     <div class="row">
       <div class="input-field col s12 right"  id="the-basics">
-        <input id="Participant" type="text" class="validate"  value="">
-        <label for="Participant">Participants full name</label>
+        <input id="Participant_0" type="text" class="validate"  value="">
+        <label for="Participant_0">Participants full name</label>
       </div>
     </div>
-    <div class="collapse" id="collapseParticipant">
+    <div class="collapse in" id="collapseParticipant_0">
       <div class="row">
         <div class="switch col s12 right">
           <span>Legal entity</span>
@@ -397,23 +407,21 @@
           <span>Natural person</span>
         </div>
         <div class="input-field col s12 right">
-          <input id="ParticipantAddress" type="text" class="validate" value="">
-          <label for="ParticipantAddress">Participants address</label>
+          <input id="ParticipantAddress_0" type="text" class="validate" value="">
+          <label for="ParticipantAddress_0">Participants address</label>
         </div>
         <div class="input-field col s12 right">
-          <input id="ParticipantId" type="text">
-          <label for="ParticipantId">Document number</label>
+          <input id="ParticipantId_0" type="text">
+          <label for="ParticipantId_0">Document number</label>
         </div>
         <div class="input-field col s12 right">
-          <input id="ParticipantPhone" type="text">
-          <label for="ParticipantPhone">Participants phone</label>
+          <input id="ParticipantPhone_0" type="text">
+          <label for="ParticipantPhone_0">Participants phone</label>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
         </div>
       </div>
     </div>
@@ -541,6 +549,13 @@
     <script src="scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="scripts/vendor/bootstrap.js"></script>
 
+    <script src="scripts/language.js"></script>
+    <script src="scripts/dataCol.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/animate-css.js"></script>
+    <script src="scripts/Common.js"></script>
+    <script src="scripts/fullscreen.js"></script>
+    <script src="scripts/skillset-init.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
