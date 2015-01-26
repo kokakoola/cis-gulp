@@ -9,14 +9,15 @@
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
     <!-- endbuild -->
 
     <!-- build:css styles/app-rtl.css -->
-    <link rel="stylesheet" href="styles/app-rtl.css">
+    <link rel="stylesheet" href="styles/app-rtl.css" class="main-style">
     <!-- endbuild -->
 
     <!-- build:css styles/app-ltr.css -->
-    <link rel="stylesheet" href="styles/app-ltr.css">
+    <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
   <body class="audit-new">
@@ -101,6 +102,8 @@
   <li><a href="audit-list.html">Audit list</a></li>
   <li><a href="audit-new.html">Add audit</a></li>
   <li><a href="audit-edit.html">View audit</a></li>
+  <li class="divider"></li>
+  <li><a href="daily-register-list.html">Daily register list</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -232,6 +235,7 @@
   </div>
 
 
+
   <div class="col s12 m6">
     <div class="card">
   <div class="card-content">
@@ -254,7 +258,7 @@
 </div>
   </div>
 
-    <div class="col s12 m6  trigger-wrapper">
+  <div class="col s12 m6  trigger-wrapper">
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
     <div class="card brown lighten-5">
   <div class="card-content">
@@ -282,7 +286,6 @@
 
 
   </div>
-
     <div class="col s12  trigger-wrapper">
       <div id="placeholder-case-form-note" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
@@ -305,6 +308,7 @@
 <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='audit-list.html'">Confirm</button>
 <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='audit-list.html'">Reject</button>
 <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='audit-list.html'" ><i class="mdi-content-clear"></i></button>
+
         </div>
       </div>
     </div>
@@ -367,6 +371,15 @@
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/moment.min.js -->
+    <script src="../bower_components/moment/min/moment.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/fullcalendar.min.js -->
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
+    <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/language.js -->

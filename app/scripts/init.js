@@ -4,7 +4,22 @@
 
     $('.collapsible').collapsible();
 
+    $('#caseForm .collapse').collapse('show');
+    $('#caseCard').collapse('hide');
+    $('#toggleRepresentative').collapse('hide');
+
     //$(".button-collapse").sideNav();
+
+  // $("#chooseID").joyride({
+  //       autoStart : true,
+  //         postStepCallback : function (index, tip) {
+  //         if (index == 2) {
+  //           $(this).joyride('set_li', false, 1);
+  //         }
+  //       },
+  //       modal:true,
+  //       expose: true
+  // });
 
     // wow.js init
     new WOW().init();
@@ -15,6 +30,58 @@
       in_duration: 300, // Transition in duration
       out_duration: 200
     });
+
+    $('.fullcalendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+		right: 'month,agendaWeek,agendaDay'
+      },
+      isRTL: $.cookie('cis-language') === 'ku',
+      defaultView: 'month',
+      editable: true,
+      events: [
+        {
+		  title: 'All Day Event',
+		  start: '2015-01-01'
+		},
+		{
+		  title: 'Long Event',
+		  start: '2015-01-07',
+		  end: '2015-01-10'
+		},
+		{
+		  id: 999,
+		  title: 'Repeating Event',
+          start: '2015-01-09T16:00:00'
+		},
+		{
+		  id: 999,
+          title: 'Repeating Event',
+          start: '2015-01-16T16:00:00'
+        },
+		{
+          title: 'Meeting',
+          start: '2015-01-12T10:30:00',
+          end: '2015-01-12T12:30:00'
+		},
+		{
+          title: 'Lunch',
+          start: '2015-01-12T12:00:00'
+        },
+		{
+		  title: 'Birthday Party',
+		  start: '2015-01-13T07:00:00'
+		},
+		{
+		  title: 'Click for Google',
+		  url: 'http://google.com/',
+		  start: '2015-01-28'
+		}
+      ]
+    });
+
+    $('ul.tabs').tabs();
 
     function bindDataTable() {
       if ($.fn.dataTable.isDataTable('table.data')) {
@@ -58,15 +125,15 @@
       });
     }
 
-      $(".dropdown-button").dropdown({
-        constrain_width: false,
-        hover: false
-      });
+    $(".dropdown-button").dropdown({
+      constrain_width: false,
+      hover: false
+    });
 
-      $(".dropdown-button-simplified").dropdown({
-        constrain_width: false,
-        hover: false
-      });
+    $(".dropdown-button-simplified").dropdown({
+      constrain_width: false,
+      hover: false
+    });
 
     bindDataTable();
     bindFormsUi();

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="fee">
+<html lang="" class="daily-register">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Fee</title>
+    <title>CIS | Daily register</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
 
@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="styles/app-ltr.css">
   </head>
-  <body class="fee">
+  <body class="daily-register">
 
 
 <div class="navbar-fixed">
@@ -155,86 +155,34 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
-        <div class="col s12">
-
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="fee-new.html">
+      <a class="btn-floating btn-large waves-effect waves-light round-top add" href="hearing-new.html">
   <i class="mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">Fee</h4>
-          <div id="placeholder-fee-filter" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
-  <div class="card">
-    <div class="card-content" >
-      <div class="row no-marg-bot">
-  <div class="col s12 m2 right">
-    <ul id="dropdownStatus" class="dropdown-content simplified">
-        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
-        <li><a href="#!">Pending <i class="status pending"></i></a></li>
-        <li><a href="#!">Registered<i class="status registered"></i></a></li>
-        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
-        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
-        <li><a href="#!">Closed<i class="status closed"></i></a></li>
-        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
-      </ul>
-      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
-  </div>
-  <div class="input-field col s12 m2 right">
+<h4 class="header white-text text-darken-2">Daily register list view</h4>
+      <div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content" >
+        <div class="row no-marg-bot">
+  <div class="input-field col s12 m3 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
-  <div class="col s12 m2 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
-      {{#each Filter.CaseType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
+  <div class="input-field col s12 m3 right">
     <input id="claimant" type="text" >
     <label for="claimant">{{Filter.Claimant}}</label>
   </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">{{Filter.From}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">{{Filter.To}}</label>
-    <input id="endDate" type="text" class="datepicker">
+  <div class="input-field col s12 m3 right">
+    <input id="defendants" type="text">
+    <label for="defendants">{{Filter.Defendants}}</label>
   </div>
 </div>
-
-<!-- hidden by toggle -->
-<div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
-      {{#each Filter.CourtType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m3 right">
-    <input id="judge" type="text">
-    <label for="judge">{{Filter.Judge}}</label>
-  </div>
-  <div class="input-field col s12 m3 right">
-    <input id="payer" type="text">
-    <label for="payer">{{Filter.Payer}}</label>
-  </div>
-    <div class="input-field col s12 m3 right">
-    <input id="recipt" type="text">
-    <label for="recipt">{{Filter.Receipt}}</label>
-  </div>
-</div>
-
+      </div>
     </div>
   </div>
 
-  <div class="filter-action">
+  <div class="col s12">
+    <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -247,62 +195,58 @@
     <i class="mdi-content-clear "></i>
   </button>
 </div>
+  </div>
+</div>
 
-</script>
+    </div>
+  </div>
 
-
-
-        </div>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6">
+          <a class="active" href="#calendar">Calendar</a>
+        </li>
+        <li class="tab col s6">
+          <a href="#pending">Pending</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card col s12" id="calendar">
+      <div class="card-content row">
+        <div id="daily-register-calendar" class="fullcalendar"></div>
       </div>
     </div>
-  </div>
+    <div class="card col s12" id="pending">
+      <div class="card-content row with-table">
+        <div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
-  <div class="card">
-    <div class="card-content row with-table">
-      <form action="">
-  <div id="placeholder-fee-table" class="template-placeholder"></div>
-
-  <script type="text/x-handlebars-template" id="fee-table-template" class="template" data-lang="data/fee/table">
-    <table class="hoverable bordered data">
-      <thead>
-        <th data-field="select">&nbsp;</th>
-        <th data-field="status" class="sorting">{{Texts.Status}}</th>
-        <th data-field="date" class="sorting">{{Texts.Date}}</th>
-        <th data-field="receipt">{{Texts.Receipt}}</th>
-        <th data-field="payer">{{Texts.Payer}}</th>
-        <th data-field="sum">{{Texts.Sum}}</th>
-        <th data-field="claimants">{{Texts.Claimant}}</th>
-        <th data-field="courttype">{{Texts.CourtType}}</th>
-        <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
-        <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-      </thead>
-      <tbody>
+<script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
+  <table class="hoverable bordered data">
+    <thead>
+      <th data-field="status" class="sorting">{{Texts.Status}}</th>
+      <th data-field="sum">{{Texts.Defendant}}</th>
+      <th data-field="claimants">{{Texts.Claimant}}</th>
+      <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+    </thead>
+    <tbody>
       {{#each Cases}}
-        <tr onClick="parent.location='fee-edit.html'">
-          <td class="center">
-            <input type="checkbox" id="select_{{@index}}" />
-            <label for="select_{{@index}}"></label>
-          </td>
-          <td class="center">
-            <i class="status {{Status}}"></i>
-          </td>
-          <td>{{Date}}</td>
-          <td>{{Receipt}}</td>
-          <td>{{Payer}}</td>
-          <td>{{Sum}}</td>
-          <td>{{Claimant}} </td>
-          <td>{{CourtType}}</td>
-          <td>{{CaseType}}</td>
-          <td>{{CaseNumber}}</td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </script>
-</form>
-
+      <tr>
+        <td class="center">
+          <i class="status {{Status}}"></i>
+        </td>
+        <td>{{Defendant}}</td>
+        <td>{{Claimant}} </td>
+        <td>{{CaseNumber}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>
+        </div>
     </div>
   </div>
+
 </main>
 
 <footer class="page-footer blue-grey darken-3">
@@ -354,3 +298,4 @@
     <script src="scripts/main.js"></script>
   </body>
 </html>
+
