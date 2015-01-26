@@ -193,7 +193,7 @@
   </div>
   <div class="col s12 m2 right">
     <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
+      <option value="" selected>{{Filter.CaseType.Label}}</option>
       {{#each Filter.CaseType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
@@ -258,7 +258,10 @@
 </div>
       </div>
     </div>
-    <div class="filter-action">
+  </script>
+    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
+<div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -271,7 +274,7 @@
     <i class="mdi-content-clear "></i>
   </button>
 </div>
-  </script>
+</script>
 
         </div>
       </div>

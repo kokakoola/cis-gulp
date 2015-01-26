@@ -1,31 +1,33 @@
+<div id="placeholder-case-form-representative" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 <div class="row collapse in" id="toggleRepresentative_0">
-  <span class="card-title grey-text text-darken-4">Representative</span>
+  <span class="card-title grey-text text-darken-4">{{Texts.Representative}}</span>
   <div class="divider"></div>
 
   <div class="col s12 right">
-    <select id="type_0">
-      <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-      <option value="1">Lawyer</option>
-      <option value="2">Parent</option>
-      <option value="3">Legal guardian</option>
-      <option value="4">Other</option>
+    <select>
+      <option value="" selected>{{Texts.Type.Label}}</option>
+      {{#each Texts.Type.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
 
   <div class="input-field col s12 right">
     <input id="parent_0" type="text" class="validate" value="">
-    <label for="parent_0">Representatives full name</label>
+    <label for="parent_0">{{Texts.FullName}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentId_0" type="text">
-    <label for="parentId_0">Representatives ID</label>
+    <label for="parentId_0">{{Texts.ID}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentPhone_0" type="text">
-    <label for="parentPhone_0">Representatives Phone</label>
+    <label for="parentPhone_0">{{Texts.Phone}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentAddress_0" type="text" value="">
-    <label for="parentAddress_0">Representatives address</label>
+    <label for="parentAddress_0">{{Texts.Address}}</label>
   </div>
 </div>
+</script>
