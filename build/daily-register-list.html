@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="fee-new">
+<html lang="" class="daily-register">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | New fee</title>
+    <title>CIS | Daily register</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
 
@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="styles/app-ltr.css">
   </head>
-  <body class="fee-new">
+  <body class="daily-register">
 
 
 <div class="navbar-fixed">
@@ -153,128 +153,98 @@
 
   <div class="card-onbanner">
     <div class="container">
+      <a class="btn-floating btn-large waves-effect waves-light round-top add" href="hearing-new.html">
+  <i class="mdi-content-add"></i>
+</a>
+<h4 class="header white-text text-darken-2">Add new hearing</h4>
       <div class="row">
-        <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="fee-list.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header white-text text-darken-2">New fee</h4>
-
-          <div class="row">
   <div class="col s12">
     <div class="card">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
-    <div class="col s12 m3 check-inline">
-      <input type="checkbox" id="grantJudicialAid" />
-      <label for="grantJudicialAid">Grant judicial aid</label>
-    </div>
-    <div class="divider"></div>
-    <div class="row no-marg-bot">
-      <div class="input-field col s12 m6">
-        <select required>
-          <option value="" disabled selected>Court</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-        <select required>
-          <option value="" disabled selected>Case type </option>
-          <option value="1">استملاك</option>
-          <option value="2">property aquizition </option>
-          <option value="3">Option 3</option>
-        </select>
-      </div>
-      <div class="col s12 m6">
-        <br>
-        <h6>Claimants</h6>
-        <hr>
-        <ul>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Surname</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
-      </div>
-
-      
-    </div>
+      <div class="card-content" >
+        <div class="row no-marg-bot">
+  <div class="input-field col s12 m3 right">
+    <input id="caseNumber" type="text">
+    <label for="caseNumber">{{Filter.CaseNumber}}</label>
+  </div>
+  <div class="input-field col s12 m3 right">
+    <input id="claimant" type="text" >
+    <label for="claimant">{{Filter.Claimant}}</label>
+  </div>
+  <div class="input-field col s12 m3 right">
+    <input id="defendants" type="text">
+    <label for="defendants">{{Filter.Defendants}}</label>
   </div>
 </div>
-  </div>
-
-  <div class="col s12 m6">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Claimants</span>
-        <div class="divider"></div>
-        <ul>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Surname</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
       </div>
     </div>
   </div>
 
-  <div class="col s12 m6">
-    <div class="card">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Claim document</span>
-    <div class="divider"></div>
-    <br>
-    <div class="col s12 m10 offset-m2">
-       <div class="row valign-wrapper">
-         <div class="col s2">
-           <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
-         </div>
-         <div class="col s10">
-           <span class="black-text">
-             This is a pdf preview of the claim. 
-           </span>
-         </div>
-       </div>
-      </div>
-  </div>
+  <div class="col s12">
+    <div class="filter-action">
+  <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
+    {{Filter.ButtonSearch}}
+    <i class="mdi-navigation-search right"></i>
+  </button>
+  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}">
+    {{Filter.ButtonMoreFields}}
+    <i class="mdi-navigation-expand-more right"></i>
+  </button>
+  <button class="btn btn-large waves-effect waves-light cancel-light left" name="clear">
+    <i class="mdi-content-clear "></i>
+  </button>
 </div>
   </div>
+</div>
 
-<div class="col s12 m6  trigger-wrapper">
-  <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-  <div class="card brown lighten-5">
-  <div class="card-content">
-    <div class="row">
-  <!--       <div class="col s12">
-        <span class="card-title grey-text text-darken-4">Fee</span>
-        
-        <div class="divider"></div>
-      </div> -->
-      <div class="input-field col s4">
-        <input id="sum" type="text">
-        <label for="sum">Sum</label>
-      </div>
-      <div class="col s8">
-        <select>
-          <option value="" disabled selected>Fee type</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-      </div>
     </div>
   </div>
-</div>
 
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6">
+          <a class="active" href="#calendar">Calendar</a>
+        </li>
+        <li class="tab col s6">
+          <a href="#pending">Pending</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card col s12" id="calendar">
+      <div class="card-content row">
+        <div id="daily-register-calendar" class="fullcalendar"></div>
+      </div>
+    </div>
+    <div class="card col s12" id="pending">
+      <div class="card-content row with-table">
+        <div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
-</div>
-</div>
-
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='fee-list.html'">Accept payment</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='fee-list.html'">Save</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='fee-list.html'" ><i class="mdi-content-clear"></i></button>
+<script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
+  <table class="hoverable bordered data">
+    <thead>
+      <th data-field="status" class="sorting">{{Texts.Status}}</th>
+      <th data-field="sum">{{Texts.Defendant}}</th>
+      <th data-field="claimants">{{Texts.Claimant}}</th>
+      <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+    </thead>
+    <tbody>
+      {{#each Cases}}
+      <tr>
+        <td class="center">
+          <i class="status {{Status}}"></i>
+        </td>
+        <td>{{Defendant}}</td>
+        <td>{{Claimant}} </td>
+        <td>{{CaseNumber}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>
         </div>
-      </div>
     </div>
   </div>
+
 </main>
 
 <footer class="page-footer blue-grey darken-3">
@@ -326,3 +296,4 @@
     <script src="scripts/main.js"></script>
   </body>
 </html>
+

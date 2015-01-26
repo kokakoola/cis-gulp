@@ -10662,6 +10662,10 @@ html {
   font-family: "Roboto", "NotoKufi", sans-serif;
 }
 
+html, body {
+  overflow: auto !important;
+}
+
 .container {
   width: 80%;
   max-width: none;
@@ -10900,10 +10904,6 @@ textarea.materialize-textarea.input-validation-error {
 
 .switch.col {
   height: 3rem;
-}
-
-table.dataTable {
-  margin-top: 15px;
 }
 
 table th.sorting_desc .btn-flat i {

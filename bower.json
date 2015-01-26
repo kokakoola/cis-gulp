@@ -12,6 +12,7 @@
     "DataTables": "~1.10.4",
     "bootstrap-sass-official": "~3.3.3",
     "animate.css": "~3.2.0",
-    "jquery-cookie": "~1.4.1"
+    "jquery-cookie": "~1.4.1",
+    "fullcalendar": "~2.2.6"
   }
 }

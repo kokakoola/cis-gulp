@@ -1,0 +1,24 @@
+<div id="placeholder-daily-register-table" class="template-placeholder"></div>
+
+<script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
+  <table class="hoverable bordered data">
+    <thead>
+      <th data-field="status" class="sorting">{{Texts.Status}}</th>
+      <th data-field="sum">{{Texts.Defendant}}</th>
+      <th data-field="claimants">{{Texts.Claimant}}</th>
+      <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+    </thead>
+    <tbody>
+      {{#each Cases}}
+      <tr>
+        <td class="center">
+          <i class="status {{Status}}"></i>
+        </td>
+        <td>{{Defendant}}</td>
+        <td>{{Claimant}} </td>
+        <td>{{CaseNumber}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>
