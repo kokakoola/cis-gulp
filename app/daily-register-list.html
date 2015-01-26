@@ -171,7 +171,9 @@
   <div class="col s12">
     <div class="card">
       <div class="card-content" >
-        <div class="row no-marg-bot">
+        <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
+<div class="row no-marg-bot">
   <div class="input-field col s12 m3 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
@@ -182,15 +184,18 @@
   </div>
   <div class="input-field col s12 m3 right">
     <input id="defendants" type="text">
-    <label for="defendants">{{Filter.Defendants}}</label>
+    <label for="defendants">{{Filter.Defendant}}</label>
   </div>
 </div>
+</script>
       </div>
     </div>
   </div>
 
   <div class="col s12">
-    <div class="filter-action">
+    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
+<div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -203,6 +208,7 @@
     <i class="mdi-content-clear "></i>
   </button>
 </div>
+</script>
   </div>
 </div>
 
@@ -319,6 +325,9 @@
     <!-- endbuild -->
     <!-- build:js scripts/vendor/fullcalendar.min.js -->
     <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
+    <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/language.js -->
