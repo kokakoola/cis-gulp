@@ -17,17 +17,14 @@ $(window).scroll(function() {
 });
 
 // START DOCREADY
-  $(document).ready(function() {
-//    loadLanguage();
+$(document).ready(function() {
 
-    // front login
-    $('.forgot-pass').click(function(event) {
-      $(".pr-wrap").toggleClass("show-pass-reset");
-    });
+  // front login
+  $('.forgot-pass').click(function(event) {
+    $(".pr-wrap").toggleClass("show-pass-reset");
+  });
 
-    $('.pass-reset-submit').click(function(event) {
-      $(".pr-wrap").removeClass("show-pass-reset");
-    });
-
-
-  }); // END DOCREADY
+  $('.pass-reset-submit').click(function(event) {
+    $(".pr-wrap").removeClass("show-pass-reset");
+  });
+}); // END DOCREADY

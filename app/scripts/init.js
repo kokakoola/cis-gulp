@@ -45,6 +45,17 @@
       $('.datepicker').pickadate();
 
       //$('select').material_select();
+
+      // sample text change
+      $('button[data-toggle="collapse"]').click(function () {
+        var expanded = $(this).hasClass('collapsed');
+
+        if (expanded) {
+          $(this).button('less');
+        } else {
+          $(this).button('reset');
+        }
+      });
     }
 
       $(".dropdown-button").dropdown({
