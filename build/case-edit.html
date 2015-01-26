@@ -216,6 +216,14 @@
         <i class="mdi-navigation-more-vert"></i>
         Claimant
       </a>
+      <div class="switch col s6 right">
+        <span>Legal entity</span>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>Natural person</span>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
@@ -229,14 +237,6 @@
     </div>
     <div class="collapse in" id="collapseClaimant_0">
       <div class="row">
-        <div class="switch col s12 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
-        </div>
         <div class="input-field col s12 right">
           <input id="ClaimantAddress_0" type="text" class="validate" value="">
           <label for="ClaimantAddress_0">Claimants address</label>
@@ -304,6 +304,14 @@
         <i class="mdi-navigation-more-vert"></i>
         Defendant
       </a>
+      <div class="switch col s6 right">
+        <span>Legal entity</span>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>Natural person</span>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
@@ -317,14 +325,6 @@
     </div>
     <div class="collapse in" id="collapseDefendant_0">
       <div class="row">
-        <div class="switch col s12 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
-        </div>
         <div class="input-field col s12 right">
           <input id="DefendantAddress_0" type="text" class="validate" value="">
           <label for="DefendantAddress_0">Defendants address</label>
@@ -387,6 +387,14 @@
         <i class="mdi-navigation-more-vert"></i>
         Participant
       </a>
+      <div class="switch col s6 right">
+        <span>Legal entity</span>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>Natural person</span>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
@@ -400,13 +408,14 @@
     </div>
     <div class="collapse in" id="collapseParticipant_0">
       <div class="row">
-        <div class="switch col s12 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
+        <div class="col s12 right">
+          <select id="type_0">
+            <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </div>
         <div class="input-field col s12 right">
           <input id="ParticipantAddress_0" type="text" class="validate" value="">
@@ -552,6 +561,7 @@
     <script src="scripts/vendor/bootstrap.js"></script>
     <script src="scripts/vendor/moment.min.js"></script>
     <script src="scripts/vendor/fullcalendar.min.js"></script>
+    <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
 
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>

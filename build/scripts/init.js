@@ -4,7 +4,22 @@
 
     $('.collapsible').collapsible();
 
+    $('#caseForm .collapse').collapse('show');
+    $('#caseCard').collapse('hide');
+    $('#toggleRepresentative').collapse('hide');
+
     //$(".button-collapse").sideNav();
+
+  // $("#chooseID").joyride({
+  //       autoStart : true,
+  //         postStepCallback : function (index, tip) {
+  //         if (index == 2) {
+  //           $(this).joyride('set_li', false, 1);
+  //         }
+  //       },
+  //       modal:true,
+  //       expose: true
+  // });
 
     // wow.js init
     new WOW().init();

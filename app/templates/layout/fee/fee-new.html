@@ -4,30 +4,20 @@
   </div>
 
   <div class="col s12 m6">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Claimants</span>
-        <div class="divider"></div>
-        <ul>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Surname</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
-      </div>
-    </div>
+    @@include('../audit/audit-cards/audit-card-payment.html')
   </div>
+
 
   <div class="col s12 m6">
     @@include('../common/common-cards/fee-audit-card-claim-pdf.html')
   </div>
 
   <div class="col s12 m6  trigger-wrapper">
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-    @@include('./fee-cards/fee-form-add-fee.html')
+<!--     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a> -->
+    @@include('./fee-cards/fee-form-add-fees.html')
   </div>
 </div>
 
 <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Accept payment</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Save</button>
+<!-- <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Save</button> -->
 <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>
