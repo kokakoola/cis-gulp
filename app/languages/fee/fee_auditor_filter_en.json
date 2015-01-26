@@ -1,20 +1,13 @@
 {
     "Filter" :
     {
-        "To" : "To",
-        "From" : "From",
-        "Claimant" : "Claimant",
-        "CaseType" : {
-          "Label" : "Case type",
-          "Values": ["Option 1", "Option 2", "Option 3"]
-        },
         "CaseNumber" : "Case number",
+        "CaseType" : "Case type",
+        "Claimant" : "Claimant",
         "Status" : {
           "Label" : "Status",
           "Values": ["Unpaid", "Paid", "Audited"]
         },
-        "Receipt" : "Receipt",
-        "Payer" : "Payer",
         "Judge" : "Judge",
         "CourtType" : {
           "Label" : "Court type",
@@ -30,9 +23,11 @@
             "Juvenile court"
           ]
         },
+        "Date" : "Date",
+        "Payer" : "Payer",
+        "Receipt" : "Receipt",
         "ButtonClearAll" : "Clear all",
         "ButtonMoreFields" : "More fields",
-        "ButtonLessFields" : "Less fields",
         "ButtonSearch" : "Search"
     }
 }
