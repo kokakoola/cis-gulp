@@ -13,6 +13,8 @@
     "bootstrap-sass-official": "~3.3.3",
     "animate.css": "~3.2.0",
     "jquery-cookie": "~1.4.1",
-    "jquery-joyride": "~2.1.0"
+    "jquery-joyride": "~2.1.0",
+    "fullcalendar": "~2.2.6"
+
   }
 }

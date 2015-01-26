@@ -9,14 +9,15 @@
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
     <!-- endbuild -->
 
     <!-- build:css styles/app-rtl.css -->
-    <link rel="stylesheet" href="styles/app-rtl.css">
+    <link rel="stylesheet" href="styles/app-rtl.css" class="main-style">
     <!-- endbuild -->
 
     <!-- build:css styles/app-ltr.css -->
-    <link rel="stylesheet" href="styles/app-ltr.css">
+    <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
   <body class="case-list">
@@ -101,6 +102,8 @@
   <li><a href="audit-list.html">Audit list</a></li>
   <li><a href="audit-new.html">Add audit</a></li>
   <li><a href="audit-edit.html">View audit</a></li>
+  <li class="divider"></li>
+  <li><a href="daily-register-list.html">Daily register list</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -255,12 +258,12 @@
 </div>
       </div>
     </div>
-    <div class=" filter-action left">
+    <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
   </button>
-  <button class="btn btn-large waves-effect waves-light save left" type="button" data-toggle="collapse" data-target="#moreFields">
+  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}">
     {{Filter.ButtonMoreFields}}
     <i class="mdi-navigation-expand-more right"></i>
   </button>
@@ -275,8 +278,8 @@
     </div>
   </div>
 
-  <div class="with-table card">
-    <div class="row">
+  <div class="card">
+    <div class="card-content row with-table">
       <form action="">
   <div id="placeholder-registry-table" class="template-placeholder"></div>
 
@@ -371,18 +374,40 @@
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/moment.min.js -->
+    <script src="../bower_components/moment/min/moment.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/fullcalendar.min.js -->
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
     <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/init.js"></script>
+    <!-- build:js scripts/language.js -->
     <script src="scripts/language.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/dataCol.js -->
+    <script src="scripts/dataCol.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/init.js -->
+    <script src="scripts/init.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/animate-css.js -->
     <script src="scripts/animate-css.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/Common.js -->
     <script src="scripts/Common.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/fullscreen.js -->
     <script src="scripts/fullscreen.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/skillset-init.js -->
     <script src="scripts/skillset-init.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

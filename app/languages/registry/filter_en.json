@@ -25,6 +25,7 @@
         "JudicialAid" : "Judicial aid",
         "ButtonClearAll" : "Clear all",
         "ButtonMoreFields" : "More fields",
+        "ButtonLwaaFields" : "Less fields",
         "ButtonSearch" : "Search"
     }
 }

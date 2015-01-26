@@ -6,6 +6,10 @@ html {
   font-family:  "Roboto", "NotoKufi", sans-serif;
 }
 
+html, body {
+  overflow: auto !important;
+}
+
 .container {
   width: 80%;
   max-width: none;
@@ -221,7 +225,7 @@ animation: second 30s ease infinite;
 
 .btn.save-light {
   background-color: color("cyan", "base");
-} 
+}
 
 .btn.cancel {
   color: color("grey-text", "text-darken-2");
@@ -229,7 +233,7 @@ animation: second 30s ease infinite;
 
 .btn.cancel-light {
   background-color: color("grey", "lighten-5");
-  
+
   i {
     color: $off-black;
   }
@@ -322,9 +326,6 @@ textarea.valid {
 
 // Table style
 // **********************
-table.dataTable {
-  margin-top: 15px;
-}
 table {
 
   th.sorting_desc .btn-flat i {
@@ -424,3 +425,9 @@ i.status {
 }
 
 
+// DataCol
+// *************
+
+div[data-datacol-model] {
+  display: none;
+}
