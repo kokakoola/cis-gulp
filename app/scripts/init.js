@@ -3,10 +3,10 @@
     //$(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
 
     $('.collapsible').collapsible();
-
-    $('#caseForm .collapse').collapse('show');
-    $('#caseCard').collapse('hide');
-    $('#toggleRepresentative').collapse('hide');
+//
+//    $('#caseForm .collapse').collapse('show');
+//    $('#caseCard').collapse('hide');
+//    $('#toggleRepresentative').collapse('hide');
 
     //$(".button-collapse").sideNav();
 
