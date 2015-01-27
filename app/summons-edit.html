@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Create summons</title>
+    <title>CIS | Created summons detail view</title>
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
     <!-- endbuild -->
 
     <!-- build:css styles/app-rtl.css -->
-    <link rel="stylesheet" href="styles/app-rtl.css">
+    <link rel="stylesheet" href="styles/app-rtl.css" class="main-style">
     <!-- endbuild -->
 
     <!-- build:css styles/app-ltr.css -->
-    <link rel="stylesheet" href="styles/app-ltr.css">
+    <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
   <body class="summons-create">
@@ -102,6 +103,8 @@
   <li><a href="audit-new.html">Add audit</a></li>
   <li><a href="audit-edit.html">View audit</a></li>
   <li class="divider"></li>
+  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
 
@@ -163,121 +166,84 @@
       <div class="row">
         <div class="col s12">
           <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="summons-list.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header white-text text-darken-2">Create summons</h4>
+<h4 class="header white-text text-darken-2">Created summons detail view</h4>
           
-          <div class="row">
-  <div class="col s12">
+          
+<div class="row">
+
+  <div class="col s12 m6">
     <div class="card">
   <div class="card-content">
-    <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
-    <div class="col s12 m3 check-inline">
-      <input type="checkbox" id="grantJudicialAid" />
-      <label for="grantJudicialAid">Grant judicial aid</label>
-    </div>
+   <span class="card-title grey-text text-darken-4">2014 / B / 23</span>
     <div class="divider"></div>
-    <div class="row no-marg-bot">
-      <div class="input-field col s12 m6">
-        <select required>
-          <option value="" disabled selected>Court</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-        <select required>
-          <option value="" disabled selected>Case type </option>
-          <option value="1">استملاك</option>
-          <option value="2">property aquizition </option>
-          <option value="3">Option 3</option>
-        </select>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="courtname">Court name</label>
+        <input id="courtname" type="text" value="Primary court 1" disabled>
       </div>
-      <div class="col s12 m6">
-        <br>
-        <h6>Claimants</h6>
-        <hr>
-        <ul>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Surname</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
+      <div class="input-field col s12">
+        <input id="judge" type="text" value="Ahmed Khadr Omar" disabled>
+        <label for="judge">Judge</label>
+      </div>      
+      <div class="input-field col s12">
+        <label for="dateofhearing">Date of hearing</label>
+        <input id="dateofhearing" type="text" class="datepicker today" disabled>
       </div>
-
-      
+      <div class="input-field col s12">
+        <input id="addressee" type="text" value="Ahmed Khadr Omar" disabled>
+        <label for="addressee">Addressee</label>
+      </div>         
     </div>
   </div>
 </div>
   </div>
 
-  <div class="col s12 m6">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">Claimants</span>
-        <div class="divider"></div>
-        <ul>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Middlename Surname</li>
-          <li>Forename Surname</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
+  <div id="placeholder-summons-filter" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
   <div class="col s12 m6">
     <div class="card">
   <div class="card-content">
     <span class="card-title grey-text text-darken-4">Claim document</span>
     <div class="divider"></div>
     <br>
-    <div class="col s12 m10 offset-m2">
+    <div class="col m6 right">
+    
+      <div class="input-field col s12 right no-marg-top">
+        <select>
+          <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
+          {{#each Filter.Summoner.Values}}
+            <option value="{{@index}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </div> 
+
+      <div class="input-field col s12 right">
+        <input id="dateofhearing" type="date" class="datepicker">
+        <label for="dateofhearing">{{Filter.DateOfDispatch}}</label>
+      </div>
+
+
+      <div class="divider"></div>
+    </div>
+
+    <div class="col s12 m6">
        <div class="row valign-wrapper">
-         <div class="col s2">
-           <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
-         </div>
-         <div class="col s10">
-           <span class="black-text">
-             This is a pdf preview of the claim. 
-           </span>
-         </div>
+          <div class="col s4">
+            <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img">    
+          </div>
        </div>
       </div>
   </div>
 </div>
   </div>
-
-<div class="col s12 m6  trigger-wrapper">
-  <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-  <div class="card brown lighten-5">
-  <div class="card-content">
-    <div class="row">
-  <!--       <div class="col s12">
-        <span class="card-title grey-text text-darken-4">Fee</span>
-        
-        <div class="divider"></div>
-      </div> -->
-      <div class="input-field col s4">
-        <input id="sum" type="text">
-        <label for="sum">Sum</label>
-      </div>
-      <div class="col s8">
-        <select>
-          <option value="" disabled selected>Fee type</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-      </div>
-    </div>
-  </div>
+  </script>
 </div>
 
-
-</div>
-</div>
-
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='summons-list.html'">Accept payment</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='summons-list.html'">Save</button>
+<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='summons-list.html'">Register</button>
+<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='summons-list.html'"><i class="mdi-action-print"></i></button>
 <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='summons-list.html'" ><i class="mdi-content-clear"></i></button>
+
+
         </div>
       </div>
     </div>
@@ -340,6 +306,15 @@
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/moment.min.js -->
+    <script src="../bower_components/moment/min/moment.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/fullcalendar.min.js -->
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
+    <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/language.js -->

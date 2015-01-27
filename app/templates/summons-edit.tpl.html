@@ -2,7 +2,7 @@
 {
   "bodyClass": "summons-create",
   "htmlClass": "summons-create",
-  "title": "Create summons"
+  "title": "Created summons detail view"
 })
 
 @@include('./layout/header.html')
@@ -17,9 +17,9 @@
         <div class="col s12">
           @@include('./layout/common/round-top-back.html')
           
-          @@include('./layout/fee/fee-new.html',
+          @@include('./layout/summons/summons-new.html',
           {
-            "formName": "Create summons",
+            "formName": "Created summons detail view",
             "backTo": "summons-list.html"
           })
         </div>

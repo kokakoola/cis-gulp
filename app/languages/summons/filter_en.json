@@ -27,6 +27,7 @@
     "ButtonClearAll" : "Clear all",
     "ButtonMoreFields" : "More fields",
     "ButtonSearch" : "Search",
-    "Judge" : "Judge"
+    "Judge" : "Judge",
+    "DateOfDispatch" : "Date of dispatch"
   }
 }
