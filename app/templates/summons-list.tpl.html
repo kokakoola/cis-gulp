@@ -1,0 +1,41 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "summon",
+  "htmlClass": "summon",
+  "title": "Summons list view"
+})
+
+@@include('./layout/header.html')
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4 class="header white-text text-darken-2">Summons view</h4>
+          @@include('./layout/summons/summons-filter.html',
+          {
+            "ffwTo": "summons-edit.html"
+          })
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content row with-table">
+      @@include('./layout/summons/summons-table.html',
+      {
+        "ffwTo": "summons-edit.html"
+      })
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')

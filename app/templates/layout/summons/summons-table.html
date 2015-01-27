@@ -1,0 +1,40 @@
+<form action="">
+  <div id="placeholder-summons-table" class="template-placeholder"></div>
+
+  <script type="text/x-handlebars-template" id="summons-table-template" class="template" data-lang="data/summons/table">
+    <table class="hoverable bordered data">
+      <thead>
+        <th data-field="select">&nbsp;</th>
+        <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+        <th data-field="courtname" class="sorting">{{Texts.CourtName}}</th>
+        <th data-field="judge" class="sorting">{{Texts.Judge}}</th>
+        <th data-field="dateofhearing" class="sorting">{{Texts.DateOfHearing}}</th>
+        <th data-field="addressee" class="sorting">{{Texts.Addressee}}</th>
+        <th data-field="dateofsummon" class="sorting">{{Texts.DateOfSummon}}</th>
+        <th data-field="summoner" class="sorting">{{Texts.Summoner}}</th>
+        <th data-field="status" class="sorting">{{Texts.Status}}</th>
+
+
+      </thead>
+      <tbody>
+      {{#each Cases}}
+        <tr onClick="parent.location='@@ffwTo'">
+          <td class="center">
+            <input type="checkbox" id="select_{{@index}}" />
+            <label for="select_{{@index}}"></label>
+          </td>
+          <td>{{CaseNumber}}</td>
+          <td>{{CourtName}}</td>
+          <td>{{Judge}}</td>
+          <td>{{DateOfHearing}}</td>
+          <td>{{Addressee}}</td>
+          <td>{{DateOfSummon}}</td>
+          <td>{{Summoner}}</td>
+          <td>{{Status}}</td>
+
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </script>
+</form>

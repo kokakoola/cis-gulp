@@ -1,0 +1,59 @@
+
+<div class="row no-marg-bot">
+  <div class="col s12 m4 right">
+    <ul id="dropdownStatus" class="dropdown-content simplified">
+        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
+        <li><a href="#!">Pending <i class="status pending"></i></a></li>
+        <li><a href="#!">Registered<i class="status registered"></i></a></li>
+        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
+        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
+        <li><a href="#!">Closed<i class="status closed"></i></a></li>
+        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
+      </ul>
+      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
+  </div>
+  <div class="input-field col s12 m4 right">
+    <input id="addresse" type="text">
+    <label for="addresse">{{Filter.Addressee}}</label>
+  </div>
+  <div class="input-field col s12 m4 right">
+    <input id="caseNumber" type="text">
+    <label for="caseNumber">{{Filter.CaseNumber}}</label>
+  </div>
+</div>
+
+<!-- hidden by toggle -->
+<div class="row collapse" id="moreFields">
+  <div class="input-field col s12 m2 right">
+    <input id="judge" type="text">
+    <label for="judge">{{Filter.Judge}}</label>
+  </div>
+
+  <div class="input-field col s12 m2 right no-marg-top">
+    <select>
+      <option value="" disabled selected>{{Filter.CourtName.Label}}</option>
+      {{#each Filter.CourtName.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="input-field col s12 m2 right no-marg-top">
+    <select>
+      <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
+      {{#each Filter.Summoner.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="input-field col s12 m2 right">
+    <input id="dateofhearing" type="date" class="datepicker">
+    <label for="dateofhearing">{{Filter.DateOfHearing}}</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="dateofsummon" type="date" class="datepicker">
+    <label for="dateofsummon">{{Filter.DateOfSummon}}</label>
+  </div>
+
+</div>

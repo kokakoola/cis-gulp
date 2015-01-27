@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Claim document</span>
+    <div class="divider"></div>
+    <br>
+    <div class="col m6 right">
+    
+      <div class="input-field col s12 right no-marg-top">
+        <select>
+          <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
+          {{#each Filter.Summoner.Values}}
+            <option value="{{@index}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </div> 
+
+      <div class="input-field col s12 right">
+        <input id="dateofhearing" type="date" class="datepicker">
+        <label for="dateofhearing">{{Filter.DateOfDispatch}}</label>
+      </div>
+
+
+      <div class="divider"></div>
+    </div>
+
+    <div class="col s12 m6">
+       <div class="row valign-wrapper">
+          <div class="col s4">
+            <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img">    
+          </div>
+       </div>
+      </div>
+  </div>
+</div>
