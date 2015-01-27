@@ -1,0 +1,44 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "summon",
+  "htmlClass": "summon",
+  "title": "Summons list view"
+})
+
+@@include('./layout/header.html')
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+
+          @@include('./layout/common/round-top-fw.html')
+          @@include('./layout/summons/summons-filter.html',
+          {
+            "formName": "Summons view",
+            "fwTo": "fee-new.html",
+            "ffwTo": "summons-edit.html"
+          })
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="with-table card">
+    <div class="row">
+      @@include('./layout/summons/summons-table.html',
+      {
+        "ffwTo": "summons-edit.html"
+      })
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')

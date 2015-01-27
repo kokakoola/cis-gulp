@@ -44,7 +44,7 @@
 
       $('.datepicker').pickadate();
 
-      //$('select').material_select();
+      $('select').material_select();
 
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {
