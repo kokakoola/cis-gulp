@@ -17,10 +17,16 @@
         <div class="col s12">
           @@include('./layout/common/round-top-back.html')
 
-          @@include('./layout/fee/fee-new.html',
+          @@include('./layout/fee-audit/fee-new.html',
           {
             "formName": "New fee",
-            "backTo": "fee-list.html"
+            "backTo": "fee-list.html",
+            "hidden": "hidden",
+            "disabled": " ",
+            "value1": "Courtname",
+            "sum1": "",
+            "sum2": "",
+            "total": "0.00"
           })
         </div>
       </div>

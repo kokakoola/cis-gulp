@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="audit-list">
+<html lang="" class="daily-new">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Audit list</title>
+    <title>CIS | New daily</title>
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
-  <body class="audit-list">
+  <body class="daily-new">
 
 
 <div class="navbar-fixed">
@@ -173,151 +173,140 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
+          <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="daily-list.html"><i class="mdi-navigation-close"></i></a>
+<h4 class="header white-text text-darken-2">Registrate hearing</h4>
 
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html">
-  <i class="mdi-content-add"></i>
-</a>
-<h4 class="header white-text text-darken-2">Auditor list view</h4>
-          <div id="placeholder-fee-filter" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
-  <div class="card">
-    <div class="card-content" >
-      <div class="row no-marg-bot">
-  <div class="col s12 m2 right">
-    <ul id="dropdownStatus" class="dropdown-content simplified">
-        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
-        <li><a href="#!">Pending <i class="status pending"></i></a></li>
-        <li><a href="#!">Registered<i class="status registered"></i></a></li>
-        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
-        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
-        <li><a href="#!">Closed<i class="status closed"></i></a></li>
-        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
-      </ul>
-      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="caseNumber" type="text">
-    <label for="caseNumber">{{Filter.CaseNumber}}</label>
-  </div>
-  <div class="col s12 m2 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
-      {{#each Filter.CaseType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="claimant" type="text" >
-    <label for="claimant">{{Filter.Claimant}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">{{Filter.From}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">{{Filter.To}}</label>
-    <input id="endDate" type="text" class="datepicker">
-  </div>
-</div>
+          <div class="row">
+  <div class="col s12 m6">
+    <div class="card">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Case 32145</span>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col s12">
+      <table>
+        <thead>
+          <tr>
+            <th data-field="price">Full name</th>
+            <th data-field="price">Role</th>
+            <th data-field="name">Send summon</th>
+            <th data-field="id">Attend hearing</th>
+          </tr>
+        </thead>
 
-<!-- hidden by toggle -->
-<div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
-      {{#each Filter.CourtType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m3 right">
-    <input id="judge" type="text">
-    <label for="judge">{{Filter.Judge}}</label>
-  </div>
-  <div class="input-field col s12 m3 right">
-    <input id="payer" type="text">
-    <label for="payer">{{Filter.Payer}}</label>
-  </div>
-    <div class="input-field col s12 m3 right">
-    <input id="recipt" type="text">
-    <label for="recipt">{{Filter.Receipt}}</label>
-  </div>
-</div>
-
+        <tbody>
+          <tr>
+            <td>Hookus Pookus</td>
+            <td>Claimant</td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="1"/><label for="1"> </label>
+              </div>
+            </td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="2" checked/><label for="2"> </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Alan Mairmaid</td>
+            <td>Defendant</td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="3" checked/><label for="3"> </label>
+              </div>
+            </td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="4" checked/><label for="4"> </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Jonathan Misterman</td>
+            <td>Participant</td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="5" checked/><label for="5"> </label>
+              </div>
+            </td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="6" checked/><label for="6"> </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
     </div>
   </div>
-</script>
-  
-  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
-<div class="filter-action">
-  <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
-    {{Filter.ButtonSearch}}
-    <i class="mdi-navigation-search right"></i>
-  </button>
-  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}">
-    {{Filter.ButtonMoreFields}}
-    <i class="mdi-navigation-expand-more right"></i>
-  </button>
-  <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
-    <i class="mdi-content-clear "></i>
-  </button>
 </div>
-</script>
-
-
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+      <div class="card">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Pick a hearing time</span>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="input-field col s12 m6">
+        <label for="hearingDate">Date</label>
+        <input id="hearingDate" type="text" class="datepicker">
+      </div>
+      <div class="input-field col s12 m6">
+        <label for="hearingTime">Time</label>
+        <input id="hearingTime" type="text" class="timepicker">
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+      <div id="placeholder-case-form-documents-upload" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+<div class="card">
+  <div class="card-content">
+  <span class="card-title grey-text text-darken-4">{{Texts.Documents}}</span>
+    
+    <div class="divider"></div>
+    <div class="row no-marg-bot">
+      <div class="col s12 center">
+        <div class="card-panel bg-light valign-wrapper">
+            <span ><h5><i class="mdi-file-file-upload"></i>{{Texts.DropFilesHere}}</h5>{{Texts.ClickHere}}</span>
         </div>
       </div>
     </div>
   </div>
+</div>
+</script>
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+      <div id="placeholder-case-form-note" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+<div class="card cyan lighten-5">
+  <div class="card-content">
+  <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+    <div class="divider"></div>
+    <div class="row no-marg-bot">
+      <div class="input-field col s12">
+        <textarea class="materialize-textarea"></textarea>
+        <label><i class="mdi-content-create tiny"></i></label>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+  </div>
 
-  <div class="card">
-    <div class="card-content row with-table">
-      <form action="">
-  <div id="placeholder-fee-table" class="template-placeholder"></div>
+</div>
 
-  <script type="text/x-handlebars-template" id="fee-table-template" class="template" data-lang="data/fee/table">
-    <table class="hoverable bordered data">
-      <thead>
-        <th data-field="select">&nbsp;</th>
-        <th data-field="status" class="sorting">{{Texts.Status}}</th>
-        <th data-field="date" class="sorting">{{Texts.Date}}</th>
-        <th data-field="receipt">{{Texts.Receipt}}</th>
-        <th data-field="payer">{{Texts.Payer}}</th>
-        <th data-field="sum">{{Texts.Sum}}</th>
-        <th data-field="claimants">{{Texts.Claimant}}</th>
-        <th data-field="courttype">{{Texts.CourtType}}</th>
-        <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
-        <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-      </thead>
-      <tbody>
-      {{#each Cases}}
-        <tr onClick="parent.location='audit-edit.html'">
-          <td class="center">
-            <input type="checkbox" id="select_{{@index}}" />
-            <label for="select_{{@index}}"></label>
-          </td>
-          <td class="center">
-            <i class="status {{Status}}"></i>
-          </td>
-          <td>{{Date}}</td>
-          <td>{{Receipt}}</td>
-          <td>{{Payer}}</td>
-          <td>{{Sum}}</td>
-          <td>{{Claimant}} </td>
-          <td>{{CourtType}}</td>
-          <td>{{CaseType}}</td>
-          <td>{{CaseNumber}}</td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </script>
-</form>
+<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='daily-list.html'">Save and generate summons</button>
+<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='daily-list.html'">Save</button>
+<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='daily-list.html'" ><i class="mdi-content-clear"></i></button>
 
+        </div>
+      </div>
     </div>
   </div>
 </main>

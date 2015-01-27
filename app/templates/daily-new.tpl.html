@@ -1,8 +1,8 @@
 @@include('./base/header.tpl.html',
 {
-  "bodyClass": "audit-new",
-  "htmlClass": "audit-new",
-  "title": "New audit"
+  "bodyClass": "daily-new",
+  "htmlClass": "daily-new",
+  "title": "New daily"
 })
 
 @@include('./layout/header.html')
@@ -17,11 +17,12 @@
         <div class="col s12">
           @@include('./layout/common/round-top-back.html')
 
-          @@include('./layout/fee-audit/audit-new.html',
+          @@include('./layout/daily/daily-new.html',
           {
-            "formName": "New audit",
-            "backTo": "audit-list.html",
-                        "hidden": "hidden",
+            "formName": "Registrate hearing",
+            "backTo": "daily-list.html",
+            "hidden": "hidden",
+            "caseNo": "{{Texts.No}}",
             "disabled": " ",
             "value1": "Courtname",
             "sum1": "",
