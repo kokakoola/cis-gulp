@@ -339,6 +339,9 @@ table {
   thead {
     border-bottom: 1px solid #9E9E9E !important;
   }
+  &.dataTable tr:hover {
+    cursor: pointer;
+  }
 }
 
 .with-table {

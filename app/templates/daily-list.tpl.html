@@ -5,7 +5,10 @@
   "title": "Daily"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Daily register for Primary Court Nr 1"
+})
+
 
 <main>
 
@@ -17,7 +20,9 @@
         "formName": "Daily register",
         "fwTo": "daily-new.html"
       })
-      @@include('./layout/daily/daily-filter.html')
+      <div class="row no-marg-bot">
+        @@include('./layout/daily/daily-filter.html')
+      </div>
     </div>
   </div>
 
@@ -39,7 +44,9 @@
     </div>
     <div class="card col s12" id="list">
       <div class="card-content row with-table">
-        @@include('./layout/daily/daily-table.html')
+        @@include('./layout/daily/daily-table.html', {
+        "fwTo": "daily-new.html"
+      })
         </div>
     </div>
   </div>

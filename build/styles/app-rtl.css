@@ -11186,6 +11186,9 @@ table a {
 table thead {
   border-bottom: 1px solid #9E9E9E !important;
 }
+table.dataTable tr:hover {
+  cursor: pointer;
+}
 
 .with-table {
   padding: 0 35px;
@@ -11609,31 +11612,13 @@ div[data-datacol-model] {
 
 @font-face {
   font-family: "NotoKufi";
+  src: url(../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.ttf);
   font-weight: 400;
-  font-style: normal;
-  src: url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.eot");
-  src: url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.eot?#iefix") format("embedded-opentype"), url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.woff") format("woff"), url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.ttf") format("truetype"), url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.svg#NotoKufi") format("svg");
 }
 @font-face {
   font-family: "NotoKufi";
+  src: url(../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.ttf);
   font-weight: 700;
-  font-style: normal;
-  src: url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.eot");
-  src: url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.eot?#iefix") format("embedded-opentype"), url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.woff") format("woff"), url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.ttf") format("truetype"), url("../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.svg#NotoKufi") format("svg");
-}
-@font-face {
-  font-family: "NotoNaskh";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular.eot");
-  src: url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular.eot?#iefix") format("embedded-opentype"), url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular.woff") format("woff"), url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular.ttf") format("truetype"), url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular.svg#NotoNaskh") format("svg");
-}
-@font-face {
-  font-family: "NotoNaskh";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold.eot");
-  src: url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold.eot?#iefix") format("embedded-opentype"), url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold.woff") format("woff"), url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold.ttf") format("truetype"), url("../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold.svg#NotoNaskh") format("svg");
 }
 span.badge.new:after {
   content: " ";
@@ -11886,14 +11871,14 @@ html, .datepicker {
  */
 /**
  * Switch the direction - only really necessary if
- * it hasnŌĆÖt already been applied higher up in the DOM.
+ * it hasn’t already been applied higher up in the DOM.
  */
 .picker {
   direction: rtl;
 }
 
 /**
- * Flip around the ŌĆ£nextŌĆØ and ŌĆ£previousŌĆØ buttons.
+ * Flip around the “next” and “previous” buttons.
  */
 .picker__nav--next {
   right: auto;

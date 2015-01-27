@@ -1,0 +1,33 @@
+{
+    "Filter" :
+    {
+        "CaseNumber" : "Case number",
+        "CaseType" : "Case type",
+        "Claimant" : "Claimant",
+        "Status" : {
+          "Label" : "Status",
+          "Values": ["Unpaid", "Paid", "Audited"]
+        },
+        "Judge" : "Judge",
+        "CourtType" : {
+          "Label" : "Court type",
+          "Values" : [
+            "Primary court",
+            "Labour court",
+            "Personal Status court",
+            "Personal Items court",
+            "Felony court",
+            "Investigative court",
+            "Appeal court",
+            "Misdemeanor court",
+            "Juvenile court"
+          ]
+        },
+        "Date" : "Date",
+        "Payer" : "Payer",
+        "Receipt" : "Receipt",
+        "ButtonClearAll" : "Clear all",
+        "ButtonMoreFields" : "More fields",
+        "ButtonSearch" : "Search"
+    }
+}

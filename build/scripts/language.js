@@ -22,7 +22,8 @@
           stylesheet = 'rtl';
         }
 
-        $('.main-style').attr({href : 'styles/app-' + stylesheet + '.css'});
+                // $('.main-style').attr({href : 'styles/app-' + stylesheet + '.css'});
+        $("link[href*='styles/app-']").attr({href : 'styles/app-' + stylesheet + '.css'});
       }
 
       obj.initLanguage = function() {

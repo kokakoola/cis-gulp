@@ -5,7 +5,10 @@
   "title": "Created summons detail view"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Notification department"
+})
+
 
 <main>
 
@@ -19,7 +22,7 @@
           
           @@include('./layout/summons/summons-new.html',
           {
-            "formName": "Created summons detail view",
+            "formName": "Register an outgoing summon",
             "backTo": "summons-list.html"
           })
         </div>

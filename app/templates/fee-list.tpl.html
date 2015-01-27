@@ -5,7 +5,9 @@
   "title": "Fee"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Fee department"
+})
 
 <main>
 
@@ -13,7 +15,7 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
+      <div class="row no-marg-bot">
         <div class="col s12">
 
           @@include('./layout/common/round-top-fw.html',

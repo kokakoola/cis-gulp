@@ -29,7 +29,7 @@
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Civil Primary Court</li>
+        <li>Daily register for Primary Court Nr 1</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -107,11 +107,9 @@
   <li class="divider"></li>
   <li><a href="daily-list.html">Daily list</a></li>
   <li><a href="daily-new.html">New daily</a></li>
-  <li><a href="daily-edit.html">Edit daily</a></li>
   <li class="divider"></li>
   <li><a href="summons-list.html">Summons list</a></li>
   <li><a href="summons-new.html">New summon</a></li>
-  <li><a href="summons-edit.html">Edit summons</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -175,11 +173,10 @@
   <i class="mdi-content-add"></i>
 </a>
 <h4 class="header white-text text-darken-2">Daily register</h4>
-      <div class="row">
-  <div class="col s12">
-    <div class="card">
-      <div class="card-content" >
-        <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+      <div class="col s12">
+  <div class="card">
+    <div class="card-content" >
+      <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
 <div class="row no-marg-bot">
   <div class="input-field col s12 m3 right">
@@ -196,12 +193,12 @@
   </div>
 </div>
 </script>
-      </div>
     </div>
   </div>
+</div>
 
-  <div class="col s12">
-    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<div class="col s12">
+  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
 <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
@@ -218,7 +215,6 @@
 </div>
 </script>
 
-  </div>
 </div>
 
     </div>
@@ -254,7 +250,7 @@
     </thead>
     <tbody>
       {{#each Cases}}
-      <tr>
+      <tr onClick="parent.location='@@fwTo'">
         <td class="center">
           <i class="status {{Status}}"></i>
         </td>
@@ -338,10 +334,10 @@
     <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
     <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
+    <!-- build:js scripts/vendor/picker.time.js -->
     <script src="../bower_components/pickadate/lib/picker.time.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/vendor/pickadate/lib/translations/ar.j -->
+    <!-- build:js scripts/vendor/ar.js -->
     <script src="../bower_components/pickadate/lib/translations/ar.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/language.js -->
