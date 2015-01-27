@@ -1,0 +1,61 @@
+{
+  "Texts": {
+    "CaseNumber": "Case number",
+    "Claimant": "Claimant",
+    "Defendant": "Payer",
+    "Status": "Status"
+  },
+
+  "Cases": [
+
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    },
+    {
+      "CaseNumber": "2014/B/23",
+      "Claimant": "Ahmed Khadr Omar",
+      "Defendant": "Ahmed Khadr Omar",
+      "Status": "True"
+    }
+
+  ]
+}

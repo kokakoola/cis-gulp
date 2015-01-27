@@ -10,6 +10,8 @@
 //**********************************
 @import "overrides/direction";
 @import "overrides/datatables";
+@import "overrides/joyride";
+@import "overrides/fullcalendar";
 
 // MIXINS
 //**********************************
@@ -26,7 +28,7 @@
 @import "components/header";
 @import "components/exp-switch";
 @import "components/helpers";
-@import "components/login";
+@import "components/login"; 
 
 // VENDOR
 //**********************************

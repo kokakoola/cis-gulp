@@ -9,14 +9,15 @@
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
     <!-- endbuild -->
 
     <!-- build:css styles/app-rtl.css -->
-    <link rel="stylesheet" href="styles/app-rtl.css">
+    <link rel="stylesheet" href="styles/app-rtl.css" class="main-style">
     <!-- endbuild -->
 
     <!-- build:css styles/app-ltr.css -->
-    <link rel="stylesheet" href="styles/app-ltr.css">
+    <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
   <body class="case-edit">
@@ -102,6 +103,8 @@
   <li><a href="audit-new.html">Add audit</a></li>
   <li><a href="audit-edit.html">View audit</a></li>
   <li class="divider"></li>
+  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
 
@@ -163,50 +166,52 @@
       <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">Edit case</h4>
       <div class="row">
+  <div id="placeholder-case-form-general" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
   <div class="col s12">
-  <div class="card">
-    <div class="card-content">
-      <div class="row">
-        <span class="card-title grey-text text-darken-4"> Case</span>
-        <div class="col s12 m1 check-inline">
-          <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
+    <div class="card">
+      <div class="card-content">
+        <div class="row">
+          <span class="card-title grey-text text-darken-4">{{Texts.Case}}</span>
+          <div class="col s12 m1 check-inline">
+            <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
+          </div>
+          <div class="col s12 m2 check-inline">
+            <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
+          </div> 
+
+          <div class="divider"></div>
         </div>
-        <div class="col s12 m2 check-inline">
-          <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
-        </div> 
-        
-        <div class="divider"></div>
-      </div>
-      <div class="row">
-        <div class="col s12 m6">
-          <select required>
-            <option value="" disabled selected>Judge default</option>
-            <option value="1">Judge Else (6)</option>
-            <option value="2">Judge Other (14)</option>
-            <option value="3">Judge Judge (22)</option>
-          </select>
-        </div>
-        <div class="input-field col s12 m6">
-          <input id="claimValue" type="text" class="validate">
-          <label for="claimValue">Case value</label>
-        </div>
-        <div class="col s12 m6">
-          <select required>
-            <option value="" disabled selected>Case type </option>
-            <option value="1">استملاك</option>
-            <option value="2">property aquizition </option>
-            <option value="3">Option 3</option>
-          </select>
-        </div>
-        <div class="input-field col s12 m6">
-          <label for="paymentDate">Registered at</label>
-          <input id="paymentDate" type="text" class="datepicker today">
+        <div class="row">
+          <div class="col s12 m6">
+            <select>
+              <option value="" selected>{{Texts.Judge.Label}}</option>
+              {{#each Texts.Judge.Values}}
+                <option value="{{@index}}">{{this}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="claimValue" type="text" class="validate">
+            <label for="claimValue">{{Texts.CaseValue}}</label>
+          </div>
+          <div class="col s12 m6">
+            <select>
+              <option value="" selected>{{Texts.CaseType.Label}}</option>
+              {{#each Texts.CaseType.Values}}
+                <option value="{{@index}}">{{this}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="input-field col s12 m6">
+            <label for="paymentDate">{{Texts.RegisteredAt}}</label>
+            <input id="paymentDate" type="text" class="datepicker today">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
+</script>
 
     <!-- Dropdown Trigger -->
 
@@ -221,6 +226,14 @@
         <i class="mdi-navigation-more-vert"></i>
         Claimant
       </a>
+      <div class="switch col s6 right">
+        <span>Legal entity</span>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>Natural person</span>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
@@ -234,14 +247,6 @@
     </div>
     <div class="collapse in" id="collapseClaimant_0">
       <div class="row">
-        <div class="switch col s12 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
-        </div>
         <div class="input-field col s12 right">
           <input id="ClaimantAddress_0" type="text" class="validate" value="">
           <label for="ClaimantAddress_0">Claimants address</label>
@@ -255,38 +260,39 @@
           <label for="ClaimantPhone_0">Claimants phone</label>
         </div>
       </div>
-        <div class="row collapse in" id="toggleRepresentative_0">
-  <span class="card-title grey-text text-darken-4">Representative</span>
+        <div id="placeholder-case-form-representative" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
+<div class="row collapse in" id="toggleRepresentative_0">
+  <span class="card-title grey-text text-darken-4">{{Texts.Representative}}</span>
   <div class="divider"></div>
 
   <div class="col s12 right">
-    <select id="type_0">
-      <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-      <option value="1">Lawyer</option>
-      <option value="2">Parent</option>
-      <option value="3">Legal guardian</option>
-      <option value="4">Other</option>
+    <select>
+      <option value="" selected>{{Texts.Type.Label}}</option>
+      {{#each Texts.Type.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
 
   <div class="input-field col s12 right">
     <input id="parent_0" type="text" class="validate" value="">
-    <label for="parent_0">Representatives full name</label>
+    <label for="parent_0">{{Texts.FullName}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentId_0" type="text">
-    <label for="parentId_0">Representatives ID</label>
+    <label for="parentId_0">{{Texts.ID}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentPhone_0" type="text">
-    <label for="parentPhone_0">Representatives Phone</label>
+    <label for="parentPhone_0">{{Texts.Phone}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentAddress_0" type="text" value="">
-    <label for="parentAddress_0">Representatives address</label>
+    <label for="parentAddress_0">{{Texts.Address}}</label>
   </div>
 </div>
-
+</script>
     </div>
   </div>
 <!--             <div class="card-action">
@@ -309,6 +315,14 @@
         <i class="mdi-navigation-more-vert"></i>
         Defendant
       </a>
+      <div class="switch col s6 right">
+        <span>Legal entity</span>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>Natural person</span>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
@@ -322,14 +336,6 @@
     </div>
     <div class="collapse in" id="collapseDefendant_0">
       <div class="row">
-        <div class="switch col s12 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
-        </div>
         <div class="input-field col s12 right">
           <input id="DefendantAddress_0" type="text" class="validate" value="">
           <label for="DefendantAddress_0">Defendants address</label>
@@ -343,38 +349,39 @@
           <label for="DefendantPhone_0">Defendants phone</label>
         </div>
       </div>
-        <div class="row collapse in" id="toggleRepresentative_0">
-  <span class="card-title grey-text text-darken-4">Representative</span>
+        <div id="placeholder-case-form-representative" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
+<div class="row collapse in" id="toggleRepresentative_0">
+  <span class="card-title grey-text text-darken-4">{{Texts.Representative}}</span>
   <div class="divider"></div>
 
   <div class="col s12 right">
-    <select id="type_0">
-      <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-      <option value="1">Lawyer</option>
-      <option value="2">Parent</option>
-      <option value="3">Legal guardian</option>
-      <option value="4">Other</option>
+    <select>
+      <option value="" selected>{{Texts.Type.Label}}</option>
+      {{#each Texts.Type.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
 
   <div class="input-field col s12 right">
     <input id="parent_0" type="text" class="validate" value="">
-    <label for="parent_0">Representatives full name</label>
+    <label for="parent_0">{{Texts.FullName}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentId_0" type="text">
-    <label for="parentId_0">Representatives ID</label>
+    <label for="parentId_0">{{Texts.ID}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentPhone_0" type="text">
-    <label for="parentPhone_0">Representatives Phone</label>
+    <label for="parentPhone_0">{{Texts.Phone}}</label>
   </div>
   <div class="input-field col s12 right">
     <input id="parentAddress_0" type="text" value="">
-    <label for="parentAddress_0">Representatives address</label>
+    <label for="parentAddress_0">{{Texts.Address}}</label>
   </div>
 </div>
-
+</script>
     </div>
   </div>
 
@@ -392,6 +399,14 @@
         <i class="mdi-navigation-more-vert"></i>
         Participant
       </a>
+      <div class="switch col s6 right">
+        <span>Legal entity</span>
+        <label>
+          <input type="checkbox">
+          <span class="lever"></span>
+        </label>
+        <span>Natural person</span>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
@@ -405,13 +420,14 @@
     </div>
     <div class="collapse in" id="collapseParticipant_0">
       <div class="row">
-        <div class="switch col s12 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
+        <div class="col s12 right">
+          <select id="type_0">
+            <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </div>
         <div class="input-field col s12 right">
           <input id="ParticipantAddress_0" type="text" class="validate" value="">
@@ -575,6 +591,15 @@
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/moment.min.js -->
+    <script src="../bower_components/moment/min/moment.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/fullcalendar.min.js -->
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
+    <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/language.js -->

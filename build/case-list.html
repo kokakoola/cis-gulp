@@ -95,6 +95,8 @@
   <li><a href="audit-new.html">Add audit</a></li>
   <li><a href="audit-edit.html">View audit</a></li>
   <li class="divider"></li>
+  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
 
@@ -248,7 +250,7 @@
 </div>
       </div>
     </div>
-    <div class=" filter-action left">
+    <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -257,7 +259,7 @@
     {{Filter.ButtonMoreFields}}
     <i class="mdi-navigation-expand-more right"></i>
   </button>
-  <button class="btn btn-large waves-effect waves-light cancel-light left" name="clear">
+  <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
     <i class="mdi-content-clear "></i>
   </button>
 </div>
@@ -268,8 +270,8 @@
     </div>
   </div>
 
-  <div class="with-table card">
-    <div class="row">
+  <div class="card">
+    <div class="card-content row with-table">
       <form action="">
   <div id="placeholder-registry-table" class="template-placeholder"></div>
 
@@ -345,6 +347,9 @@
     <script src="scripts/vendor/handlebars.min.js"></script>
     <script src="scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="scripts/vendor/bootstrap.js"></script>
+    <script src="scripts/vendor/moment.min.js"></script>
+    <script src="scripts/vendor/fullcalendar.min.js"></script>
+    <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
 
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
