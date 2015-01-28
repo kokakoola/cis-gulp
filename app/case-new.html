@@ -219,7 +219,7 @@
   </div>
 
   <!-- DataCol form group -->
-  <div class="panel-group" id="caseForm" data-datacol-models-show="2" data-datacol-models-count="3" data-datacol-group>
+  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="4" data-datacol-group>
 
     <!-- DataCol trigger -->
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
@@ -232,6 +232,7 @@
       <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
       <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
       <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+      <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
     </ul>
 
     <!-- DataCol models -->
@@ -405,6 +406,29 @@
 
 </div>
     </div>
+    <div class="col s12 m6" data-datacol-model="note">
+      <div id="placeholder-case-form-note" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+    </div>
     <div class="col s12 m6" data-datacol-model="participant">
       <div class="card">
   <div class="card-content">
@@ -481,45 +505,6 @@
   </div>
 </div>
 </script>
-  </div>
-  
-
-  <div class="panel-group" id="caseFormNote" data-datacol-models-show="1" data-datacol-models-count="1" data-datacol-group>
-
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="addNote" data-datacol-trigger>
-      <i class="mdi-content-add animated rotateIn"></i>
-    </a>
-
-    <ul id="addNote" class="dropdown-content">
-      <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
-    </ul>
-
-    <div class="col s12 m6" data-datacol-model="note">
-
-        <div id="placeholder-case-form-note" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
-
-  <div class="card cyan lighten-5 wow bounceInDown">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
-      <a href="#!" class="card-title grey-text text-darken-4">
-        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
-      </a>
-      <div class="divider"></div>
-      <div class="row no-marg-bot">
-        <div class="input-field col s12">
-          <textarea class="materialize-textarea"></textarea>
-          <label><i class="mdi-content-create tiny"></i></label>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
-
-
-
-    </div>
-
   </div>
 
 <div id="placeholder-case-new" class="template-placeholder"></div>
