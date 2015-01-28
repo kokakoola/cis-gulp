@@ -176,16 +176,11 @@
     <div class="card-content" >
       <div class="row no-marg-bot">
   <div class="col s12 m2 right">
-    <ul id="dropdownStatus" class="dropdown-content simplified">
-        <li><a href="#!">Drafts<i class="status draft"></i></a></li>
-        <li><a href="#!">Pending <i class="status pending"></i></a></li>
-        <li><a href="#!">Registered<i class="status registered"></i></a></li>
-        <li><a href="#!">In proceedings<i class="status in-proceedings"></i></a></li>
-        <li><a href="#!">In next what?<i class="status in-next"></i></a></li>
-        <li><a href="#!">Closed<i class="status closed"></i></a></li>
-        <li><a href="#!">Rejected<i class="status rejected"></i></a></li>
-      </ul>
-      <a class="btn-flat dropdown-button-simplified" href="#!" data-activates="dropdownStatus"><i class="mdi-navigation-arrow-drop-down left"></i>Status</a>
+    <select class="status-select">
+      <option value="" disabled selected>Status</option>
+      <option class="status pending">Pending</option>
+      <option class="status registered">Registered</option>
+    </select>
   </div>
   <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">

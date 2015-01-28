@@ -111,7 +111,7 @@
 
       $('.datepicker').pickadate();
 
-      $('select').material_select();
+      $('select').material_select_override();
 
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {
