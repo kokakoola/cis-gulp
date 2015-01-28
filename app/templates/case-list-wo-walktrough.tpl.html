@@ -1,0 +1,46 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "case-list",
+  "htmlClass": "case-list",
+  "title": "Case list"
+})
+
+@@include('./layout/header.html', {
+  "courtName": "Civil Primary Court Nr 1"
+})
+
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row no-marg-bot">
+        <div class="col s12">
+
+          @@include('./layout/common/round-top-fw.html',
+          {
+            "formName": "Prime registry",
+            "fwTo": "case-new.html"
+          })
+          @@include('./layout/case/case-filter.html')
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content row with-table">
+      @@include('./layout/case/case-table.html',
+      {
+        "ffwTo": "case-edit.html"
+      })
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')
