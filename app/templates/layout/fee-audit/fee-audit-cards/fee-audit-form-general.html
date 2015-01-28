@@ -7,20 +7,24 @@
     </div>
     <div class="divider"></div>
     <div class="row no-marg-bot">
-      <div class="input-field col s12 m6">
-        <select required>
-          <option value="" disabled selected>Court</option>
-          <option value="1">1</option>
-          <option value="2" @@disabled selected>@@value1</option>
-          <option value="3">3</option>
-        </select>
-        <select required>
-          <option value="" disabled selected>Case type </option>
-          <option value="1">استملاك</option>
-          <option value="2">property aquizition </option>
-          <option value="3">Option 3</option>
-        </select>
+      <div class="col s12 m6">
+        <div class="input-field">
+          <i class="mdi-action-search prefix right"></i>
+          <input id="caseNr" type="text">
+          <label for="caseNr">Case Nr</label>
+        </div>
+        <br>
+        <div class="input-field">
+          <input id="courtName" type="text" disabled>
+          <label for="courtName">Court Name</label>
+        </div>
+        <br>
+        <div class="input-field">
+          <input id="caseType" type="text" disabled>
+          <label for="caseType">Case type</label>
+        </div>
       </div>
+
       <div class="col s12 m6">
         <br>
         <h6>Claimants</h6>
@@ -32,6 +36,8 @@
           <li>Forename Fathers Name Surname</li>
         </ul>
       </div>
+
+
 
       
     </div>
