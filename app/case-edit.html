@@ -34,7 +34,7 @@
       <ul class="side-nav" id="nav-mobile">
         <li>
           <a class="dropdown-button" href="#!" data-activates="contentDropdown">
-            <i class="mdi-navigation-menu"></i>
+            <i class="page-content mdi-navigation-menu"></i>
             Content
           </a>
         </li>
@@ -56,7 +56,7 @@
             <span class="count" id="notification_count">6</span>
           </a>
         </li>
-        <li>
+        <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
             <i class="mdi-navigation-arrow-drop-down right"></i>
             Person Name
@@ -94,6 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -175,7 +176,7 @@
   <div class="col s12">
     <div id="placeholder-case-form-general" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
-  <div class="card">
+  <div class="card  wow bounceInDown">
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Case}} {{Texts.No}}</span>
       <div class="col s12 m1 check-inline">
@@ -218,11 +219,25 @@
   </div>
     <!-- Dropdown Trigger -->
 
-  <div class="panel-group" id="caseCard">
-    <div id="Claimants">
-      <div>
-        <div class="col s12 m6">
-          <div class="card">
+  <!-- DataCol form group -->
+  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="3" data-datacol-group>
+
+    <!-- DataCol trigger -->
+    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
+
+    <!-- Dropdown Structure -->
+    <!-- DataCol clone triggers -->
+    <ul id="add" class="dropdown-content">
+      <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
+      <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
+      <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+    </ul>
+
+    <!-- DataCol models -->
+    <div class="col s12 m6" data-datacol-model="claimant">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
@@ -307,14 +322,9 @@
 </div>
 
 
-        </div>
-      </div>
     </div>
-    <div id="Defendants">
-      <div>
-        <div class="col s12 m6 trigger-wrapper">
-          <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-         <div class="card">
+    <div class="col s12 m6" data-datacol-model="defendant">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
@@ -395,13 +405,9 @@
   </div>
 
 </div>
-        </div>
-      </div>
     </div>
-    <div id="Participants">
-      <div>
-        <div class="col s12 m6">
-          <div class="card">
+    <div class="col s12 m6" data-datacol-model="participant">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseParticipant_0" class="card-title grey-text text-darken-4">
@@ -454,12 +460,12 @@
     </div>
   </div>
 </div>
-        </div>
-      </div>
     </div>
+
   </div>
+  
   <div class="col s12 m6">
-    <div class="card">
+    <div class="card  wow bounceInDown">
   <div class="card-content">
     <span class="card-title grey-text text-darken-4">Claim document</span>
     <div class="divider"></div>
@@ -483,9 +489,10 @@
 </div>
 
   </div>
-  <div class="col s12 m6 trigger-wrapper">
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a>
-      <div class="card cyan lighten-5">
+
+  <div class="col s12 m6">
+<!--     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a> -->
+      <div class="card cyan lighten-5  wow bounceInDown">
   <div class="card-content">
     <span class="card-title grey-text text-darken-4">Note</span>
     <div class="divider"></div>
@@ -509,6 +516,27 @@
 
 
   </div>
+  <div id="placeholder-case-form-note " class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
 </div>
 
 <div class="row">

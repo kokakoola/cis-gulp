@@ -1,15 +1,16 @@
 <div class="row">
+      <!-- DataCol trigger -->
+    <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
   <div class="col s12">
   @@include('./case-cards/case-form-general.html')
   </div>
 
   <!-- DataCol form group -->
-  <div class="panel-group" id="caseForm" data-datacol-models-show="2" data-datacol-models-count="3" data-datacol-group>
+  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="4" data-datacol-group>
 
-    <!-- DataCol trigger -->
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
-      <i class="mdi-content-add animated rotateIn"></i>
-    </a>
+
 
     <!-- Dropdown Structure -->
     <!-- DataCol clone triggers -->
@@ -17,6 +18,7 @@
       <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
       <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
       <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+      <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
     </ul>
 
     <!-- DataCol models -->
@@ -26,17 +28,17 @@
     <div class="col s12 m6" data-datacol-model="defendant">
       @@include('./case-cards/case-form-defendant.html', {"person":"Defendant"})
     </div>
+    <div class="col s12 m6" data-datacol-model="note">
+      @@include('../common/common-cards/case-form-note.html')
+    </div>
     <div class="col s12 m6" data-datacol-model="participant">
       @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
     </div>
 
   </div>
+  
   <div class="col s12 m6">
     @@include(''../common/common-cards/case-form-documents-upload.html')
-  </div>
-  <div class="col s12 m6 trigger-wrapper">
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a>
-      @@include('../common/common-cards/case-form-note.html')
   </div>
 </div>
 

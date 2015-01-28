@@ -1,4 +1,4 @@
-<div class="card brown lighten-5">
+<div class="card brown lighten-5  wow bounceInDown">
   <div class="card-content">
     <div class="row no-marg-bot">
         <!-- <div class="col s12">
@@ -10,9 +10,17 @@
         <input id="sum" type="text" value="@@sum2" @@disabled>
         <label for="sum">Sum</label>
       </div>
-      <div class="input-field col s6">
+      <!-- <div class="input-field col s6">
         <input id="feeType" type="text">
         <label for="feeType">Fee type one</label>
+      </div> -->
+      <div class="input-field col s6 select-inline">
+        <select>
+          <option value="" disabled selected>Fee type</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
       </div>
     </div>
     <div class="row no-marg-bot @@hidden">
@@ -28,7 +36,7 @@
     <div class="row no-marg-bot">
       <a href='#!' class="dropdown-button btn white right"  data-activates='addFee'>Add fee</a>
     </div>
-    <div class="row no-marg-bot">
+    <!-- <div class="row no-marg-bot">
       <hr>
       <div class="col s6">
         <h6>
@@ -40,7 +48,7 @@
           <strong>Total</strong>
         </h6>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 

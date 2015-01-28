@@ -34,7 +34,7 @@
       <ul class="side-nav" id="nav-mobile">
         <li>
           <a class="dropdown-button" href="#!" data-activates="contentDropdown">
-            <i class="mdi-navigation-menu"></i>
+            <i class="page-content mdi-navigation-menu"></i>
             Content
           </a>
         </li>
@@ -56,7 +56,7 @@
             <span class="count" id="notification_count">6</span>
           </a>
         </li>
-        <li>
+        <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
             <i class="mdi-navigation-arrow-drop-down right"></i>
             Person Name
@@ -94,6 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -177,7 +178,7 @@
           <div class="row">
   <div class="col s12 m6">
     <div class="card">
-  <div class="card-content">
+  <div class="card-content  wow bounceInDown">
     <span class="card-title grey-text text-darken-4">Case 32145</span>
     <div class="divider"></div>
     <div class="row">
@@ -243,7 +244,7 @@
 </div>
   </div>
   <div class="col s12 m6 trigger-wrapper">
-      <div class="card">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <span class="card-title grey-text text-darken-4">Pick a hearing time</span>
     <div class="divider"></div>
@@ -261,7 +262,7 @@
 </div>
   </div>
   <div class="col s12 m6 trigger-wrapper">
-      <div id="placeholder-case-form-documents-upload" class="template-placeholder"></div>
+      <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
 <div class="card">
   <div class="card-content">
@@ -279,23 +280,29 @@
 </div>
 </script>
   </div>
-  <div class="col s12 m6 trigger-wrapper">
-      <div id="placeholder-case-form-note" class="template-placeholder"></div>
+
+      <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
-<div class="card cyan lighten-5">
-  <div class="card-content">
-  <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
-    <div class="divider"></div>
-    <div class="row no-marg-bot">
-      <div class="input-field col s12">
-        <textarea class="materialize-textarea"></textarea>
-        <label><i class="mdi-content-create tiny"></i></label>
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </script>
-  </div>
+
+
+
 
 </div>
 
@@ -408,6 +415,21 @@
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 2) {
+            $(this).joyride('set_li', false, 1);
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
     <!-- endbuild -->
   </body>
 </html>

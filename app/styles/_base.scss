@@ -74,16 +74,29 @@ main {
   position: relative;
 }
 
+// .btn-floating.trigger {
+//   position: absolute;
+//   top: -7px;
+//   @include left(-7px);
+// }
+
 .btn-floating.trigger {
-  position: absolute;
-  top: -7px;
-  @include left(-7px);
+  position: fixed;
+  top: 45%;
+  @include left(7.4%);
 }
 
 .switch label {
   margin-right: 15px;
   margin-left: 15px;
 }
+
+// JOYRIDE COMPONENT OVERRIDE
+// ***************************************
+.joyride-expose-wrapper {
+  display: none;
+}
+
 
 // FRONTPAGE
 // ***************************************
@@ -312,6 +325,13 @@ textarea.valid {
 
 .switch.col {
   height: 3rem;
+}
+
+.select-inline {
+  .select-wrapper span.select-dropdown {
+  height: 3rem;
+  line-height: 3rem;
+  }
 }
 
 

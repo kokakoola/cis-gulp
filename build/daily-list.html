@@ -24,7 +24,7 @@
       <ul class="side-nav" id="nav-mobile">
         <li>
           <a class="dropdown-button" href="#!" data-activates="contentDropdown">
-            <i class="mdi-navigation-menu"></i>
+            <i class="page-content mdi-navigation-menu"></i>
             Content
           </a>
         </li>
@@ -46,7 +46,7 @@
             <span class="count" id="notification_count">6</span>
           </a>
         </li>
-        <li>
+        <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
             <i class="mdi-navigation-arrow-drop-down right"></i>
             Person Name
@@ -84,6 +84,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -161,7 +162,7 @@
   <div class="card-onbanner">
     <div class="container">
       <a class="btn-floating btn-large waves-effect waves-light round-top add" href="daily-new.html">
-  <i class="mdi-content-add"></i>
+  <i class="create-case mdi-content-add"></i>
 </a>
 <h4 class="header white-text text-darken-2">Daily register</h4>
       <div class="row no-marg-bot">
@@ -183,6 +184,13 @@
     <input id="defendants" type="text">
     <label for="defendants">{{Filter.Defendant}}</label>
   </div>
+  <div class="col s12 m3 right">
+    <select class="status-select">
+      <option value="" disabled selected>Status</option>
+      <option class="status pending">Pending</option>
+      <option class="status registered">Registered</option>
+    </select>
+  </div>
 </div>
 </script>
     </div>
@@ -199,7 +207,7 @@
   </button>
   <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}">
     {{Filter.ButtonMoreFields}}
-    <i class="mdi-navigation-expand-more right"></i>
+    <i class="filter-toggle mdi-navigation-expand-more right"></i>
   </button>
   <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
     <i class="mdi-content-clear "></i>
