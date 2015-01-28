@@ -14,7 +14,8 @@
     "animate.css": "~3.2.0",
     "jquery-cookie": "~1.4.1",
     "jquery-joyride": "~2.1.0",
-    "fullcalendar": "~2.2.6"
-
+    "fullcalendar": "~2.2.6",
+    "pickadate": "~3.5.4",
+    "typeahead.js": "0.10.5"
   }
 }

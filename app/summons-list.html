@@ -172,7 +172,7 @@
           <h4 class="header white-text text-darken-2">Summons</h4>
           <div id="placeholder-summons-filter" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
-	<div class="card">
+	<div class="card overflow-visible">
 	  <div class="card-content" >
 	    <div class="row no-marg-bot">
   <div class="col s12 m4 right">
@@ -183,9 +183,15 @@
     </select>
   </div>
 
-  <div class="input-field col s12 m4 right">
-    <input id="addresse" type="text">
-    <label for="addresse">{{Filter.Addressee}}</label>
+
+<div class="input-field col s12 m4 right">
+    <div id="the-basics">
+      <input id="addresse" placeholder="{{Filter.Addressee}}"class="typeahead" type="text">
+      <!-- <label for="addresse">{{Filter.Addressee}}</label> -->
+<!--  <label for="caseNumber">{{Filter.CaseNumber}}</label>
+      <input id="" class="typeahead" type="text"> -->
+    </div>
+  
   </div>
   <div class="input-field col s12 m4 right">
     <input id="caseNumber" type="text">
@@ -262,7 +268,7 @@
   <div id="placeholder-summons-table" class="template-placeholder"></div>
 
   <script type="text/x-handlebars-template" id="summons-table-template" class="template" data-lang="data/summons/table">
-    <table class="hoverable bordered data">
+    <table class="hoverable bordered data order-column">
       <thead>
         <th data-field="select">&nbsp;</th>
         <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
@@ -374,6 +380,10 @@
     <!-- endbuild -->
     <!-- build:js scripts/vendor/ar.js -->
     <script src="../bower_components/pickadate/lib/translations/ar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/typeahead.js.js -->
+    <script src="../bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="../bower_components/typeahead.js/dist/typeahead.jquery.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/language.js -->
     <script src="scripts/language.js"></script>

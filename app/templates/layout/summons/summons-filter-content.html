@@ -7,9 +7,15 @@
     </select>
   </div>
 
-  <div class="input-field col s12 m4 right">
-    <input id="addresse" type="text">
-    <label for="addresse">{{Filter.Addressee}}</label>
+
+<div class="input-field col s12 m4 right">
+    <div id="the-basics">
+      <input id="addresse" placeholder="{{Filter.Addressee}}"class="typeahead" type="text">
+      <!-- <label for="addresse">{{Filter.Addressee}}</label> -->
+<!--  <label for="caseNumber">{{Filter.CaseNumber}}</label>
+      <input id="" class="typeahead" type="text"> -->
+    </div>
+  
   </div>
   <div class="input-field col s12 m4 right">
     <input id="caseNumber" type="text">
