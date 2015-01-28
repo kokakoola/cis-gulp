@@ -34,7 +34,7 @@
       <ul class="side-nav" id="nav-mobile">
         <li>
           <a class="dropdown-button" href="#!" data-activates="contentDropdown">
-            <i class="mdi-navigation-menu"></i>
+            <i class="page-content mdi-navigation-menu"></i>
             Content
           </a>
         </li>
@@ -56,7 +56,7 @@
             <span class="count" id="notification_count">6</span>
           </a>
         </li>
-        <li>
+        <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
             <i class="mdi-navigation-arrow-drop-down right"></i>
             Person Name
@@ -174,10 +174,10 @@
         <div class="col s12">
 
           <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
-  <i class="mdi-content-add"></i>
+  <i class="create-case mdi-content-add"></i>
 </a>
 <h4 class="header white-text text-darken-2">Prime registry</h4>
-            <div id="placeholder-registry-filter" class="template-placeholder"></div>
+            <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
     <div class="card">
       <div class="card-content" >
@@ -296,7 +296,7 @@
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
 
-    <table class="hoverable bordered data">
+    <table class="hoverable bordered data proceeding-table">
         <thead>
           <th data-field="status" class="sorting">{{Texts.Status}}</th>
           <th data-field="date" class="sorting">{{Texts.Date}}</th>
@@ -356,6 +356,38 @@
     </div>
   </div>
 </footer>
+
+     <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-class="user-profile" data-button="Next" class="custom">
+        <h2>Hint 1</h2>
+        <p>Here you can access your profile and settings. Aswell sign out</p>
+      </li>
+      <li data-class="page-content" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <h2>Hint 2</h2>
+        <p>Here you can access to your webpage content. Like creating new cases or look for different fees.</p>
+      </li>
+      <li data-class="create-case" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
+        <h2>Hint 3</h2>
+        <p>Here you can start creating new court case.</p>
+      </li>
+      <li data-class="justbeinghere" data-button="Next" class="custom">
+        <h2>Hint 4</h2>
+        <p>Here you can access your profile and settings. Aswell sign out</p>
+      </li>
+      <li data-class="filtering" data-button="Next" class="custom">
+        <h2>Hint 4</h2>
+        <p>This is proceeding search table. Not all fields are manatory. Proceedings are shown below.</p>
+      </li>
+      <li data-class="proceeding-table" data-button="Next" class="custom" >
+        <h2>Hint 5</h2>
+        <p>This is proceedings table. Here you can see filtered and non filtered proceedings.</p>
+      </li>
+    </ol>
+
+
+
+
 
     <!-- build:js scripts/vendor/jquery.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -425,6 +457,21 @@
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 2) {
+            $(this).joyride('set_li', false, 1);
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
     <!-- endbuild -->
   </body>
 </html>
