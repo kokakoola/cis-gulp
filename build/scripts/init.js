@@ -112,9 +112,8 @@
       $('.datepicker').pickadate();
 
       $('.timepicker').pickatime();
-
-      $('select').material_select();
-
+      $('select').material_select_override();
+    
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {
         var expanded = $(this).hasClass('collapsed');

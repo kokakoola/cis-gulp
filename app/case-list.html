@@ -94,6 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -275,7 +276,7 @@
   </button>
   <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}">
     {{Filter.ButtonMoreFields}}
-    <i class="mdi-navigation-expand-more right"></i>
+    <i class="filter-toggle mdi-navigation-expand-more right"></i>
   </button>
   <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
     <i class="mdi-content-clear "></i>
@@ -328,6 +329,7 @@
 
     </div>
   </div>
+
 </main>
 
 <footer class="page-footer blue-grey darken-3">
@@ -357,7 +359,7 @@
   </div>
 </footer>
 
-     <!-- Tip Content -->
+<!-- Tip Content -->
     <ol id="joyRideTipContent">
       <li data-class="user-profile" data-button="Next" class="custom">
         <h2>Hint 1</h2>
@@ -379,15 +381,15 @@
         <h2>Hint 4</h2>
         <p>This is proceeding search table. Not all fields are manatory. Proceedings are shown below.</p>
       </li>
-      <li data-class="proceeding-table" data-button="Next" class="custom" >
+      <li data-class="filter-toggle" data-button="Next" class="custom">
         <h2>Hint 5</h2>
+        <p>This button expands your filter for more parameters.</p>
+      </li>
+      <li data-class="proceeding-table" data-button="Next" class="custom" >
+        <h2>Hint 6</h2>
         <p>This is proceedings table. Here you can see filtered and non filtered proceedings.</p>
       </li>
     </ol>
-
-
-
-
 
     <!-- build:js scripts/vendor/jquery.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
