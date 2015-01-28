@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="case-list">
+<html lang="" class="daily">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Case list</title>
+    <title>CIS | Daily</title>
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
-  <body class="case-list">
+  <body class="daily">
 
 
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Civil Primary Court Nr 1</li>
+        <li>Daily register for Primary Court Nr 1</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -171,103 +171,44 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row no-marg-bot">
-        <div class="col s12">
-
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
+      <a class="btn-floating btn-large waves-effect waves-light round-top add" href="daily-new.html">
   <i class="create-case mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">Prime registry</h4>
-            <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
-    <div class="card">
-      <div class="card-content" >
-        <div class="row">
-  <div class="col s12 m2 right">
-    <select class="status-select">
-      <option value="" disabled selected>Status</option>
-      <option class="status draft">Drafts</p></option>
-      <option class="status pending">Pending</option>
-      <option class="status registered">Registered</option>
-      <option class="status closed">Closed</option>
-      <option class="status in-proceedings">In proceedings</option>
-      <option class="status in-next">In next what</option>
-      <option class="status rejected">Rejected</option>
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
+<h4 class="header white-text text-darken-2">Daily register</h4>
+      <div class="row no-marg-bot">
+        <div class="col s12">
+  <div class="card">
+    <div class="card-content" >
+      <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
+<div class="row no-marg-bot">
+  <div class="input-field col s12 m3 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
-  <div class="col s12 m2 right">
-    <select>
-      <option value="" selected>{{Filter.CaseType.Label}}</option>
-      {{#each Filter.CaseType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="claimant" type="text" >
-    <label for="claimant">{{Filter.Judge}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">{{Filter.From}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">{{Filter.To}}</label>
-    <input id="endDate" type="text" class="datepicker">
-
-  </div>
-</div>
-
-<!-- hidden by toggle -->
-<div class="row collapse" id="moreFields">
-  <div class="col s12 m2 right">
-  <div class="check-inline">
-    <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
-  </div>
-  <br>
-  <div class="check-inline">
-    <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
-  </div>
-  </div>
-
-  <div class="col s12 m3 right">
-    <div class="row">
-      <div class="col s12">
-        <label for="">{{Filter.CaseValue.Label}}</label>
-      </div>
-      <div class="input-field col s12 m6">
-        <input id="fromSum" type="text">
-        <label for="fromSum">{{Filter.CaseValue.From}}</label>
-      </div>
-      <div class="input-field col s12 m6">
-        <input id="toSum" type="text" >
-        <label for="toSum">{{Filter.CaseValue.To}}</label>
-      </div>
-    </div>
-  </div>
   <div class="input-field col s12 m3 right">
-    <input id="claimant" type="text">
+    <input id="claimant" type="text" >
     <label for="claimant">{{Filter.Claimant}}</label>
   </div>
-  <div class="input-field col s12 m2 right">
-    <input id="defendant" type="text">
-    <label for="defendant">{{Filter.Defendant}}</label>
+  <div class="input-field col s12 m3 right">
+    <input id="defendants" type="text">
+    <label for="defendants">{{Filter.Defendant}}</label>
   </div>
-  <div class="input-field col s12 m2 right">
-    <input id="participant" type="text">
-    <label for="participant">{{Filter.Participant}}</label>
+  <div class="col s12 m3 right">
+    <select class="status-select">
+      <option value="" disabled selected>Status</option>
+      <option class="status pending">Pending</option>
+      <option class="status registered">Registered</option>
+    </select>
   </div>
 </div>
-      </div>
+</script>
     </div>
-  </script>
-    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+  </div>
+</div>
+
+<div class="col s12">
+  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
 <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
@@ -284,51 +225,58 @@
 </div>
 </script>
 
+</div>
 
-        </div>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-content row with-table">
-      <form action="">
-  <div id="placeholder-registry-table" class="template-placeholder"></div>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6">
+          <a class="active" href="#calendar">Calendar</a>
+        </li>
+        <li class="tab col s6">
+          <a href="#list">List</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card col s12" id="calendar">
+      <div class="card-content row">
+        <div id="daily-register-calendar" class="fullcalendar"></div>
+      </div>
+    </div>
+    <div class="card col s12" id="list">
+      <div class="card-content row with-table">
+        <div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
-  <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
-
-    <table class="hoverable bordered data proceeding-table">
-        <thead>
-          <th data-field="status" class="sorting">{{Texts.Status}}</th>
-          <th data-field="date" class="sorting">{{Texts.Date}}</th>
-          <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-          <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
-          <th data-field="claimants">{{Texts.Claimant}}</th>
-          <th data-field="defendants">{{Texts.Defendant}}</th>
-          <th data-field="paticipants">{{Texts.Participants}}</th>
-          <th data-field="judge">{{Texts.Judge}}</th>
-        </thead>
-        <tbody>
-        {{#each Cases}}
-          <tr onClick="parent.location='case-edit.html'">
-            <td class="center"><i class="status {{Status}}"></i></td>
-            <td>{{Date}}</td>
-            <td>{{CaseNumber}}</td>
-            <td>{{CaseType}}</td>
-            <td>{{Claimant}}</td>
-            <td>{{Defendant}} </td>
-            <td>{{Participants}}</td>
-            <td>{{Judge}}</td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
-
-  </script>
-</form>
-
+<script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
+  <table class="hoverable bordered data">
+    <thead>
+      <th data-field="status" class="sorting">{{Texts.Status}}</th>
+      <th data-field="sum">{{Texts.Defendant}}</th>
+      <th data-field="claimants">{{Texts.Claimant}}</th>
+      <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+    </thead>
+    <tbody>
+      {{#each Cases}}
+      <tr onClick="parent.location='daily-new.html'">
+        <td class="center">
+          <i class="status {{Status}}"></i>
+        </td>
+        <td>{{Defendant}}</td>
+        <td>{{Claimant}} </td>
+        <td>{{CaseNumber}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>
+        </div>
     </div>
   </div>
+
 </main>
 
 <footer class="page-footer blue-grey darken-3">
@@ -448,3 +396,4 @@
     <!-- endbuild -->
   </body>
 </html>
+
