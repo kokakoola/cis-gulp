@@ -1,11 +1,13 @@
 @@include('./base/header.tpl.html',
 {
-  "bodyClass": "daily-register",
-  "htmlClass": "daily-register",
-  "title": "Daily register"
+  "bodyClass": "daily",
+  "htmlClass": "daily",
+  "title": "Daily"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Daily register for Primary Court Nr 1"
+})
 
 <main>
 
@@ -14,10 +16,10 @@
   <div class="card-onbanner">
     <div class="container">
       @@include('./layout/common/round-top-fw.html', {
-        "formName": "Daily register list view",
-        "fwTo": "hearing-new.html"
+        "formName": "Daily register",
+        "fwTo": "daily-new.html"
       })
-      @@include('./layout/daily-register/daily-register-filter.html')
+      @@include('./layout/daily/daily-filter.html')
     </div>
   </div>
 
@@ -28,18 +30,18 @@
           <a class="active" href="#calendar">Calendar</a>
         </li>
         <li class="tab col s6">
-          <a href="#pending">Pending</a>
+          <a href="#list">List</a>
         </li>
       </ul>
     </div>
     <div class="card col s12" id="calendar">
       <div class="card-content row">
-        @@include('./layout/daily-register/daily-register-calendar.html')
+        @@include('./layout/daily/daily-calendar.html')
       </div>
     </div>
-    <div class="card col s12" id="pending">
+    <div class="card col s12" id="list">
       <div class="card-content row with-table">
-        @@include('./layout/daily-register/daily-register-table.html')
+        @@include('./layout/daily/daily-table.html')
         </div>
     </div>
   </div>

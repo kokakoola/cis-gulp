@@ -1,0 +1,9 @@
+{
+    "Filter" :
+    {
+        "ButtonClearAll" : "Clear all",
+        "ButtonMoreFields" : "More fields",
+        "ButtonLessFields" : "Less fields",
+        "ButtonSearch" : "Search"
+    }
+}

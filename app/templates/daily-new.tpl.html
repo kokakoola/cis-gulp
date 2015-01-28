@@ -1,0 +1,42 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "daily-new",
+  "htmlClass": "daily-new",
+  "title": "New daily"
+})
+
+@@include('./layout/header.html', {
+  "courtName": "Daily register for Primary Court Nr 1"
+})
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          @@include('./layout/common/round-top-back.html')
+
+          @@include('./layout/daily/daily-new.html',
+          {
+            "formName": "Registrate hearing",
+            "backTo": "daily-list.html",
+            "hidden": "hidden",
+            "caseNo": "{{Texts.No}}",
+            "disabled": " ",
+            "value1": "Courtname",
+            "sum1": "",
+            "sum2": "",
+            "total": "0.00"
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')

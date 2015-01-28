@@ -19,7 +19,7 @@
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Civil Primary Court</li>
+        <li>Civil Primary Court Nr 1</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -84,18 +84,22 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-new.html">Add case</a></li>
-  <li><a href="case-edit.html">View case</a></li>
+  <li><a href="case-new.html">New case</a></li>
+  <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
   <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">Add fee</a></li>
-  <li><a href="fee-edit.html">View fee</a></li>
+  <li><a href="fee-new.html">New fee</a></li>
+  <li><a href="fee-edit.html">Edit fee</a></li>
   <li class="divider"></li>
   <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">Add audit</a></li>
-  <li><a href="audit-edit.html">View audit</a></li>
+  <li><a href="audit-new.html">New audit</a></li>
+  <li><a href="audit-edit.html">Edit audit</a></li>
   <li class="divider"></li>
-  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li><a href="daily-list.html">Daily list</a></li>
+  <li><a href="daily-new.html">New daily</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -149,13 +153,14 @@
     </li>
   </ul>
 
+
 <main>
 
   <div class="main-banner"></div>
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
+      <div class="row no-marg-bot">
         <div class="col s12">
 
           <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
@@ -185,7 +190,7 @@
   </div>
   <div class="col s12 m2 right">
     <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
+      <option value="" selected>{{Filter.CaseType.Label}}</option>
       {{#each Filter.CaseType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
@@ -250,7 +255,10 @@
 </div>
       </div>
     </div>
-    <div class="filter-action">
+  </script>
+    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
+<div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -263,7 +271,8 @@
     <i class="mdi-content-clear "></i>
   </button>
 </div>
-  </script>
+</script>
+
 
         </div>
       </div>
@@ -350,7 +359,8 @@
     <script src="scripts/vendor/moment.min.js"></script>
     <script src="scripts/vendor/fullcalendar.min.js"></script>
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
-
+    <script src="scripts/vendor/picker.time.js"></script>
+    <script src="scripts/vendor/ar.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>

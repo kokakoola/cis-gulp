@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col s12 m6">
+    @@include('./daily-cards/daily-form-general.html')
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+      @@include('./daily-cards/daily-form-timepicker.html')
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+      @@include('../common/common-cards/case-form-documents-upload.html')
+  </div>
+  <div class="col s12 m6 trigger-wrapper">
+      @@include('../common/common-cards/case-form-note.html')
+  </div>
+
+</div>
+
+<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Save and generate summons</button>
+<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Save</button>
+<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>

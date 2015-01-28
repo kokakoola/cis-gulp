@@ -1,7 +1,31 @@
-@include font-face('NotoKufi', '../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular', 400, normal);
+// @include font-face('NotoKufi', '../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular', 400, normal);
 
-@include font-face('NotoKufi', '../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold', 700, normal);
+// @include font-face('NotoKufi', '../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold', 700, normal);
 
-@include font-face('NotoNaskh', '../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular', 400, normal);
+// @include font-face('NotoNaskh', '../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular', 400, normal);
 
-@include font-face('NotoNaskh', '../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold', 700, normal);
+// @include font-face('NotoNaskh', '../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold', 700, normal);
+
+@font-face {
+    font-family: "NotoKufi";
+    src: url(../font/NotoKufiArabic-unhinted/NotoKufiArabic-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "NotoKufi";
+    src: url(../font/NotoKufiArabic-unhinted/NotoKufiArabic-Bold.ttf);
+    font-weight: 700;
+}
+
+// @font-face {
+//     font-family: "NotoNaskh";
+//     src: url(../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Regular.ttf);
+//     font-weight: 400;
+// }
+
+// @font-face {
+//     font-family: "NotoNaskh";
+//     src: url(../font/NotoNaskhArabic-unhinted/NotoNaskhArabic-Bold.ttf);
+//     font-weight: 700;
+// }

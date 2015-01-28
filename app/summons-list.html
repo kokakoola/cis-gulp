@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
     <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/classic.time.css">
+    <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/rtl.css">
     <!-- endbuild -->
 
     <!-- build:css styles/app-rtl.css -->
@@ -27,7 +29,7 @@
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Civil Primary Court</li>
+        <li>Notification department</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -92,18 +94,22 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-new.html">Add case</a></li>
-  <li><a href="case-edit.html">View case</a></li>
+  <li><a href="case-new.html">New case</a></li>
+  <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
   <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">Add fee</a></li>
-  <li><a href="fee-edit.html">View fee</a></li>
+  <li><a href="fee-new.html">New fee</a></li>
+  <li><a href="fee-edit.html">Edit fee</a></li>
   <li class="divider"></li>
   <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">Add audit</a></li>
-  <li><a href="audit-edit.html">View audit</a></li>
+  <li><a href="audit-new.html">New audit</a></li>
+  <li><a href="audit-edit.html">Edit audit</a></li>
   <li class="divider"></li>
-  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li><a href="daily-list.html">Daily list</a></li>
+  <li><a href="daily-new.html">New daily</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -163,9 +169,9 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
+      <div class="row no-marg-bot">
         <div class="col s12">
-          <h4 class="header white-text text-darken-2">Summons view</h4>
+          <h4 class="header white-text text-darken-2">Summons</h4>
           <div id="placeholder-summons-filter" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
 	<div class="card">
@@ -365,7 +371,12 @@
     <!-- build:js scripts/vendor/jquery.joyride-2.1.js -->
     <script src="../bower_components/jquery-joyride/jquery.joyride-2.1.js"></script>
     <!-- endbuild -->
-
+    <!-- build:js scripts/vendor/picker.time.js -->
+    <script src="../bower_components/pickadate/lib/picker.time.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/ar.js -->
+    <script src="../bower_components/pickadate/lib/translations/ar.js"></script>
+    <!-- endbuild -->
     <!-- build:js scripts/language.js -->
     <script src="scripts/language.js"></script>
     <!-- endbuild -->

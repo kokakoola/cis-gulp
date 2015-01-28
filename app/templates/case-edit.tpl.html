@@ -5,7 +5,9 @@
   "title": "Edit case"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Civil Primary Court Nr 1"
+})
 
 <main>
 
@@ -17,7 +19,9 @@
       @@include('./layout/case/case-edit.html',
       {
         "formName": "Edit case",
-        "backTo": "case-list.html"
+        "backTo": "case-list.html",
+        "collapse": " ",
+        "caseNo": "{{Texts.No}}"
       })
     </div>
   </div>

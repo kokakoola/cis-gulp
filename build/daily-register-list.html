@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="daily-register">
+<html lang="" class="daily">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Daily register</title>
+    <title>CIS | Daily</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
 
@@ -12,14 +12,14 @@
 
     <link rel="stylesheet" href="styles/app-ltr.css">
   </head>
-  <body class="daily-register">
+  <body class="daily">
 
 
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Civil Primary Court</li>
+        <li>Daily register for Primary Court Nr 1</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -84,18 +84,22 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-new.html">Add case</a></li>
-  <li><a href="case-edit.html">View case</a></li>
+  <li><a href="case-new.html">New case</a></li>
+  <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
   <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">Add fee</a></li>
-  <li><a href="fee-edit.html">View fee</a></li>
+  <li><a href="fee-new.html">New fee</a></li>
+  <li><a href="fee-edit.html">Edit fee</a></li>
   <li class="divider"></li>
   <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">Add audit</a></li>
-  <li><a href="audit-edit.html">View audit</a></li>
+  <li><a href="audit-new.html">New audit</a></li>
+  <li><a href="audit-edit.html">Edit audit</a></li>
   <li class="divider"></li>
-  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li><a href="daily-list.html">Daily list</a></li>
+  <li><a href="daily-new.html">New daily</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -155,15 +159,16 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <a class="btn-floating btn-large waves-effect waves-light round-top add" href="hearing-new.html">
+      <a class="btn-floating btn-large waves-effect waves-light round-top add" href="daily-new.html">
   <i class="mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">Daily register list view</h4>
-      <div class="row">
-  <div class="col s12">
-    <div class="card">
-      <div class="card-content" >
-        <div class="row no-marg-bot">
+<h4 class="header white-text text-darken-2">Daily register</h4>
+      <div class="col s12">
+  <div class="card">
+    <div class="card-content" >
+      <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
+<div class="row no-marg-bot">
   <div class="input-field col s12 m3 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
@@ -174,15 +179,18 @@
   </div>
   <div class="input-field col s12 m3 right">
     <input id="defendants" type="text">
-    <label for="defendants">{{Filter.Defendants}}</label>
+    <label for="defendants">{{Filter.Defendant}}</label>
   </div>
 </div>
-      </div>
+</script>
     </div>
   </div>
+</div>
 
-  <div class="col s12">
-    <div class="filter-action">
+<div class="col s12">
+  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
+<div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
@@ -195,7 +203,8 @@
     <i class="mdi-content-clear "></i>
   </button>
 </div>
-  </div>
+</script>
+
 </div>
 
     </div>
@@ -208,7 +217,7 @@
           <a class="active" href="#calendar">Calendar</a>
         </li>
         <li class="tab col s6">
-          <a href="#pending">Pending</a>
+          <a href="#list">List</a>
         </li>
       </ul>
     </div>
@@ -217,7 +226,7 @@
         <div id="daily-register-calendar" class="fullcalendar"></div>
       </div>
     </div>
-    <div class="card col s12" id="pending">
+    <div class="card col s12" id="list">
       <div class="card-content row with-table">
         <div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
@@ -231,7 +240,7 @@
     </thead>
     <tbody>
       {{#each Cases}}
-      <tr>
+      <tr onClick="parent.location='@@fwTo'">
         <td class="center">
           <i class="status {{Status}}"></i>
         </td>
@@ -288,7 +297,8 @@
     <script src="scripts/vendor/moment.min.js"></script>
     <script src="scripts/vendor/fullcalendar.min.js"></script>
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
-
+    <script src="scripts/vendor/picker.time.js"></script>
+    <script src="scripts/vendor/ar.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>

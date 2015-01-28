@@ -5,7 +5,9 @@
   "title": "Audit list"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Audit"
+})
 
 <main>
 
@@ -13,15 +15,16 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
+      <div class="row no-marg-bot">
         <div class="col s12">
 
           @@include('./layout/common/round-top-fw.html',
           {
-            "formName": "Auditor list view",
+            "formName": "Audit",
             "fwTo": "audit-new.html"
           })
           @@include('./layout/audit/audit-filter.html')
+          @@include('./layout/fee-audit/fee-filter.html')
 
         </div>
       </div>
@@ -30,7 +33,7 @@
 
   <div class="card">
     <div class="card-content row with-table">
-      @@include('./layout/fee/fee-table.html',
+      @@include('./layout/fee-audit/fee-table.html',
       {
         "ffwTo": "audit-edit.html"
       })

@@ -10,6 +10,7 @@ $(function () {
   $.fn.dataCol = function (options) {
 
     var selector = {
+      'show': 'datacol-models-show',
       'index': 'datacol-models-count',
       'model': 'datacol-model',
       'trigger': 'datacol-trigger',
@@ -37,11 +38,13 @@ $(function () {
       });
 
       function init() {
-        var firstModel = obj.find('[data-' + selector.model + ']')
-                            .first()
-                            .data(selector.model);
+        var count = obj.data(selector.show);
 
-        cloneModel(firstModel);
+        var models = obj.find('[data-' + selector.model + ']:lt(' + count + ')');
+
+        $.each(models, function() {
+          cloneModel($(this).data(selector.model));
+        });
       }
 
       function cloneModel(model) {

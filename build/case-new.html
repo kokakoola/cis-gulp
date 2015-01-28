@@ -19,7 +19,7 @@
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Civil Primary Court</li>
+        <li>Civil Primary Court Nr 1</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -84,18 +84,22 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-new.html">Add case</a></li>
-  <li><a href="case-edit.html">View case</a></li>
+  <li><a href="case-new.html">New case</a></li>
+  <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
   <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">Add fee</a></li>
-  <li><a href="fee-edit.html">View fee</a></li>
+  <li><a href="fee-new.html">New fee</a></li>
+  <li><a href="fee-edit.html">Edit fee</a></li>
   <li class="divider"></li>
   <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">Add audit</a></li>
-  <li><a href="audit-edit.html">View audit</a></li>
+  <li><a href="audit-new.html">New audit</a></li>
+  <li><a href="audit-edit.html">Edit audit</a></li>
   <li class="divider"></li>
-  <li><a href="daily-register-list.html">Daily register list</a></li>
+  <li><a href="daily-list.html">Daily list</a></li>
+  <li><a href="daily-new.html">New daily</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -159,52 +163,52 @@
 <h4 class="header white-text text-darken-2">New case</h4>
       <div class="row">
   <div class="col s12">
+  <div id="placeholder-case-form-general" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
   <div class="card">
     <div class="card-content">
-      <div class="row">
-        <span class="card-title grey-text text-darken-4"> Case</span>
-        <div class="col s12 m1 check-inline">
-          <input type="checkbox" id="urgent" /><label for="urgent">Urgent</label>
-        </div>
-        <div class="col s12 m2 check-inline">
-          <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
-        </div> 
-        
-        <div class="divider"></div>
+      <span class="card-title grey-text text-darken-4">{{Texts.Case}}  </span>
+      <div class="col s12 m1 check-inline">
+        <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
       </div>
+      <div class="col s12 m2 check-inline">
+        <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
+      </div> 
+      
+      <div class="divider"></div>
       <div class="row">
         <div class="col s12 m6">
-          <select required>
-            <option value="" disabled selected>Judge default</option>
-            <option value="1">Judge Else (6)</option>
-            <option value="2">Judge Other (14)</option>
-            <option value="3">Judge Judge (22)</option>
+          <select>
+            <option value="" selected>{{Texts.Judge.Label}}</option>
+            {{#each Texts.Judge.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
           </select>
         </div>
         <div class="input-field col s12 m6">
           <input id="claimValue" type="text" class="validate">
-          <label for="claimValue">Case value</label>
+          <label for="claimValue">{{Texts.CaseValue}}</label>
         </div>
         <div class="col s12 m6">
-          <select required>
-            <option value="" disabled selected>Case type </option>
-            <option value="1">استملاك</option>
-            <option value="2">property aquizition </option>
-            <option value="3">Option 3</option>
+          <select>
+            <option value="" selected>{{Texts.CaseType.Label}}</option>
+            {{#each Texts.CaseType.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
           </select>
         </div>
         <div class="input-field col s12 m6">
-          <label for="paymentDate">Registered at</label>
+          <label for="paymentDate">{{Texts.RegisteredAt}}</label>
           <input id="paymentDate" type="text" class="datepicker today">
         </div>
       </div>
     </div>
   </div>
-</div>
-
+</script>
+  </div>
 
   <!-- DataCol form group -->
-  <div class="panel-group" id="caseForm" data-datacol-models-count="3" data-datacol-group>
+  <div class="panel-group" id="caseForm" data-datacol-models-show="2" data-datacol-models-count="3" data-datacol-group>
 
     <!-- DataCol trigger -->
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
@@ -262,38 +266,42 @@
           <label for="ClaimantPhone_0">Claimants phone</label>
         </div>
       </div>
-        <div class="row collapse in" id="toggleRepresentative_0">
-  <span class="card-title grey-text text-darken-4">Representative</span>
+        <div id="placeholder-case-form-representative" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
+
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
+    <i class="mdi-navigation-more-vert"></i>
+    {{Texts.Representative}}
+  </a>
   <div class="divider"></div>
+  <div class="row collapse" id="collapseRepresentative">
+    <div class="col s12 right">
+      <select>
+        <option value="" selected>{{Texts.Type.Label}}</option>
+        {{#each Texts.Type.Values}}
+          <option value="{{@index}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
 
-  <div class="col s12 right">
-    <select id="type_0">
-      <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-      <option value="1">Lawyer</option>
-      <option value="2">Parent</option>
-      <option value="3">Legal guardian</option>
-      <option value="4">Other</option>
-    </select>
+    <div class="input-field col s12 right">
+      <input id="parent_0" type="text" class="validate" value="">
+      <label for="parent_0">{{Texts.FullName}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentId_0" type="text">
+      <label for="parentId_0">{{Texts.ID}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentPhone_0" type="text">
+      <label for="parentPhone_0">{{Texts.Phone}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentAddress_0" type="text" value="">
+      <label for="parentAddress_0">{{Texts.Address}}</label>
+    </div>
   </div>
-
-  <div class="input-field col s12 right">
-    <input id="parent_0" type="text" class="validate" value="">
-    <label for="parent_0">Representatives full name</label>
-  </div>
-  <div class="input-field col s12 right">
-    <input id="parentId_0" type="text">
-    <label for="parentId_0">Representatives ID</label>
-  </div>
-  <div class="input-field col s12 right">
-    <input id="parentPhone_0" type="text">
-    <label for="parentPhone_0">Representatives Phone</label>
-  </div>
-  <div class="input-field col s12 right">
-    <input id="parentAddress_0" type="text" value="">
-    <label for="parentAddress_0">Representatives address</label>
-  </div>
-</div>
-
+</script>
     </div>
   </div>
 <!--             <div class="card-action">
@@ -345,38 +353,42 @@
           <label for="DefendantPhone_0">Defendants phone</label>
         </div>
       </div>
-        <div class="row collapse in" id="toggleRepresentative_0">
-  <span class="card-title grey-text text-darken-4">Representative</span>
+        <div id="placeholder-case-form-representative" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
+
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
+    <i class="mdi-navigation-more-vert"></i>
+    {{Texts.Representative}}
+  </a>
   <div class="divider"></div>
+  <div class="row collapse" id="collapseRepresentative">
+    <div class="col s12 right">
+      <select>
+        <option value="" selected>{{Texts.Type.Label}}</option>
+        {{#each Texts.Type.Values}}
+          <option value="{{@index}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
 
-  <div class="col s12 right">
-    <select id="type_0">
-      <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-      <option value="1">Lawyer</option>
-      <option value="2">Parent</option>
-      <option value="3">Legal guardian</option>
-      <option value="4">Other</option>
-    </select>
+    <div class="input-field col s12 right">
+      <input id="parent_0" type="text" class="validate" value="">
+      <label for="parent_0">{{Texts.FullName}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentId_0" type="text">
+      <label for="parentId_0">{{Texts.ID}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentPhone_0" type="text">
+      <label for="parentPhone_0">{{Texts.Phone}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentAddress_0" type="text" value="">
+      <label for="parentAddress_0">{{Texts.Address}}</label>
+    </div>
   </div>
-
-  <div class="input-field col s12 right">
-    <input id="parent_0" type="text" class="validate" value="">
-    <label for="parent_0">Representatives full name</label>
-  </div>
-  <div class="input-field col s12 right">
-    <input id="parentId_0" type="text">
-    <label for="parentId_0">Representatives ID</label>
-  </div>
-  <div class="input-field col s12 right">
-    <input id="parentPhone_0" type="text">
-    <label for="parentPhone_0">Representatives Phone</label>
-  </div>
-  <div class="input-field col s12 right">
-    <input id="parentAddress_0" type="text" value="">
-    <label for="parentAddress_0">Representatives address</label>
-  </div>
-</div>
-
+</script>
     </div>
   </div>
 
@@ -440,28 +452,31 @@
 
   </div>
   <div class="col s12 m6">
-    <div class="card">
+    <div id="placeholder-case-form-documents-upload" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+<div class="card">
   <div class="card-content">
-  <span class="card-title grey-text text-darken-4">Documents </span>
+  <span class="card-title grey-text text-darken-4">{{Texts.Documents}}</span>
     
     <div class="divider"></div>
-    <div class="row">
+    <div class="row no-marg-bot">
       <div class="col s12 center">
         <div class="card-panel bg-light valign-wrapper">
-            <span ><h5><i class="mdi-file-file-upload"></i> Drop files here to upload</h5> or click here</span>
+            <span ><h5><i class="mdi-file-file-upload"></i>{{Texts.DropFilesHere}}</h5>{{Texts.ClickHere}}</span>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
+</script>
   </div>
   <div class="col s12 m6 trigger-wrapper">
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a>
-      <div class="card cyan lighten-5">
+      <div id="placeholder-case-form-note" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+<div class="card cyan lighten-5">
   <div class="card-content">
-  <span class="card-title grey-text text-darken-4">Note</span>
+  <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
     <div class="divider"></div>
     <div class="row no-marg-bot">
       <div class="input-field col s12">
@@ -471,20 +486,23 @@
     </div>
   </div>
 </div>
-
-
-
+</script>
   </div>
 </div>
+
+<div id="placeholder-case-new" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-new-template" class="template" data-lang="registry/case_new">
 
 <div class="row">
   <div class="col s12">
-    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">Send to judge</button>
-    <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='case-list.html'">Register</button>
-    <button class="btn btn-large waves-effect waves-light save-light right" onclick="window.location.href='case-list.html'">Save</button>
+    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">{{Texts.ButtonSendToJudge}}</button>
+    <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='case-list.html'">{{Texts.ButtonRegister}}</button>
+    <button class="btn btn-large waves-effect waves-light save-light right" onclick="window.location.href='case-list.html'">{{Texts.ButtonSave}}</button>
     <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='case-list.html'" ><i class="mdi-content-clear"></i></button>
   </div>
 </div>
+
+</script>
 
 <!-- Alert modal Structure -->
 <div id="modal1" class="modal">
@@ -541,7 +559,8 @@
     <script src="scripts/vendor/moment.min.js"></script>
     <script src="scripts/vendor/fullcalendar.min.js"></script>
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
-
+    <script src="scripts/vendor/picker.time.js"></script>
+    <script src="scripts/vendor/ar.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>

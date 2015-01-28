@@ -5,7 +5,9 @@
   "title": "New audit"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Audit"
+})
 
 <main>
 
@@ -17,10 +19,16 @@
         <div class="col s12">
           @@include('./layout/common/round-top-back.html')
 
-          @@include('./layout/audit/audit-new.html',
+          @@include('./layout/fee-audit/audit-new.html',
           {
             "formName": "New audit",
-            "backTo": "audit-list.html"
+            "backTo": "audit-list.html",
+                        "hidden": "hidden",
+            "disabled": " ",
+            "value1": "Courtname",
+            "sum1": "",
+            "sum2": "",
+            "total": "0.00"
           })
         </div>
       </div>

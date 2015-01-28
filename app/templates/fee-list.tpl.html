@@ -5,7 +5,9 @@
   "title": "Fee"
 })
 
-@@include('./layout/header.html')
+@@include('./layout/header.html', {
+  "courtName": "Fee department"
+})
 
 <main>
 
@@ -13,7 +15,7 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
+      <div class="row no-marg-bot">
         <div class="col s12">
 
           @@include('./layout/common/round-top-fw.html',
@@ -21,7 +23,7 @@
             "formName": "Fee",
             "fwTo": "fee-new.html"
           })
-          @@include('./layout/fee/fee-filter.html',
+          @@include('./layout/fee-audit/fee-filter.html',
           {
             "ffwTo": "fee-edit.html"
           })
@@ -33,7 +35,7 @@
 
   <div class="card">
     <div class="card-content row with-table">
-      @@include('./layout/fee/fee-table.html',
+      @@include('./layout/fee-audit/fee-table.html',
       {
         "ffwTo": "fee-edit.html"
       })
