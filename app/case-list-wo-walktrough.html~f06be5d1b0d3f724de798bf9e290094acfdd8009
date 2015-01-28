@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="summon">
+<html lang="" class="case-list">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Summons list view</title>
+    <title>CIS | Case list</title>
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
   </head>
-  <body class="summon">
+  <body class="case-list">
 
 
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Notification department</li>
+        <li>Civil Primary Court Nr 1</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -164,81 +164,110 @@
     </li>
   </ul>
 
+
 <main>
+
   <div class="main-banner"></div>
+
   <div class="card-onbanner">
     <div class="container">
       <div class="row no-marg-bot">
         <div class="col s12">
-          <h4 class="header white-text text-darken-2">Summons</h4>
-          <div id="placeholder-summons-filter" class="template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
-	<div class="card overflow-visible">
-	  <div class="card-content" >
-	    <div class="row no-marg-bot">
-  <div class="col s12 m4 right">
+
+          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
+  <i class="create-case mdi-content-add"></i>
+</a>
+<h4 class="header white-text text-darken-2">Prime registry</h4>
+            <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
+    <div class="card">
+      <div class="card-content" >
+        <div class="row">
+  <div class="col s12 m2 right">
     <select class="status-select">
       <option value="" disabled selected>Status</option>
+      <option class="status draft">Drafts</p></option>
       <option class="status pending">Pending</option>
-      <option class="status sent">Sent</option>
+      <option class="status registered">Registered</option>
+      <option class="status closed">Closed</option>
+      <option class="status in-proceedings">In proceedings</option>
+      <option class="status in-next">In next what</option>
+      <option class="status rejected">Rejected</option>
     </select>
   </div>
-
-
-<div class="input-field col s12 m4 right">
-    <div id="the-basics">
-      <input id="addresse" placeholder="{{Filter.Addressee}}"class="typeahead" type="text">
-      <!-- <label for="addresse">{{Filter.Addressee}}</label> -->
-<!--  <label for="caseNumber">{{Filter.CaseNumber}}</label>
-      <input id="" class="typeahead" type="text"> -->
-    </div>
-  
-  </div>
-  <div class="input-field col s12 m4 right">
+  <div class="input-field col s12 m2 right">
     <input id="caseNumber" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
+  </div>
+  <div class="col s12 m2 right">
+    <select>
+      <option value="" selected>{{Filter.CaseType.Label}}</option>
+      {{#each Filter.CaseType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="claimant" type="text" >
+    <label for="claimant">{{Filter.Judge}}</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <i class="mdi-notification-event-note prefix"></i>
+    <input id="startDate" type="date" class="datepicker">
+    <label for="startDate">{{Filter.From}}</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <i class="mdi-notification-event-note prefix"></i>
+    <label for="endDate">{{Filter.To}}</label>
+    <input id="endDate" type="text" class="datepicker">
+
   </div>
 </div>
 
 <!-- hidden by toggle -->
 <div class="row collapse" id="moreFields">
+  <div class="col s12 m2 right">
+  <div class="check-inline">
+    <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
+  </div>
+  <br>
+  <div class="check-inline">
+    <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
+  </div>
+  </div>
+
+  <div class="col s12 m3 right">
+    <div class="row">
+      <div class="col s12">
+        <label for="">{{Filter.CaseValue.Label}}</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="fromSum" type="text">
+        <label for="fromSum">{{Filter.CaseValue.From}}</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input id="toSum" type="text" >
+        <label for="toSum">{{Filter.CaseValue.To}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="input-field col s12 m3 right">
+    <input id="claimant" type="text">
+    <label for="claimant">{{Filter.Claimant}}</label>
+  </div>
   <div class="input-field col s12 m2 right">
-    <input id="judge" type="text">
-    <label for="judge">{{Filter.Judge}}</label>
-  </div>
-
-  <div class="input-field col s12 m2 right no-marg-top">
-    <select>
-      <option value="" disabled selected>{{Filter.CourtName.Label}}</option>
-      {{#each Filter.CourtName.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-
-  <div class="input-field col s12 m2 right no-marg-top">
-    <select>
-      <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
-      {{#each Filter.Summoner.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-
-  <div class="input-field col s12 m2 right">
-    <input id="dateofhearing" type="date" class="datepicker">
-    <label for="dateofhearing">{{Filter.DateOfHearing}}</label>
+    <input id="defendant" type="text">
+    <label for="defendant">{{Filter.Defendant}}</label>
   </div>
   <div class="input-field col s12 m2 right">
-    <input id="dateofsummon" type="date" class="datepicker">
-    <label for="dateofsummon">{{Filter.DateOfSummon}}</label>
+    <input id="participant" type="text">
+    <label for="participant">{{Filter.Participant}}</label>
   </div>
-
 </div>
-	  </div>
-	</div>
-</script>
-<div id="placeholder-list-filter-action" class="template-placeholder"></div>
+      </div>
+    </div>
+  </script>
+    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
 <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
@@ -256,8 +285,6 @@
 </script>
 
 
-
-
         </div>
       </div>
     </div>
@@ -266,43 +293,37 @@
   <div class="card">
     <div class="card-content row with-table">
       <form action="">
-  <div id="placeholder-summons-table" class="template-placeholder"></div>
+  <div id="placeholder-registry-table" class="template-placeholder"></div>
 
-  <script type="text/x-handlebars-template" id="summons-table-template" class="template" data-lang="data/summons/table">
-    <table class="hoverable bordered data order-column">
-      <thead>
-        <th data-field="select">&nbsp;</th>
-        <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-        <th data-field="courtname" class="sorting">{{Texts.CourtName}}</th>
-        <th data-field="judge" class="sorting">{{Texts.Judge}}</th>
-        <th data-field="dateofhearing" class="sorting">{{Texts.DateOfHearing}}</th>
-        <th data-field="addressee" class="sorting">{{Texts.Addressee}}</th>
-        <th data-field="dateofsummon" class="sorting">{{Texts.DateOfSummon}}</th>
-        <th data-field="summoner" class="sorting">{{Texts.Summoner}}</th>
-        <th data-field="status" class="sorting">{{Texts.Status}}</th>
+  <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
 
+    <table class="hoverable bordered data proceeding-table">
+        <thead>
+          <th data-field="status" class="sorting">{{Texts.Status}}</th>
+          <th data-field="date" class="sorting">{{Texts.Date}}</th>
+          <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+          <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
+          <th data-field="claimants">{{Texts.Claimant}}</th>
+          <th data-field="defendants">{{Texts.Defendant}}</th>
+          <th data-field="paticipants">{{Texts.Participants}}</th>
+          <th data-field="judge">{{Texts.Judge}}</th>
+        </thead>
+        <tbody>
+        {{#each Cases}}
+          <tr onClick="parent.location='case-edit.html'">
+            <td class="center"><i class="status {{Status}}"></i></td>
+            <td>{{Date}}</td>
+            <td>{{CaseNumber}}</td>
+            <td>{{CaseType}}</td>
+            <td>{{Claimant}}</td>
+            <td>{{Defendant}} </td>
+            <td>{{Participants}}</td>
+            <td>{{Judge}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
 
-      </thead>
-      <tbody>
-      {{#each Cases}}
-        <tr onClick="parent.location='summons-edit.html'">
-          <td class="center">
-            <input type="checkbox" id="select_{{@index}}" />
-            <label for="select_{{@index}}"></label>
-          </td>
-          <td>{{CaseNumber}}</td>
-          <td>{{CourtName}}</td>
-          <td>{{Judge}}</td>
-          <td>{{DateOfHearing}}</td>
-          <td>{{Addressee}}</td>
-          <td>{{DateOfSummon}}</td>
-          <td>{{Summoner}}</td>
-          <td>{{Status}}</td>
-
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
   </script>
 </form>
 
@@ -381,10 +402,6 @@
     <!-- endbuild -->
     <!-- build:js scripts/vendor/ar.js -->
     <script src="../bower_components/pickadate/lib/translations/ar.js"></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/typeahead.js.js -->
-    <script src="../bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
-    <script src="../bower_components/typeahead.js/dist/typeahead.jquery.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/language.js -->
     <script src="scripts/language.js"></script>
