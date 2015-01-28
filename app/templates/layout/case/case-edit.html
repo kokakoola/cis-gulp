@@ -2,14 +2,9 @@
   <div class="col s12">
     @@include('./case-cards/case-form-general.html')
   </div>
-    <!-- Dropdown Trigger -->
 
   <!-- DataCol form group -->
-<<<<<<< HEAD
-  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="3" data-datacol-group>
-=======
   <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
->>>>>>> f06be5d1b0d3f724de798bf9e290094acfdd8009
 
     <!-- DataCol trigger -->
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
@@ -22,10 +17,7 @@
       <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
       <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
       <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
-<<<<<<< HEAD
-=======
       <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
->>>>>>> f06be5d1b0d3f724de798bf9e290094acfdd8009
     </ul>
 
     <!-- DataCol models -->
@@ -38,15 +30,12 @@
     <div class="col s12 m6" data-datacol-model="participant">
       @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
     </div>
-<<<<<<< HEAD
-=======
     <div class="col s12 m6" data-datacol-model="noteCard">
       @@include('../common/common-cards/case-card-note.html')
     </div>
     <div class="col s12 m6" data-datacol-model="noteForm">
       @@include('../common/common-cards/case-form-note.html')
     </div>
->>>>>>> f06be5d1b0d3f724de798bf9e290094acfdd8009
 
   </div>
   
@@ -54,14 +43,6 @@
     @@include('../common/common-cards/case-card-documents.html')
   </div>
 
-<<<<<<< HEAD
-  <div class="col s12 m6">
-<!--     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a> -->
-      @@include('../common/common-cards/case-card-note.html')
-  </div>
-  @@include('../common/common-cards/case-form-note.html')
-=======
->>>>>>> f06be5d1b0d3f724de798bf9e290094acfdd8009
 </div>
 
 <div class="row">
