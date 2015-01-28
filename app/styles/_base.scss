@@ -365,6 +365,7 @@ table {
 i.status {
   color: #ddd;
   margin-left: 5px;
+  margin-right: 5px;
   vertical-align: middle;
   font-size: 0.8;
   &:before {
@@ -393,6 +394,12 @@ i.status {
   }
   &.rejected {
     color: color("grey", "darken-4");
+  }
+  &.audited {
+    color: color("light-blue", "lighten-1");
+  }  
+  &.sent {
+    color: color("light-blue", "lighten-1");
   }
 
 }
@@ -434,3 +441,4 @@ i.status {
 div[data-datacol-model] {
   display: none;
 }
+
