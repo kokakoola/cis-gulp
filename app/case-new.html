@@ -173,10 +173,14 @@
       <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">New case</h4>
       <div class="row">
+      <!-- DataCol trigger -->
+    <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
   <div class="col s12">
   <div id="placeholder-case-form-general" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
-  <div class="card">
+  <div class="card  wow bounceInDown">
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Case}}  </span>
       <div class="col s12 m1 check-inline">
@@ -221,10 +225,7 @@
   <!-- DataCol form group -->
   <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="4" data-datacol-group>
 
-    <!-- DataCol trigger -->
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
-      <i class="mdi-content-add animated rotateIn"></i>
-    </a>
+
 
     <!-- Dropdown Structure -->
     <!-- DataCol clone triggers -->
@@ -237,7 +238,7 @@
 
     <!-- DataCol models -->
     <div class="col s12 m6" data-datacol-model="claimant">
-      <div class="card">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
@@ -324,7 +325,7 @@
 
     </div>
     <div class="col s12 m6" data-datacol-model="defendant">
-      <div class="card">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
@@ -407,7 +408,7 @@
 </div>
     </div>
     <div class="col s12 m6" data-datacol-model="note">
-      <div id="placeholder-case-form-note" class="template-placeholder"></div>
+      <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
   <div class="card cyan lighten-5 wow bounceInDown">
@@ -430,7 +431,7 @@
 
     </div>
     <div class="col s12 m6" data-datacol-model="participant">
-      <div class="card">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseParticipant_0" class="card-title grey-text text-darken-4">
@@ -488,7 +489,7 @@
   </div>
   
   <div class="col s12 m6">
-    <div id="placeholder-case-form-documents-upload" class="template-placeholder"></div>
+    <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
 <div class="card">
   <div class="card-content">
@@ -506,6 +507,7 @@
 </div>
 </script>
   </div>
+</div>
 
 <div id="placeholder-case-new" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-new-template" class="template" data-lang="registry/case_new">
