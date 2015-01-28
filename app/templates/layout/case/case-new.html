@@ -36,7 +36,24 @@
     @@include(''../common/common-cards/case-form-documents-upload.html')
   </div>
   
-  @@include('../common/common-cards/case-form-note.html')
+
+  <div class="panel-group" id="caseFormNote" data-datacol-models-show="1" data-datacol-models-count="1" data-datacol-group>
+
+    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="addNote" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
+
+    <ul id="addNote" class="dropdown-content">
+      <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
+    </ul>
+
+    <div class="col s12 m6" data-datacol-model="note">
+
+        @@include('../common/common-cards/case-form-note.html')
+
+    </div>
+
+  </div>
 
 <div id="placeholder-case-new" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-new-template" class="template" data-lang="registry/case_new">
