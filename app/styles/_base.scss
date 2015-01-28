@@ -85,6 +85,13 @@ main {
   margin-left: 15px;
 }
 
+// JOYRIDE COMPONENT OVERRIDE
+// ***************************************
+.joyride-expose-wrapper {
+  display: none;
+}
+
+
 // FRONTPAGE
 // ***************************************
 .front-fullscreen {
@@ -312,6 +319,13 @@ textarea.valid {
 
 .switch.col {
   height: 3rem;
+}
+
+.select-inline {
+  .select-wrapper span.select-dropdown {
+  height: 3rem;
+  line-height: 3rem;
+  }
 }
 
 
