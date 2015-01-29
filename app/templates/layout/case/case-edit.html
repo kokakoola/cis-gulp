@@ -26,19 +26,19 @@
     </ul>
 
     <!-- DataCol models -->
-    <div class="col s12 m6" data-datacol-model="claimant">
+    <div class="col s12 m6" > <!-- data-datacol-model="claimant" -->
       @@include('./case-cards/case-form-claimant.html', {"person":"Claimant" })
     </div>
-    <div class="col s12 m6" data-datacol-model="defendant">
+    <div class="col s12 m6" > <!-- data-datacol-model="defendant" -->
       @@include('./case-cards/case-form-defendant.html', {"person":"Defendant"})
     </div>
-    <div class="col s12 m6" data-datacol-model="participant">
+    <div class="col s12 m6" > <!-- data-datacol-model="participant" -->
       @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
     </div>
-    <div class="col s12 m6" data-datacol-model="noteCard">
+    <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
       @@include('../common/common-cards/case-card-note.html')
     </div>
-    <div class="col s12 m6" data-datacol-model="noteForm">
+    <div class="col s12 m6" ><!--  data-datacol-model="noteForm" -->
       @@include('../common/common-cards/case-form-note.html')
     </div>
 
@@ -52,7 +52,7 @@
 
 <div class="row">
   <div class="col s12">
-    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Send to judge</button>
+    <button class="btn btn-large waves-effect waves-light submit right @@hidden" onclick="window.location.href='@@backTo'">Send to judge</button>
     <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Register</button>
     <button class="btn btn-large waves-effect waves-light save-light right" onclick="window.location.href='@@backTo'">Save</button>
     <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>

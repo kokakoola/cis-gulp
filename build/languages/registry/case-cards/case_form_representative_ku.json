@@ -1,0 +1,13 @@
+{
+  "Texts" : {
+    "Representative" : "Representative",
+    "Type" : {
+      "Label" : "Select type",
+      "Values" : ["Lawyer", "Parent", "Legal guardian", "Other"]
+    },
+    "FullName" : "Representatives full name",
+    "ID" : "Representatives ID",
+    "Phone" : "Representatives phone",
+    "Address" : "Representatives address"
+  }
+}

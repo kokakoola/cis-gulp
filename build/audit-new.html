@@ -166,6 +166,11 @@
 <h4 class="header white-text text-darken-2">New audit</h4>
 
           <div class="row">
+  <!-- DataCol trigger -->
+  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+    <i class="mdi-content-add animated rotateIn"></i>
+  </a>
+  
   <div class="col s12">
     <div class="card  wow bounceInDown">
   <div class="card-content">
@@ -241,8 +246,6 @@
 </div>
   </div>
 
-
-
   <div class="col s12 m6">
     <div class="card  wow bounceInDown">
   <div class="card-content">
@@ -252,7 +255,7 @@
     <div class="col s12 m10 offset-m2">
        <div class="row valign-wrapper">
          <div class="col s2">
-           <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
+           <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
          </div>
          <div class="col s10">
            <span class="black-text">
@@ -266,7 +269,7 @@
   </div>
 
   <div class="col s12 m6  trigger-wrapper">
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+    <!-- <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a> -->
     <div class="card brown lighten-5  wow bounceInDown">
   <div class="card-content">
     <div class="row">
@@ -294,7 +297,18 @@
 
   </div>
 
-  <div id="placeholder-case-form-note " class="template-placeholder"></div>
+  <!-- DataCol form group -->
+  <div class="panel-group" id="noteForm" data-datacol-models-show="1" data-datacol-models-count="1" data-datacol-group>
+
+    <!-- Dropdown Structure -->
+    <!-- DataCol clone triggers -->
+    <ul id="add" class="dropdown-content">
+      <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
+    </ul>
+
+    <!-- DataCol models -->
+    <div class="col s12 m6" data-datacol-model="note">
+      <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
   <div class="card cyan lighten-5 wow bounceInDown">
@@ -315,6 +329,9 @@
 </script>
 
 
+    </div>
+
+  </div>
 
 </div>
 

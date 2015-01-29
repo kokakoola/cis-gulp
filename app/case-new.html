@@ -236,7 +236,7 @@
     </ul>
 
     <!-- DataCol models -->
-    <div class="col s12 m6" data-datacol-model="claimant">
+    <div class="col s12 m6"> <!--  data-datacol-model="claimant" -->
       <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
@@ -258,7 +258,7 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field col s12 right"  id="the-basics">
+      <div class="input-field col s12 right">
         <input id="Claimant_0" type="text" class="validate"  value="">
         <label for="Claimant_0">Claimants full name</label>
       </div>
@@ -281,12 +281,12 @@
         <div id="placeholder-case-form-representative" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 
-  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
     <i class="mdi-navigation-more-vert"></i>
     {{Texts.Representative}}
   </a>
   <div class="divider"></div>
-  <div class="row collapse" id="collapseRepresentative">
+  <div class="row collapse in" id="collapseRepresentative">
     <div class="col s12 right">
       <select>
         <option value="" selected>{{Texts.Type.Label}}</option>
@@ -323,7 +323,7 @@
 
 
     </div>
-    <div class="col s12 m6" data-datacol-model="defendant">
+    <div class="col s12 m6">  <!-- data-datacol-model="defendant" -->
       <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
@@ -368,12 +368,12 @@
         <div id="placeholder-case-form-representative" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 
-  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
     <i class="mdi-navigation-more-vert"></i>
     {{Texts.Representative}}
   </a>
   <div class="divider"></div>
-  <div class="row collapse" id="collapseRepresentative">
+  <div class="row collapse in" id="collapseRepresentative">
     <div class="col s12 right">
       <select>
         <option value="" selected>{{Texts.Type.Label}}</option>
@@ -406,7 +406,7 @@
 
 </div>
     </div>
-    <div class="col s12 m6" data-datacol-model="note">
+    <div class="col s12 m6">  <!-- data-datacol-model="note" -->
       <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
@@ -429,7 +429,7 @@
 
 
     </div>
-    <div class="col s12 m6" data-datacol-model="participant">
+    <div class="col s12 m6"> <!-- data-datacol-model="participant" -->
       <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
@@ -450,32 +450,32 @@
       </a>
       <div class="divider"></div>
     </div>
-    <div class="row">
-      <div class="input-field col s12 right"  id="the-basics">
+    <div class="row no-marg-bot">
+      <div class="input-field col s12"  id="the-basics">
         <input id="Participant_0" type="text" class="validate"  value="">
-        <label for="Participant_0">Participants full name</label>
+        <label for="Participant_0">Participants full name</label> 
       </div>
     </div>
-    <div class="collapse in" id="collapseParticipant_0">
+    <div class="collapse in in" id="collapseParticipant_0">
       <div class="row">
-        <div class="col s12 right">
-          <select id="type_0">
-            <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
+        <div class="input-field col s12 ">
+          <select >
+            <option value="" selected disabled>Select type  </option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
         </div>
-        <div class="input-field col s12 right">
+        <div class="input-field col s12">
           <input id="ParticipantAddress_0" type="text" class="validate" value="">
           <label for="ParticipantAddress_0">Participants address</label>
         </div>
-        <div class="input-field col s12 right">
+        <div class="input-field col s12">
           <input id="ParticipantId_0" type="text">
           <label for="ParticipantId_0">Document number</label>
         </div>
-        <div class="input-field col s12 right">
+        <div class="input-field col s12">
           <input id="ParticipantPhone_0" type="text">
           <label for="ParticipantPhone_0">Participants phone</label>
         </div>
@@ -521,18 +521,6 @@
 </div>
 
 </script>
-
-<!-- Alert modal Structure -->
-<div id="modal1" class="modal">
-  <h4>Hei!</h4>
-  <p>You are about to delete the claimant. Are you sure? </p>
-  <hr>
-  <div class="right">
-    <a href="#" class="waves-effect btn-flat modal-close">No</a>
-    <a href="#" class="waves-effect btn teal modal-close">Yes</a>
-  </div>
-</div>
-
 
     </div>
   </div>

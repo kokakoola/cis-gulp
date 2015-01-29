@@ -21,16 +21,16 @@
     </ul>
 
     <!-- DataCol models -->
-    <div class="col s12 m6" data-datacol-model="claimant">
+    <div class="col s12 m6"> <!--  data-datacol-model="claimant" -->
       @@include('./case-cards/case-form-claimant.html', {"person":"Claimant" })
     </div>
-    <div class="col s12 m6" data-datacol-model="defendant">
+    <div class="col s12 m6">  <!-- data-datacol-model="defendant" -->
       @@include('./case-cards/case-form-defendant.html', {"person":"Defendant"})
     </div>
-    <div class="col s12 m6" data-datacol-model="note">
+    <div class="col s12 m6">  <!-- data-datacol-model="note" -->
       @@include('../common/common-cards/case-form-note.html')
     </div>
-    <div class="col s12 m6" data-datacol-model="participant">
+    <div class="col s12 m6"> <!-- data-datacol-model="participant" -->
       @@include('./case-cards/case-form-participant.html', {"person":"Participant"})
     </div>
 
@@ -54,15 +54,3 @@
 </div>
 
 </script>
-
-<!-- Alert modal Structure -->
-<div id="modal1" class="modal">
-  <h4>Hei!</h4>
-  <p>You are about to delete the claimant. Are you sure? </p>
-  <hr>
-  <div class="right">
-    <a href="#" class="waves-effect btn-flat modal-close">No</a>
-    <a href="#" class="waves-effect btn teal modal-close">Yes</a>
-  </div>
-</div>
-

@@ -55,9 +55,9 @@ $(document).ready(function() {
     $(".pr-wrap").toggleClass("show-pass-reset");
   });
 
-  $("input" ).click(function(event) {
-    alert( "Handler for .click() called." );
-  });
+  // $("input" ).click(function(event) {
+  //   alert( "Handler for .click() called." );
+  // });
 
   $('.pass-reset-submit').click(function(event) {
     $(".pr-wrap").removeClass("show-pass-reset");

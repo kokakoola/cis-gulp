@@ -1,0 +1,33 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "case-assesment",
+  "htmlClass": "case-assesment",
+  "title": "Case assesment"
+})
+
+@@include('./layout/header.html', {
+  "courtName": "Civil Primary Court Nr 1"
+})
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      @@include('./layout/common/round-top-back.html')
+      @@include('./layout/case/case-edit.html',
+      {
+        "formName": "Case assesment",
+        "backTo": "case-list.html",
+        "collapse": " ",
+        "caseNo": "{{Texts.No}}",
+        "hidden": "hidden"
+      })
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')
