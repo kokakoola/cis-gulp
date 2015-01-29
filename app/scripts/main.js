@@ -209,6 +209,4 @@ var guid = (function() {
   };
 })();
 
-       
-
  // END DOCREADY
