@@ -168,12 +168,12 @@ var guid = (function() {
  // END DOCREADY
 
 // Usersnap
-(function() {
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.async = true;
-s.src = '//api.usersnap.com/load/'+
-        '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-var x = document.getElementsByTagName('script')[0];
-x.parentNode.insertBefore(s, x);
-})();
+//(function() {
+//var s = document.createElement("script");
+//s.type = "text/javascript";
+//s.async = true;
+//s.src = '//api.usersnap.com/load/'+
+ //       '1ea495c4-875c-43d6-a897-82e131526bbc.js';
+//var x = document.getElementsByTagName('script')[0];
+//x.parentNode.insertBefore(s, x);
+//})();
