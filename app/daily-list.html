@@ -94,7 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -110,7 +110,6 @@
   <li><a href="daily-new.html">New daily</a></li>
   <li class="divider"></li>
   <li><a href="summons-list.html">Summons list</a></li>
-  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -177,21 +176,21 @@
 <h4 class="header white-text text-darken-2">Daily register</h4>
       <div class="row no-marg-bot">
         <div class="col s12">
-  <div class="card">
+  <div class="card overflow-visible">
     <div class="card-content" >
       <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
 <div class="row no-marg-bot">
-  <div class="input-field col s12 m3 right">
-    <input id="caseNumber" type="text">
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input class="typeahead-input casenrs" id="caseNumber" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
-  <div class="input-field col s12 m3 right">
-    <input id="claimant" type="text" >
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input id="claimant" type="text" class="typeahead-input persons">
     <label for="claimant">{{Filter.Claimant}}</label>
   </div>
-  <div class="input-field col s12 m3 right">
-    <input id="defendants" type="text">
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input id="defendants" type="text" class="typeahead-input persons">
     <label for="defendants">{{Filter.Defendant}}</label>
   </div>
   <div class="col s12 m3 right">
