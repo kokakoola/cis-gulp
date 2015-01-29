@@ -214,7 +214,7 @@ animation: second 30s ease infinite;
   a.round-top {
     vertical-align: middle;
     @include margin-left(-65px);
-    z-index: 200;
+    // z-index: 200;
     &.add {
       background-color: color("cyan", "darken-1");
     }
@@ -305,7 +305,7 @@ textarea.valid {
   }
 
 .input-field label {
-  color: #444;
+  // color: #444;
   &span.field-validation-error,
   &.success {
     display: none;
