@@ -94,7 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -110,7 +110,6 @@
   <li><a href="daily-new.html">New daily</a></li>
   <li class="divider"></li>
   <li><a href="summons-list.html">Summons list</a></li>
-  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -185,17 +184,13 @@
   </div>
 
 
-<div class="input-field col s12 m4 right">
-    <div id="the-basics">
-      <input id="addresse" placeholder="{{Filter.Addressee}}"class="typeahead" type="text">
-      <!-- <label for="addresse">{{Filter.Addressee}}</label> -->
-<!--  <label for="caseNumber">{{Filter.CaseNumber}}</label>
-      <input id="" class="typeahead" type="text"> -->
-    </div>
-  
+  <div class="input-field typeahead-container col s12 m4 right">
+      <input id="addresse" class="typeahead-input persons" type="text">
+      <label for="addresse">{{Filter.Addressee}}</label>
   </div>
-  <div class="input-field col s12 m4 right">
-    <input id="caseNumber" type="text">
+
+  <div class="input-field typeahead-container col s12 m4 right">
+    <input id="caseNumber" class="typeahead-input casenrs" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
 </div>
@@ -438,17 +433,6 @@
           x.appendChild(s);
       })();
 
-
-
-        /* (function() {
-         var s = document.createElement("script");
-         s.type = "text/javascript";
-         s.async = true;
-         s.src = '//api.usersnap.com/load/'+
-                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-        var x = document.getElementsByTagName('script')[0];
-         x.parentNode.insertBefore(s, x);
-         })();*/
     </script>
     <!-- endbuild -->
   </body>

@@ -5,14 +5,17 @@
   
   <div class="col s12 m6 trigger-wrapper">
       @@include('./daily-cards/daily-form-timepicker.html')
-    <div>
-        @@include('./daily-cards/daily-form-calendar.html')
-    </div>
+  <div class="s12 m6">
+      @@include('./daily-cards/daily-form-calendar.html')
+  </div>
       
   </div>
   
   <div class="col s12 m6 trigger-wrapper">
-      @@include('../common/common-cards/case-form-documents-upload.html')
+      <div class="outer-container">
+        @@include('../common/common-cards/case-form-documents-upload.html')  
+      </div>
+      
   </div>
       @@include('../common/common-cards/case-form-note.html')
 </div>

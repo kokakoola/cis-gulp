@@ -8,17 +8,13 @@
   </div>
 
 
-<div class="input-field col s12 m4 right">
-    <div id="the-basics">
-      <input id="addresse" placeholder="{{Filter.Addressee}}"class="typeahead" type="text">
-      <!-- <label for="addresse">{{Filter.Addressee}}</label> -->
-<!--  <label for="caseNumber">{{Filter.CaseNumber}}</label>
-      <input id="" class="typeahead" type="text"> -->
-    </div>
-  
+  <div class="input-field typeahead-container col s12 m4 right">
+      <input id="addresse" class="typeahead-input persons" type="text">
+      <label for="addresse">{{Filter.Addressee}}</label>
   </div>
-  <div class="input-field col s12 m4 right">
-    <input id="caseNumber" type="text">
+
+  <div class="input-field typeahead-container col s12 m4 right">
+    <input id="caseNumber" class="typeahead-input casenrs" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
 </div>

@@ -94,7 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list wo walktrough</a></li>
+  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li class="divider"></li>
@@ -110,7 +110,6 @@
   <li><a href="daily-new.html">New daily</a></li>
   <li class="divider"></li>
   <li><a href="summons-list.html">Summons list</a></li>
-  <li><a href="summons-new.html">New summon</a></li>
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
 </ul>
@@ -207,7 +206,7 @@
         </div>
         <div class="col s12 m6">
           <select>
-            <option value="" selected>{{Texts.CaseType.Label}}</option>
+            <option value="" selected disabled>{{Texts.CaseType.Label}}</option>
             {{#each Texts.CaseType.Values}}
               <option value="{{@index}}">{{this}}</option>
             {{/each}}
@@ -242,7 +241,7 @@
 
     <!-- DataCol models -->
     <div class="col s12 m6" > <!-- data-datacol-model="claimant" -->
-      <div class="card  wow bounceInDown">
+      <div class="card overflow-visible wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
@@ -250,12 +249,12 @@
         Claimant
       </a>
       <div class="switch col s6 right">
-        <span>Legal entity</span>
+        <span>Natural person</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Natural person</span>
+        <span>Legal entity</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -263,20 +262,21 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field col s12 right">
-        <input id="Claimant_0" type="text" class="validate"  value="">
+
+      <div class="input-field typeahead-container col s12 right"  id="the-basics">
+        <input id="Claimant_0" type="text" class="typeahead-input persons validate"  value="">
         <label for="Claimant_0">Claimants full name</label>
       </div>
     </div>
     <div class="collapse  " id="collapseClaimant_0">
       <div class="row">
-        <div class="input-field col s12 right">
-          <input id="ClaimantAddress_0" type="text" class="validate" value="">
-          <label for="ClaimantAddress_0">Claimants address</label>
-        </div>
-        <div class="input-field col s12 right">
-          <input id="ClaimantId_0" type="text">
+        <div class="input-field typeahead-container col s12 right">
+          <input id="ClaimantId_0" class="validate typeahead-input aadresses" type="text">
           <label for="ClaimantId_0">Document number</label>
+        </div>
+        <div class="input-field typeahead-container  col s12 right">
+          <input id="ClaimantAddress_0" type="text" class="validate typeahead-input aadresses" value="">
+          <label for="ClaimantAddress_0">Claimants address</label>
         </div>
         <div class="input-field col s12 right">
           <input id="ClaimantPhone_0" type="text">
@@ -329,7 +329,7 @@
 
     </div>
     <div class="col s12 m6" > <!-- data-datacol-model="defendant" -->
-      <div class="card  wow bounceInDown">
+      <div class="card overflow-visible wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
@@ -337,12 +337,12 @@
         Defendant
       </a>
       <div class="switch col s6 right">
-        <span>Legal entity</span>
+        <span>Natural person</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Natural person</span>
+        <span>Legal entity</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -350,20 +350,20 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field col s12 right"  id="the-basics">
-        <input id="Defendant_0" type="text" class="validate"  value="">
+      <div class="input-field typeahead-container  col s12 right"  id="the-basics">
+        <input id="Defendant_0" type="text" class="typeahead-input persons validate"  value="">
         <label for="Defendant_0">Defendants full name</label>
       </div>
     </div>
     <div class="collapse  " id="collapseDefendant_0">
       <div class="row">
-        <div class="input-field col s12 right">
-          <input id="DefendantAddress_0" type="text" class="validate" value="">
-          <label for="DefendantAddress_0">Defendants address</label>
-        </div>
-        <div class="input-field col s12 right">
+        <div class="input-field typeahead-container  col s12 right">
           <input id="DefendantId_0" type="text">
           <label for="DefendantId_0">Document number</label>
+        </div>
+        <div class="input-field typeahead-container  col s12 right">
+          <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="">
+          <label for="DefendantAddress_0">Defendants address</label>
         </div>
         <div class="input-field col s12 right">
           <input id="DefendantPhone_0" type="text">
@@ -420,12 +420,12 @@
         Participant
       </a>
       <div class="switch col s6 right">
-        <span>Legal entity</span>
+        <span>Natural person</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Natural person</span>
+        <span>Legal entity</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -689,17 +689,6 @@
           x.appendChild(s);
       })();
 
-
-
-        /* (function() {
-         var s = document.createElement("script");
-         s.type = "text/javascript";
-         s.async = true;
-         s.src = '//api.usersnap.com/load/'+
-                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-        var x = document.getElementsByTagName('script')[0];
-         x.parentNode.insertBefore(s, x);
-         })();*/
     </script>
     <!-- endbuild -->
   </body>

@@ -17,10 +17,16 @@ $(window).scroll(function() {
 });
 
 
+// var personTypeahead = ['خدر حسن محم','على احمد امين', 'ڕووناك عبدالقادر محمد', 'على احمد امين'];
+// var casenrTypeahead = ['1.23/ ب / 2014', '2. 22/ ب / 2014', '3.21/ ب / 2014', '4.20/ ب / 2014'];
+// var aadressTypeahead = ['سلێمانى /  تووى مهليك / ژمارهى شهقام : 23 / ژمارهى خانوو 2', 'سلێمانى / سهرچنار  / ژمارهى شهقام : 423 / ژمارهى خانوو 12', 'سلێمانى / ڕزگارى / ژمارهى شهقام : 2 / ژمارهى خانوو14', ' سلێمانى / مامۆستايان / ژمارهى شهقام : 44 / ژمارهى خانوو 32'];
+// var docsTypeahead=['324234234','243532345','234523455','243525555'];
 
+var personTypeahead = ['Person 1', 'Person 2', 'Person 3', 'Person 4'];
+var casenrTypeahead = ['2014 / B / 23', '2014 / B / 24', '2014 / B / 25', '2014 / B / 26'];
+var aadressTypeahead = ['Akadeemia tee 2', 'Akadeemia tee 5', 'Puu 4', ' Puu 5'];
+var docsTypeahead=['324234234','243532345','234523455','243525555'];
 
-var states = ['Person 1', 'Person 2', 'Person 3', 'Person 4'
-  ];
 
 
 var substringMatcher = function(strs) {
@@ -55,35 +61,79 @@ $(document).ready(function() {
     $(".pr-wrap").toggleClass("show-pass-reset");
   });
 
-  // $("input" ).click(function(event) {
-  //   alert( "Handler for .click() called." );
-  // });
-
   $('.pass-reset-submit').click(function(event) {
     $(".pr-wrap").removeClass("show-pass-reset");
   });
 
-   // $('#the-basics.typeahead').click(function(e){
-   //    alert('asd');
-   // });
+
+
 
   setTimeout(function (){
-      $('#the-basics .typeahead').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-    },
-    {
-      name: 'states',
-      displayKey: 'value',
-      source: substringMatcher(states)
+
+      $('.typeahead-input.persons').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(personTypeahead)
+      });
+
+      $('.typeahead-input.casenrs').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(casenrTypeahead)
+      });
+
+      $('.typeahead-input.aadresses').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(aadressTypeahead)
+      });
+
+
+    $( ".typeahead-container" ).each(function(event) {
+        // alert('ss');
+        // alert($(this).find("span").css("width","100%"));
+        $(this).find("span").css("width","100%")
+        // alert($(this).id.css("background-color","yellow"));
+        // $(this.find(span).css("background-color","yellow"));      
     });
-  }, 400);
+
+
+    $('.typeahead-container').click(function(event){
+      $(this).find('label').addClass(' active');
+      $(this).find('label').removeClass(' filled');
+      // $('.typeahead-container label').addClass(' active');
+      // $('.typeahead-container label').removeClass(' filled');
+    });
+
+    $('.typeahead-container').focusout(function(event){
+
+      if(!($('#'+event.target.id).val())){
+        $('.typeahead-container label').removeClass(' active');
+      }
+      else{
+        // alert('ne');        
+        $('.typeahead-container label').addClass(' filled');
+      }
+    });
+  }, 800);
 
 
 
 
 });
+
 
 $.fn.material_select_override = function (callback) {
   $(this).each(function(){
@@ -163,8 +213,4 @@ var guid = (function() {
   };
 })();
 
-       
-
-
  // END DOCREADY
-

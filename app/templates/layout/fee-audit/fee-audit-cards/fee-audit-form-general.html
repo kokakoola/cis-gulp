@@ -1,4 +1,4 @@
-<div class="card  wow bounceInDown">
+<div class="card overflow-visible wow bounceInDown">
   <div class="card-content">
     <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
     <div class="col s12 m3 check-inline">
@@ -8,9 +8,8 @@
     <div class="divider"></div>
     <div class="row no-marg-bot">
       <div class="col s12 m6">
-        <div class="input-field">
-          <i class="mdi-action-search prefix right"></i>
-          <input id="caseNr" type="text">
+        <div class="input-field typeahead-container " @@hiddenCaseNumber>
+          <input id="caseNr" type="text" class="typeahead-input casenrs">
           <label for="caseNr">Case Nr</label>
         </div>
         <br>
@@ -22,6 +21,11 @@
         <div class="input-field">
           <input id="caseType" type="text" disabled>
           <label for="caseType">Case type</label>
+        </div>
+        <br>
+        <div class="input-field">
+          <input id="caseValue" type="text" @@caseValueDisabled>
+          <label for="caseValue">Case value</label>
         </div>
       </div>
 
