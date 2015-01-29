@@ -173,6 +173,11 @@
       <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
 <h4 class="header white-text text-darken-2">Edit case</h4>
       <div class="row">
+  <!-- DataCol trigger -->
+  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+    <i class="mdi-content-add animated rotateIn"></i>
+  </a>
+  
   <div class="col s12">
     <div id="placeholder-case-form-general" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
@@ -220,11 +225,6 @@
 
   <!-- DataCol form group -->
   <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
-
-    <!-- DataCol trigger -->
-    <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
-      <i class="mdi-content-add animated rotateIn"></i>
-    </a>
 
     <!-- Dropdown Structure -->
     <!-- DataCol clone triggers -->
