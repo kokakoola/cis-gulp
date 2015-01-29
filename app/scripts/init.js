@@ -83,9 +83,9 @@
 
     $('.dailycalendar').fullCalendar({
       header: {
-        left: '',
+        left: 'prev,next today',
         center: 'title',
-    right: ''
+        right: 'month,agendaWeek,agendaDay'
       },
       isRTL: $.cookie('cis-language') === 'ku',
       defaultView: 'agendaDay',

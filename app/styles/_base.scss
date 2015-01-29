@@ -98,6 +98,20 @@ main {
 }
 
 
+// FULLCALENDAR FONT SIZE OVERRIDE
+// ***************************************
+.fc-center h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+// DAILY NEW FILEUPLOAD CARD MARGIN OVERRIDE
+// ***************************************
+.outer-container {
+  margin-top: -68%;
+}
+
+
 // FRONTPAGE
 // ***************************************
 .front-fullscreen {

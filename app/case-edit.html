@@ -207,7 +207,7 @@
         </div>
         <div class="col s12 m6">
           <select>
-            <option value="" selected>{{Texts.CaseType.Label}}</option>
+            <option value="" selected disabled>{{Texts.CaseType.Label}}</option>
             {{#each Texts.CaseType.Values}}
               <option value="{{@index}}">{{this}}</option>
             {{/each}}
@@ -250,12 +250,12 @@
         Claimant
       </a>
       <div class="switch col s6 right">
-        <span>Legal entity</span>
+        <span>Natural person</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Natural person</span>
+        <span>Legal entity</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -337,12 +337,12 @@
         Defendant
       </a>
       <div class="switch col s6 right">
-        <span>Legal entity</span>
+        <span>Natural person</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Natural person</span>
+        <span>Legal entity</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -420,12 +420,12 @@
         Participant
       </a>
       <div class="switch col s6 right">
-        <span>Legal entity</span>
+        <span>Natural person</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Natural person</span>
+        <span>Legal entity</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -689,17 +689,6 @@
           x.appendChild(s);
       })();
 
-
-
-        /* (function() {
-         var s = document.createElement("script");
-         s.type = "text/javascript";
-         s.async = true;
-         s.src = '//api.usersnap.com/load/'+
-                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-        var x = document.getElementsByTagName('script')[0];
-         x.parentNode.insertBefore(s, x);
-         })();*/
     </script>
     <!-- endbuild -->
   </body>
