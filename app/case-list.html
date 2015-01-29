@@ -297,12 +297,12 @@
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
 
-    <table class="hoverable bordered data proceeding-table">
+    <table class="hoverable bordered data">
         <thead>
           <th data-field="status" class="sorting">{{Texts.Status}}</th>
           <th data-field="date" class="sorting">{{Texts.Date}}</th>
           <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-          <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
+          <th data-field="casetype" class="sorting proceeding-table">{{Texts.CaseType}}</th>
           <th data-field="claimants">{{Texts.Claimant}}</th>
           <th data-field="defendants">{{Texts.Defendant}}</th>
           <th data-field="paticipants">{{Texts.Participants}}</th>
@@ -323,7 +323,6 @@
           {{/each}}
         </tbody>
       </table>
-
   </script>
 </form>
 
@@ -385,9 +384,9 @@
         <h2>Hint 5</h2>
         <p>This button expands your filter for more parameters.</p>
       </li>
-      <li data-class="proceeding-table" data-button="Next" class="custom" >
+      <li data-class="proceeding-table" data-button="Exit" class="custom" >
         <h2>Hint 6</h2>
-        <p>This is proceedings table. Here you can see filtered and non filtered proceedings.</p>
+        <p>This is proceedings table. Here you can see filtered and non filtered proceedings also you can re-order entries.</p>
       </li>
     </ol>
 
@@ -477,6 +476,32 @@
         expose: true
         });
       });
+    </script>
+
+
+    <script type="text/javascript">
+
+     (function() {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '///api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
+          var x = document.getElementsByTagName('head')[0];
+          x.appendChild(s);
+      })();
+
+
+
+        /* (function() {
+         var s = document.createElement("script");
+         s.type = "text/javascript";
+         s.async = true;
+         s.src = '//api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
+        var x = document.getElementsByTagName('script')[0];
+         x.parentNode.insertBefore(s, x);
+         })();*/
     </script>
     <!-- endbuild -->
   </body>

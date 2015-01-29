@@ -2,8 +2,8 @@
     "Filter" :
     {
         "ButtonClearAll" : "Clear all",
-        "ButtonMoreFields" : "More fields",
-        "ButtonLessFields" : "Less fields",
-        "ButtonSearch" : "Search"
+        "ButtonMoreFields" : "خانه‌ى زياتر",
+        "ButtonLessFields" : "خانه‌ى كه‌متر",
+        "ButtonSearch" : "گه‌ڕان"
     }
 }

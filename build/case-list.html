@@ -287,12 +287,12 @@
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
 
-    <table class="hoverable bordered data proceeding-table">
+    <table class="hoverable bordered data">
         <thead>
           <th data-field="status" class="sorting">{{Texts.Status}}</th>
           <th data-field="date" class="sorting">{{Texts.Date}}</th>
           <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-          <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
+          <th data-field="casetype" class="sorting proceeding-table">{{Texts.CaseType}}</th>
           <th data-field="claimants">{{Texts.Claimant}}</th>
           <th data-field="defendants">{{Texts.Defendant}}</th>
           <th data-field="paticipants">{{Texts.Participants}}</th>
@@ -313,7 +313,6 @@
           {{/each}}
         </tbody>
       </table>
-
   </script>
 </form>
 
@@ -352,15 +351,15 @@
 <!-- Tip Content -->
     <ol id="joyRideTipContent">
       <li data-class="user-profile" data-button="Next" class="custom">
-        <h2>Hint 1</h2>
+        <h2>Your profile</h2>
         <p>Here you can access your profile and settings. Aswell sign out</p>
       </li>
       <li data-class="page-content" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
-        <h2>Hint 2</h2>
+        <h2>Menu</h2>
         <p>Here you can access to your webpage content. Like creating new cases or look for different fees.</p>
       </li>
       <li data-class="create-case" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
-        <h2>Hint 3</h2>
+        <h2>Create new</h2>
         <p>Here you can start creating new court case.</p>
       </li>
       <li data-class="justbeinghere" data-button="Next" class="custom">
@@ -375,9 +374,9 @@
         <h2>Hint 5</h2>
         <p>This button expands your filter for more parameters.</p>
       </li>
-      <li data-class="proceeding-table" data-button="Next" class="custom" >
+      <li data-class="proceeding-table" data-button="Exit" class="custom" >
         <h2>Hint 6</h2>
-        <p>This is proceedings table. Here you can see filtered and non filtered proceedings.</p>
+        <p>This is proceedings table. Here you can see filtered and non filtered proceedings also you can re-order entries.</p>
       </li>
     </ol>
 
@@ -395,6 +394,7 @@
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
     <script src="scripts/vendor/picker.time.js"></script>
     <script src="scripts/vendor/ar.js"></script>
+    <script src="scripts/vendor/typeahead.js.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>

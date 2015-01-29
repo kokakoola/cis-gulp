@@ -1,9 +1,9 @@
 {
   "Texts": {
-    "CaseNumber": "رقم القضية",
-    "Claimant": "المدعي ",
-    "Defendant": "دافع",
-    "Status": "وضع"
+    "CaseNumber": "ژماره‌ى داوا",
+    "Claimant": "ناوى داواكار",
+    "Defendant": "ناوى داواله‌سه‌ر كراو",
+    "Status": "قۆناغ"
   },
 
   "Cases": [
@@ -11,7 +11,7 @@
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
-      "Defendant": "أحمد خضر عمر",
+      "Defendant": "على احمد امين",
       "Status": "True"
     },
     {

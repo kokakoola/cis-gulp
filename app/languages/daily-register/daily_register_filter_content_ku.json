@@ -1,7 +1,7 @@
 {
   "Filter" : {
-    "CaseNumber" : "Case number",
-    "Claimant" : "Claimant",
-    "Defendant" : "Defendant"
+    "CaseNumber" : "ژماره‌ى داوا",
+    "Claimant" : "ناوى داواكار",
+    "Defendant" : "ناوى داواله‌سه‌ر كراو"
   }
 }
