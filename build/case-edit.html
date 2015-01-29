@@ -207,10 +207,9 @@
   </div>
 </script>
   </div>
-    <!-- Dropdown Trigger -->
 
   <!-- DataCol form group -->
-  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="3" data-datacol-group>
+  <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
 
     <!-- DataCol trigger -->
     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
@@ -223,6 +222,7 @@
       <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
       <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
       <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+      <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
     </ul>
 
     <!-- DataCol models -->
@@ -451,6 +451,57 @@
   </div>
 </div>
     </div>
+    <div class="col s12 m6" data-datacol-model="noteCard">
+      <div class="card cyan lighten-5  wow bounceInDown">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Note</span>
+    <a href="#!" class="card-title grey-text text-darken-4">
+      <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+    </a>
+    <div class="divider"></div>
+    <div class="col s12 m10 offset-m2">
+      <div class="row valign-wrapper">
+       <div class="col s2">
+         <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
+       </div>
+       <div class="col s10">
+         <span class="black-text">
+           This is note by a specific person. Can we use identicons? Visual helpers are always good ana it should be easy to implement.
+         </span>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+
+
+
+    </div>
+    <div class="col s12 m6" data-datacol-model="noteForm">
+      <div id="placeholder-case-form-note " class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+    </div>
 
   </div>
   
@@ -480,53 +531,6 @@
 
   </div>
 
-  <div class="col s12 m6">
-<!--     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add-note" href="#!" data-activates='addNote'><i class="mdi-content-add animated rotateIn"></i></a> -->
-      <div class="card cyan lighten-5  wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Note</span>
-    <div class="divider"></div>
-    <div class="col s12 m10 offset-m2">
-      <div class="row valign-wrapper">
-       <div class="col s2">
-         <img src="http://lorempixel.com/200/200/people/" alt="" class="circle responsive-img"> 
-       </div>
-       <div class="col s10">
-         <span class="black-text">
-           This is note by a specific person. Can we use identicons? Visual helpers are always good ana it should be easy to implement.
-         </span>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-
-
-
-
-
-  </div>
-  <div id="placeholder-case-form-note " class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
-
-  <div class="card cyan lighten-5 wow bounceInDown">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
-      <a href="#!" class="card-title grey-text text-darken-4">
-        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
-      </a>
-      <div class="divider"></div>
-      <div class="row no-marg-bot">
-        <div class="input-field col s12">
-          <textarea class="materialize-textarea"></textarea>
-          <label><i class="mdi-content-create tiny"></i></label>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
-
-
 </div>
 
 <div class="row">
@@ -537,16 +541,6 @@
     <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='case-list.html'" ><i class="mdi-content-clear"></i></button>
   </div>
 </div>
-
-
-<!-- Dropdown Structure -->
-<ul id='add' class='dropdown-content'>
-  <li><a href="#!" data-datacontainer="#Claimants" class="js-addDataRow">Add a claimant</a></li>
-  <li><a href="#!" data-datacontainer="#Defendants" class="js-addDataRow">Add a defendant</a></li>
-  <li><a href="#!" data-datacontainer="#Participants" class="js-addDataRow">Add a participant</a></li>
-</ul>
-
-
 
     </div>
   </div>
@@ -593,6 +587,7 @@
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
     <script src="scripts/vendor/picker.time.js"></script>
     <script src="scripts/vendor/ar.js"></script>
+    <script src="scripts/vendor/typeahead.js.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>

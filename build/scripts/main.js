@@ -16,6 +16,37 @@ $(window).scroll(function() {
     }
 });
 
+
+
+
+var states = ['Person 1', 'Person 2', 'Person 3', 'Person 4'
+  ];
+
+
+var substringMatcher = function(strs) {
+  return function findMatches(q, cb) {
+    var matches, substrRegex;
+ 
+    // an array that will be populated with substring matches
+    matches = [];
+    // regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(q, 'i');
+ 
+    // iterate through the pool of strings and for any string that
+    // contains the substring `q`, add it to the `matches` array
+    $.each(strs, function(i, str) {
+      if (substrRegex.test(str)) {
+        // the typeahead jQuery plugin expects suggestions to a
+        // JavaScript object, refer to typeahead docs for more info
+        matches.push({ value: str });
+      }
+    });
+ 
+    cb(matches);
+  };
+};
+
+
 // START DOCREADY
 $(document).ready(function() {
 
@@ -24,9 +55,33 @@ $(document).ready(function() {
     $(".pr-wrap").toggleClass("show-pass-reset");
   });
 
+  $("input" ).click(function(event) {
+    alert( "Handler for .click() called." );
+  });
+
   $('.pass-reset-submit').click(function(event) {
     $(".pr-wrap").removeClass("show-pass-reset");
   });
+
+   // $('#the-basics.typeahead').click(function(e){
+   //    alert('asd');
+   // });
+
+  setTimeout(function (){
+      $('#the-basics .typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'states',
+      displayKey: 'value',
+      source: substringMatcher(states)
+    });
+  }, 400);
+
+
+
 
 });
 
@@ -94,6 +149,8 @@ $.fn.material_select_override = function (callback) {
   });
 }
 
+
+
 var guid = (function() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
@@ -109,14 +166,3 @@ var guid = (function() {
        
 
  // END DOCREADY
-
-// Usersnap
-(function() {
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.async = true;
-s.src = '//api.usersnap.com/load/'+
-        '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-var x = document.getElementsByTagName('script')[0];
-x.parentNode.insertBefore(s, x);
-})();
