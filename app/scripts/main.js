@@ -19,8 +19,7 @@ $(window).scroll(function() {
 
 
 
-var states = ['Person 1', 'Person 2', 'Person 3', 'Person 4'
-  ];
+var states = ['Person 1', 'Person 2', 'Person 3', 'Person 4'];
 
 
 var substringMatcher = function(strs) {
@@ -55,20 +54,14 @@ $(document).ready(function() {
     $(".pr-wrap").toggleClass("show-pass-reset");
   });
 
-  $("input" ).click(function(event) {
-    alert( "Handler for .click() called." );
-  });
-
   $('.pass-reset-submit').click(function(event) {
     $(".pr-wrap").removeClass("show-pass-reset");
   });
 
-   // $('#the-basics.typeahead').click(function(e){
-   //    alert('asd');
-   // });
+
 
   setTimeout(function (){
-      $('#the-basics .typeahead').typeahead({
+    $('#the-basics .typeahead').typeahead({
       hint: true,
       highlight: true,
       minLength: 1
@@ -78,12 +71,23 @@ $(document).ready(function() {
       displayKey: 'value',
       source: substringMatcher(states)
     });
-  }, 400);
+
+     $('.input-field').click(function(e){
+        alert('asd');
+     });
+
+
+  }, 800);
 
 
 
 
 });
+
+ $('.input-field').click(function(e){
+    alert('asd');
+ });
+
 
 $.fn.material_select_override = function (callback) {
   $(this).each(function(){
