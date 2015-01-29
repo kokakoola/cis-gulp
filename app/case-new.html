@@ -236,7 +236,7 @@
 
     <!-- DataCol models -->
     <div class="col s12 m6" data-datacol-model="claimant">
-      <div class="card  wow bounceInDown">
+      <div class="card overflow-visible wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
@@ -257,20 +257,20 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field col s12 right"  id="the-basics">
-        <input id="Claimant_0" type="text" class="validate"  value="">
+      <div class="input-field typeahead-container col s12 right"  id="the-basics">
+        <input id="Claimant_0" type="text" class="typeahead-input persons validate"  value="">
         <label for="Claimant_0">Claimants full name</label>
       </div>
     </div>
     <div class="collapse in" id="collapseClaimant_0">
       <div class="row">
-        <div class="input-field col s12 right">
-          <input id="ClaimantAddress_0" type="text" class="validate" value="">
-          <label for="ClaimantAddress_0">Claimants address</label>
-        </div>
-        <div class="input-field col s12 right">
-          <input id="ClaimantId_0" type="text">
+        <div class="input-field typeahead-container col s12 right">
+          <input id="ClaimantId_0" class="validate typeahead-input aadresses" type="text">
           <label for="ClaimantId_0">Document number</label>
+        </div>
+        <div class="input-field typeahead-container  col s12 right">
+          <input id="ClaimantAddress_0" type="text" class="validate typeahead-input aadresses" value="">
+          <label for="ClaimantAddress_0">Claimants address</label>
         </div>
         <div class="input-field col s12 right">
           <input id="ClaimantPhone_0" type="text">
@@ -323,7 +323,7 @@
 
     </div>
     <div class="col s12 m6" data-datacol-model="defendant">
-      <div class="card  wow bounceInDown">
+      <div class="card overflow-visible wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
@@ -344,20 +344,20 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field col s12 right"  id="the-basics">
-        <input id="Defendant_0" type="text" class="validate"  value="">
+      <div class="input-field typeahead-container  col s12 right"  id="the-basics">
+        <input id="Defendant_0" type="text" class="typeahead-input persons validate"  value="">
         <label for="Defendant_0">Defendants full name</label>
       </div>
     </div>
     <div class="collapse in" id="collapseDefendant_0">
       <div class="row">
-        <div class="input-field col s12 right">
-          <input id="DefendantAddress_0" type="text" class="validate" value="">
-          <label for="DefendantAddress_0">Defendants address</label>
-        </div>
-        <div class="input-field col s12 right">
+        <div class="input-field typeahead-container  col s12 right">
           <input id="DefendantId_0" type="text">
           <label for="DefendantId_0">Document number</label>
+        </div>
+        <div class="input-field typeahead-container  col s12 right">
+          <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="">
+          <label for="DefendantAddress_0">Defendants address</label>
         </div>
         <div class="input-field col s12 right">
           <input id="DefendantPhone_0" type="text">

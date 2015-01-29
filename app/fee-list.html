@@ -178,7 +178,7 @@
 <h4 class="header white-text text-darken-2">Fee</h4>
           <div id="placeholder-fee-filter" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
-  <div class="card">
+  <div class="card overflow-visible">
     <div class="card-content" >
       <div class="row no-marg-bot">
   <div class="col s12 m2 right">
@@ -188,8 +188,8 @@
       <option class="status registered">Registered</option>
     </select>
   </div>
-  <div class="input-field col s12 m2 right">
-    <input id="caseNumber" type="text">
+  <div class="input-field typeahead-container col s12 m2 right">
+    <input id="caseNumber" class="typeahead-input casenrs" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
   <div class="col s12 m2 right">
@@ -200,8 +200,8 @@
       {{/each}}
     </select>
   </div>
-  <div class="input-field col s12 m2 right">
-    <input id="claimant" type="text" >
+  <div class="input-field typeahead-container col s12 m2 right">
+    <input id="claimant" class="typeahead-input persons" type="text" >
     <label for="claimant">{{Filter.Claimant}}</label>
   </div>
   <div class="input-field col s12 m2 right">
