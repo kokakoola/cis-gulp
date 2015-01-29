@@ -1,0 +1,7 @@
+{
+  "Filter" : {
+    "CaseNumber" : "Case number",
+    "Claimant" : "Claimant",
+    "Defendant" : "Defendant"
+  }
+}

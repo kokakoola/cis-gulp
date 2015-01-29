@@ -11042,6 +11042,15 @@ main {
   display: none;
 }
 
+.fc-center h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.outer-container {
+  margin-top: -68%;
+}
+
 .front-fullscreen {
   position: fixed;
   top: 20px;
