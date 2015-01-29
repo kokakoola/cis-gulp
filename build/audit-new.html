@@ -176,23 +176,27 @@
     </div>
     <div class="divider"></div>
     <div class="row no-marg-bot">
-      <div class="input-field col s12 m6">
-        <select required>
-          <option value="" disabled selected>Court</option>
-          <option value="1">1</option>
-          <option value="2"   selected>Courtname</option>
-          <option value="3">3</option>
-        </select>
-        <select required>
-          <option value="" disabled selected>Case type </option>
-          <option value="1">استملاك</option>
-          <option value="2">property aquizition </option>
-          <option value="3">Option 3</option>
-        </select>
+      <div class="col s12 m6">
+        <div class="input-field">
+          <i class="mdi-action-search prefix right"></i>
+          <input id="caseNr" type="text">
+          <label for="caseNr">Case Nr</label>
+        </div>
+        <br>
+        <div class="input-field">
+          <input id="courtName" type="text" disabled>
+          <label for="courtName">Court Name</label>
+        </div>
+        <br>
+        <div class="input-field">
+          <input id="caseType" type="text" disabled>
+          <label for="caseType">Case type</label>
+        </div>
       </div>
+
       <div class="col s12 m6">
         <br>
-        <h6>Claimants</h6>
+        <h6>Participants</h6>
         <hr>
         <ul>
           <li>Forename Middlename Surname,</li>
@@ -201,6 +205,8 @@
           <li>Forename Fathers Name Surname</li>
         </ul>
       </div>
+
+
 
       
     </div>
@@ -215,20 +221,20 @@
     <div class="divider"></div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="payer" type="text" value="This Man Named Somebody, This Man Else" disabled> 
         <label for="payer">Payer</label>
+        <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
       </div>
       <div class="input-field col s12">
         <label for="paymentDate">Payment date</label>
-        <input id="paymentDate" type="text" class="datepicker today" disabled>
+        <input id="paymentDate" type="text" class="datepicker today">
       </div>
       <div class="input-field col s12">
-        <input id="receiptNo" type="text" value="32525" disabled>
         <label for="receiptNo">Receipt No</label>
+        <input id="receiptNo" type="text" value="32525" disabled>
       </div>
       <div class="input-field col s12">
-        <input id="sum2" type="text" value="0.00" disabled>
         <label for="sum2">Total</label>
+        <input id="sum2" type="text" value="0.00" disabled>
       </div>
     </div>
   </div>
@@ -363,6 +369,7 @@
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
     <script src="scripts/vendor/picker.time.js"></script>
     <script src="scripts/vendor/ar.js"></script>
+    <script src="scripts/vendor/typeahead.js.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>
