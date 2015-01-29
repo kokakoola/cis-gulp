@@ -287,12 +287,12 @@
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
 
-    <table class="hoverable bordered data proceeding-table">
+    <table class="hoverable bordered data">
         <thead>
           <th data-field="status" class="sorting">{{Texts.Status}}</th>
           <th data-field="date" class="sorting">{{Texts.Date}}</th>
           <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-          <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
+          <th data-field="casetype" class="sorting proceeding-table">{{Texts.CaseType}}</th>
           <th data-field="claimants">{{Texts.Claimant}}</th>
           <th data-field="defendants">{{Texts.Defendant}}</th>
           <th data-field="paticipants">{{Texts.Participants}}</th>
@@ -313,7 +313,6 @@
           {{/each}}
         </tbody>
       </table>
-
   </script>
 </form>
 
@@ -362,6 +361,7 @@
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
     <script src="scripts/vendor/picker.time.js"></script>
     <script src="scripts/vendor/ar.js"></script>
+    <script src="scripts/vendor/typeahead.js.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/dataCol.js"></script>
     <script src="scripts/init.js"></script>

@@ -396,14 +396,28 @@
 
 
     <script type="text/javascript">
-      (function() {
+
+     (function() {
           var s = document.createElement('script');
           s.type = 'text/javascript';
           s.async = true;
-          s.src = '//api.usersnap.com/load/YOUR-APIKEY-HERE.js';
+          s.src = '///api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
           var x = document.getElementsByTagName('head')[0];
           x.appendChild(s);
       })();
+
+
+
+        /* (function() {
+         var s = document.createElement("script");
+         s.type = "text/javascript";
+         s.async = true;
+         s.src = '//api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
+        var x = document.getElementsByTagName('script')[0];
+         x.parentNode.insertBefore(s, x);
+         })();*/
     </script>
     <!-- endbuild -->
   </body>

@@ -243,8 +243,9 @@
   </div>
 </div>
   </div>
+  
   <div class="col s12 m6 trigger-wrapper">
-      <div class="card  wow bounceInDown">
+      <div class="card">
   <div class="card-content">
     <span class="card-title grey-text text-darken-4">Pick a hearing time</span>
     <div class="divider"></div>
@@ -260,7 +261,19 @@
     </div>
   </div>
 </div>
+
+
+    <div>
+        <div class="card">
+	<div class="card-content">
+		<div id="daily-register-calendar" class="dailycalendar"></div>
+	</div>
+</div>
+
+    </div>
+      
   </div>
+  
   <div class="col s12 m6 trigger-wrapper">
       <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
@@ -280,7 +293,6 @@
 </div>
 </script>
   </div>
-
       <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
@@ -300,8 +312,6 @@
     </div>
   </div>
 </script>
-
-
 
 
 </div>
@@ -433,14 +443,28 @@
 
 
     <script type="text/javascript">
-      (function() {
+
+     (function() {
           var s = document.createElement('script');
           s.type = 'text/javascript';
           s.async = true;
-          s.src = '//api.usersnap.com/load/YOUR-APIKEY-HERE.js';
+          s.src = '///api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
           var x = document.getElementsByTagName('head')[0];
           x.appendChild(s);
       })();
+
+
+
+        /* (function() {
+         var s = document.createElement("script");
+         s.type = "text/javascript";
+         s.async = true;
+         s.src = '//api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
+        var x = document.getElementsByTagName('script')[0];
+         x.parentNode.insertBefore(s, x);
+         })();*/
     </script>
     <!-- endbuild -->
   </body>

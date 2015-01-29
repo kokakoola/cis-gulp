@@ -2,16 +2,19 @@
   <div class="col s12 m6">
     @@include('./daily-cards/daily-form-general.html')
   </div>
+  
   <div class="col s12 m6 trigger-wrapper">
       @@include('./daily-cards/daily-form-timepicker.html')
+    <div>
+        @@include('./daily-cards/daily-form-calendar.html')
+    </div>
+      
   </div>
+  
   <div class="col s12 m6 trigger-wrapper">
       @@include('../common/common-cards/case-form-documents-upload.html')
   </div>
-
       @@include('../common/common-cards/case-form-note.html')
-
-
 </div>
 
 <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Save and generate summons</button>
