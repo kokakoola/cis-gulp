@@ -508,3 +508,11 @@ span.tt-dropdown-menu{
     margin: 0;
 }
 
+.typeahead-container label.active{
+  color: #03a9f4;
+}
+
+.typeahead-container label.active.filled{
+  color: red;
+}
+

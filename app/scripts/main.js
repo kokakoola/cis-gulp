@@ -19,7 +19,10 @@ $(window).scroll(function() {
 
 
 
-var states = ['Person 1', 'Person 2', 'Person 3', 'Person 4'];
+var personTypeahead = ['Person 1', 'Person 2', 'Person 3', 'Person 4'];
+var casenrTypeahead = ['2014 / B / 23', '2014 / B / 24', '2014 / B / 25', '2014 / B / 26'];
+var aadressTypeahead = ['Akadeemia tee 2', 'Akadeemia tee 5', 'Puu 4', ' Puu 5'];
+
 
 
 var substringMatcher = function(strs) {
@@ -60,33 +63,72 @@ $(document).ready(function() {
 
 
 
+
   setTimeout(function (){
-    $('#the-basics .typeahead').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-    },
-    {
-      name: 'states',
-      displayKey: 'value',
-      source: substringMatcher(states)
+
+      $('.typeahead-input.persons').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(personTypeahead)
+      });
+
+      $('.typeahead-input.casenrs').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(casenrTypeahead)
+      });
+
+      $('.typeahead-input.aadresses').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(aadressTypeahead)
+      });
+
+
+    $( ".typeahead-container" ).each(function(event) {
+        // alert('ss');
+        // alert($(this).find("span").css("width","100%"));
+        $(this).find("span").css("width","100%")
+        // alert($(this).id.css("background-color","yellow"));
+        // $(this.find(span).css("background-color","yellow"));      
     });
 
-     $('.input-field').click(function(e){
-        alert('asd');
-     });
 
+    $('.typeahead-container').click(function(event){
+      $(this).find('label').addClass(' active');
+      $(this).find('label').removeClass(' filled');
+      // $('.typeahead-container label').addClass(' active');
+      // $('.typeahead-container label').removeClass(' filled');
+    });
 
+    $('.typeahead-container').focusout(function(event){
+
+      if(!($('#'+event.target.id).val())){
+        $('.typeahead-container label').removeClass(' active');
+      }
+      else{
+        // alert('ne');        
+        $('.typeahead-container label').addClass(' filled');
+      }
+    });
   }, 800);
 
 
 
 
 });
-
- $('.input-field').click(function(e){
-    alert('asd');
- });
 
 
 $.fn.material_select_override = function (callback) {
