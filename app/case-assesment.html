@@ -99,7 +99,7 @@
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
-  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-list-wo-walktrough.html">{{List.CaseListWO}}</a></li>
   <li><a href="case-new.html">{{List.NewCase}}</a></li>
   <li><a href="case-edit.html">{{List.EditCase}}</a></li>
   <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
@@ -110,6 +110,7 @@
   <li class="divider"></li>
   <li><a href="audit-list.html">{{List.AuditList}}</a></li>
   <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li><a href="audit-edit.html">{{List.EditAudit}}</a></li>
   <li class="divider"></li>
   <li><a href="daily-list.html">{{List.DailyList}}</a></li>
   <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
@@ -174,13 +175,8 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
-  
-  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
-  <h4 class="header white-text text-darken-2">{{Texts.CaseAssesment}}</h4>
-  
-</script>
+      <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+<h4 class="header white-text text-darken-2">{{Texts.CaseAssesment}}</h4>
       <div class="row">
   <!-- DataCol trigger -->
   <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
@@ -477,11 +473,9 @@
 
     </div>
     <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
-      <div id="placeholder-case-card-note  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-card-note-template" class="template" data-lang="common/common-cards/case_card_note">
-<div class="card cyan lighten-5  wow bounceInDown">
+      <div class="card cyan lighten-5  wow bounceInDown">
   <div class="card-content">
-    <span class="card-title grey-text text-darken-4">{{Texts.Title}}</span>
+    <span class="card-title grey-text text-darken-4">Note</span>
     <a href="#!" class="card-title grey-text text-darken-4">
       <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
     </a>
@@ -493,12 +487,18 @@
        </div>
        <div class="col s10">
          <span class="black-text">
-           {{Texts.Note}}
+           This is note by a specific person. Can we use identicons? Visual helpers are always good ana it should be easy to implement.
+         </span>
+       </div>
      </div>
    </div>
  </div>
 </div>
-</script>
+
+
+
+
+
     </div>
     <div class="col s12 m6" ><!--  data-datacol-model="noteForm" -->
       <div id="placeholder-case-form-note " class="template-placeholder"></div>

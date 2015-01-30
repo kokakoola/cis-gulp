@@ -99,7 +99,7 @@
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
-  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-list-wo-walktrough.html">{{List.CaseListWO}}</a></li>
   <li><a href="case-new.html">{{List.NewCase}}</a></li>
   <li><a href="case-edit.html">{{List.EditCase}}</a></li>
   <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
@@ -110,6 +110,7 @@
   <li class="divider"></li>
   <li><a href="audit-list.html">{{List.AuditList}}</a></li>
   <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li><a href="audit-edit.html">{{List.EditAudit}}</a></li>
   <li class="divider"></li>
   <li><a href="daily-list.html">{{List.DailyList}}</a></li>
   <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
@@ -177,15 +178,10 @@
       <div class="row no-marg-bot">
         <div class="col s12">
 
-          <div id="placeholder-round-top-fw  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
-
-<a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html">
+          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html">
   <i class="create-case mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">{{Texts.Audit}}</h4>
-
-</script>
+<h4 class="header white-text text-darken-2">Audit</h4>
           <div id="placeholder-fee-filter" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
   <div class="card overflow-visible">
