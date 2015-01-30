@@ -28,7 +28,8 @@
         "ButtonLessFields" : "Less fields",
         "ButtonSearch" : "Search",
         "SelectCasetype": "Select case type",
-        "SelectStatus": "Select status"
+        "SelectStatus": "Select status",
+        "SelectCourt": "Select court"
 
     }
 }
