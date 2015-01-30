@@ -1,39 +1,39 @@
 {
 	"Texts" : {
-		"Defendant" : "Defendant",
+		"Defendant" : "داواله‌سه‌ر كراو",
 		"NaturalPerson" : "Natural person",
 		"LegalEntity" : "Legal entity",
-		"FullName" : "Defendants full name",
-    	"Address" : "Defendants address",
-    	"DocumentNumber" : "Document number",
-    	"Phone" : "Claimants phone"
+		"FullName" : "ناوى داواله‌سه‌ر كراو ",
+    	"Address" : "ناونيشانى داواله‌سه‌ركراو ",
+    	"DocumentNumber" : "ژماره‌ى به‌ڵگه‌نامه‌ ",
+    	"Phone" : "ژماره‌ى  ته‌له‌فۆنى داواله‌سه‌ر كراو"
 	},
 	"Content" : {
-		"FullName" : "Ronak Abdulkader Muhammed",
-    	"Address" : "sulaimania / Tuymalik / street no. 23/ house no. 2",
+		"FullName" : "ڕووناك عبدالقادر محمد",
+    	"Address" : "سلێمانى / ڕزگارى / ژماره‌ى شه‌قام : 2 / ژماره‌ى خانوو14",
     	"DocumentNumber" : "1256",
     	"Phone" : "00964 770 157 0000"
 	},
 	"Representative" : {
-	    "Representative" : "Representative",
+	    "Representative" : "نوێنه‌ر ",
 	    "Type" : {
-	      "Label" : "Select type",
-	      "Values" : ["Lawyer", "Parent", "Legal guardian", "Other"]
+	      "Label" : "جۆرى",
+	      "Values" : ["هتد","ڕاسپێردراوى ياسايى","باوان ","پارێزه‌ر"]
 	    },
-	    "FullName" : "Representatives full name",
-	    "ID" : "Representatives ID",
-	    "Phone" : "Representatives phone",
-	    "Address" : "Representatives address"
+	    "FullName" : "ناوى بريكار ",
+	    "ID" : "ژماره‌ى به‌ڵگه‌نامه‌ ",
+	    "Phone" : "ژماره‌ى ‌ ته‌له‌فۆنى بريكار ",
+	    "Address" : "ناونيشانى بريكار "
   	},
   	"RepresentativeContent" : {
-	    "Representative" : "Representative",
+	    "Representative" : "نوێنه‌ر ",
 	    "Type" : {
-	      "Label" : "Select type",
-	      "Values" : ["Lawyer"]
+	      "Label" : "جۆرى",
+	      "Values" : ["پارێزه‌ر"]
 	    },
-	    "FullName" : "Ali Ahmed Amin",
+	    "FullName" : "خدر حسن محمد",
 	    "ID" : "256523651",
 	    "Phone" : "00964 750 000 0000",
-	    "Address" : "sulaimania / Rizgary / street no. 2/ house no.14"
+	    "Address" : "سلێمانى / مامۆستايان / ژماره‌ى شه‌قام : 44 / ژماره‌ى خانوو 32"
   	}
 }
