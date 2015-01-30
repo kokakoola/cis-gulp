@@ -7,7 +7,7 @@
     "TypeOfOffence" : "Type of offence",
     "Addressee" : "ناونيشان ",
     "Summoner" : "گه‌يه‌نه‌ر",
-    "DateOfSummon" : "Date of summon",
+    "DateOfSummon" : "به‌روارى پسووڵه‌ ى ئاگادار كردنه‌وه‌",
     "DateOfHearing" : "به‌روارى دادبينى",
     "Urgent" : "به‌په‌له‌ ",
     "Judge" : "ناوى دادوه‌ر"
@@ -17,7 +17,7 @@
 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -29,7 +29,7 @@
       },       
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -41,7 +41,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -53,7 +53,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -65,7 +65,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -77,7 +77,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -89,7 +89,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -101,7 +101,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -113,19 +113,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "pending",
-        "CourtName" : "1 دادگاى به‌رايى ",
-        "TypeOfOffence" : "Type 1",
-        "Addressee" : "أحمد خضر عمر",
-        "Summoner" : "أحمد خضر عمر",
-        "DateOfSummon" : "۱۹۹۱/۱۱/۱۱",
-        "DateOfHearing" : "۱۹۹۱/۱۱/۰۳",
-        "Urgent" : " ",
-        "Judge" : "أحمد خضر عمر"
-      }, 
-      {
-        "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "sent",
+        "Status" : "له‌ چاوه‌ڕوانيدايه‌ ",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -149,7 +137,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "sent",
+        "Status" : "ڕه‌وانه‌ كرا",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -161,7 +149,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "sent",
+        "Status" : "ڕه‌وانه‌ كرا",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -173,7 +161,7 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "sent",
+        "Status" : "ڕه‌وانه‌ كرا",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
@@ -185,7 +173,19 @@
       }, 
       {
         "CaseNumber" : "ب / 2014 / 23",
-        "Status" : "sent",
+        "Status" : "ڕه‌وانه‌ كرا",
+        "CourtName" : "1 دادگاى به‌رايى ",
+        "TypeOfOffence" : "Type 1",
+        "Addressee" : "أحمد خضر عمر",
+        "Summoner" : "أحمد خضر عمر",
+        "DateOfSummon" : "۱۹۹۱/۱۱/۱۱",
+        "DateOfHearing" : "۱۹۹۱/۱۱/۰۳",
+        "Urgent" : " ",
+        "Judge" : "أحمد خضر عمر"
+      }, 
+      {
+        "CaseNumber" : "ب / 2014 / 23",
+        "Status" : "ڕه‌وانه‌ كرا",
         "CourtName" : "1 دادگاى به‌رايى ",
         "TypeOfOffence" : "Type 1",
         "Addressee" : "أحمد خضر عمر",
