@@ -12,49 +12,49 @@
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "على احمد امين",
-      "Status": "True"
+      "Status": "drafts"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "drafts"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "registered"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "drafts"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "pending"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "closed"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "pending"
     },
     {
       "CaseNumber": "ب/2014/23",
       "Claimant": "أحمد خضر عمر",
       "Defendant": "أحمد خضر عمر",
-      "Status": "True"
+      "Status": "closed"
     }
   ]
 }

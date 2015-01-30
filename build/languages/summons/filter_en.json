@@ -28,6 +28,9 @@
     "ButtonMoreFields" : "More fields",
     "ButtonSearch" : "Search",
     "Judge" : "Judge",
-    "DateOfDispatch" : "Date of dispatch"
+    "DateOfDispatch" : "Date of dispatch",
+    "SelectStatus" : "Select status",
+    "SelectCourt" : "Select court",
+    "SelectSummoner" : "Select summoner"
   }
 }

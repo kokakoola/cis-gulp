@@ -108,56 +108,6 @@
       ]
     });
 
-    $('.dailycalendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay'
-      },
-      isRTL: $.cookie('cis-language') === 'ku',
-      defaultView: 'agendaDay',
-      editable: true,
-      events: [
-        {
-      title: 'All Day Event',
-      start: '2015-01-29'
-    },
-    {
-      title: 'Long Event',
-      start: '2015-01-07',
-      end: '2015-29-29'
-    },
-    {
-      id: 999,
-      title: 'Repeating Event',
-          start: '2015-01-09T16:00:00'
-    },
-    {
-      id: 999,
-          title: 'Repeating Event',
-          start: '2015-01-16T16:00:00'
-        },
-    {
-          title: 'Meeting',
-          start: '2015-01-12T10:30:00',
-          end: '2015-01-12T12:30:00'
-    },
-    {
-          title: 'Lunch',
-          start: '2015-01-12T12:00:00'
-        },
-    {
-      title: 'Birthday Party',
-      start: '2015-01-13T07:00:00'
-    },
-    {
-      title: 'Click for Google',
-      url: 'http://google.com/',
-      start: '2015-01-28'
-    }
-      ]
-    });
-
     $('ul.tabs').tabs();
 
     function bindDataTable() {

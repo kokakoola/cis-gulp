@@ -29,12 +29,6 @@
           </a>
         </li>
         <li>
-          <a href="#!" onclick="toggleFullScreen()">
-            <i class="mdi-navigation-fullscreen"></i>
-            Fullscreen
-          </a>
-        </li>
-        <li>
           <a class="dropdown-button" href="#!" data-activates="languageDropdown">
             <i class="mdi-action-language"></i>
             Language
@@ -75,36 +69,40 @@
 
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
-  <li><a href="#!">Profile</a></li>
-  <li><a href="#!">Settings</a></li>
+  <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-profile-template" class="template" data-lang="header/person_dropdown">
+  <li><a href="#!">{{List.Profile}}</a></li>
+  <li><a href="#!">{{List.Settings}}</a></li>
   <li class="divider"></li>
-  <li><a href="#!"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
 </ul>
 
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
-  <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
-  <li><a href="case-new.html">New case</a></li>
-  <li><a href="case-edit.html">Edit case</a></li>
-  <li><a href="case-assesment.html">Case assesment</a></li>
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
   <li class="divider"></li>
-  <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">New fee</a></li>
-  <li><a href="fee-edit.html">Edit fee</a></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
   <li class="divider"></li>
-  <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">New audit</a></li>
-  <li><a href="audit-edit.html">Edit audit</a></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
   <li class="divider"></li>
-  <li><a href="daily-list.html">Daily list</a></li>
-  <li><a href="daily-new.html">New daily</a></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
   <li class="divider"></li>
-  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
   <li class="divider"></li>
-  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
 </ul>
-
 
 <!-- notifications dropdown -->
 <div class="navbar dropdown-content notification-container" id="notificationsDropdown">
@@ -161,10 +159,15 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <a class="btn-floating btn-large waves-effect waves-light round-top add" href="daily-new.html">
+      <div id="placeholder-round-top-fw  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
+
+<a class="btn-floating btn-large waves-effect waves-light round-top add" href="daily-new.html">
   <i class="create-case mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">Daily register</h4>
+<h4 class="header white-text text-darken-2">{{Texts.DailyRegister}}</h4>
+
+</script>
       <div class="row no-marg-bot">
         <div class="col s12">
   <div class="card overflow-visible">
@@ -184,9 +187,10 @@
     <input id="defendants" type="text" class="typeahead-input persons">
     <label for="defendants">{{Filter.Defendant}}</label>
   </div>
-  <div class="col s12 m3 right">
+  <div class="input-field select-label col s12 m3 right">
+    <label class="active">{{Filter.SelectStatus}}</label> 
     <select class="status-select">
-      <option value="" disabled selected>Status</option>
+      <option value="" disabled selected>{{Filter.SelectStatus}}</option>
       <option class="status pending">Pending</option>
       <option class="status registered">Registered</option>
     </select>

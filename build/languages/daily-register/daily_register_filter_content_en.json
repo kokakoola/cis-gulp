@@ -2,6 +2,7 @@
   "Filter" : {
     "CaseNumber" : "Case number",
     "Claimant" : "Claimant",
-    "Defendant" : "Defendant"
+    "Defendant" : "Defendant",
+    "SelectStatus" : "Select status"
   }
 }

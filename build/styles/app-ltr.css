@@ -10980,6 +10980,10 @@ html, body {
   line-height: 5rem;
 }
 
+.card {
+  overflow: auto;
+}
+
 .card a {
   color: inherit;
   margin-right: inherit;
@@ -11018,11 +11022,6 @@ main {
           flex: 1 0 auto;
 }
 
-.with-table {
-  background: #fff;
-  margin-top: -20px;
-}
-
 .trigger-wrapper {
   position: relative;
 }
@@ -11051,18 +11050,24 @@ main {
   margin-top: -68%;
 }
 
-<<<<<<< HEAD
-=======
-.pp-section {
-  height: 100vh;
+.cont-padding {
+  padding: 20px;
 }
 
->>>>>>> 8356fd906c5570eb4390e5cb1a103467cda1909f
+.pp-section {
+  height: 100vh;
+  width: 100vw;
+}
+
 .front-fullscreen {
   position: fixed;
   top: 20px;
   left: 40px;
-  font-size: 4rem;
+  font-size: 2.5rem;
+}
+.front-fullscreen li {
+  padding: 15px;
+  display: inline;
 }
 
 .full-bg {
@@ -11078,6 +11083,7 @@ main {
   opacity: 0.6;
   height: 2rem;
   max-width: 400px;
+  line-height: 2rem;
 }
 .full-bg input[type=text]:focus {
   border-color: #333;
@@ -11244,6 +11250,7 @@ table.dataTable tr:hover {
 
 .with-table {
   padding: 0 35px;
+  background: #fff;
 }
 
 i.status {
@@ -11251,7 +11258,7 @@ i.status {
   margin-left: 5px;
   margin-right: 5px;
   vertical-align: middle;
-  font-size: 0.8;
+  font-size: 0.6rem;
 }
 i.status:before {
   font-family: "Material-Design-Icons";
@@ -11362,6 +11369,15 @@ span.tt-dropdown-menu {
 
 .typeahead-container label.active {
   color: #03a9f4;
+}
+
+.select-label .select-wrapper span.select-dropdown {
+  line-height: 3rem;
+  height: 3rem;
+}
+
+table.dataTable.order-column tbody tr > .sorting_1 {
+  background-color: whitesmoke;
 }
 
 .row {

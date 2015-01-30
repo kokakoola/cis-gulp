@@ -15,5 +15,12 @@
       "Label" : "Case type",
       "Values" : ["Loan", "Prevent opposition", "Prevent exposure", "Recover posession", "Stopping new business", "Identical wage", "Named wage"]
     }
+  },
+  "Content" :
+  {
+    "CaseType" : "Named wage",
+    "CaseValue" : "500000",
+    "Judge" : "Judge Else (6)",
+    "No" : "22/3/3349"
   }
 }

@@ -29,12 +29,6 @@
           </a>
         </li>
         <li>
-          <a href="#!" onclick="toggleFullScreen()">
-            <i class="mdi-navigation-fullscreen"></i>
-            Fullscreen
-          </a>
-        </li>
-        <li>
           <a class="dropdown-button" href="#!" data-activates="languageDropdown">
             <i class="mdi-action-language"></i>
             Language
@@ -75,36 +69,40 @@
 
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
-  <li><a href="#!">Profile</a></li>
-  <li><a href="#!">Settings</a></li>
+  <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-profile-template" class="template" data-lang="header/person_dropdown">
+  <li><a href="#!">{{List.Profile}}</a></li>
+  <li><a href="#!">{{List.Settings}}</a></li>
   <li class="divider"></li>
-  <li><a href="#!"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
 </ul>
 
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
-  <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
-  <li><a href="case-new.html">New case</a></li>
-  <li><a href="case-edit.html">Edit case</a></li>
-  <li><a href="case-assesment.html">Case assesment</a></li>
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
   <li class="divider"></li>
-  <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">New fee</a></li>
-  <li><a href="fee-edit.html">Edit fee</a></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
   <li class="divider"></li>
-  <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">New audit</a></li>
-  <li><a href="audit-edit.html">Edit audit</a></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
   <li class="divider"></li>
-  <li><a href="daily-list.html">Daily list</a></li>
-  <li><a href="daily-new.html">New daily</a></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
   <li class="divider"></li>
-  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
   <li class="divider"></li>
-  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
 </ul>
-
 
 <!-- notifications dropdown -->
 <div class="navbar dropdown-content notification-container" id="notificationsDropdown">
@@ -164,18 +162,24 @@
       <div class="row no-marg-bot">
         <div class="col s12">
 
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
+          <div id="placeholder-round-top-fw  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
+
+<a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
   <i class="create-case mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">Prime registry</h4>
+<h4 class="header white-text text-darken-2">{{Texts.PrimeRegistry}}</h4>
+
+</script>
             <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
     <div class="card overflow-visible">
       <div class="card-content" >
         <div class="row">
-  <div class="col s12 m2 right">
+  <div class="input-field select-label col s12 m2 right">
+  <label class="active">{{Filter.Status.Label}}</label>
     <select class="status-select">
-      <option value="" disabled selected>Status</option>
+      <option value="" disabled selected>{{Filter.SelectStatus}}</option>
       <option class="status draft">Drafts</p></option>
       <option class="status pending">Pending</option>
       <option class="status registered">Registered</option>
@@ -189,9 +193,10 @@
     <input id="caseNumber" class="typeahead-input casenrs" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
-  <div class="col s12 m2 right">
+  <div class="input-field select-label col s12 m2 right">
+    <label class="active">{{Filter.CaseType.Label}}</label> 
     <select>
-      <option value="" selected>{{Filter.CaseType.Label}}</option>
+      <option value="" selected disabled>{{Filter.SelectCasetype}}</option>   
       {{#each Filter.CaseType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
@@ -228,9 +233,6 @@
 
   <div class="col s12 m3 right">
     <div class="row">
-      <div class="col s12">
-        <label for="">{{Filter.CaseValue.Label}}</label>
-      </div>
       <div class="input-field col s12 m6">
         <input id="fromSum" type="text">
         <label for="fromSum">{{Filter.CaseValue.From}}</label>
@@ -347,38 +349,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Tip Content -->
-    <ol id="joyRideTipContent">
-      <li data-class="user-profile" data-button="Next" class="custom">
-        <h2>Your profile</h2>
-        <p>Here you can access your profile and settings. Aswell sign out</p>
-      </li>
-      <li data-class="page-content" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
-        <h2>Menu</h2>
-        <p>Here you can access to your webpage content. Like creating new cases or look for different fees.</p>
-      </li>
-      <li data-class="create-case" data-button="Next" data-options="tipLocation:top;tipAnimation:fade">
-        <h2>Create new</h2>
-        <p>Here you can start creating new court case.</p>
-      </li>
-      <li data-class="justbeinghere" data-button="Next" class="custom">
-        <h2>Hint 4</h2>
-        <p>Here you can access your profile and settings. Aswell sign out</p>
-      </li>
-      <li data-class="filtering" data-button="Next" class="custom">
-        <h2>Hint 4</h2>
-        <p>This is proceeding search table. Not all fields are manatory. Proceedings are shown below.</p>
-      </li>
-      <li data-class="filter-toggle" data-button="Next" class="custom">
-        <h2>Hint 5</h2>
-        <p>This button expands your filter for more parameters.</p>
-      </li>
-      <li data-class="proceeding-table" data-button="Exit" class="custom" >
-        <h2>Hint 6</h2>
-        <p>This is proceedings table. Here you can see filtered and non filtered proceedings also you can re-order entries.</p>
-      </li>
-    </ol>
 
     <script src="scripts/vendor/jquery.js"></script>
     <script src="scripts/vendor/jquery.cookie.js"></script>

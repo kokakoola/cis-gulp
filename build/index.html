@@ -17,31 +17,48 @@
 
 
   <div class="section pagepiling full-bg" id="login">
-    <a href="#!" class="front-fullscreen" onclick="toggleFullScreen()"><i class="mdi-navigation-fullscreen"></i></a>
+<ul class="front-fullscreen">
+  <li>
+    <a class="dropdown-button" href="#!" data-activates="languageDropdown">
+      <i class="mdi-action-language"></i>  
+    </a>
+  </li>
+</ul>
+    <div id="placeholder-index" class="template-placeholder"></div>
+    <script type="text/x-handlebars-template" id="index-template" class="template" data-lang="general/index">
     <div class="container">
-
       <div class="col s5 m5 center">
         <h3 class="white-text">
           <img src="images/cis-logo.svg" alt="" width="70" height="70">
           <br>
-          <span style="font-size: 55%;">Welcome to Sulaymaniah</span>
+          <span style="font-size: 55%;">{{Texts.Welcome.First}}</span>
           <br>
-          Court Info System
+          {{Texts.Welcome.Second}}
         </h3>
         <div class="divider white"></div>
-        <h6 class="white-text">Please login:</h6>
+        <h6 class="white-text">{{Texts.PleaseLogin}}</h6>
         <br>
-        <input type="text" value="" placeholder="Name">
+        <input type="text" value="" placeholder="{{Texts.PlaceHolders.Name}}">
         <br>
-        <input type="password" value="" placeholder="Password">
+        <input type="password" value="" placeholder="{{Texts.PlaceHolders.Password}}">
         <br>
-        <button onclick="location.href='case-list-wo-walktrough.html'" class="btn-large waves-effect waves-dark deep-orange darken-4 wow rotateIn" type="button">Login</button>
+        <button onclick="location.href='case-list-wo-walktrough.html'" class="btn-large waves-effect waves-dark cyan darken-1 wow rotateIn" type="button">{{Texts.ButtonLogin}}</button>
         <br>
-        <a href="">Forgot Password?</a>
+        <a href="">{{Texts.ForgotPassword}}</a>
       </div>
     </div>
+    </script>
   </div>
 
+<!-- language dropdown -->
+<ul id="languageDropdown" class="navbar dropdown-content">
+  <li class="active">
+    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
+  </li>
+  <li>
+    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
+  </li>
+</ul>
 
     <script src="scripts/vendor/jquery.js"></script>
     <script src="scripts/vendor/jquery.cookie.js"></script>

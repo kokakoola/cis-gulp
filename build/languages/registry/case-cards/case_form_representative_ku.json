@@ -2,12 +2,12 @@
   "Texts" : {
     "Representative" : "Representative",
     "Type" : {
-      "Label" : "Select type",
-      "Values" : ["Lawyer", "Parent", "Legal guardian", "Other"]
+      "Label" : "جۆرى",
+      "Values" : ["هتد","ڕاسپێردراوى ياسايى","باوان ","پارێزه‌ر"]
     },
-    "FullName" : "Representatives full name",
-    "ID" : "Representatives ID",
-    "Phone" : "Representatives phone",
-    "Address" : "Representatives address"
+    "FullName" : "ناوى بريكار ",
+    "ID" : "ژماره‌ى به‌ڵگه‌نامه",
+    "Phone" : "ژماره‌ى ‌ ته‌له‌فۆنى بريكار ",
+    "Address" : "ناونيشانى بريكار"
   }
 }
