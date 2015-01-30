@@ -22,6 +22,10 @@ var casenrTypeahead = ['1.23/ ب / 2014', '2. 22/ ب / 2014', '3.21/ ب /
 var aadressTypeahead = ['سلێمانى /  تووى مهليك / ژمارهى شهقام : 23 / ژمارهى خانوو 2', 'سلێمانى / سهرچنار  / ژمارهى شهقام : 423 / ژمارهى خانوو 12', 'سلێمانى / ڕزگارى / ژمارهى شهقام : 2 / ژمارهى خانوو14', ' سلێمانى / مامۆستايان / ژمارهى شهقام : 44 / ژمارهى خانوو 32'];
 var docsTypeahead=['324234234','243532345','234523455','243525555'];
 
+//list statustest, et neid kuvada tabelisse, hetkel võetakse lambised, sest tõlked jms on puudulikud. Hiljem tuleb teha mingi mapping, sest 
+//inglisekeelne staatuse nimetus on ikooni klassiks, mis kuvab õiget värvi ikooni
+var feeStatuses=['pending','registered'];
+
 
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {

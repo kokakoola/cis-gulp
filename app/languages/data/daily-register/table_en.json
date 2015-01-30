@@ -12,49 +12,49 @@
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "registered"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "registered"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "draft"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "closed"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "draft"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "closed"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "closed"
     },
     {
       "CaseNumber": "2014/B/23",
       "Claimant": "Ahmed Khadr Omar",
       "Defendant": "Ahmed Khadr Omar",
-      "Status": "True"
+      "Status": "rejected"
     }
 
   ]
