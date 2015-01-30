@@ -2,7 +2,10 @@
   <nav>
     <div class="nav-wrapper container">
       <ul>
+        <div id="placeholder-courtname" class="filtering template-placeholder"></div>
+        <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
         <li>@@courtName</li>
+        </script>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -53,7 +56,7 @@
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
   <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="content-profile-template" class="template" data-lang="header/person_dropdown">
+  <script type="text/x-handlebars-template" id="profile-dropdown-template" class="template" data-lang="header/person_dropdown">
   <li><a href="#!">{{List.Profile}}</a></li>
   <li><a href="#!">{{List.Settings}}</a></li>
   <li class="divider"></li>
