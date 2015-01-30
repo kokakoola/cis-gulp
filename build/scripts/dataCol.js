@@ -7,7 +7,7 @@ $(function () {
 
 ;(function ($) {
   'use strict';
-  $.fn.dataCol = function (options) {
+  $.fn.dataCol = function (options) { 
 
     var selector = {
       'show': 'datacol-models-show',
@@ -45,6 +45,8 @@ $(function () {
         $.each(models, function() {
           cloneModel($(this).data(selector.model));
         });
+
+        reIndex();
       }
 
       function cloneModel(model) {

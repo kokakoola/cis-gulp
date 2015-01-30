@@ -58,14 +58,16 @@
 
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
-  <li><a href="#!">Profile</a></li>
-  <li><a href="#!">Settings</a></li>
+  <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-profile-template" class="template" data-lang="header/person_dropdown">
+  <li><a href="#!">{{List.Profile}}</a></li>
+  <li><a href="#!">{{List.Settings}}</a></li>
   <li class="divider"></li>
-  <li><a href="#!"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
 </ul>
 
 @@include('./general/content-dropdown.html')
-
 
 <!-- notifications dropdown -->
 <div class="navbar dropdown-content notification-container" id="notificationsDropdown">

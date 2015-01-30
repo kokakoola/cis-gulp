@@ -1,19 +1,24 @@
 {
   "Texts" :
   {
-    "Urgent" : "Urgent",
+    "Urgent" : "به‌په‌له‌ ",
     "Confidential" : "Confidential",
-    "Case" : "Case",
-    "No": "22/3/3345",
-    "CaseValue" : "Case value",
-    "RegisteredAt" : "Registered at",
+    "Case" : "داوا",
+    "No": "23/ ب / 2014",
+    "CaseValue" : "به‌هاى داوا ",
+    "RegisteredAt" : "تۆمار كرا له‌ ",
     "Judge" : {
       "Label" : "Select judge automatically",
-      "Values" : ["Judge Else (6)", "Judge Other (14)", "Judge Judge (22)"]
+      "Values" : ["خدر حسن محمد", "على احمد امين", "ڕووناك عبدالقادر محمد"]
     },
     "CaseType" : {
+<<<<<<< HEAD
       "Label" : "Case type",
       "Values" : ["Loan", "Prevent opposition", "Prevent exposure", "Recover posession", "Stopping new business", "Identical wage", "Named wage"]
+=======
+      "Label" : "به‌هاى داوا ",
+      "Values" : ["قه‌رز", "ڕێگرى كردن", "ڕێگرى به‌ربه‌ست", "گه‌ڕانه‌وه‌ى بنده‌ستى", "ڕاگرتنى كارى نوێ", "كرێ ى هاوتا", "كرێ ى ناونراو"]
+>>>>>>> 8356fd906c5570eb4390e5cb1a103467cda1909f
     }
   },
   "Content" :

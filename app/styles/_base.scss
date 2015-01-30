@@ -24,6 +24,10 @@ html, body {
   line-height: 5rem;
 }
 
+.card {
+  overflow: auto;
+}
+
 .card a {
   color: inherit;
   @include margin-right(inherit);
@@ -61,11 +65,6 @@ body {
 
 main {
    flex: 1 0 auto;
-}
-
-.with-table {
-  background: #fff;
-  margin-top: -20px;
 }
 
 // COMPONENTS
@@ -116,12 +115,18 @@ main {
 // ***************************************
 .pp-section {
 height: 100vh;
+width: 100vw;
 }
 .front-fullscreen {
  position: fixed;
  top: 20px;
  left: 40px;
- font-size: 4rem;
+ font-size: 2.5rem;
+ 
+ li {
+  padding: 15px;
+  display: inline;
+ }
 }
 
 .full-bg {
@@ -383,6 +388,7 @@ table {
 
 .with-table {
   padding: 0 35px;
+  background: #fff;
 }
 
 // .status.bullet {
@@ -531,6 +537,11 @@ span.tt-dropdown-menu{
 
 .typeahead-container label.active{
   color: #03a9f4;
+}
+
+.select-label .select-wrapper span.select-dropdown {
+  line-height:3rem;
+  height:3rem;
 }
 
 
