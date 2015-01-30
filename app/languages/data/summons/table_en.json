@@ -17,7 +17,7 @@
 
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -29,7 +29,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "sent",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -41,7 +41,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -53,7 +53,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "sent",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -65,7 +65,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "sent",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -77,7 +77,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "sent",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -89,7 +89,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -101,7 +101,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "sent",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -113,7 +113,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -125,7 +125,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -137,7 +137,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -149,7 +149,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -161,7 +161,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -173,7 +173,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -185,7 +185,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -197,7 +197,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",
@@ -209,7 +209,7 @@
         },
         {
           "CaseNumber" : "2014 / B / 23",
-          "Status" : "Created",
+          "Status" : "pending",
           "CourtName" : "Primary court 1",
           "TypeOfOffence" : "Type 1",
           "Addressee" : "Ahmed Khadr Omar",

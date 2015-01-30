@@ -16,7 +16,7 @@
 
   "Cases" : [
         {
-          "Status" : "ڕه‌شنوس",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -26,7 +26,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "ڕه‌شنوس",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -36,7 +36,7 @@
           "Judge" : "استملاك"
         },
       {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -46,7 +46,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -56,7 +56,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -66,7 +66,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "in-next",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -76,7 +76,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "in-next",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -86,7 +86,67 @@
           "Judge" : "استملاك"
         },
       {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "in-next",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "in-next",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "in-next",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "registered",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "registered",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "registered",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "23/ ب / 2014 ",
+          "CaseType" : "استملاك",
+          "Claimant" : "آزاد حلة عمر",
+          "Defendant" : "آزاد حلة عمر",
+          "Participants"  : "استملاك",
+          "Judge" : "استملاك"
+        },
+        {
+          "Status" : "registered",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -106,7 +166,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "draft",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -116,67 +176,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
-          "Date" : "2014-05-06",
-          "CaseNumber" : "23/ ب / 2014 ",
-          "CaseType" : "استملاك",
-          "Claimant" : "آزاد حلة عمر",
-          "Defendant" : "آزاد حلة عمر",
-          "Participants"  : "استملاك",
-          "Judge" : "استملاك"
-        },
-        {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
-          "Date" : "2014-05-06",
-          "CaseNumber" : "23/ ب / 2014 ",
-          "CaseType" : "استملاك",
-          "Claimant" : "آزاد حلة عمر",
-          "Defendant" : "آزاد حلة عمر",
-          "Participants"  : "استملاك",
-          "Judge" : "استملاك"
-        },
-        {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
-          "Date" : "2014-05-06",
-          "CaseNumber" : "23/ ب / 2014 ",
-          "CaseType" : "استملاك",
-          "Claimant" : "آزاد حلة عمر",
-          "Defendant" : "آزاد حلة عمر",
-          "Participants"  : "استملاك",
-          "Judge" : "استملاك"
-        },
-        {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
-          "Date" : "2014-05-06",
-          "CaseNumber" : "23/ ب / 2014 ",
-          "CaseType" : "استملاك",
-          "Claimant" : "آزاد حلة عمر",
-          "Defendant" : "آزاد حلة عمر",
-          "Participants"  : "استملاك",
-          "Judge" : "استملاك"
-        },
-        {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
-          "Date" : "2014-05-06",
-          "CaseNumber" : "23/ ب / 2014 ",
-          "CaseType" : "استملاك",
-          "Claimant" : "آزاد حلة عمر",
-          "Defendant" : "آزاد حلة عمر",
-          "Participants"  : "استملاك",
-          "Judge" : "استملاك"
-        },
-        {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
-          "Date" : "2014-05-06",
-          "CaseNumber" : "23/ ب / 2014 ",
-          "CaseType" : "استملاك",
-          "Claimant" : "آزاد حلة عمر",
-          "Defendant" : "آزاد حلة عمر",
-          "Participants"  : "استملاك",
-          "Judge" : "استملاك"
-        },
-        {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "draft",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -186,7 +186,7 @@
           "Judge" : "استملاك"
         },
       {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "draft",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -196,7 +196,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "draft",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -206,7 +206,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "registered",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -216,7 +216,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "registered‌",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -226,7 +226,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "registered",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -236,7 +236,7 @@
           "Judge" : "استملاك"
         },
       {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "registered‌",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -246,7 +246,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "in-next",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",
@@ -256,7 +256,7 @@
           "Judge" : "استملاك"
         },
         {
-          "Status" : "له‌ چاوه‌ڕوانيدايه‌",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "23/ ب / 2014 ",
           "CaseType" : "استملاك",

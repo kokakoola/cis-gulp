@@ -19,7 +19,7 @@
   "Cases" : [
 
         {
-          "Status" : "True",
+          "Status" : "rejected",
           "Date" : "2014-05-06",
           "CaseNumber" : "186/ 2014/ EE6",
           "CaseType" : "Eclair",
@@ -30,7 +30,7 @@
         }
 ,
         {
-          "Status" : "True",
+          "Status" : "closed",
           "Date" : "2014-05-06",
           "CaseNumber" : "186/ 2014/ EE6",
           "CaseType" : "Eclair",
@@ -41,7 +41,7 @@
         }
 ,
         {
-          "Status" : "True",
+          "Status" : "in-next",
           "Date" : "2014-05-06",
           "CaseNumber" : "186/ 2014/ EE6",
           "CaseType" : "Eclair",
@@ -52,7 +52,7 @@
         }
 ,
         {
-          "Status" : "True",
+          "Status" : "closed",
           "Date" : "2014-05-06",
           "CaseNumber" : "186/ 2014/ EE6",
           "CaseType" : "Eclair",
@@ -63,7 +63,7 @@
         }
 ,
         {
-          "Status" : "True",
+          "Status" : "in-next",
           "Date" : "2014-05-06",
           "CaseNumber" : "186/ 2014/ EE6",
           "CaseType" : "Eclair",
