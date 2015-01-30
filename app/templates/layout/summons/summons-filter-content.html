@@ -1,7 +1,8 @@
 <div class="row no-marg-bot">
-  <div class="col s12 m4 right">
+  <div class="input-field select-label col s12 m4 right">
+    <label class="active">Status</label>
     <select class="status-select">
-      <option value="" disabled selected>Status</option>
+      <option value="" disabled selected>Select status</option>
       <option class="status pending">Pending</option>
       <option class="status sent">Sent</option>
     </select>
@@ -26,18 +27,21 @@
     <label for="judge">{{Filter.Judge}}</label>
   </div>
 
-  <div class="input-field col s12 m2 right no-marg-top">
+  <div class="input-field select-label select-label col s12 m2 right">
+    <label class="active">Court</label>
     <select>
-      <option value="" disabled selected>{{Filter.CourtName.Label}}</option>
+      <option value="" disabled selected>Select court</option>    
+      <!-- <option value="" disabled selected>{{Filter.CourtName.Label}}</option> -->
       {{#each Filter.CourtName.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
     </select>
   </div>
 
-  <div class="input-field col s12 m2 right no-marg-top">
+  <div class="input-field select-label col s12 m2 right">
+    <label class="active">Summoner</label>
     <select>
-      <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
+      <option value="" disabled selected>Select summoner</option>    
       {{#each Filter.Summoner.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
