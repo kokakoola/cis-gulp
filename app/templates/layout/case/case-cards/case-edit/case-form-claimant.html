@@ -1,0 +1,50 @@
+<div id="placeholder-case-form-claimant" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-claimant-template" class="template" data-lang="registry/case-cards/case_form_claimant">
+    <div class="card overflow-visible wow bounceInDown">
+      <div class="card-content">
+        <div>
+          <a data-toggle="collapse" href="#collapse@@person_0" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-more-vert"></i>
+           {{Texts.Claimant}}
+          </a>
+          <div class="switch col s6 right">
+            <span>{{Texts.NaturalPerson}}</span>
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+            <span>{{Texts.LegalEntity}}</span>
+          </div>
+          <a href="#!" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+          <div class="divider"></div>
+      </div>
+        <div class="row">
+          <div class="input-field typeahead-container col s12 right"  id="the-basics">
+            <input id="@@person_0" type="text" class="typeahead-input persons validate"  value="{{Content.FullName}}">
+            <label for="@@person_0" class="active">{{Texts.FullName}}</label>
+          </div>
+        </div>
+        <div class="collapse @@collapse" id="collapse@@person_0">
+          <div class="row">
+            <div class="input-field typeahead-container col s12 right">
+              <input id="@@personId_0" class="validate typeahead-input documents" type="text" value="{{Content.DocumentNumber}}">
+              <label for="@@personId_0" class="active">{{Texts.DocumentNumber}}</label>
+            </div>
+            <div class="input-field typeahead-container  col s12 right">
+              <input id="@@personAddress_0" type="text" class="validate typeahead-input aadresses" value="{{Content.Address}}">
+              <label for="@@personAddress_0" class="active">{{Texts.Address}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="@@personPhone_0" type="text" value="{{Content.Phone}}">
+              <label for="@@personPhone_0" class="active">{{Texts.Phone}}</label>
+            </div>
+          </div>
+            @@include('./case-form-representative.html')
+        </div>
+    </div>
+  </script>
+
+
+

@@ -8,7 +8,7 @@
     "CaseValue" : "Case value",
     "RegisteredAt" : "Registered at",
     "Judge" : {
-      "Label" : "Judge",
+      "Label" : "Select judge automatically",
       "Values" : ["Judge Else (6)", "Judge Other (14)", "Judge Judge (22)"]
     },
     "CaseType" : {

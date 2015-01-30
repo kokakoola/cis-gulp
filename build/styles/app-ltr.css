@@ -11042,6 +11042,22 @@ main {
   display: none;
 }
 
+.fc-center h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.outer-container {
+  margin-top: -68%;
+}
+
+<<<<<<< HEAD
+=======
+.pp-section {
+  height: 100vh;
+}
+
+>>>>>>> 8356fd906c5570eb4390e5cb1a103467cda1909f
 .front-fullscreen {
   position: fixed;
   top: 20px;
@@ -11338,6 +11354,14 @@ span.tt-dropdown-menu {
 
 .tt-suggestion p {
   margin: 0;
+}
+
+.typeahead-container label.active.filled {
+  color: #9e9e9e;
+}
+
+.typeahead-container label.active {
+  color: #03a9f4;
 }
 
 .row {
