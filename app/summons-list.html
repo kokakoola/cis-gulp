@@ -182,9 +182,9 @@
 	  <div class="card-content" >
 	    <div class="row no-marg-bot">
   <div class="input-field select-label col s12 m4 right">
-    <label class="active">Status</label>
+    <label class="active">{{Filter.Status.Label}}</label>  
     <select class="status-select">
-      <option value="" disabled selected>Select status</option>
+      <option value="" disabled selected>{{Filter.SelectStatus}}</option>
       <option class="status pending">Pending</option>
       <option class="status sent">Sent</option>
     </select>
@@ -210,9 +210,9 @@
   </div>
 
   <div class="input-field select-label select-label col s12 m2 right">
-    <label class="active">Court</label>
+    <label class="active">{{Filter.CourtName.Label}}</label>
     <select>
-      <option value="" disabled selected>Select court</option>    
+      <option value="" disabled selected>{{Filter.SelectCourt}}</option>    
       <!-- <option value="" disabled selected>{{Filter.CourtName.Label}}</option> -->
       {{#each Filter.CourtName.Values}}
         <option value="{{@index}}">{{this}}</option>
@@ -221,9 +221,9 @@
   </div>
 
   <div class="input-field select-label col s12 m2 right">
-    <label class="active">Summoner</label>
+    <label class="active">{{Filter.Summoner.Label}}</label>
     <select>
-      <option value="" disabled selected>Select summoner</option>    
+      <option value="" disabled selected>{{Filter.SelectSummoner}}</option>    
       {{#each Filter.Summoner.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
