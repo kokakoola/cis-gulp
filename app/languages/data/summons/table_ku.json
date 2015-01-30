@@ -1,16 +1,16 @@
 {
   "Texts" :
   {
-    "CaseNumber" : "Case nr",
-    "Status" : "Status",
+    "CaseNumber" : "ژماره‌ى داوا",
+    "Status" : "قۆناغ ",
     "CourtName" : "Court name",
     "TypeOfOffence" : "Type of offence",
-    "Addressee" : "Addressee",
-    "Summoner" : "Summoner",
+    "Addressee" : "ناونيشان ",
+    "Summoner" : "گه‌يه‌نه‌ر",
     "DateOfSummon" : "Date of summon",
-    "DateOfHearing" : "Date of hearing",
-    "Urgent" : "Urgent",
-    "Judge" : "Judge"
+    "DateOfHearing" : "به‌روارى دادبينى",
+    "Urgent" : "به‌په‌له‌ ",
+    "Judge" : "ناوى دادوه‌ر"
   },
 
   "Cases" : [
