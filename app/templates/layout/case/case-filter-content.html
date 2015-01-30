@@ -19,7 +19,7 @@
   <div class="input-field select-label col s12 m2 right">
     <label class="active">{{Filter.CaseType.Label}}</label> 
     <select>
-      <option value="" selected>{{Filter.SelectCasetype}}</option>   
+      <option value="" selected disabled>{{Filter.SelectCasetype}}</option>   
       {{#each Filter.CaseType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
