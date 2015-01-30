@@ -99,7 +99,7 @@
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
-  <li><a href="case-list-wo-walktrough.html">{{List.CaseListWO}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
   <li><a href="case-new.html">{{List.NewCase}}</a></li>
   <li><a href="case-edit.html">{{List.EditCase}}</a></li>
   <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
@@ -110,7 +110,6 @@
   <li class="divider"></li>
   <li><a href="audit-list.html">{{List.AuditList}}</a></li>
   <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
-  <li><a href="audit-edit.html">{{List.EditAudit}}</a></li>
   <li class="divider"></li>
   <li><a href="daily-list.html">{{List.DailyList}}</a></li>
   <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
@@ -177,8 +176,13 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="fee-list.html"><i class="mdi-navigation-close"></i></a>
-<h4 class="header white-text text-darken-2">New fee</h4>
+          <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
+  
+  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="fee-list.html"><i class="mdi-navigation-close"></i></a>
+  <h4 class="header white-text text-darken-2">{{Texts.NewFee}}</h4>
+  
+</script>
 
           <div class="row">
   <!-- DataCol trigger -->

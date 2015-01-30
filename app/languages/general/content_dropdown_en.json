@@ -1,7 +1,7 @@
 {
   "List" : {
     "CaseList" : "Case list",
-    "CaseListWO" : "Case list without walkthrough",
+    "CaseListWith" : "Case list with walkthrough",
     "NewCase" : "New case",
     "EditCase" : "Edit case",
     "CaseAssesment" : "Case assesment",
