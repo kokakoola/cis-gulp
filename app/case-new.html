@@ -94,7 +94,7 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
   <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
+  <li><a href="case-list-with-walktrough.html">Case list with walktrough</a></li>
   <li><a href="case-new.html">New case</a></li>
   <li><a href="case-edit.html">Edit case</a></li>
   <li><a href="case-assesment.html">Case assesment</a></li>
@@ -258,7 +258,6 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-
       <div class="input-field typeahead-container col s12 right"  id="the-basics">
         <input id="Claimant_0" type="text" class="typeahead-input persons validate"  value="">
         <label for="Claimant_0">Claimants full name</label>
@@ -267,7 +266,7 @@
     <div class="collapse in" id="collapseClaimant_0">
       <div class="row">
         <div class="input-field typeahead-container col s12 right">
-          <input id="ClaimantId_0" class="validate typeahead-input documents" type="text">
+          <input id="ClaimantId_0" class="validate typeahead-input aadresses" type="text">
           <label for="ClaimantId_0">Document number</label>
         </div>
         <div class="input-field typeahead-container  col s12 right">
@@ -282,12 +281,12 @@
         <div id="placeholder-case-form-representative" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 
-  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
     <i class="mdi-navigation-more-vert"></i>
     {{Texts.Representative}}
   </a>
   <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
+  <div class="row collapse" id="collapseRepresentative">
     <div class="col s12 right">
       <select>
         <option value="" selected>{{Texts.Type.Label}}</option>
@@ -325,7 +324,7 @@
 
     </div>
     <div class="col s12 m6">  <!-- data-datacol-model="defendant" -->
-      <div class="card overflow-visible wow bounceInDown">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
@@ -333,12 +332,12 @@
         Defendant
       </a>
       <div class="switch col s6 right">
-        <span>Natural person</span>
+        <span>Legal entity</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Legal entity</span>
+        <span>Natural person</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -346,20 +345,20 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field typeahead-container  col s12 right"  id="the-basics">
-        <input id="Defendant_0" type="text" class="typeahead-input persons validate"  value="">
+      <div class="input-field col s12 right"  id="the-basics">
+        <input id="Defendant_0" type="text" class="validate"  value="">
         <label for="Defendant_0">Defendants full name</label>
       </div>
     </div>
     <div class="collapse in" id="collapseDefendant_0">
       <div class="row">
-        <div class="input-field typeahead-container  col s12 right">
-          <input id="DefendantId_0"  class="typeahead-input documents"  type="text">
-          <label for="DefendantId_0">Document number</label>
-        </div>
-        <div class="input-field typeahead-container  col s12 right">
-          <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="">
+        <div class="input-field col s12 right">
+          <input id="DefendantAddress_0" type="text" class="validate" value="">
           <label for="DefendantAddress_0">Defendants address</label>
+        </div>
+        <div class="input-field col s12 right">
+          <input id="DefendantId_0" type="text">
+          <label for="DefendantId_0">Document number</label>
         </div>
         <div class="input-field col s12 right">
           <input id="DefendantPhone_0" type="text">
@@ -369,12 +368,12 @@
         <div id="placeholder-case-form-representative" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 
-  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
     <i class="mdi-navigation-more-vert"></i>
     {{Texts.Representative}}
   </a>
   <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
+  <div class="row collapse" id="collapseRepresentative">
     <div class="col s12 right">
       <select>
         <option value="" selected>{{Texts.Type.Label}}</option>
@@ -432,26 +431,6 @@
     </div>
     <div class="col s12 m6"> <!-- data-datacol-model="participant" -->
       <div class="card  wow bounceInDown">
-<<<<<<< HEAD
-    <div class="card-content">
-      <div>
-        <a data-toggle="collapse" href="#collapseParticipant_0" class="card-title grey-text text-darken-4">
-          <i class="mdi-navigation-more-vert"></i>
-          Participant
-        </a>
-        <div class="switch col s6 right">
-          <span>Legal entity</span>
-          <label>
-            <input type="checkbox">
-            <span class="lever"></span>
-          </label>
-          <span>Natural person</span>
-        </div>
-        <a href="#!" class="card-title grey-text text-darken-4">
-          <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
-        </a>
-        <div class="divider"></div>
-=======
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseParticipant_0" class="card-title grey-text text-darken-4">
@@ -474,45 +453,11 @@
     <div class="row no-marg-bot">
       <div class="input-field col s12"  id="the-basics">
         <input id="Participant_0" type="text" class="validate"  value="">
-<<<<<<< HEAD
-        <label for="Participant_0">Participants full name</label>
->>>>>>> dc5bffa3b9691ac211e446068f5ce8bfca329de9
-=======
         <label for="Participant_0">Participants full name</label> 
->>>>>>> 24e4f305e3743c01eb6a2ed55c87dce68305b683
       </div>
-      <script type="text/x-handlebars-template" id="case-form-participant-template" class="template" data-lang="registry/case-cards/case_form_representative">
+    </div>
+    <div class="collapse in" id="collapseParticipant_0">
       <div class="row">
-<<<<<<< HEAD
-        <div class="input-field col s12 right"  id="the-basics">
-          <input id="Participant_0" type="text" class="validate"  value="">
-          <label for="Participant_0">Participants full name</label>
-        </div>
-      </div>
-      <div class="collapse in" id="collapseParticipant_0">
-        <div class="row">
-          <div class="col s12 right">
-            <select id="type_0">
-              <option value="" selected>Select type <i class="mdi-content-add"></i> </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div class="input-field col s12 right">
-            <input id="ParticipantAddress_0" type="text" class="validate" value="">
-            <label for="ParticipantAddress_0">Participants address</label>
-          </div>
-          <div class="input-field col s12 right">
-            <input id="ParticipantId_0" type="text">
-            <label for="ParticipantId_0">Document number</label>
-          </div>
-          <div class="input-field col s12 right">
-            <input id="ParticipantPhone_0" type="text">
-            <label for="ParticipantPhone_0">Participants phone</label>
-          </div>
-=======
         <div class="input-field col s12 ">
           <select >
             <option value="" selected disabled>Select type  </option>
@@ -533,12 +478,10 @@
         <div class="input-field col s12">
           <input id="ParticipantPhone_0" type="text">
           <label for="ParticipantPhone_0">Participants phone</label>
->>>>>>> 24e4f305e3743c01eb6a2ed55c87dce68305b683
         </div>
       </div>
-       </script>
     </div>
- 
+  </div>
 </div>
     </div>
 

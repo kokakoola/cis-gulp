@@ -1,8 +1,8 @@
 <div id="placeholder-case-form-general" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
-  <div class="card  wow bounceInDown">
+  <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
+  <div class="card  wow">
     <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.Case}} @@caseNo</span>
+      <span class="card-title grey-text text-darken-4">{{Texts.Case}} {{Content.No}}</span>
       <div class="col s12 m1 check-inline">
         <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
       </div>
@@ -14,19 +14,19 @@
       <div class="row">
         <div class="col s12 m6">
           <select>
-            <option value="" selected>{{Texts.Judge.Label}}</option>
+            <option value="{{Content.Judge}}" selected>{{Content.Judge}}</option>
             {{#each Texts.Judge.Values}}
-              <option value="{{@index}}">{{this}}</option>
+              <option value="{{@index}}">{{Content.Judge}}</option>
             {{/each}}
           </select>
         </div>
         <div class="input-field col s12 m6">
-          <input id="claimValue" type="text" class="validate">
-          <label for="claimValue">{{Texts.CaseValue}}</label>
+          <input id="claimValue" type="text" class="validate" value="{{Content.CaseValue}}" >
+          <label for="claimValue" class="active">{{Texts.CaseValue}}</label>
         </div>
         <div class="col s12 m6">
           <select>
-            <option value="" selected disabled>{{Texts.CaseType.Label}}</option>
+            <option value="{{Content.CaseType}}" selected>{{Content.CaseType}}</option>
             {{#each Texts.CaseType.Values}}
               <option value="{{@index}}">{{this}}</option>
             {{/each}}

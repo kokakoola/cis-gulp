@@ -13,7 +13,14 @@
     },
     "CaseType" : {
       "Label" : "Case type",
-      "Values" : ["قه‌رز", "ڕێگرى كردن", "ڕێگرى به‌ربه‌ست", "گه‌ڕانه‌وه‌ى بنده‌ستى", "ڕاگرتنى كارى نوێ", "كرێ ى هاوتا", "كرێ ى ناونراو"]
+      "Values" : ["Loan", "Prevent opposition", "Prevent exposure", "Recover posession", "Stopping new business", "Identical wage", "Named wage"]
     }
+  },
+  "Content" :
+  {
+    "CaseType" : "Named wage",
+    "CaseValue" : "500000",
+    "Judge" : "Judge Else (6)",
+    "No" : "22/3/3349"
   }
 }

@@ -18,29 +18,36 @@
       </a>
       <div class="divider"></div>
     </div>
-    <div class="row">
-      <div class="input-field col s12 right"  id="the-basics">
+    <div class="row no-marg-bot">
+      <div class="input-field col s12"  id="the-basics">
         <input id="@@person_0" type="text" class="validate"  value="">
-        <label for="@@person_0">@@persons full name</label>
+        <label for="@@person_0">@@persons full name</label> 
       </div>
     </div>
-    <div class="collapse @@collapse" id="collapse@@person_0">
+    <div class="collapse in @@collapse" id="collapse@@person_0">
       <div class="row">
-        <div class="input-field col s12 right">
+        <div class="input-field col s12 ">
+          <select >
+            <option value="" selected disabled>Select type  </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="input-field col s12">
           <input id="@@personAddress_0" type="text" class="validate" value="">
           <label for="@@personAddress_0">@@persons address</label>
         </div>
-        <div class="input-field col s12 right">
+        <div class="input-field col s12">
           <input id="@@personId_0" type="text">
           <label for="@@personId_0">Document number</label>
         </div>
-        <div class="input-field col s12 right">
+        <div class="input-field col s12">
           <input id="@@personPhone_0" type="text">
           <label for="@@personPhone_0">@@persons phone</label>
         </div>
       </div>
-        @@include('./case-form-representative.html')
     </div>
   </div>
-
 </div>
