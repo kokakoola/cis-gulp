@@ -1,2 +1,42 @@
 Read Me before you start:
 
+Sisukord
+1.Dropdownile labeli lisamine
+2.Typeaheadi lisamine
+3.Staatuste maagia
+
+
+
+1.Dropdownile labeli lisamine.
+
+Näide:
+<div class="col input-field  select-label s12 m3 right">
+    <label class="active">{{Filter.CourtType.Label}}</label>    
+    <select>
+      <option value="" disabled selected>{{Filter.SelectCourt}}</option>
+      {{#each Filter.CourtType.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+Tähtis on:
+A) container peab sisaldama klasse input-field ja select label
+b) Label peab omama klasse "active"
+
+
+2. Typeaheadi lisamine.
+
+Näide:
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input id="judge"  class="typeahead-input persons" type="text">
+    <label for="judge">{{Filter.Judge}}</label>
+  </div>
+
+
+inputi ümbritsev container peab omama klassi "input-field typeahead-container" ja input ise peab omama klassi "typeahead-input" ning vastavalt, millist datat soovitakse (väga halb lahendus aga kuna asjaga oli väga kiire, siis toohetk sai nõnda tehtud), siis vastavalt kas "persons, aadresses, casenrs, documents". 
+NB! Lisaks, "card" klassi omav div, peab omama ka klassi "overflow-visible". 
+
+
+3. Staatuse maagia.
+Hetkel on data-failides kurdikeelsed staatused ladina tähtedega, sest reaalse klassi nimetuse asemel kuvatakse selle klassi "värv", klassi värv aga pannakse ikoonina, mis omakorda vajab õige värvi kuvamiseks õiget klassi, milleks on inglisekeelne lowercase nimetus. Hiljem saab razor view'ga selle ümber teha, mingi mäpping sinna juurde, kurdi-inglise vms.

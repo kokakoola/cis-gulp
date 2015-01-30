@@ -12,20 +12,15 @@
       "Values" : ["خدر حسن محمد", "على احمد امين", "ڕووناك عبدالقادر محمد"]
     },
     "CaseType" : {
-<<<<<<< HEAD
-      "Label" : "Case type",
-      "Values" : ["Loan", "Prevent opposition", "Prevent exposure", "Recover posession", "Stopping new business", "Identical wage", "Named wage"]
-=======
       "Label" : "به‌هاى داوا ",
       "Values" : ["قه‌رز", "ڕێگرى كردن", "ڕێگرى به‌ربه‌ست", "گه‌ڕانه‌وه‌ى بنده‌ستى", "ڕاگرتنى كارى نوێ", "كرێ ى هاوتا", "كرێ ى ناونراو"]
->>>>>>> 8356fd906c5570eb4390e5cb1a103467cda1909f
     }
   },
   "Content" :
   {
-    "CaseType" : "Named wage",
+    "CaseType" : "كرێ ى ناونراو ",
     "CaseValue" : "500000",
-    "Judge" : "Judge Else (6)",
-    "No" : "22/3/3349"
+    "Judge" : "ناوى داواكار",
+    "No" : "23/ ب / 2014""
   }
 }
