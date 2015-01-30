@@ -1,18 +1,20 @@
 <div class="row no-marg-bot">
-  <div class="col s12 m2 right">
+  <div class="input-field select-label col s12 m2 right">
+    <label class="active">Status</label>  
     <select class="status-select">
-      <option value="" disabled selected>Status</option>
+      <option value="" disabled selected>Select status</option>
       <option class="status pending">Pending</option>
       <option class="status registered">Registered</option>
     </select>
   </div>
-  <div class="input-field typeahead-container col s12 m2 right">
+  <div class="input-field  typeahead-container col s12 m2 right">
     <input id="caseNumber" class="typeahead-input casenrs" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
   </div>
-  <div class="col s12 m2 right">
+  <div class="col input-field select-label s12 m2 right">
+    <label class="active">Case type</label>    
     <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
+      <option value="" disabled selected>Select case</option>
       {{#each Filter.CaseType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
@@ -36,9 +38,12 @@
 
 <!-- hidden by toggle -->
 <div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
+
+  <div class="input-field select-label select-label col s12 m2 right">
+    <label class="active">Court</label>
     <select>
-      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
+      <option value="" disabled selected>Select court</option>    
+      <!-- <option value="" disabled selected>{{Filter.CourtName.Label}}</option> -->
       {{#each Filter.CourtType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}

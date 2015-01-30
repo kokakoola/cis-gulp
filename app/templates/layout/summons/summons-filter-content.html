@@ -2,7 +2,7 @@
   <div class="input-field select-label col s12 m4 right">
     <label class="active">Status</label>
     <select class="status-select">
-      <option value="" disabled selected>Please select status</option>
+      <option value="" disabled selected>Select status</option>
       <option class="status pending">Pending</option>
       <option class="status sent">Sent</option>
     </select>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="input-field select-label select-label col s12 m2 right">
-    <label class="active">CourtName</label>
+    <label class="active">Court</label>
     <select>
       <option value="" disabled selected>Select court</option>    
       <!-- <option value="" disabled selected>{{Filter.CourtName.Label}}</option> -->
@@ -39,9 +39,9 @@
   </div>
 
   <div class="input-field select-label col s12 m2 right">
-    <label class="active">Select summoner</label>
+    <label class="active">Summoner</label>
     <select>
-      <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
+      <option value="" disabled selected>Select summoner</option>    
       {{#each Filter.Summoner.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
