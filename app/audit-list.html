@@ -225,11 +225,11 @@
 </div>
 
 <!-- hidden by toggle -->
-<div class="input-field typeahead-container row collapse" id="moreFields">
-  <div class="col s12 m3 right">
+<div class="row collapse" id="moreFields">
+  <div class="col input-field  select-label s12 m3 right">
     <label class="active">{{Filter.CourtType.Label}}</label>    
     <select>
-      <option value="" disabled selected>{{Filter.SelectCourt}</option>
+      <option value="" disabled selected>{{Filter.SelectCourt}}</option>
       {{#each Filter.CourtType.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
