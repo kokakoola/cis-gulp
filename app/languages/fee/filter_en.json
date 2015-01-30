@@ -33,6 +33,10 @@
         "ButtonClearAll" : "Clear all",
         "ButtonMoreFields" : "More fields",
         "ButtonLessFields" : "Less fields",
-        "ButtonSearch" : "Search"
+        "ButtonSearch" : "Search",
+        "SelectCasetype": "Select case type",
+        "SelectStatus": "Select status",
+        "SelectCourt": "Select court"
+
     }
 }
