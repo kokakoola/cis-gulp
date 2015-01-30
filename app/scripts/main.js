@@ -22,11 +22,6 @@ var casenrTypeahead = ['1.23/ ب / 2014', '2. 22/ ب / 2014', '3.21/ ب /
 var aadressTypeahead = ['سلێمانى /  تووى مهليك / ژمارهى شهقام : 23 / ژمارهى خانوو 2', 'سلێمانى / سهرچنار  / ژمارهى شهقام : 423 / ژمارهى خانوو 12', 'سلێمانى / ڕزگارى / ژمارهى شهقام : 2 / ژمارهى خانوو14', ' سلێمانى / مامۆستايان / ژمارهى شهقام : 44 / ژمارهى خانوو 32'];
 var docsTypeahead=['324234234','243532345','234523455','243525555'];
 
-// var personTypeahead = ['Person 1', 'Person 2', 'Person 3', 'Person 4'];
-// var casenrTypeahead = ['2014 / B / 23', '2014 / B / 24', '2014 / B / 25', '2014 / B / 26'];
-// var aadressTypeahead = ['Akadeemia tee 2', 'Akadeemia tee 5', 'Puu 4', ' Puu 5'];
-
-
 
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
@@ -99,37 +94,36 @@ $(document).ready(function() {
         source: substringMatcher(aadressTypeahead)
       });
 
+        $('.typeahead-input.documents').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(docsTypeahead)
+      });
 
     $( ".typeahead-container" ).each(function(event) {
-        // alert('ss');
-        // alert($(this).find("span").css("width","100%"));
-        $(this).find("span").css("width","100%")
-        // alert($(this).id.css("background-color","yellow"));
-        // $(this.find(span).css("background-color","yellow"));      
+        $(this).find("span").css("width","100%")     
     });
 
 
     $('.typeahead-container').click(function(event){
       $(this).find('label').addClass(' active');
       $(this).find('label').removeClass(' filled');
-      // $('.typeahead-container label').addClass(' active');
-      // $('.typeahead-container label').removeClass(' filled');
     });
 
-    $('.typeahead-container').focusout(function(event){
+    $('.typeahead-input').focusout(function(event){
 
       if(!($('#'+event.target.id).val())){
-        $('.typeahead-container label').removeClass(' active');
+        $('label[for="'+(event.target.id)+'"]').removeClass(' active');
       }
-      else{
-        // alert('ne');        
-        $('.typeahead-container label').addClass(' filled');
-      }
+      else{       
+        $('label[for="'+(event.target.id)+'"]').addClass(' filled');
+       }
     });
   }, 800);
-
-
-
 
 });
 

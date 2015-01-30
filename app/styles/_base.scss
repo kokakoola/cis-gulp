@@ -114,6 +114,9 @@ main {
 
 // FRONTPAGE
 // ***************************************
+.pp-section {
+height: 100vh;
+}
 .front-fullscreen {
  position: fixed;
  top: 20px;
@@ -522,11 +525,13 @@ span.tt-dropdown-menu{
     margin: 0;
 }
 
+.typeahead-container label.active.filled{
+  color: #9e9e9e;
+}
+
 .typeahead-container label.active{
   color: #03a9f4;
 }
 
-.typeahead-container label.active.filled{
-  color: red;
-}
+
 

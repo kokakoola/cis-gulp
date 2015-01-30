@@ -1,8 +1,8 @@
 @@include('./base/header.tpl.html',
 {
-  "bodyClass": "case-edit",
-  "htmlClass": "case-edit",
-  "title": "Edit case"
+  "bodyClass": "case-assesment",
+  "htmlClass": "case-assesment",
+  "title": "Case assesment"
 })
 
 @@include('./layout/header.html', {
@@ -18,11 +18,11 @@
       @@include('./layout/common/round-top-back.html')
       @@include('./layout/case/case-edit.html',
       {
-        "formName": "Edit case",
+        "formName": "Case assesment",
         "backTo": "case-list.html",
         "collapse": " ",
         "caseNo": "{{Texts.No}}",
-        "hidden": ""
+        "hidden": "hidden"
       })
     </div>
   </div>
