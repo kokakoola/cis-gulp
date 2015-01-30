@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="audit-list">
+<html lang="" class="fee">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Audit list</title>
+    <title>CIS | Fee</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
 
@@ -12,14 +12,14 @@
 
     <link rel="stylesheet" href="styles/app-ltr.css">
   </head>
-  <body class="audit-list">
+  <body class="fee">
 
 
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Audit</li>
+        <li>Fee department</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -163,10 +163,10 @@
       <div class="row no-marg-bot">
         <div class="col s12">
 
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html">
+          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="fee-new.html">
   <i class="create-case mdi-content-add"></i>
 </a>
-<h4 class="header white-text text-darken-2">Audit</h4>
+<h4 class="header white-text text-darken-2">Fee</h4>
           <div id="placeholder-fee-filter" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
   <div class="card overflow-visible">
@@ -176,7 +176,7 @@
     <select class="status-select">
       <option value="" disabled selected>Status</option>
       <option class="status pending">Pending</option>
-      <option class="status audited">Audited</option>
+      <option class="status registered">Registered</option>
     </select>
   </div>
   <div class="input-field typeahead-container col s12 m2 right">
@@ -217,12 +217,12 @@
       {{/each}}
     </select>
   </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="judge"  class="typeahead-input persons" type="text">
+  <div class="input-field col s12 m3 right">
+    <input id="judge" type="text">
     <label for="judge">{{Filter.Judge}}</label>
   </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="payer"  class="typeahead-input persons" type="text">
+  <div class="input-field col s12 m3 right">
+    <input id="payer" type="text">
     <label for="payer">{{Filter.Payer}}</label>
   </div>
     <div class="input-field col s12 m3 right">
@@ -279,7 +279,7 @@
       </thead>
       <tbody>
       {{#each Cases}}
-        <tr onClick="parent.location='audit-edit.html'">
+        <tr onClick="parent.location='fee-edit.html'">
           <td class="center">
             <input type="checkbox" id="select_{{@index}}" />
             <label for="select_{{@index}}"></label>

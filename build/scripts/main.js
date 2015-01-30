@@ -17,10 +17,10 @@ $(window).scroll(function() {
 });
 
 
-
-
-var states = ['Person 1', 'Person 2', 'Person 3', 'Person 4'
-  ];
+var personTypeahead = ['خدر حسن محم','على احمد امين', 'ڕووناك عبدالقادر محمد', 'على احمد امين'];
+var casenrTypeahead = ['1.23/ ب / 2014', '2. 22/ ب / 2014', '3.21/ ب / 2014', '4.20/ ب / 2014'];
+var aadressTypeahead = ['سلێمانى /  تووى مهليك / ژمارهى شهقام : 23 / ژمارهى خانوو 2', 'سلێمانى / سهرچنار  / ژمارهى شهقام : 423 / ژمارهى خانوو 12', 'سلێمانى / ڕزگارى / ژمارهى شهقام : 2 / ژمارهى خانوو14', ' سلێمانى / مامۆستايان / ژمارهى شهقام : 44 / ژمارهى خانوو 32'];
+var docsTypeahead=['324234234','243532345','234523455','243525555'];
 
 
 var substringMatcher = function(strs) {
@@ -55,35 +55,78 @@ $(document).ready(function() {
     $(".pr-wrap").toggleClass("show-pass-reset");
   });
 
-  $("input" ).click(function(event) {
-    alert( "Handler for .click() called." );
-  });
-
   $('.pass-reset-submit').click(function(event) {
     $(".pr-wrap").removeClass("show-pass-reset");
   });
 
-   // $('#the-basics.typeahead').click(function(e){
-   //    alert('asd');
-   // });
+
+
 
   setTimeout(function (){
-      $('#the-basics .typeahead').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-    },
-    {
-      name: 'states',
-      displayKey: 'value',
-      source: substringMatcher(states)
+
+      $('.typeahead-input.persons').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(personTypeahead)
+      });
+
+      $('.typeahead-input.casenrs').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(casenrTypeahead)
+      });
+
+      $('.typeahead-input.aadresses').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(aadressTypeahead)
+      });
+
+        $('.typeahead-input.documents').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        displayKey: 'value',
+        source: substringMatcher(docsTypeahead)
+      });
+
+    $( ".typeahead-container" ).each(function(event) {
+        $(this).find("span").css("width","100%")     
     });
-  }, 400);
 
 
+    $('.typeahead-container').click(function(event){
+      $(this).find('label').addClass(' active');
+      $(this).find('label').removeClass(' filled');
+    });
 
+    $('.typeahead-input').focusout(function(event){
+
+      if(!($('#'+event.target.id).val())){
+        $('label[for="'+(event.target.id)+'"]').removeClass(' active');
+      }
+      else{       
+        $('label[for="'+(event.target.id)+'"]').addClass(' filled');
+       }
+    });
+  }, 800);
 
 });
+
 
 $.fn.material_select_override = function (callback) {
   $(this).each(function(){
@@ -163,8 +206,4 @@ var guid = (function() {
   };
 })();
 
-       
-
-
  // END DOCREADY
-

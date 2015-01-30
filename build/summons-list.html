@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="audit-list">
+<html lang="" class="summon">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Audit list</title>
+    <title>CIS | Summons list view</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
 
@@ -12,14 +12,14 @@
 
     <link rel="stylesheet" href="styles/app-ltr.css">
   </head>
-  <body class="audit-list">
+  <body class="summon">
 
 
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Audit</li>
+        <li>Notification department</li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
@@ -155,87 +155,76 @@
   </ul>
 
 <main>
-
   <div class="main-banner"></div>
-
   <div class="card-onbanner">
     <div class="container">
       <div class="row no-marg-bot">
         <div class="col s12">
-
-          <a class="btn-floating btn-large waves-effect waves-light round-top add" href="audit-new.html">
-  <i class="create-case mdi-content-add"></i>
-</a>
-<h4 class="header white-text text-darken-2">Audit</h4>
-          <div id="placeholder-fee-filter" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-filter-template" class="template" data-lang="fee/filter">
-  <div class="card overflow-visible">
-    <div class="card-content" >
-      <div class="row no-marg-bot">
-  <div class="col s12 m2 right">
+          <h4 class="header white-text text-darken-2">Summons</h4>
+          <div id="placeholder-summons-filter" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
+	<div class="card overflow-visible">
+	  <div class="card-content" >
+	    <div class="row no-marg-bot">
+  <div class="col s12 m4 right">
     <select class="status-select">
       <option value="" disabled selected>Status</option>
       <option class="status pending">Pending</option>
-      <option class="status audited">Audited</option>
+      <option class="status sent">Sent</option>
     </select>
   </div>
-  <div class="input-field typeahead-container col s12 m2 right">
+
+
+  <div class="input-field typeahead-container col s12 m4 right">
+      <input id="addresse" class="typeahead-input persons" type="text">
+      <label for="addresse">{{Filter.Addressee}}</label>
+  </div>
+
+  <div class="input-field typeahead-container col s12 m4 right">
     <input id="caseNumber" class="typeahead-input casenrs" type="text">
     <label for="caseNumber">{{Filter.CaseNumber}}</label>
-  </div>
-  <div class="col s12 m2 right">
-    <select>
-      <option value="" disabled selected>{{Filter.CaseType.Label}}</option>
-      {{#each Filter.CaseType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field typeahead-container col s12 m2 right">
-    <input id="claimant" class="typeahead-input persons" type="text" >
-    <label for="claimant">{{Filter.Claimant}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">{{Filter.From}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">{{Filter.To}}</label>
-    <input id="endDate" type="text" class="datepicker">
   </div>
 </div>
 
 <!-- hidden by toggle -->
 <div class="row collapse" id="moreFields">
-  <div class="col s12 m3 right">
+  <div class="input-field col s12 m2 right">
+    <input id="judge" type="text">
+    <label for="judge">{{Filter.Judge}}</label>
+  </div>
+
+  <div class="input-field col s12 m2 right no-marg-top">
     <select>
-      <option value="" disabled selected>{{Filter.CourtType.Label}}</option>
-      {{#each Filter.CourtType.Values}}
+      <option value="" disabled selected>{{Filter.CourtName.Label}}</option>
+      {{#each Filter.CourtName.Values}}
         <option value="{{@index}}">{{this}}</option>
       {{/each}}
     </select>
   </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="judge"  class="typeahead-input persons" type="text">
-    <label for="judge">{{Filter.Judge}}</label>
-  </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="payer"  class="typeahead-input persons" type="text">
-    <label for="payer">{{Filter.Payer}}</label>
-  </div>
-    <div class="input-field col s12 m3 right">
-    <input id="recipt" type="text">
-    <label for="recipt">{{Filter.Receipt}}</label>
-  </div>
-</div>
 
-    </div>
+  <div class="input-field col s12 m2 right no-marg-top">
+    <select>
+      <option value="" disabled selected>{{Filter.Summoner.Label}}</option>
+      {{#each Filter.Summoner.Values}}
+        <option value="{{@index}}">{{this}}</option>
+      {{/each}}
+    </select>
   </div>
+
+  <div class="input-field col s12 m2 right">
+    <input id="dateofhearing" type="date" class="datepicker">
+    <label for="dateofhearing">{{Filter.DateOfHearing}}</label>
+  </div>
+  <div class="input-field col s12 m2 right">
+    <input id="dateofsummon" type="date" class="datepicker">
+    <label for="dateofsummon">{{Filter.DateOfSummon}}</label>
+  </div>
+
+</div>
+	  </div>
+	</div>
 </script>
-  
-  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
 <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
@@ -253,6 +242,8 @@
 </script>
 
 
+
+
         </div>
       </div>
     </div>
@@ -261,40 +252,39 @@
   <div class="card">
     <div class="card-content row with-table">
       <form action="">
-  <div id="placeholder-fee-table" class="template-placeholder"></div>
+  <div id="placeholder-summons-table" class="template-placeholder"></div>
 
-  <script type="text/x-handlebars-template" id="fee-table-template" class="template" data-lang="data/fee/table">
-    <table class="hoverable bordered data">
+  <script type="text/x-handlebars-template" id="summons-table-template" class="template" data-lang="data/summons/table">
+    <table class="hoverable bordered data order-column">
       <thead>
         <th data-field="select">&nbsp;</th>
-        <th data-field="status" class="sorting">{{Texts.Status}}</th>
-        <th data-field="date" class="sorting">{{Texts.Date}}</th>
-        <th data-field="receipt">{{Texts.Receipt}}</th>
-        <th data-field="payer">{{Texts.Payer}}</th>
-        <th data-field="sum">{{Texts.Sum}}</th>
-        <th data-field="claimants">{{Texts.Claimant}}</th>
-        <th data-field="courttype">{{Texts.CourtType}}</th>
-        <th data-field="casetype" class="sorting">{{Texts.CaseType}}</th>
         <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+        <th data-field="courtname" class="sorting">{{Texts.CourtName}}</th>
+        <th data-field="judge" class="sorting">{{Texts.Judge}}</th>
+        <th data-field="dateofhearing" class="sorting">{{Texts.DateOfHearing}}</th>
+        <th data-field="addressee" class="sorting">{{Texts.Addressee}}</th>
+        <th data-field="dateofsummon" class="sorting">{{Texts.DateOfSummon}}</th>
+        <th data-field="summoner" class="sorting">{{Texts.Summoner}}</th>
+        <th data-field="status" class="sorting">{{Texts.Status}}</th>
+
+
       </thead>
       <tbody>
       {{#each Cases}}
-        <tr onClick="parent.location='audit-edit.html'">
+        <tr onClick="parent.location='summons-edit.html'">
           <td class="center">
             <input type="checkbox" id="select_{{@index}}" />
             <label for="select_{{@index}}"></label>
           </td>
-          <td class="center">
-            <i class="status {{Status}}"></i>
-          </td>
-          <td>{{Date}}</td>
-          <td>{{Receipt}}</td>
-          <td>{{Payer}}</td>
-          <td>{{Sum}}</td>
-          <td>{{Claimant}} </td>
-          <td>{{CourtType}}</td>
-          <td>{{CaseType}}</td>
           <td>{{CaseNumber}}</td>
+          <td>{{CourtName}}</td>
+          <td>{{Judge}}</td>
+          <td>{{DateOfHearing}}</td>
+          <td>{{Addressee}}</td>
+          <td>{{DateOfSummon}}</td>
+          <td>{{Summoner}}</td>
+          <td>{{Status}}</td>
+
         </tr>
         {{/each}}
       </tbody>
