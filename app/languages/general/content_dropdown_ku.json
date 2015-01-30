@@ -1,19 +1,19 @@
 {
   "List" : {
-    "CaseList" : "Case list",
-    "CaseListWith" : "Case list with walkthrough",
-    "NewCase" : "New case",
-    "EditCase" : "Edit case",
-    "CaseAssesment" : "Case assesment",
-    "FeeList" : "Fee list",
-    "NewFee" : "New fee",
-    "EditFee" : "Edit fee",
-    "AuditList" : "Audit list",
-    "NewAudit" : "New audit",
-    "EditAudit" : "Edit audit",
-    "DailyList" : "Daily list",
-    "NewDaily" : "New daily",
-    "SummonsList" : "Summons list",
-    "LogOut" : "Log out"
+    "CaseList" : "ليستى داوا ",
+    "CaseListWith" : "ليستى داوا به‌ بێ گه‌ڕان ",
+    "NewCase" : "داواى نوێ",
+    "EditCase" : "گۆڕانكارى داواى",
+    "CaseAssesment" : "هه‌ڵسه‌نگاندنى داوا ",
+    "FeeList" : "ليستى ڕه‌سمه‌كان",
+    "NewFee" : "ڕه‌سمى نوێ",
+    "EditFee" : "گۆڕانكارى له‌ ڕه‌سم ",
+    "AuditList" : "ليستى ووردبينى ",
+    "NewAudit" : "ووردبينى نوێ",
+    "EditAudit" : "گۆڕانكارى ووردبينى",
+    "DailyList" : "تۆمارى ڕۆژانه‌",
+    "NewDaily" : "دادبينى نوێ",
+    "SummonsList" : "ليستى پسووڵه‌ى ئاگادار كردنه‌وه‌ ڕۆشتووه‌كان ",
+    "LogOut" : "ده‌رچوون"
   }
 }
