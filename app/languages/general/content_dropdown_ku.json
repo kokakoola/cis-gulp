@@ -1,0 +1,19 @@
+{
+  "List" : {
+    "CaseList" : "Case list",
+    "CaseListWO" : "Case list without walkthrough",
+    "NewCase" : "New case",
+    "EditCase" : "Edit case",
+    "CaseAssesment" : "Case assesment",
+    "FeeList" : "Fee list",
+    "NewFee" : "New fee",
+    "EditFee" : "Edit fee",
+    "AuditList" : "Audit list",
+    "NewAudit" : "New audit",
+    "EditAudit" : "Edit audit",
+    "DailyList" : "Daily list",
+    "NewDaily" : "New daily",
+    "SummonsList" : "Summons list",
+    "LogOut" : "Log out"
+  }
+}

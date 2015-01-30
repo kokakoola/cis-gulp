@@ -1,23 +1,26 @@
 <!-- content dropdown -->
 <ul id="contentDropdown" class="navbar dropdown-content">
-  <li><a href="case-list.html">Case list</a></li>
-  <li><a href="case-list-wo-walktrough.html">Case list without walktrough</a></li>
-  <li><a href="case-new.html">New case</a></li>
-  <li><a href="case-edit.html">Edit case</a></li>
-  <li><a href="case-assesment.html">Case assesment</a></li>
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-wo-walktrough.html">{{List.CaseListWO}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
   <li class="divider"></li>
-  <li><a href="fee-list.html">Fee list</a></li>
-  <li><a href="fee-new.html">New fee</a></li>
-  <li><a href="fee-edit.html">Edit fee</a></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
   <li class="divider"></li>
-  <li><a href="audit-list.html">Audit list</a></li>
-  <li><a href="audit-new.html">New audit</a></li>
-  <li><a href="audit-edit.html">Edit audit</a></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li><a href="audit-edit.html">{{List.EditAudit}}</a></li>
   <li class="divider"></li>
-  <li><a href="daily-list.html">Daily list</a></li>
-  <li><a href="daily-new.html">New daily</a></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
   <li class="divider"></li>
-  <li><a href="summons-list.html">Summons list</a></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
   <li class="divider"></li>
-  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>Log out</a></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
 </ul>

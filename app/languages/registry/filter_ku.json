@@ -1,31 +1,31 @@
 {
     "Filter" :
     {
-        "To" : "To",
-        "From" : "From",
-        "Judge" : "Judge",
+        "To" : "بۆ",
+        "From" : "له‌",
+        "Judge" : "ناوى دادوه‌ر",
         "CaseType" : {
-          "Label" : "Case type",
-          "Values": ["Option 1", "Option 2", "Option 3"]
+          "Label" : "جۆرى داوا ",
+          "Values": [" قه‌رز", "ڕێگرى به‌ربه‌ست", "گه‌ڕانه‌وه‌ى بنده‌ستى"]
         },
-        "CaseNumber" : "Case number",
+        "CaseNumber" : "ژماره‌ى داوا",
         "Status" : {
-          "Label" : "Status",
-          "Values" : ["Unpaid", "Paid", "Audited"]
+          "Label" : "قۆناغ ",
+          "Values" : ["جه‌خت كرايه‌وه‌", "پێدراو ", "جه‌خت كرايه‌وه‌"]
         },
-        "Participant" : "Participant",
-        "Defendant" : "Defendant",
-        "Claimant" : "Claimant",
+        "Participant" : "به‌شدار بوو",
+        "Defendant" : "ناوى داواله‌سه‌ر كراو",
+        "Claimant" : "ناوى داواكار",
         "CaseValue" : {
-          "Label" : "Case value",
+          "Label" : "به‌هاى داوا ",
           "From" : "From",
           "To" : "To"
         },
-        "Urgent" : "Urgent",
-        "JudicialAid" : "Judicial aid",
+        "Urgent" : "به‌په‌له‌ ",
+        "JudicialAid" : "هاوكارى دادوه‌رى",
         "ButtonClearAll" : "Clear all",
-        "ButtonMoreFields" : "More fields",
-        "ButtonLessFields" : "Less fields",
-        "ButtonSearch" : "Search"
+        "ButtonMoreFields" : "خانه‌ى زياتر ",
+        "ButtonLessFields" : "خانه‌ى كه‌متر ",
+        "ButtonSearch" : "گه‌ڕان"
     }
 }
