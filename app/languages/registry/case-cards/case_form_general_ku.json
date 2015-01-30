@@ -2,13 +2,13 @@
   "Texts" :
   {
     "Urgent" : "به‌په‌له‌ ",
-    "Confidential" : "Confidential",
+    "Confidential" : "نهێنى",
     "Case" : "داوا",
     "No": "23/ ب / 2014",
     "CaseValue" : "به‌هاى داوا ",
     "RegisteredAt" : "تۆمار كرا له‌ ",
     "Judge" : {
-      "Label" : "Select judge automatically",
+      "Label" : "هه‌ڵبژاردنى دادوه‌ر به‌ ئۆتۆماتيكى",
       "Values" : ["خدر حسن محمد", "على احمد امين", "ڕووناك عبدالقادر محمد"]
     },
     "CaseType" : {
