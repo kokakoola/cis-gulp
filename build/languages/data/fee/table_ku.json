@@ -1,29 +1,209 @@
 {
     "Texts" :
     {
-        "CaseNumber" : "رقم القضية (GT)",
-        "CaseType" : "نوع القضية (GT)",
-        "CourtType" : "نوع المحكمة (GT)",
-        "Claimant" : "المدعي (GT)",
-        "Sum" : "مجموع (GT)",
-        "Payer" : "دافع (GT)",
-        "Receipt" : "استلام (GT)",
-        "Date" : "تاريخ (GT)",
-        "Status" : "وضع (GT)"
+        "CaseNumber" : "ژماره‌ى داوا",
+        "CaseType" : "جۆرى داوا",
+        "CourtType" : "جۆرى دادگا",
+        "Claimant" : "ناوى داواكار",
+        "Sum" : "كۆ",
+        "Payer" : "پاره‌ده‌ر",
+        "Receipt" : "پسووڵه‌",
+        "Date" : "بەروار",
+        "Status" : "قۆناغ "
     },
 
     "Cases" : [
 
         {
             "CaseNumber" : "ب/2014/23",
+            "CaseType" : "ئيفلاسك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "100700",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "120423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێنه‌ دراو "
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "ئيفلاسك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "100500",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "120423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێنه‌ دراو "
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "ئيفلاسك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "على احمد امين",
+            "Sum" : "45000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "120423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێنه‌ دراو "
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "ئيفلاسك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "على احمد امين",
+            "Sum" : "70000",
+            "Payer" : "على احمد امين",
+            "Receipt" : "120423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "ڕه‌تكرايه‌وه‌"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "ئيفلاسك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "على احمد امين",
+            "Sum" : "90000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "123423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "ڕه‌تكرايه‌وه‌"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "5000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "120553",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێنه‌ دراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "3000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "145423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "30000",
+            "Payer" : "على احمد امين",
+            "Receipt" : "122342",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "ئيفلاسك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "45000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "129423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "ڕووناك عبدالقادر محمد",
+            "Sum" : "10000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "128423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
             "CaseType" : "استملاك",
             "CourtType" : "دادگاى به‌رايى ",
             "Claimant" : "أحمد خضر عمر",
             "Sum" : "10000",
             "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
+            "Receipt" : "127423",
             "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "أحمد خضر عمر",
+            "Sum" : "10000",
+            "Payer" : "على احمد امين",
+            "Receipt" : "125423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "أحمد خضر عمر",
+            "Sum" : "10000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "124423",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "أحمد خضر عمر",
+            "Sum" : "10000",
+            "Payer" : "على احمد امين",
+            "Receipt" : "120443",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "أحمد خضر عمر",
+            "Sum" : "10000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "120473",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
+        }
+,
+        {
+            "CaseNumber" : "ب/2014/23",
+            "CaseType" : "استملاك",
+            "CourtType" : "دادگاى به‌رايى ",
+            "Claimant" : "أحمد خضر عمر",
+            "Sum" : "10000",
+            "Payer" : "أحمد خضر عمر",
+            "Receipt" : "120412",
+            "Date" : "۱۹۹۱/۱۱/۰۳",
+            "Status" : "پێدراو"
         }
 ,
         {
@@ -35,7 +215,7 @@
             "Payer" : "أحمد خضر عمر",
             "Receipt" : "120423",
             "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
+            "Status" : "پێدراو"
         }
 ,
         {
@@ -47,7 +227,7 @@
             "Payer" : "أحمد خضر عمر",
             "Receipt" : "120423",
             "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
+            "Status" : "پێدراو"
         }
 ,
         {
@@ -59,7 +239,7 @@
             "Payer" : "أحمد خضر عمر",
             "Receipt" : "120423",
             "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
+            "Status" : "پێدراو"
         }
 ,
         {
@@ -71,187 +251,7 @@
             "Payer" : "أحمد خضر عمر",
             "Receipt" : "120423",
             "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
-        }
-,
-        {
-            "CaseNumber" : "ب/2014/23",
-            "CaseType" : "استملاك",
-            "CourtType" : "دادگاى به‌رايى ",
-            "Claimant" : "أحمد خضر عمر",
-            "Sum" : "10000",
-            "Payer" : "أحمد خضر عمر",
-            "Receipt" : "120423",
-            "Date" : "۱۹۹۱/۱۱/۰۳",
-            "Status" : "True"
+            "Status" : "پێدراو"
         }
 
     ]

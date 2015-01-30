@@ -99,7 +99,7 @@
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
-  <li><a href="case-list-wo-walktrough.html">{{List.CaseListWO}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
   <li><a href="case-new.html">{{List.NewCase}}</a></li>
   <li><a href="case-edit.html">{{List.EditCase}}</a></li>
   <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
@@ -191,7 +191,7 @@
   <div id="placeholder-case-form-general" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
   <div class="card  wow bounceInDown">
-    <div class="card-content">
+    <div class="card-content row">
       <span class="card-title grey-text text-darken-4">{{Texts.Case}}  </span>
       <div class="col s12 m1 check-inline">
         <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
@@ -267,7 +267,6 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-
       <div class="input-field typeahead-container col s12 right"  id="the-basics">
         <input id="Claimant_0" type="text" class="typeahead-input persons validate"  value="">
         <label for="Claimant_0">Claimants full name</label>
@@ -276,7 +275,7 @@
     <div class="collapse in" id="collapseClaimant_0">
       <div class="row">
         <div class="input-field typeahead-container col s12 right">
-          <input id="ClaimantId_0" class="validate typeahead-input documents" type="text">
+          <input id="ClaimantId_0" class="validate typeahead-input aadresses" type="text">
           <label for="ClaimantId_0">Document number</label>
         </div>
         <div class="input-field typeahead-container  col s12 right">
@@ -291,12 +290,12 @@
         <div id="placeholder-case-form-representative" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 
-  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
     <i class="mdi-navigation-more-vert"></i>
     {{Texts.Representative}}
   </a>
   <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
+  <div class="row collapse" id="collapseRepresentative">
     <div class="col s12 right">
       <select>
         <option value="" selected>{{Texts.Type.Label}}</option>
@@ -334,7 +333,7 @@
 
     </div>
     <div class="col s12 m6">  <!-- data-datacol-model="defendant" -->
-      <div class="card overflow-visible wow bounceInDown">
+      <div class="card  wow bounceInDown">
   <div class="card-content">
     <div>
       <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
@@ -342,12 +341,12 @@
         Defendant
       </a>
       <div class="switch col s6 right">
-        <span>Natural person</span>
+        <span>Legal entity</span>
         <label>
           <input type="checkbox">
           <span class="lever"></span>
         </label>
-        <span>Legal entity</span>
+        <span>Natural person</span>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -355,20 +354,20 @@
       <div class="divider"></div>
     </div>
     <div class="row">
-      <div class="input-field typeahead-container  col s12 right"  id="the-basics">
-        <input id="Defendant_0" type="text" class="typeahead-input persons validate"  value="">
+      <div class="input-field col s12 right"  id="the-basics">
+        <input id="Defendant_0" type="text" class="validate"  value="">
         <label for="Defendant_0">Defendants full name</label>
       </div>
     </div>
     <div class="collapse in" id="collapseDefendant_0">
       <div class="row">
-        <div class="input-field typeahead-container  col s12 right">
-          <input id="DefendantId_0"  class="typeahead-input documents"  type="text">
-          <label for="DefendantId_0">Document number</label>
-        </div>
-        <div class="input-field typeahead-container  col s12 right">
-          <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="">
+        <div class="input-field col s12 right">
+          <input id="DefendantAddress_0" type="text" class="validate" value="">
           <label for="DefendantAddress_0">Defendants address</label>
+        </div>
+        <div class="input-field col s12 right">
+          <input id="DefendantId_0" type="text">
+          <label for="DefendantId_0">Document number</label>
         </div>
         <div class="input-field col s12 right">
           <input id="DefendantPhone_0" type="text">
@@ -378,12 +377,12 @@
         <div id="placeholder-case-form-representative" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_representative">
 
-  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
+  <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4">
     <i class="mdi-navigation-more-vert"></i>
     {{Texts.Representative}}
   </a>
   <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
+  <div class="row collapse" id="collapseRepresentative">
     <div class="col s12 right">
       <select>
         <option value="" selected>{{Texts.Type.Label}}</option>

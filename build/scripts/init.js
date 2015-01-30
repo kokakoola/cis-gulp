@@ -42,50 +42,77 @@
       editable: true,
       events: [
         {
-      title: 'All Day Event',
-      start: '2015-01-01'
-    },
-    {
-      title: 'Long Event',
-      start: '2015-01-07',
-      end: '2015-01-10'
-    },
-    {
-      id: 999,
-      title: 'Repeating Event',
-          start: '2015-01-09T16:00:00'
-    },
-    {
-      id: 999,
-          title: 'Repeating Event',
-          start: '2015-01-16T16:00:00'
+              title: '186/ 2015/ EE6',
+              start: '2015-01-29T113:30:00',
+              end: '2015-01-29T14:30:00'
         },
-    {
-          title: 'Meeting',
-          start: '2015-01-12T10:30:00',
-          end: '2015-01-12T12:30:00'
-    },
-    {
-          title: 'Lunch',
-          start: '2015-01-12T12:00:00'
+        {
+              title: '145/ 2015/ EE6',
+              start: '2015-01-28T10:30:00',
+              end: '2015-01-28T12:30:00'
         },
-    {
-      title: 'Birthday Party',
-      start: '2015-01-13T07:00:00'
-    },
-    {
-      title: 'Click for Google',
-      url: 'http://google.com/',
-      start: '2015-01-28'
-    }
+        {
+              title: '199/ 2015/ EE6',
+              start: '2015-01-30T10:30:00',
+              end: '2015-01-30T12:30:00'
+        },
+        {
+              title: '195/ 2015/ EE6',
+              start: '2015-02-02T10:30:00',
+              end: '2015-02-03T12:30:00'
+        },
+        {
+              title: '123/ 2015/ EE6',
+              start: '2015-02-05T10:30:00',
+              end: '2015-02-05T12:30:00'
+        }
       ]
     });
 
     $('.dailycalendar').fullCalendar({
       header: {
-        left: '',
+        left: 'prev,next today',
         center: 'title',
-    right: ''
+        right: 'month,agendaWeek,agendaDay'
+      },
+      isRTL: $.cookie('cis-language') === 'ku',
+      defaultView: 'agendaWeek',
+      editable: true,
+      events: [
+        {
+              title: '186/ 2015/ EE6',
+              start: '2015-01-29T113:30:00',
+              end: '2015-01-29T14:30:00'
+        },
+        {
+              title: '145/ 2015/ EE6',
+              start: '2015-01-28T10:30:00',
+              end: '2015-01-28T12:30:00'
+        },
+        {
+              title: '199/ 2015/ EE6',
+              start: '2015-01-30T10:30:00',
+              end: '2015-01-30T12:30:00'
+        },
+        {
+              title: '195/ 2015/ EE6',
+              start: '2015-02-02T10:30:00',
+              end: '2015-02-03T12:30:00'
+        },
+        {
+              title: '123/ 2015/ EE6',
+              start: '2015-02-05T10:30:00',
+              end: '2015-02-05T12:30:00'
+        }
+   
+      ]
+    });
+
+    $('.dailycalendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
       },
       isRTL: $.cookie('cis-language') === 'ku',
       defaultView: 'agendaDay',
