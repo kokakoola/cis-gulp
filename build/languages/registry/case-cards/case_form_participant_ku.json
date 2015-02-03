@@ -1,24 +1,24 @@
 {
 	"Texts" : {
-		"Participant" : "Participant",
+		"Participant" : "به‌شدار بوو",
 		"NaturalPerson" : "Natural person",
 		"LegalEntity" : "Legal entity",
-		"FullName" : "Participant full name",
+		"FullName" : "ناوى به‌شداربوو ",
 		"Type" : {
-      	"Label" : "Select type",
+      	"Label" : "جۆرى",
       	"Values" : ["1", "2", "3", "4"]
     	},
-    	"Address" : "Participants address",
-    	"DocumentNumber" : "Document number",
-    	"Phone" : "Participants phone"
+    	"Address" : "ناونيشانى به‌شداربوو",
+    	"DocumentNumber" : "ژماره‌ى به‌ڵگه‌نامه‌ ",
+    	"Phone" : "ژماره‌ى ته‌له‌فۆنى به‌شدار بوو "
 	},
 	"Content" : {
-		"FullName" : "Ronak Abdulkader Muhammed",
+		"FullName" : "على احمد امين",
 		"Type" : {
-      	"Label" : "Select type",
+      	"Label" : "جۆرى",
       	"Values" : ["1", "2", "3", "4"]
     	},
-    	"Address" : "sulaimania / Tuymalik / street no. 23/ house no. 2",
+    	"Address" : "سلێمانى /  تووى مه‌ليك / ژماره‌ى شه‌قام : 23 / ژماره‌ى خانوو 2",
     	"DocumentNumber" : "1265",
     	"Phone" : "00964 770 157 0000"
 	}

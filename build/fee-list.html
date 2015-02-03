@@ -19,19 +19,22 @@
   <nav>
     <div class="nav-wrapper container">
       <ul>
-        <li>Fee department</li>
+        <div id="placeholder-courtname" class="filtering template-placeholder"></div>
+        <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
+        <li>{{Texts.FeeDepartment}}</li>
+        </script>
       </ul>
       <ul class="side-nav" id="nav-mobile">
         <li>
           <a class="dropdown-button" href="#!" data-activates="contentDropdown">
             <i class="page-content mdi-navigation-menu"></i>
-            Content
+            ناوه‌ڕۆك
           </a>
         </li>
         <li>
           <a class="dropdown-button" href="#!" data-activates="languageDropdown">
             <i class="mdi-action-language"></i>
-            Language
+            زمان
           </a>
         </li>
         <li>
@@ -43,7 +46,7 @@
         <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
             <i class="mdi-navigation-arrow-drop-down right"></i>
-            Person Name
+            ڕۆژه‌ كمال احمد حسن
           </a>
         </li>
         <li>
@@ -70,7 +73,7 @@
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
   <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="content-profile-template" class="template" data-lang="header/person_dropdown">
+  <script type="text/x-handlebars-template" id="profile-dropdown-template" class="template" data-lang="header/person_dropdown">
   <li><a href="#!">{{List.Profile}}</a></li>
   <li><a href="#!">{{List.Settings}}</a></li>
   <li class="divider"></li>
@@ -250,7 +253,7 @@
     {{Filter.ButtonSearch}}
     <i class="mdi-navigation-search right"></i>
   </button>
-  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}">
+  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}" @@hidden>
     {{Filter.ButtonMoreFields}}
     <i class="filter-toggle mdi-navigation-expand-more right"></i>
   </button>
@@ -364,5 +367,19 @@
     <script src="scripts/fullscreen.js"></script>
     <script src="scripts/skillset-init.js"></script>
     <script src="scripts/main.js"></script>
+
+        <script type="text/javascript">
+
+     (function() {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '///api.usersnap.com/load/'+
+                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
+          var x = document.getElementsByTagName('head')[0];
+          x.appendChild(s);
+      })();
+
+    </script>
   </body>
 </html>
