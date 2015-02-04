@@ -1,0 +1,283 @@
+{
+    "Texts" :
+    {
+        "CaseNumber" : "Case number",
+        "CaseType" : "Case type",
+        "CourtType" : "Court type",
+        "Claimant" : "Claimant",
+        "Sum" : "Sum",
+        "Payer" : "Payer",
+        "Receipt" : "Receipt",
+        "Date" : "Date",
+        "Status" : "Status"
+    },
+
+    "Cases" : [
+
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/10/1991",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "1/11/1991",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1992",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "12/1/1991",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/2003",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/09/2004",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "22/8/2001",
+            "Status" : "pending"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+,
+        {
+            "CaseNumber" : "2014/B/23",
+            "CaseType" : "Property aquizition",
+            "CourtType" : "Civil Primary court",
+            "Claimant" : "Ahmed Khadr Omar",
+            "Sum" : "10000",
+            "Payer" : "Ahmed Khadr Omar",
+            "Receipt" : "120423",
+            "Date" : "3/11/1991",
+            "Status" : "registered"
+        }
+
+
+    ]
+}

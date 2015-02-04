@@ -1,0 +1,78 @@
+{
+  "Texts" :
+  {
+    "CaseNumber" : "Case number",
+    "CaseType" : "Type of the case",
+    "Claimant" : "Claimant",
+    "Defendant" : "Defendant",
+    "Judge" : "Judge",
+    "Rejected" : "REJECTED",
+    "All" : "ALL",
+    "Status" : "Status",
+    "Date" : "Date",
+    "CaseNumber" : "Case number",
+    "CaseType" : "Case type",
+    "Participants"  : "Participants",
+    "About" : "About"
+  },
+
+  "Cases" : [
+
+        {
+          "Status" : "rejected",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "186/ 2014/ EE6",
+          "CaseType" : "Eclair",
+          "Claimant" : "Eclair",
+          "Defendant" : "Eclair",
+          "Participants"  : "Eclair",
+          "Judge" : "Eclair"
+        }
+,
+        {
+          "Status" : "closed",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "186/ 2014/ EE6",
+          "CaseType" : "Eclair",
+          "Claimant" : "Ahmed",
+          "Defendant" : "Ahmed",
+          "Participants"  : "Ahmed",
+          "Judge" : "Ahmed"
+        }
+,
+        {
+          "Status" : "in-next",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "186/ 2014/ EE6",
+          "CaseType" : "Eclair",
+          "Claimant" : "Ahmed",
+          "Defendant" : "Eclair",
+          "Participants"  : "Eclair",
+          "Judge" : "Eclair"
+        }
+,
+        {
+          "Status" : "closed",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "186/ 2014/ EE6",
+          "CaseType" : "Eclair",
+          "Claimant" : "Ahmed",
+          "Defendant" : "Eclair",
+          "Participants"  : "Eclair",
+          "Judge" : "Eclair"
+        }
+,
+        {
+          "Status" : "in-next",
+          "Date" : "2014-05-06",
+          "CaseNumber" : "186/ 2014/ EE6",
+          "CaseType" : "Eclair",
+          "Claimant" : "Ahmed",
+          "Defendant" : "Ahmed",
+          "Participants"  : "Ahmed",
+          "Judge" : "Ahmed"
+        }
+
+  ]
+
+}

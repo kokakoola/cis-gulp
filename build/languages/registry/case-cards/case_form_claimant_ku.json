@@ -1,0 +1,39 @@
+{
+	"Texts" : {
+		"Claimant" : "داواكار",
+		"NaturalPerson" : "Natural person",
+		"LegalEntity" : "Legal entity",
+		"FullName" : "ناوى داواكار",
+    	"Address" : "ناونيشانى داواكار",
+    	"DocumentNumber" : "ژماره‌ى به‌ڵگه‌نامه‌ ",
+    	"Phone" : "ژماره‌ى  ته‌له‌فۆنى داواكار"
+	},
+	"Content" : {
+		"FullName" : "ڕووناك عبدالقادر محمد",
+    	"Address" : "سلێمانى /  تووى مه‌ليك / ژماره‌ى شه‌قام : 23 / ژماره‌ى خانوو 2",
+    	"DocumentNumber" : "1256",
+    	"Phone" : "00964 770 157 0000"
+	},
+	"Representative" : {
+	    "Representative" : "نوێنه‌ر",
+	    "Type" : {
+	      "Label" : "جۆرى",
+	      "Values" : ["هتد","ڕاسپێردراوى ياسايى","باوان ","پارێزه‌ر"]
+	    },
+	    "FullName" : "ناوى بريكار ",
+	    "ID" : "ژماره‌ى به‌ڵگه‌نامه‌ ",
+	    "Phone" : "ژماره‌ى ‌ ته‌له‌فۆنى بريكار",
+	    "Address" : "ناونيشانى بريكار "
+  	},
+  	"RepresentativeContent" : {
+	    "Representative" : "نوێنه",
+	    "Type" : {
+	      "Label" : "جۆرى",
+	      "Values" : ["پارێزه‌ر"]
+	    },
+	    "FullName" : "خدر حسن محمد",
+	    "ID" : "256523651",
+	    "Phone" : "00964 750 000 0000",
+	    "Address" : "سلێمانى / سه‌رچنار  / ژماره‌ى شه‌قام : 423 / ژماره‌ى خانوو 12"
+  	}
+}

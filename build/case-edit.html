@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="" class="case-edit">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>CIS | Edit case</title>
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/app-rtl.css">
+
+    <link rel="stylesheet" href="styles/app-ltr.css">
+  </head>
+  <body class="case-edit">
+
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper container">
+      <ul>
+        <div id="placeholder-courtname" class="filtering template-placeholder"></div>
+        <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
+        <li>{{Texts.Civil}}</li>
+        </script>
+      </ul>
+      <ul class="side-nav" id="nav-mobile">
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="contentDropdown">
+            <i class="page-content mdi-navigation-menu"></i>
+            ناوه‌ڕۆك
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="languageDropdown">
+            <i class="mdi-action-language"></i>
+            زمان
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-button notificationLink" href="#!" data-activates="notificationsDropdown">
+            <i class="mdi-social-notifications"></i>
+            <span class="count" id="notification_count">6</span>
+          </a>
+        </li>
+        <li class="user-profile">
+          <a class="dropdown-button" href="#!" data-activates="personDropdown">
+            <i class="mdi-navigation-arrow-drop-down right"></i>
+            ڕۆژه‌ كمال احمد حسن
+          </a>
+        </li>
+        <li>
+          <a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+</div>
+
+<!-- Dropdown Structure -->
+
+<!-- language dropdown -->
+<ul id="languageDropdown" class="navbar dropdown-content">
+  <li class="active">
+    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
+  </li>
+  <li>
+    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
+  </li>
+</ul>
+
+<!-- profile dropdown -->
+<ul id="personDropdown" class="navbar dropdown-content">
+  <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="profile-dropdown-template" class="template" data-lang="header/person_dropdown">
+  <li><a href="#!">{{List.Profile}}</a></li>
+  <li><a href="#!">{{List.Settings}}</a></li>
+  <li class="divider"></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
+</ul>
+
+<!-- content dropdown -->
+<ul id="contentDropdown" class="navbar dropdown-content">
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
+  <li class="divider"></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
+  <li class="divider"></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li class="divider"></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
+  <li class="divider"></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
+</ul>
+
+<!-- notifications dropdown -->
+<div class="navbar dropdown-content notification-container" id="notificationsDropdown">
+  <ul class="collection with-header">
+    <li class="collection-header"><h5>Notifications</h5></li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge orange">Drafts</span> <small>1 hour ago <br>You have 4 new drafts to finish</small>
+      </a></div>
+    </li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge green">What is this?</span> <small>1 hour ago <br>You have 4 new drafts to finish</small>
+      </a></div>
+    </li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge red">Drafts</span> <small>1 hour ago <br>You have 4 new drafts to finish </small>
+      </a><a href="#!" class="secondary-content"><i class="mdi-action-alarm-on text-red"></i></a></div>
+    </li>
+    <li class="collection-item">
+      <div><a href="#!">
+          <span class="new badge pink">Drafts</span> <small>1 hour ago <br>You have 4 new drafts to finish</small>
+      </a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- slide out panel -->
+<ul id="slide-out" class="side-nav full">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <div class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></div>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="#!">First Dropdown Link</a></li>
+              <li><a href="#!">Second Dropdown Link</a></li>
+              <li><a href="#!">Third Dropdown Link</a></li>
+              <li><a href="#!">Fourth Dropdown Link</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
+  
+  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+  <h4 class="header white-text text-darken-2">{{Texts.EditCase}}</h4>
+  
+</script>
+      <div class="row">
+  <!-- DataCol trigger -->
+  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+    <i class="mdi-content-add animated rotateIn"></i>
+  </a>
+  
+  <div class="col s12">
+    <div id="placeholder-case-form-general" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
+  <div class="card  wow cont-padding" style="padding: 20px">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Case}} {{Content.No}}</span>
+      <div class="col s12 m1 check-inline">
+        <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
+      </div>
+      <div class="col s12 m2 check-inline">
+        <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
+      </div> 
+      
+      <div class="divider"></div>
+      <div class="row">
+        <div class="col s12 m6">
+          <select>
+            <option value="{{Content.Judge}}" selected>{{Content.Judge}}</option>
+            {{#each Texts.Judge.Values}}
+              <option value="{{@index}}">{{Content.Judge}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="claimValue" type="text" class="validate" value="{{Content.CaseValue}}" >
+          <label for="claimValue" class="active">{{Texts.CaseValue}}</label>
+        </div>
+        <div class="col s12 m6">
+          <select>
+            <option value="{{Content.CaseType}}" selected>{{Content.CaseType}}</option>
+            {{#each Texts.CaseType.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <label for="paymentDate">{{Texts.RegisteredAt}}</label>
+          <input id="paymentDate" type="text" class="datepicker today">
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+  </div>
+
+  <!-- DataCol form group -->
+  <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
+
+    <!-- DataCol trigger -->
+    <a class="dropdown-button btn-large btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
+
+    <!-- Dropdown Structure -->
+    <!-- DataCol clone triggers -->
+    <ul id="add" class="dropdown-content">
+      <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
+      <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
+      <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+      <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
+    </ul>
+
+    <!-- DataCol models -->
+    <div class="col s12 m6" > <!-- data-datacol-model="claimant" -->
+      <div id="placeholder-case-form-claimant" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-claimant-template" class="template" data-lang="registry/case-cards/case_form_claimant">
+    <div class="card overflow-visible wow bounceInDown">
+      <div class="card-content">
+        <div>
+          <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-more-vert"></i>
+           {{Texts.Claimant}}
+          </a>
+          <div class="switch col s6 right">
+            <span>{{Texts.NaturalPerson}}</span>
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+            <span>{{Texts.LegalEntity}}</span>
+          </div>
+          <a href="#!" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+          <div class="divider"></div>
+      </div>
+        <div class="row">
+          <div class="input-field typeahead-container col s12 right"  id="the-basics">
+            <input id="Claimant_0" type="text" class="typeahead-input persons validate"  value="{{Content.FullName}}">
+            <label for="Claimant_0" class="active">{{Texts.FullName}}</label>
+          </div>
+        </div>
+        <div class="collapse  " id="collapseClaimant_0">
+          <div class="row">
+            <div class="input-field typeahead-container col s12 right">
+              <input id="ClaimantId_0" class="validate typeahead-input documents" type="text" value="{{Content.DocumentNumber}}">
+              <label for="ClaimantId_0" class="active">{{Texts.DocumentNumber}}</label>
+            </div>
+            <div class="input-field typeahead-container  col s12 right">
+              <input id="ClaimantAddress_0" type="text" class="validate typeahead-input aadresses" value="{{Content.Address}}">
+              <label for="ClaimantAddress_0" class="active">{{Texts.Address}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="ClaimantPhone_0" type="text" value="{{Content.Phone}}">
+              <label for="ClaimantPhone_0" class="active">{{Texts.Phone}}</label>
+            </div>
+          </div>
+              <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
+    <i class="mdi-navigation-more-vert"></i>
+    {{Representative.Representative}}
+  </a>
+  <div class="divider"></div>
+  <div class="row collapse in" id="collapseRepresentative">
+    <div class="col s12 right">
+      <select>
+        <option value="" selected>{{Representative.Type.Label}}</option>
+        {{#each Representative.Type.Values}}
+          <option value="{{@index}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="input-field col s12 right">
+      <input id="parent_0" type="text" class="validate" value="">
+      <label for="parent_0">{{Representative.FullName}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentId_0" type="text" value="">
+      <label for="parentId_0">{{Representative.ID}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentPhone_0" type="text" value="">
+      <label for="parentPhone_0">{{Representative.Phone}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentAddress_0" type="text" value="">
+      <label for="parentAddress_0">{{Representative.Address}}</label>
+    </div>
+  </div>
+
+        </div>
+    </div>
+  </script>
+
+
+
+
+    </div>
+    <div class="col s12 m6" > <!-- data-datacol-model="defendant" -->
+      <div id="placeholder-case-form-defendant" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-defendant-template" class="template" data-lang="registry/case-cards/case_form_defendant">
+   
+    <div class="card overflow-visible wow bounceInDown">
+      <div class="card-content">
+        <div>
+          <a data-toggle="collapse" href="#collapseDefendant_0" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-more-vert"></i>
+            {{Texts.Defendant}}
+          </a>
+          <div class="switch col s6 right">
+            <span>{{Texts.NaturalPerson}}</span>
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+            <span>{{Texts.LegalEntity}}</span>
+          </div>
+          <a href="#!" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+          <div class="divider"></div>
+        </div>
+        <div class="row">
+          <div class="input-field typeahead-container  col s12 right"  id="the-basics">
+            <input id="Defendant_0" type="text" class="typeahead-input persons validate"  value="{{Content.FullName}}">
+            <label for="Defendant_0" class="active">{{Texts.FullName}}</label>
+          </div>
+        </div>
+        <div class="collapse  " id="collapseDefendant_0">
+          <div class="row">
+            <div class="input-field typeahead-container  col s12 right">
+              <input id="DefendantId_0"  class="typeahead-input documents" type="text" value="{{Content.DocumentNumber}}">
+              <label for="DefendantId_0" class="active">{{Texts.DocumentNumber}}</label>
+            </div>
+            <div class="input-field typeahead-container  col s12 right">
+              <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="{{Content.Address}} ">
+              <label for="DefendantAddress_0" class="active">{{Texts.Address}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="DefendantPhone_0" type="text" value="{{Content.Phone}}">
+              <label for="DefendantPhone_0" class="active">{{Texts.Phone}}</label>
+            </div>
+          </div>
+              <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
+    <i class="mdi-navigation-more-vert"></i>
+    {{Representative.Representative}}
+  </a>
+  <div class="divider"></div>
+  <div class="row collapse in" id="collapseRepresentative">
+    <div class="col s12 right">
+      <select>
+        <option value="" selected>{{Representative.Type.Label}}</option>
+        {{#each Representative.Type.Values}}
+          <option value="{{@index}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="input-field col s12 right">
+      <input id="parent_0" type="text" class="validate" value="">
+      <label for="parent_0">{{Representative.FullName}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentId_0" type="text" value="">
+      <label for="parentId_0">{{Representative.ID}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentPhone_0" type="text" value="">
+      <label for="parentPhone_0">{{Representative.Phone}}</label>
+    </div>
+    <div class="input-field col s12 right">
+      <input id="parentAddress_0" type="text" value="">
+      <label for="parentAddress_0">{{Representative.Address}}</label>
+    </div>
+  </div>
+
+        </div>
+      </div>
+
+    </div>
+</script>
+    </div>
+    <div class="col s12 m6" > <!-- data-datacol-model="participant" -->
+      <div id="placeholder-case-form-representative" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-representative-template" class="template" data-lang="registry/case-cards/case_form_participant"> 
+    <div class="card  wow bounceInDown">
+      <div class="card-content">
+        <div>
+          <a data-toggle="collapse" href="#collapseParticipant_0" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-more-vert"></i>
+            {{Texts.Participant}}
+          </a>
+          <div class="switch col s6 right">
+            <span>{{Texts.NaturalPerson}}</span>
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+            <span>{{Texts.LegalEntity}}</span>
+          </div>
+          <a href="#!" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+          <div class="divider"></div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 right"  id="the-basics">
+            <input id="Participant_0" type="text" class="validate"  value="{{Content.FullName}}">
+            <label for="Participant_0" class="active">{{Texts.FullName}}</label>
+          </div>
+        </div>
+        <div class="collapse  " id="collapseParticipant_0">
+          <div class="row">
+            <div class="col s12 right">
+              <select>
+                <option value="1" selected>{{Texts.Type.Label}}</option>
+                {{#each Texts.Type.Values}}
+                  <option value="{{@index}}">{{this}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="ParticipantAddress_0" type="text" class="validate" value="{{Content.Address}}">
+              <label for="ParticipantAddress_0" class="active">{{Texts.Address}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="ParticipantId_0" type="text" value="{{Content.DocumentNumber}}">
+              <label for="ParticipantId_0" class="active">{{Texts.DocumentNumber}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="ParticipantPhone_0" type="text" value="{{Content.Phone}}">
+              <label for="ParticipantPhone_0" class="active">{{Texts.Phone}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+    </div>
+    <div class="col s12 m6" ><!--  data-datacol-model="noteForm" -->
+      <div id="placeholder-case-form-note " class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <div class="col s12 m3 check-inline right">
+        <input type="checkbox" id="Personal" class="right" />
+        <label for="Personal">Personal</label>
+      </div>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+    </div>
+    <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
+      <div id="placeholder-case-card-note  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-card-note-template" class="template" data-lang="common/common-cards/case_card_note">
+
+  <div class="row valign-wrapper">
+    <div class="col s2 valign">
+      <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img identicon"> 
+    </div>
+    <div class="col s10">
+      <div class="card with-pointer cyan lighten-5 wow bounceInDown">
+        <div class="card-content">
+          {{Texts.Note}}
+          <hr>
+          <small>
+            <ul class="list-inline grey-text text-darken-2 left">
+              <li class="">This Man That</li>
+              <li class="">04.12.2015 </li>
+              <li class="">at 14:50</li>
+            </ul>
+          </small> 
+          <a href="#!" class="card-title grey-text text-darken-2 right">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+
+    </div>
+
+  </div>
+  
+  <div class="col s12 m6">
+    <div id="placeholder-case-card-documents  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-card-documents-template" class="template" data-lang="common/common-cards/case_card_documents">
+<div class="card  wow bounceInDown">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">{{Texts.Title}}</span>
+    <div class="divider"></div>
+    <br>
+    <div class="col s12 m10 offset-m2">
+       <div class="row valign-wrapper">
+         <div class="col s2">
+           <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
+         </div>
+         <div class="col s8">
+           <span class="black-text">
+             {{Texts.Preview}}
+           </span>
+         </div>
+       </div>
+      </div>
+  </div>
+</div>
+</script>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <button class="btn btn-large waves-effect waves-light submit right " onclick="window.location.href='case-list.html'">Send to judge</button>
+    <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='case-list.html'">Register</button>
+    <button class="btn btn-large waves-effect waves-light save-light right" onclick="window.location.href='case-list.html'">Save</button>
+    <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='case-list.html'" ><i class="mdi-content-clear"></i></button>
+  </div>
+</div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer blue-grey darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+      </div>
+      <!-- <div class="col l3 s12">
+        <h5 class="white-text">Help center</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Other important numbers</h5>
+      </div> -->
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="scripts/vendor/jquery.cookie.js"></script>
+    <script src="scripts/vendor/materialize.min.js"></script>
+    <script src="scripts/vendor/jquery.pagepiling.min.js"></script>
+    <script src="scripts/vendor/wow.min.js"></script>
+    <script src="scripts/vendor/fullscreen.min.js"></script>
+    <script src="scripts/vendor/handlebars.min.js"></script>
+    <script src="scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="scripts/vendor/bootstrap.js"></script>
+    <script src="scripts/vendor/moment.min.js"></script>
+    <script src="scripts/vendor/fullcalendar.min.js"></script>
+    <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
+    <script src="scripts/vendor/picker.time.js"></script>
+    <script src="scripts/vendor/ar.js"></script>
+    <script src="scripts/vendor/typeahead.js.js"></script>
+    <script src="scripts/language.js"></script>
+    <script src="scripts/dataCol.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/animate-css.js"></script>
+    <script src="scripts/Common.js"></script>
+    <script src="scripts/fullscreen.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
