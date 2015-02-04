@@ -5,7 +5,7 @@
   </a>
   
   <div class="col s12">
-    @@include('./case-cards/case-edit/case-form-general.html')
+    @@include('./case-cards/case-card-general.html')
   </div>
 
   <!-- DataCol form group -->
@@ -27,20 +27,21 @@
 
     <!-- DataCol models -->
     <div class="col s12 m6" > <!-- data-datacol-model="claimant" -->
-      @@include('./case-cards/case-edit/case-form-claimant.html', {"person":"Claimant" })
+      @@include('./case-cards/case-card-claimant.html', {"person":"Claimant" })
     </div>
     <div class="col s12 m6" > <!-- data-datacol-model="defendant" -->
-      @@include('./case-cards/case-edit/case-form-defendant.html', {"person":"Defendant"})
+      @@include('./case-cards/case-card-defendant.html', {"person":"Defendant"})
     </div>
     <div class="col s12 m6" > <!-- data-datacol-model="participant" -->
-      @@include('./case-cards/case-edit/case-form-participant.html', {"person":"Participant"})
-    </div>
-    <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
-      @@include('../common/common-cards/case-card-note.html')
+      @@include('./case-cards/case-card-participant.html', {"person":"Participant"})
     </div>
     <div class="col s12 m6" ><!--  data-datacol-model="noteForm" -->
       @@include('../common/common-cards/case-form-note.html')
     </div>
+    <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
+      @@include('../common/common-cards/case-card-note.html')
+    </div>
+
   </div>
   
   <div class="col s12 m6">

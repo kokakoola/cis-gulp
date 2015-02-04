@@ -28,14 +28,39 @@
         </div>
         <div class="collapse @@collapse" id="collapse@@person_0">
           <div class="row">
-            <div class="input-field typeahead-container  col s12 right">
+            <div class="input-field col s12 m6 select-inline left">
+              <select>
+                <option value="" disabled selected>Dokumendi liik</option>
+                <option>1</option>
+                <option>1</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="input-field typeahead-container  col s12 m3 left">
               <input id="@@personId_0"  class="typeahead-input documents" type="text" value="">
               <label for="@@personId_0">{{Texts.DocumentNumber}}</label>
             </div>
-            <div class="input-field typeahead-container  col s12 right">
+            <div class="col s12 m3 marg-top-20 right">
+              <a class="btn-floating valign"><i class="mdi-content-add"></i></a>
+              <a class="btn-flat no-marg-bot right"><i class="mdi-navigation-close"></i></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m1 left">
+              <input name="group1" type="radio" id="test1" checked />
+              <label for="test1"></label>
+            </div>
+            <div class="input-field typeahead-container  col s12 m8 left">
               <input id="@@personAddress_0" type="text" class="validate typeahead-input aadresses" value="">
               <label for="@@personAddress_0">{{Texts.Address}}</label>
             </div>
+            <div class="col s3 marg-top-20 right">
+              <a class="btn-floating"><i class="mdi-content-add"></i></a>
+              <a class="btn-flat no-marg-bot right"><i class="mdi-navigation-close"></i></a>
+            </div>
+          </div>
+          <div class="row">
             <div class="input-field col s12 right">
               <input id="@@personPhone_0" type="text" value="">
               <label for="@@personPhone_0">{{Texts.Phone}}</label>

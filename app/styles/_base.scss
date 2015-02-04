@@ -393,7 +393,9 @@ textarea.valid {
   }
 }
 
-
+.valign-bottom {
+  align-self: flex-end;
+}
 
 // .rotate-45 {
 //   -webkit-transform: rotate(45deg);
