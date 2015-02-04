@@ -1,0 +1,22 @@
+<table class="hoverable bordered data">
+	<thead>
+    <th data-field="type" class="sorting">{{Headers.Type}}</th>
+    <th data-field="category" class="sorting">{{Headers.Category}}</th>
+    <th data-field="author" class="sorting">{{Headers.Author}}</th>
+    <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+    <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+    <th data-field="notes">{{Headers.Notes}}</th>
+  </thead>
+  <tbody>
+  {{#each Cases}}
+    <tr onClick="$('#modal1').openModal();">
+      <td>{{Type}}</td>
+      <td>{{Category}}</td>
+      <td>{{Author}}</td>
+      <td class="center">{{DateOfRegister}}</td>
+      <td>{{Files}}</td>
+      <td class="center">{{Notes}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

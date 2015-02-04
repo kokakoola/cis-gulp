@@ -252,6 +252,7 @@
 <div class="row no-marg-bot">
 
   <div class="col s12 m6">
+    <div class="row">
     <div class="js-fileupload-plugin col s12 center">
       <div class="js-fileupload-previews file-previews">
         <div class="js-fileupload-preview-item row" style="display: block;">
@@ -282,17 +283,25 @@
         <h5><i class="@*Some nice upload icon*@"></i>Drag files here to upload</h5> or click to browse
       </div>
     </div>
+    </div>
   </div>
 
   <div class="col s12 m6">
     <form>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="col s12">
           <select>
             <option value="" disabled selected>Type</option>
             <option value="1">Claim document</option>
-            <option value="2">Option 2</option>
+            <option value="2">Decisioin</option>
             <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="col s12">
+          <select id="category">
+            <option value="" disabled selected>Category</option>
+            <option value="1">Incoming</option>
+            <option value="2">Outgoing</option>
           </select>
         </div>
         <div class="input-field col s12">
@@ -304,7 +313,7 @@
           <input id="registrationDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
-          <label for="arrivalDate">Date of registration</label>
+          <label for="arrivalDate">Date of arrival</label>
           <input id="arrivalDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
@@ -312,6 +321,10 @@
           <label>Description</label>
         </div>
         <div class="input-field col s12">
+          <div class="col s12 m4 right">
+            <input type="checkbox" id="Personal" class="right" />
+            <label for="Personal">Personal</label>
+          </div>
           <textarea class="materialize-textarea"></textarea>
           <label>Notes</label>
         </div>

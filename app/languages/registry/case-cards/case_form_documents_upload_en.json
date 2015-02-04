@@ -4,5 +4,63 @@
     "DropFilesHere" : "Drop files here to upload",
     "ClickHere" : "or click here",
     "ButtonSave" : "Save"
-  }
+  },
+
+  "Headers" : {
+  		"Type" : "Type",
+  		"Category" : "Category",
+  		"Author" : "Author",
+  		"DateOfRegister" : "Date of registration",
+  		"Files" : "Files",
+  		"Notes" : "Notes"
+  	},
+
+  "Cases" : [
+
+        {
+          "Type" : "Claim document",
+          "Category" : "Incoming",
+          "Author" : "Kareem Abdul Jabbar",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        }
+,
+        {
+          "Type" : "Claim document",
+          "Category" : "Incoming",
+          "Author" : "Kareem Abdul Jabbar",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "claimdoc.doc",
+          "Notes" : "6"
+        }
+,
+        {
+          "Type" : "Claim document",
+          "Category" : "Incoming",
+          "Author" : "Kareem Abdul Jabbar",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "claimdoc.doc",
+          "Notes" : "6"
+        }
+,
+        {
+          "Type" : "Claim document",
+          "Category" : "Incoming",
+          "Author" : "Kareem Abdul Jabbar",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "claimdoc.doc",
+          "Notes" : "6"
+        }
+,
+        {
+          "Type" : "Claim document",
+          "Category" : "Incoming",
+          "Author" : "Kareem Abdul Jabbar",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        }
+
+  ]
 }

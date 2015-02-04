@@ -8,6 +8,10 @@
     @@include('./case-cards/case-card-general.html')
   </div>
 
+  <div class="col s12">
+    @@include('./case-cards/case-card-documents-table.html')
+  </div>
+
   <!-- DataCol form group -->
   <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
 
@@ -23,7 +27,12 @@
       <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
       <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
       <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
+      <li><a href="#modal1" class="modal-trigger">Add a document</a></li>
     </ul>
+
+    <div id="modal1" class="modal">
+      @@include(''../common/common-cards/case-form-documents-upload.html')
+    </div>
 
     <!-- DataCol models -->
     <div class="col s12 m6" > <!-- data-datacol-model="claimant" -->

@@ -229,6 +229,70 @@
 </script>
   </div>
 
+  <div class="col s12">
+    <div id="placeholder-case-form-general-2" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+  <div class="card  wow cont-padding" style="padding: 20px">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Documents}}</span>
+      
+      <div class="divider"></div>
+      <div class="row card bg-light">
+	<form action="">
+		<div class="col s12 m6 l4">
+			<select name="" id="type-1">
+				<option value="" selected disabled>Type</option>
+				<option value="">Claim document</option>
+			</select>
+		</div>
+		<div class="input-field col s12 m6 l4">
+			<input type="text" id="author-1">
+			<label for="author-1">Author</label>
+		</div>
+		<div class="input-field col s12 m6 l4">
+			<label for="registerDate-1">Date of arrival</label>
+			<input id="registerDate-1" type="text" class="datepicker today">
+		</div>
+		<div class="filter-action col s12">
+			<button class="btn waves-effect waves-light submit left" type="button" name="search">
+				Search
+				<i class="mdi-navigation-search right"></i>
+			</button>
+			<button class="btn waves-effect waves-light btn-flat left" name="clear">
+				<i class="mdi-content-clear "></i>
+			</button>
+		</div>
+	</form>
+</div>
+
+      
+      <table class="hoverable bordered data">
+	<thead>
+    <th data-field="type" class="sorting">{{Headers.Type}}</th>
+    <th data-field="category" class="sorting">{{Headers.Category}}</th>
+    <th data-field="author" class="sorting">{{Headers.Author}}</th>
+    <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+    <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+    <th data-field="notes">{{Headers.Notes}}</th>
+  </thead>
+  <tbody>
+  {{#each Cases}}
+    <tr onClick="$('#modal1').openModal();">
+      <td>{{Type}}</td>
+      <td>{{Category}}</td>
+      <td>{{Author}}</td>
+      <td class="center">{{DateOfRegister}}</td>
+      <td>{{Files}}</td>
+      <td class="center">{{Notes}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+  </div>
+</script>
+  </div>
+
   <!-- DataCol form group -->
   <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
 
@@ -244,7 +308,104 @@
       <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
       <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
       <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
+      <li><a href="#modal1" class="modal-trigger">Add a document</a></li>
     </ul>
+
+    <div id="modal1" class="modal">
+      <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+<h5 class="grey-text text-darken-4">{{Texts.Documents}}</h5>
+<div class="divider"></div>
+<div class="row no-marg-bot">
+
+  <div class="col s12 m6">
+    <div class="row">
+    <div class="js-fileupload-plugin col s12 center">
+      <div class="js-fileupload-previews file-previews">
+        <div class="js-fileupload-preview-item row" style="display: block;">
+          <div class="js-fileupload-preview-thumbnail col s5">
+            <img src="http://placehold.it/125x125">
+          </div>
+          <div class="col s7">
+            <span class="js-fileupload-preview-filename">Toimiku otsing paigast ära.png</span>
+            <span class="js-fileupload-preview-filesize">(311.36 KB)</span>
+            <br>
+            <a class="js-fileupload-remove-click waves-effect waves-teal btn-flat"><span><i class="mdi-content-clear"></i></span></a>
+          </div>
+        </div>
+
+        <div class="js-fileupload-preview-item row" style="display: block;">
+          <div class="js-fileupload-preview-thumbnail col s5">
+            <img class="js-fileupload-preview-thumbnail-image" data-src="/CIS/assets/images/thumbnails/" src="http://placehold.it/125x125">
+          </div>
+          <div class="col s7">
+            <span class="js-fileupload-preview-filename">valduse äravõtmise akt_85-2014-45_2014_11_24.docx</span>
+            <span class="js-fileupload-preview-filesize">(37.04 KB)</span>
+            <br>
+            <a class="js-fileupload-remove-click waves-effect waves-teal btn-flat"><span><i class="mdi-content-clear"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="js-fileupload-descriptionarea card-panel bg-light">
+        <h5><i class="@*Some nice upload icon*@"></i>Drag files here to upload</h5> or click to browse
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="col s12 m6">
+    <form>
+      <div class="row">
+        <div class="col s12">
+          <select>
+            <option value="" disabled selected>Type</option>
+            <option value="1">Claim document</option>
+            <option value="2">Decisioin</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="col s12">
+          <select id="category">
+            <option value="" disabled selected>Category</option>
+            <option value="1">Incoming</option>
+            <option value="2">Outgoing</option>
+          </select>
+        </div>
+        <div class="input-field col s12">
+          <input id="author" type="text" class="validate">
+          <label for="author">Author</label>
+        </div>
+        <div class="input-field col s12">
+          <label for="registrationDate">Date of registration</label>
+          <input id="registrationDate" type="text" class="datepicker today">
+        </div>
+        <div class="input-field col s12">
+          <label for="arrivalDate">Date of arrival</label>
+          <input id="arrivalDate" type="text" class="datepicker today">
+        </div>
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label>Description</label>
+        </div>
+        <div class="input-field col s12">
+          <div class="col s12 m4 right">
+            <input type="checkbox" id="Personal" class="right" />
+            <label for="Personal">Personal</label>
+          </div>
+          <textarea class="materialize-textarea"></textarea>
+          <label>Notes</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+<div class="action-bar">
+  <button class="btn waves-effect waves-light save-light right modal-action modal-close">{{Texts.ButtonSave}}</button>
+  <button class="btn btn-flat lighten-4 waves-effect waves-light cancel right modal-action modal-close"><i class="mdi-content-clear"></i></button>
+</div>
+</script>
+    </div>
 
     <!-- DataCol models -->
     <div class="col s12 m6" > <!-- data-datacol-model="claimant" -->
