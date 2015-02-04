@@ -3,28 +3,14 @@
   <div class="card  wow cont-padding" style="padding: 20px">
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Case}} {{Content.No}}</span>
-      <div class="col s12 m1 check-inline">
-        <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
-      </div>
+
       <div class="col s12 m2 check-inline">
         <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
       </div> 
       
       <div class="divider"></div>
       <div class="row">
-        <div class="col s12 m6">
-          <select>
-            <option value="{{Content.Judge}}" selected>{{Content.Judge}}</option>
-            {{#each Texts.Judge.Values}}
-              <option value="{{@index}}">{{Content.Judge}}</option>
-            {{/each}}
-          </select>
-        </div>
-        <div class="input-field col s12 m6">
-          <input id="claimValue" type="text" class="validate" value="{{Content.CaseValue}}" >
-          <label for="claimValue" class="active">{{Texts.CaseValue}}</label>
-        </div>
-        <div class="col s12 m6">
+        <div class="col s12 m6 right">
           <select>
             <option value="{{Content.CaseType}}" selected>{{Content.CaseType}}</option>
             {{#each Texts.CaseType.Values}}
@@ -32,10 +18,24 @@
             {{/each}}
           </select>
         </div>
-        <div class="input-field col s12 m6">
+        <div class="input-field col s12 m6 right">
           <label for="paymentDate">{{Texts.RegisteredAt}}</label>
           <input id="paymentDate" type="text" class="datepicker today">
         </div>
+        <div class="col s12 m6 right">
+          <select>
+            <option value="{{Content.Judge}}" selected>{{Content.Judge}}</option>
+            {{#each Texts.Judge.Values}}
+              <option value="{{@index}}">{{Content.Judge}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6 right">
+          <input id="claimValue" type="text" class="validate" value="{{Content.CaseValue}}" >
+          <label for="claimValue" class="active">{{Texts.CaseValue}}</label>
+        </div>
+        
+        
       </div>
     </div>
   </div>

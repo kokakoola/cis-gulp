@@ -72,7 +72,8 @@ footer.page-footer {
 // FRAME
 // ****************************************
 main {
-  background: #cfd8dc;
+  background: color("blue-grey", "lighten-4");
+  flex: 1 0 auto;
 }
 
 // fixed footer flex
@@ -80,10 +81,6 @@ body {
    display: flex;
    min-height: 100vh;
    flex-direction: column;
-}
-
-main {
-   flex: 1 0 auto;
 }
 
 // COMPONENTS

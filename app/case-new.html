@@ -192,28 +192,13 @@
 
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Case}}  </span>
-      <div class="col s12 m1 check-inline">
-        <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
-      </div>
       <div class="col s12 m2 check-inline">
         <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
       </div> 
       
       <div class="divider"></div>
       <div class="row">
-        <div class="col s12 m6">
-          <select>
-            <option value="" selected>{{Texts.Judge.Label}}</option>
-            {{#each Texts.Judge.Values}}
-              <option value="{{@index}}">{{this}}</option>
-            {{/each}}
-          </select>
-        </div>
-        <div class="input-field col s12 m6">
-          <input id="claimValue" type="text" class="validate">
-          <label for="claimValue">{{Texts.CaseValue}}</label>
-        </div>
-        <div class="col s12 m6">
+        <div class="col s12 m6 right">
           <select>
             <option value="" selected disabled>{{Texts.CaseType.Label}}</option>
             {{#each Texts.CaseType.Values}}
@@ -221,9 +206,21 @@
             {{/each}}
           </select>
         </div>
-        <div class="input-field col s12 m6">
+        <div class="input-field col s12 m6 right">
           <label for="paymentDate">{{Texts.RegisteredAt}}</label>
           <input id="paymentDate" type="text" class="datepicker today">
+        </div>
+        <div class="col s12 m6 right">
+          <select>
+            <option value="" selected>{{Texts.Judge.Label}}</option>
+            {{#each Texts.Judge.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6 right">
+          <input id="claimValue" type="text" class="validate">
+          <label for="claimValue">{{Texts.CaseValue}}</label>
         </div>
       </div>
     </div>
@@ -384,40 +381,12 @@
               <input id="ClaimantPhone_0" type="text" value="">
               <label for="ClaimantPhone_0">{{Texts.Phone}}</label>
             </div>
+            <div class="input-field col s12 right">
+              <input id="ClaimantRepresentative_0" type="text" value="">
+              <label for="ClaimantRepresentative_0">{{Representative.Representative}}</label>
+            </div>
           </div>
-              <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
-    <i class="mdi-navigation-more-vert"></i>
-    {{Representative.Representative}}
-  </a>
-  <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
-    <div class="col s12 right">
-      <select>
-        <option value="" selected>{{Representative.Type.Label}}</option>
-        {{#each Representative.Type.Values}}
-          <option value="{{@index}}">{{this}}</option>
-        {{/each}}
-      </select>
-    </div>
-
-    <div class="input-field col s12 right">
-      <input id="parent_0" type="text" class="validate" value="">
-      <label for="parent_0">{{Representative.FullName}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentId_0" type="text" value="">
-      <label for="parentId_0">{{Representative.ID}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentPhone_0" type="text" value="">
-      <label for="parentPhone_0">{{Representative.Phone}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentAddress_0" type="text" value="">
-      <label for="parentAddress_0">{{Representative.Address}}</label>
-    </div>
-  </div>
-
+            
         </div>
     </div>
   </script>
@@ -494,40 +463,11 @@
               <input id="DefendantPhone_0" type="text" value="">
               <label for="DefendantPhone_0">{{Texts.Phone}}</label>
             </div>
+            <div class="input-field col s12 right">
+              <input id="DefendantRepresentative_0" type="text" value="">
+              <label for="DefendantRepresentative_0">{{Representative.Representative}}</label>
+            </div>
           </div>
-              <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
-    <i class="mdi-navigation-more-vert"></i>
-    {{Representative.Representative}}
-  </a>
-  <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
-    <div class="col s12 right">
-      <select>
-        <option value="" selected>{{Representative.Type.Label}}</option>
-        {{#each Representative.Type.Values}}
-          <option value="{{@index}}">{{this}}</option>
-        {{/each}}
-      </select>
-    </div>
-
-    <div class="input-field col s12 right">
-      <input id="parent_0" type="text" class="validate" value="">
-      <label for="parent_0">{{Representative.FullName}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentId_0" type="text" value="">
-      <label for="parentId_0">{{Representative.ID}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentPhone_0" type="text" value="">
-      <label for="parentPhone_0">{{Representative.Phone}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentAddress_0" type="text" value="">
-      <label for="parentAddress_0">{{Representative.Address}}</label>
-    </div>
-  </div>
-
         </div>
       </div>
 
@@ -712,7 +652,7 @@
     <script src="../bower_components/pickadate/lib/picker.time.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/vendor/ar.js -->
-    <script src="../bower_components/pickadate/lib/translations/ar.js"></script>
+<!--     // <script src="../bower_components/pickadate/lib/translations/ar.js"></script> -->
     <!-- endbuild -->
     <!-- build:js scripts/vendor/typeahead.js.js -->
     <script src="../bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
