@@ -4,5 +4,80 @@
     "DropFilesHere" : "فابله‌كان لێره‌ دابنێ بۆ ئه‌پلۆد كردنيان",
     "ClickHere" : "يان كرته‌ بكه‌ لێره‌ ",
     "ButtonSave" : "هه‌ڵگرتن"
-  }
+  },
+
+  "Headers" : {
+  		"Type" : "Type",
+  		"Category" : "Category",
+  		"Author" : "Author",
+  		"DateOfRegister" : "Date of registration",
+  		"Files" : "Files",
+  		"Notes" : "Notes"
+  	},
+
+  "Cases" : [
+
+  			{
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        },
+
+        {
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        },
+
+        {
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        },
+
+        {
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        },
+
+        {
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        },
+
+        {
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        },
+
+        {
+          "Type" : "استملاك",
+          "Category" : "آزاد حلة عمر",
+          "Author" : "آزاد حلة عمر",
+          "DateOfRegister" : "20/01/2015",
+          "Files" : "calimdoc.doc",
+          "Notes" : "6"
+        }
+      ]
 }
