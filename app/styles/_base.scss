@@ -587,5 +587,27 @@ table.dataTable.order-column tbody tr > .sorting_1, {
    background-color: whitesmoke;
   }
 
+.modal {
+  background-color: #fff;
+  max-height: none;
+  height: auto;
+  width: 70%;
+  @media #{$medium-and-down} {
+    width: 80%;
+  }
+}
 
+.file-previews {
+  padding: 20px 0 0;
+  a {
+    margin-bottom: 0;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .js-fileupload-preview-filename {
+    word-break: break-word;
+  }
+}
 
