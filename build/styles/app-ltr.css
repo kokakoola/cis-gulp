@@ -11969,6 +11969,32 @@ table.dataTable.order-column tbody tr > .sorting_1 {
   background-color: whitesmoke;
 }
 
+.modal {
+  background-color: #fff;
+  max-height: none;
+  height: auto;
+  width: 70%;
+}
+@media only screen and (max-width: 992px) {
+  .modal {
+    width: 80%;
+  }
+}
+
+.file-previews {
+  padding: 20px 0 0;
+}
+.file-previews a {
+  margin-bottom: 0;
+}
+.file-previews img {
+  height: 100%;
+  width: 100%;
+}
+.file-previews .js-fileupload-preview-filename {
+  word-break: break-word;
+}
+
 .row {
   margin-left: auto;
   margin-right: auto;
