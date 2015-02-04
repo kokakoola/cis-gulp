@@ -2,6 +2,7 @@
   "Texts" : {
     "Documents" : "Documents",
     "DropFilesHere" : "Drop files here to upload",
-    "ClickHere" : "or click here"
+    "ClickHere" : "or click here",
+    "ButtonSave" : "Save"
   }
 }
