@@ -1,22 +1,29 @@
 <div id="placeholder-case-card-note  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-card-note-template" class="template" data-lang="common/common-cards/case_card_note">
-<div class="card cyan lighten-5  wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">{{Texts.Title}}</span>
-    <a href="#!" class="card-title grey-text text-darken-4">
-      <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
-    </a>
-    <div class="divider"></div>
-    <div class="col s12 m10 offset-m2">
-      <div class="row valign-wrapper">
-       <div class="col s2">
-         <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
-       </div>
-       <div class="col s10">
-         <span class="black-text">
-           {{Texts.Note}}
-     </div>
-   </div>
- </div>
-</div>
+
+  <div class="row valign-wrapper">
+    <div class="col s2 valign">
+      <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img identicon"> 
+    </div>
+    <div class="col s10">
+      <div class="card with-pointer cyan lighten-5 wow bounceInDown">
+        <div class="card-content">
+          {{Texts.Note}}
+          <hr>
+          <small>
+            <ul class="list-inline grey-text text-darken-2 left">
+              <li class="">This Man That</li>
+              <li class="">04.12.2015 </li>
+              <li class="">at 14:50</li>
+            </ul>
+          </small> 
+          <a href="#!" class="card-title grey-text text-darken-2 right">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </script>
+
+

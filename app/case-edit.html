@@ -307,20 +307,20 @@
     </div>
 
     <div class="input-field col s12 right">
-      <input id="parent_0" type="text" class="validate" value="{{RepresentativeContent.FullName}}">
-      <label for="parent_0" class="active">{{Representative.FullName}}</label>
+      <input id="parent_0" type="text" class="validate" value="">
+      <label for="parent_0">{{Representative.FullName}}</label>
     </div>
     <div class="input-field col s12 right">
-      <input id="parentId_0" type="text" value="{{RepresentativeContent.ID}}">
-      <label for="parentId_0" class="active">{{Representative.ID}}</label>
+      <input id="parentId_0" type="text" value="">
+      <label for="parentId_0">{{Representative.ID}}</label>
     </div>
     <div class="input-field col s12 right">
-      <input id="parentPhone_0" type="text" value="{{RepresentativeContent.Phone}}">
-      <label for="parentPhone_0" class="active">{{Representative.Phone}}</label>
+      <input id="parentPhone_0" type="text" value="">
+      <label for="parentPhone_0">{{Representative.Phone}}</label>
     </div>
     <div class="input-field col s12 right">
-      <input id="parentAddress_0" type="text" value="{{RepresentativeContent.Address}}">
-      <label for="parentAddress_0" class="active">{{Representative.Address}}</label>
+      <input id="parentAddress_0" type="text" value="">
+      <label for="parentAddress_0">{{Representative.Address}}</label>
     </div>
   </div>
 
@@ -335,6 +335,7 @@
     <div class="col s12 m6" > <!-- data-datacol-model="defendant" -->
       <div id="placeholder-case-form-defendant" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="case-form-defendant-template" class="template" data-lang="registry/case-cards/case_form_defendant">
+   
     <div class="card overflow-visible wow bounceInDown">
       <div class="card-content">
         <div>
@@ -368,7 +369,7 @@
               <label for="DefendantId_0" class="active">{{Texts.DocumentNumber}}</label>
             </div>
             <div class="input-field typeahead-container  col s12 right">
-              <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="{{Content.Address}}">
+              <input id="DefendantAddress_0" type="text" class="validate typeahead-input aadresses" value="{{Content.Address}} ">
               <label for="DefendantAddress_0" class="active">{{Texts.Address}}</label>
             </div>
             <div class="input-field col s12 right">
@@ -392,20 +393,20 @@
     </div>
 
     <div class="input-field col s12 right">
-      <input id="parent_0" type="text" class="validate" value="{{RepresentativeContent.FullName}}">
-      <label for="parent_0" class="active">{{Representative.FullName}}</label>
+      <input id="parent_0" type="text" class="validate" value="">
+      <label for="parent_0">{{Representative.FullName}}</label>
     </div>
     <div class="input-field col s12 right">
-      <input id="parentId_0" type="text" value="{{RepresentativeContent.ID}}">
-      <label for="parentId_0" class="active">{{Representative.ID}}</label>
+      <input id="parentId_0" type="text" value="">
+      <label for="parentId_0">{{Representative.ID}}</label>
     </div>
     <div class="input-field col s12 right">
-      <input id="parentPhone_0" type="text" value="{{RepresentativeContent.Phone}}">
-      <label for="parentPhone_0" class="active">{{Representative.Phone}}</label>
+      <input id="parentPhone_0" type="text" value="">
+      <label for="parentPhone_0">{{Representative.Phone}}</label>
     </div>
     <div class="input-field col s12 right">
-      <input id="parentAddress_0" type="text" value="{{RepresentativeContent.Address}}">
-      <label for="parentAddress_0" class="active">{{Representative.Address}}</label>
+      <input id="parentAddress_0" type="text" value="">
+      <label for="parentAddress_0">{{Representative.Address}}</label>
     </div>
   </div>
 
@@ -413,7 +414,7 @@
       </div>
 
     </div>
- </script>
+</script>
     </div>
     <div class="col s12 m6" > <!-- data-datacol-model="participant" -->
       <div id="placeholder-case-form-representative" class="template-placeholder"></div>
@@ -473,30 +474,6 @@
   </script>
 
     </div>
-    <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
-      <div id="placeholder-case-card-note  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-card-note-template" class="template" data-lang="common/common-cards/case_card_note">
-<div class="card cyan lighten-5  wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">{{Texts.Title}}</span>
-    <a href="#!" class="card-title grey-text text-darken-4">
-      <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
-    </a>
-    <div class="divider"></div>
-    <div class="col s12 m10 offset-m2">
-      <div class="row valign-wrapper">
-       <div class="col s2">
-         <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
-       </div>
-       <div class="col s10">
-         <span class="black-text">
-           {{Texts.Note}}
-     </div>
-   </div>
- </div>
-</div>
-</script>
-    </div>
     <div class="col s12 m6" ><!--  data-datacol-model="noteForm" -->
       <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
@@ -504,9 +481,14 @@
   <div class="card cyan lighten-5 wow bounceInDown">
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <div class="col s12 m3 check-inline right">
+        <input type="checkbox" id="Personal" class="right" />
+        <label for="Personal">Personal</label>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
+
       <div class="divider"></div>
       <div class="row no-marg-bot">
         <div class="input-field col s12">
@@ -518,8 +500,40 @@
   </div>
 </script>
 
+    </div>
+    <div class="col s12 m6">  <!-- data-datacol-model="noteCard" -->
+      <div id="placeholder-case-card-note  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-card-note-template" class="template" data-lang="common/common-cards/case_card_note">
+
+  <div class="row valign-wrapper">
+    <div class="col s2 valign">
+      <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img identicon"> 
+    </div>
+    <div class="col s10">
+      <div class="card with-pointer cyan lighten-5 wow bounceInDown">
+        <div class="card-content">
+          {{Texts.Note}}
+          <hr>
+          <small>
+            <ul class="list-inline grey-text text-darken-2 left">
+              <li class="">This Man That</li>
+              <li class="">04.12.2015 </li>
+              <li class="">at 14:50</li>
+            </ul>
+          </small> 
+          <a href="#!" class="card-title grey-text text-darken-2 right">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
 
     </div>
+
   </div>
   
   <div class="col s12 m6">
@@ -656,41 +670,8 @@
     <!-- build:js scripts/fullscreen.js -->
     <script src="scripts/fullscreen.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/skillset-init.js -->
-    <script src="scripts/skillset-init.js"></script>
-    <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-
-    <script>
-      $(window).load(function() {
-        $('#joyRideTipContent').joyride({
-          autoStart : true,
-          postStepCallback : function (index, tip) {
-          if (index == 2) {
-            $(this).joyride('set_li', false, 1);
-          }
-        },
-        modal:true,
-        expose: true
-        });
-      });
-    </script>
-
-
-    <script type="text/javascript">
-
-     (function() {
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = '///api.usersnap.com/load/'+
-                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-          var x = document.getElementsByTagName('head')[0];
-          x.appendChild(s);
-      })();
-
-    </script>
     <!-- endbuild -->
   </body>
 </html>

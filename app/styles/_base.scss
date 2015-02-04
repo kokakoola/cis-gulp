@@ -26,6 +26,25 @@ html, body {
 
 .card {
   overflow: auto;
+  &.with-pointer {
+      &:before {
+      content: '';
+      display: block;
+      position: fixed;
+      width: 0;
+      height: 0;
+      color: transparent;
+      border: 15px solid black;
+      border-color: transparent #E0F7FA  transparent transparent;
+      top: 40%;
+      margin-left: -30px;
+    }
+  }
+}
+
+.identicon {
+  max-width: 74px;
+  max-height: 74px;
 }
 
 .card a {
@@ -88,6 +107,17 @@ main {
 .switch label {
   margin-right: 15px;
   margin-left: 15px;
+}
+
+.list-inline li {
+  display: inline;
+  @include padding-right(10px); 
+
+
+  &:after {
+    content: "|";
+    @include margin-left(10px);
+  }
 }
 
 // JOYRIDE COMPONENT OVERRIDE
@@ -182,6 +212,7 @@ width: 100vw;
     opacity: 0.6;
     height: 2rem;
     max-width: 400px;
+    line-height: 2rem;
   }
   input[type=text]:focus {border-color:#333; }
 
@@ -362,7 +393,9 @@ textarea.valid {
   }
 }
 
-
+.valign-bottom {
+  align-self: flex-end;
+}
 
 // .rotate-45 {
 //   -webkit-transform: rotate(45deg);

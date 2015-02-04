@@ -369,9 +369,14 @@
   <div class="card cyan lighten-5 wow bounceInDown">
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <div class="col s12 m3 check-inline right">
+        <input type="checkbox" id="Personal" class="right" />
+        <label for="Personal">Personal</label>
+      </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
       </a>
+
       <div class="divider"></div>
       <div class="row no-marg-bot">
         <div class="input-field col s12">
@@ -382,7 +387,6 @@
     </div>
   </div>
 </script>
-
 
     </div>
 
@@ -493,41 +497,8 @@
     <!-- build:js scripts/fullscreen.js -->
     <script src="scripts/fullscreen.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/skillset-init.js -->
-    <script src="scripts/skillset-init.js"></script>
-    <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-
-    <script>
-      $(window).load(function() {
-        $('#joyRideTipContent').joyride({
-          autoStart : true,
-          postStepCallback : function (index, tip) {
-          if (index == 2) {
-            $(this).joyride('set_li', false, 1);
-          }
-        },
-        modal:true,
-        expose: true
-        });
-      });
-    </script>
-
-
-    <script type="text/javascript">
-
-     (function() {
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = '///api.usersnap.com/load/'+
-                 '1ea495c4-875c-43d6-a897-82e131526bbc.js';
-          var x = document.getElementsByTagName('head')[0];
-          x.appendChild(s);
-      })();
-
-    </script>
     <!-- endbuild -->
   </body>
 </html>
