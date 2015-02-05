@@ -505,9 +505,9 @@ i.status {
   border-bottom: 1px solid color("grey", "base");
 }
 
-// .filter-action {
-//   margin-top: -35px;
-// }
+.filter-action.upper .btn{
+  margin-bottom: -10px;
+}
 
 .input-field .prefix {
   opacity: 0.8;

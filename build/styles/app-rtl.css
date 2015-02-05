@@ -11583,6 +11583,8 @@ footer.page-footer {
 
 main {
   background: #cfd8dc;
+  -webkit-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 body {
@@ -11591,11 +11593,6 @@ body {
   min-height: 100vh;
   -webkit-flex-direction: column;
           flex-direction: column;
-}
-
-main {
-  -webkit-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 .trigger-wrapper {
@@ -11897,6 +11894,10 @@ i.status.sent {
   line-height: 5rem;
   height: 4rem;
   border-bottom: 1px solid #9e9e9e;
+}
+
+.filter-action.upper .btn, .filter-action.upper .btn-large {
+  margin-bottom: -10px;
 }
 
 .input-field .prefix {
@@ -12572,8 +12573,16 @@ input[type=checkbox][disabled]:first-child ~ .lever:active:after {
   margin-top: 20px;
 }
 
+.marg-bot-20 {
+  margin-bottom: 20px;
+}
+
 .overflow-visible {
   overflow: visible;
+}
+
+.no-overflow {
+  overflow: hidden;
 }
 
 html.login, body.login {

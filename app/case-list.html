@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/classic.time.css">
     <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/rtl.css">
     <!-- endbuild -->
-
     <!-- build:css styles/app-rtl.css -->
     <link rel="stylesheet" href="styles/app-rtl.css" class="main-style">
     <!-- endbuild -->
@@ -21,6 +20,7 @@
     <!-- build:css styles/app-ltr.css -->
     <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
     <!-- endbuild -->
+
   </head>
   <body class="case-list">
 
@@ -35,8 +35,11 @@
         </script>
       </ul>
       <ul class="side-nav" id="nav-mobile">
+        <li class="right">
+          <a href="#" data-activates="slide-out" class="callSlideout"><i class="mdi-action-search"></i></a>
+        </li>
         <li>
-          <a class="dropdown-button" href="#!" data-activates="contentDropdown">
+          <a class="dropdown-button" href="#!" data-activates="otherPages">
             <i class="page-content mdi-navigation-menu"></i>
             ناوه‌ڕۆك
           </a>
@@ -92,29 +95,8 @@
 </ul>
 
 <!-- content dropdown -->
-<ul id="contentDropdown" class="navbar dropdown-content">
-  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
-  <li><a href="case-list.html">{{List.CaseList}}</a></li>
-  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
-  <li><a href="case-new.html">{{List.NewCase}}</a></li>
-  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
-  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
-  <li class="divider"></li>
-  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
-  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
-  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
-  <li class="divider"></li>
-  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
-  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
-  <li class="divider"></li>
-  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
-  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
-  <li class="divider"></li>
-  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
-  <li class="divider"></li>
-  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
-  </script>
+<ul id="otherPages" class="navbar dropdown-content">
+  <li><a href="#!">Next page</a></li>
 </ul>
 
 <!-- notifications dropdown -->
@@ -144,135 +126,159 @@
   </ul>
 </div>
 
-<!-- slide out panel -->
 <ul id="slide-out" class="side-nav full">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <div class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">First Dropdown Link</a></li>
-              <li><a href="#!">Second Dropdown Link</a></li>
-              <li><a href="#!">Third Dropdown Link</a></li>
-              <li><a href="#!">Fourth Dropdown Link</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
+  <li class="divider"></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
+  <li class="divider"></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li class="divider"></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
+  <li class="divider"></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
+</ul>
 
 
 <main>
 
   <div class="main-banner"></div>
 
-  <div class="card-onbanner">
-    <div class="container">
+  <div class="container">
+    <div class="card-onbanner">
       <div class="row no-marg-bot">
         <div class="col s12">
+           
 
           <div id="placeholder-round-top-fw  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
 
-<a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
-  <i class="create-case mdi-content-add"></i>
-</a>
+
 <h4 class="header white-text text-darken-2">{{Texts.PrimeRegistry}}</h4>
 
 </script>
-            <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
+
+<!-- <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
+  <i class="create-case mdi-content-add"></i>
+</a> -->
+          <div class="row">
+<div class="col s12">
+  <div class="filter-action upper">
+    <a href="case-new.html" class="btn btn-large waves-effect right waves-light submit" >
+      Add new case
+      <i class="mdi-navigation-search right"></i>
+    </a>
+    <button class="btn btn-large waves-effect waves-light save right collapsed" type="button" data-toggle="collapse" data-target="#showFilter" data-less-text="Hide filter" @@hidden>
+      Display filter
+    </button>
+  </div>
+</div>
+</div>
+          
+
+    <div class="collapse" id="showFilter">
+        <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
-    <div class="card overflow-visible">
-      <div class="card-content" >
-        <div class="row">
-  <div class="input-field select-label col s12 m2 right">
-  <label class="active">{{Filter.Status.Label}}</label>
-    <select class="status-select">
-      <option value="" disabled selected>{{Filter.SelectStatus}}</option>
-      <option class="status draft">Drafts</p></option>
-      <option class="status pending">Pending</option>
-      <option class="status registered">Registered</option>
-      <option class="status closed">Closed</option>
-      <option class="status in-proceedings">In proceedings</option>
-      <option class="status in-next">In next what</option>
-      <option class="status rejected">Rejected</option>
-    </select>
-  </div>
-  <div class="input-field typeahead-container col s12 m2 right">
-    <input id="caseNumber" class="typeahead-input casenrs" type="text">
-    <label for="caseNumber">{{Filter.CaseNumber}}</label>
-  </div>
-  <div class="input-field select-label col s12 m2 right">
-    <label class="active">{{Filter.CaseType.Label}}</label> 
-    <select>
-      <option value="" selected disabled>{{Filter.SelectCasetype}}</option>   
-      {{#each Filter.CaseType.Values}}
-        <option value="{{@index}}">{{this}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <input id="claimant" type="text" >
-    <label for="claimant">{{Filter.Judge}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <input id="startDate" type="date" class="datepicker">
-    <label for="startDate">{{Filter.From}}</label>
-  </div>
-  <div class="input-field col s12 m2 right">
-    <i class="mdi-notification-event-note prefix"></i>
-    <label for="endDate">{{Filter.To}}</label>
-    <input id="endDate" type="text" class="datepicker">
-
-  </div>
-</div>
-
-<!-- hidden by toggle -->
-<div class="row collapse" id="moreFields">
-  <div class="col s12 m2 right">
-  <div class="check-inline">
-    <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
-  </div>
-  <br>
-  <div class="check-inline">
-    <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
-  </div>
-  </div>
-
-  <div class="col s12 m3 right">
-    <div class="row">
-      <div class="input-field col s12 m6">
-        <input id="fromSum" type="text">
-        <label for="fromSum">{{Filter.CaseValue.From}}</label>
+      <div class="card no-overflow">
+        <div class="card-content" >
+          <a class="card-title grey-text text-darken-4">Filter</a>
+          <div class="divider"></div>
+          <div class="row">
+            <div class="input-field select-label col s12 m2 right">
+              <label class="active">{{Filter.Status.Label}}</label>
+              <select class="status-select">
+                <option value="" disabled selected>{{Filter.SelectStatus}}</option>
+                <option class="status draft">Drafts</option>
+                <option class="status pending">Pending</option>
+                <option class="status registered">Registered</option>
+                <option class="status closed">Closed</option>
+                <option class="status in-proceedings">In proceedings</option>
+                <option class="status in-next">In next what</option>
+                <option class="status rejected">Rejected</option>
+              </select>
+            </div>
+            <div class="input-field typeahead-container col s12 m2 right">
+              <input id="caseNumber" class="typeahead-input casenrs" type="text">
+              <label for="caseNumber">{{Filter.CaseNumber}}</label>
+            </div>
+            <div class="input-field select-label col s12 m2 right">
+              <label class="active">{{Filter.CaseType.Label}}</label> 
+              <select>
+                <option value="" selected disabled>{{Filter.SelectCasetype}}</option>   
+                {{#each Filter.CaseType.Values}}
+                  <option value="{{@index}}">{{this}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="input-field col s12 m2 right">
+              <input id="claimant" type="text" >
+              <label for="claimant">{{Filter.Judge}}</label>
+            </div>
+            <div class="input-field col s12 m2 right">
+              <i class="mdi-notification-event-note prefix"></i>
+              <input id="startDate" type="date" class="datepicker">
+              <label for="startDate">{{Filter.From}}</label>
+            </div>
+            <div class="input-field col s12 m2 right">
+              <i class="mdi-notification-event-note prefix"></i>
+              <label for="endDate">{{Filter.To}}</label>
+              <input id="endDate" type="text" class="datepicker">
+            </div>
+          </div>
+          
+          <div class="row collapse" id="moreFields">
+            <div class="col s12 m2 right">
+            <div class="check-inline">
+              <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
+            </div>
+            <br>
+            <div class="check-inline">
+              <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
+            </div>
+            </div>
+          
+            <div class="col s12 m3 right">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input id="fromSum" type="text">
+                  <label for="fromSum">{{Filter.CaseValue.From}}</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input id="toSum" type="text" >
+                  <label for="toSum">{{Filter.CaseValue.To}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-field typeahead-container col s12 m3 right">
+              <input id="claimant" class="typeahead-input persons" type="text">
+              <label for="claimant">{{Filter.Claimant}}</label>
+            </div>
+            <div class="input-field typeahead-container col s12 m2 right">
+              <input id="defendant" class="typeahead-input persons" type="text">
+              <label for="defendant">{{Filter.Defendant}}</label>
+            </div>
+            <div class="input-field typeahead-container col s12 m2 right">
+              <input id="participant" class="typeahead-input persons" type="text">
+              <label for="participant">{{Filter.Participant}}</label>
+            </div>
+          </div>
+      
+        </div>
       </div>
-      <div class="input-field col s12 m6">
-        <input id="toSum" type="text" >
-        <label for="toSum">{{Filter.CaseValue.To}}</label>
-      </div>
-    </div>
-  </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="claimant" class="typeahead-input persons" type="text">
-    <label for="claimant">{{Filter.Claimant}}</label>
-  </div>
-  <div class="input-field typeahead-container col s12 m2 right">
-    <input id="defendant" class="typeahead-input persons" type="text">
-    <label for="defendant">{{Filter.Defendant}}</label>
-  </div>
-  <div class="input-field typeahead-container col s12 m2 right">
-    <input id="participant" class="typeahead-input persons" type="text">
-    <label for="participant">{{Filter.Participant}}</label>
-  </div>
-</div>
-      </div>
-    </div>
-  </script>
-    <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+      </script>
+          <div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
 <div class="filter-action">
   <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
@@ -289,15 +295,20 @@
 </div>
 </script>
 
+    </div>
+
+
+
 
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="card-content row with-table">
-      <form action="">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content with-table">
+            <form action="">
   <div id="placeholder-registry-table" class="template-placeholder"></div>
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
@@ -310,7 +321,6 @@
           <th data-field="casetype" class="sorting proceeding-table">{{Texts.CaseType}}</th>
           <th data-field="claimants">{{Texts.Claimant}}</th>
           <th data-field="defendants">{{Texts.Defendant}}</th>
-          <th data-field="paticipants">{{Texts.Participants}}</th>
           <th data-field="judge">{{Texts.Judge}}</th>
         </thead>
         <tbody>
@@ -322,7 +332,6 @@
             <td>{{CaseType}}</td>
             <td>{{Claimant}}</td>
             <td>{{Defendant}} </td>
-            <td>{{Participants}}</td>
             <td>{{Judge}}</td>
           </tr>
           {{/each}}
@@ -331,6 +340,9 @@
   </script>
 </form>
 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

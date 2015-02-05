@@ -182,28 +182,13 @@
 
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{Texts.Case}}  </span>
-      <div class="col s12 m1 check-inline">
-        <input type="checkbox" id="urgent" /><label for="urgent">{{Texts.Urgent}}</label>
-      </div>
       <div class="col s12 m2 check-inline">
         <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
       </div> 
       
       <div class="divider"></div>
       <div class="row">
-        <div class="col s12 m6">
-          <select>
-            <option value="" selected>{{Texts.Judge.Label}}</option>
-            {{#each Texts.Judge.Values}}
-              <option value="{{@index}}">{{this}}</option>
-            {{/each}}
-          </select>
-        </div>
-        <div class="input-field col s12 m6">
-          <input id="claimValue" type="text" class="validate">
-          <label for="claimValue">{{Texts.CaseValue}}</label>
-        </div>
-        <div class="col s12 m6">
+        <div class="col s12 m6 right">
           <select>
             <option value="" selected disabled>{{Texts.CaseType.Label}}</option>
             {{#each Texts.CaseType.Values}}
@@ -211,9 +196,21 @@
             {{/each}}
           </select>
         </div>
-        <div class="input-field col s12 m6">
+        <div class="input-field col s12 m6 right">
           <label for="paymentDate">{{Texts.RegisteredAt}}</label>
           <input id="paymentDate" type="text" class="datepicker today">
+        </div>
+        <div class="col s12 m6 right">
+          <select>
+            <option value="" selected>{{Texts.Judge.Label}}</option>
+            {{#each Texts.Judge.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6 right">
+          <input id="claimValue" type="text" class="validate">
+          <label for="claimValue">{{Texts.CaseValue}}</label>
         </div>
       </div>
     </div>
@@ -242,6 +239,7 @@
 <div class="row no-marg-bot">
 
   <div class="col s12 m6">
+    <div class="row">
     <div class="js-fileupload-plugin col s12 center">
       <div class="js-fileupload-previews file-previews">
         <div class="js-fileupload-preview-item row" style="display: block;">
@@ -272,17 +270,25 @@
         <h5><i class="@*Some nice upload icon*@"></i>Drag files here to upload</h5> or click to browse
       </div>
     </div>
+    </div>
   </div>
 
   <div class="col s12 m6">
     <form>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="col s12">
           <select>
             <option value="" disabled selected>Type</option>
             <option value="1">Claim document</option>
-            <option value="2">Option 2</option>
+            <option value="2">Decisioin</option>
             <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="col s12">
+          <select id="category">
+            <option value="" disabled selected>Category</option>
+            <option value="1">Incoming</option>
+            <option value="2">Outgoing</option>
           </select>
         </div>
         <div class="input-field col s12">
@@ -294,7 +300,7 @@
           <input id="registrationDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
-          <label for="arrivalDate">Date of registration</label>
+          <label for="arrivalDate">Date of arrival</label>
           <input id="arrivalDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
@@ -302,6 +308,10 @@
           <label>Description</label>
         </div>
         <div class="input-field col s12">
+          <div class="col s12 m4 right">
+            <input type="checkbox" id="Personal" class="right" />
+            <label for="Personal">Personal</label>
+          </div>
           <textarea class="materialize-textarea"></textarea>
           <label>Notes</label>
         </div>
@@ -361,40 +371,12 @@
               <input id="ClaimantPhone_0" type="text" value="">
               <label for="ClaimantPhone_0">{{Texts.Phone}}</label>
             </div>
+            <div class="input-field col s12 right">
+              <input id="ClaimantRepresentative_0" type="text" value="">
+              <label for="ClaimantRepresentative_0">{{Representative.Representative}}</label>
+            </div>
           </div>
-              <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
-    <i class="mdi-navigation-more-vert"></i>
-    {{Representative.Representative}}
-  </a>
-  <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
-    <div class="col s12 right">
-      <select>
-        <option value="" selected>{{Representative.Type.Label}}</option>
-        {{#each Representative.Type.Values}}
-          <option value="{{@index}}">{{this}}</option>
-        {{/each}}
-      </select>
-    </div>
-
-    <div class="input-field col s12 right">
-      <input id="parent_0" type="text" class="validate" value="">
-      <label for="parent_0">{{Representative.FullName}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentId_0" type="text" value="">
-      <label for="parentId_0">{{Representative.ID}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentPhone_0" type="text" value="">
-      <label for="parentPhone_0">{{Representative.Phone}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentAddress_0" type="text" value="">
-      <label for="parentAddress_0">{{Representative.Address}}</label>
-    </div>
-  </div>
-
+            
         </div>
     </div>
   </script>
@@ -471,40 +453,11 @@
               <input id="DefendantPhone_0" type="text" value="">
               <label for="DefendantPhone_0">{{Texts.Phone}}</label>
             </div>
+            <div class="input-field col s12 right">
+              <input id="DefendantRepresentative_0" type="text" value="">
+              <label for="DefendantRepresentative_0">{{Representative.Representative}}</label>
+            </div>
           </div>
-              <a data-toggle="collapse" href="#collapseRepresentative" class="card-title grey-text text-darken-4 ">
-    <i class="mdi-navigation-more-vert"></i>
-    {{Representative.Representative}}
-  </a>
-  <div class="divider"></div>
-  <div class="row collapse in" id="collapseRepresentative">
-    <div class="col s12 right">
-      <select>
-        <option value="" selected>{{Representative.Type.Label}}</option>
-        {{#each Representative.Type.Values}}
-          <option value="{{@index}}">{{this}}</option>
-        {{/each}}
-      </select>
-    </div>
-
-    <div class="input-field col s12 right">
-      <input id="parent_0" type="text" class="validate" value="">
-      <label for="parent_0">{{Representative.FullName}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentId_0" type="text" value="">
-      <label for="parentId_0">{{Representative.ID}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentPhone_0" type="text" value="">
-      <label for="parentPhone_0">{{Representative.Phone}}</label>
-    </div>
-    <div class="input-field col s12 right">
-      <input id="parentAddress_0" type="text" value="">
-      <label for="parentAddress_0">{{Representative.Address}}</label>
-    </div>
-  </div>
-
         </div>
       </div>
 
