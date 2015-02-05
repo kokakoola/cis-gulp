@@ -1,25 +1,10 @@
 (function($){
   $(function(){
-    //$(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
+    $(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
 
     $('.collapsible').collapsible();
 
-   // $('#caseForm .collapse').collapse('show');
-   // $('#caseCard').collapse('hide');
-   // $('#toggleRepresentative').collapse('hide');
-
-    //$(".button-collapse").sideNav();
-
-  // $("#chooseID").joyride({
-  //       autoStart : true,
-  //         postStepCallback : function (index, tip) {
-  //         if (index == 2) {
-  //           $(this).joyride('set_li', false, 1);
-  //         }
-  //       },
-  //       modal:true,
-  //       expose: true
-  // });
+    $('.tooltipped').tooltip({delay: 50});
 
     // wow.js init 
     new WOW().init();
@@ -133,18 +118,21 @@
         {
           var date = new Date();
           this.set('select', [date.getFullYear(), date.getMonth() + 1, date.getDate()]);
-        }
+        },
+        disable: [
+          6, 7
+        ]
       });
 
-      $('.datepicker').pickadate();
+      $('.datepicker').pickadate({
+         disable: [
+          6, 7
+        ]
+      });
 
       $('.timepicker').pickatime();
 
-
-
       $('select').material_select_override();
-
-      
     
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {

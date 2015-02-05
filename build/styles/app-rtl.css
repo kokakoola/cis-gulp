@@ -11896,6 +11896,10 @@ i.status.sent {
   border-bottom: 1px solid #9e9e9e;
 }
 
+.filter-action.upper .btn, .filter-action.upper .btn-large {
+  margin-bottom: -10px;
+}
+
 .input-field .prefix {
   opacity: 0.8;
 }
@@ -12578,6 +12582,10 @@ input[type=checkbox][disabled]:first-child ~ .lever:active:after {
 
 .overflow-visible {
   overflow: visible;
+}
+
+.no-overflow {
+  overflow: hidden;
 }
 
 html.login, body.login {

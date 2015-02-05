@@ -1,20 +1,24 @@
-<!-- slide out panel -->
 <ul id="slide-out" class="side-nav full">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <div class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">First Dropdown Link</a></li>
-              <li><a href="#!">Second Dropdown Link</a></li>
-              <li><a href="#!">Third Dropdown Link</a></li>
-              <li><a href="#!">Fourth Dropdown Link</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
+  <li class="divider"></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
+  <li class="divider"></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li class="divider"></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
+  <li class="divider"></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
+</ul>
