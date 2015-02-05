@@ -11583,6 +11583,8 @@ footer.page-footer {
 
 main {
   background: #cfd8dc;
+  -webkit-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 body {
@@ -11591,11 +11593,6 @@ body {
   min-height: 100vh;
   -webkit-flex-direction: column;
           flex-direction: column;
-}
-
-main {
-  -webkit-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 .trigger-wrapper {
@@ -11972,9 +11969,12 @@ table.dataTable.order-column tbody tr > .sorting_1 {
 
 .modal {
   background-color: #fff;
-  max-height: none;
-  height: auto;
-  width: 70%;
+  max-height: 90%;
+}
+@media (max-width: 1200px) {
+  .modal {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 992px) {
   .modal {
@@ -12570,6 +12570,10 @@ input[type=checkbox][disabled]:first-child ~ .lever:active:after {
 
 .marg-top-20 {
   margin-top: 20px;
+}
+
+.marg-bot-20 {
+  margin-bottom: 20px;
 }
 
 .overflow-visible {
