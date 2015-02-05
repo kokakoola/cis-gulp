@@ -586,9 +586,10 @@ table.dataTable.order-column tbody tr > .sorting_1, {
 
 .modal {
   background-color: #fff;
-  max-height: none;
-  height: auto;
-  width: 70%;
+  max-height: 90%;
+  @media (max-width: $large-screen) {
+    width: 70%;
+  }
   @media #{$medium-and-down} {
     width: 80%;
   }
