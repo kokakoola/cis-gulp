@@ -21,7 +21,7 @@
   //       expose: true
   // });
 
-    // wow.js init
+    // wow.js init 
     new WOW().init();
 
     $('.modal-trigger').leanModal({

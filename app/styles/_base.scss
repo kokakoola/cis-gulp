@@ -25,7 +25,7 @@ html, body {
 }
 
 .card {
-  overflow: auto;
+  overflow: visible;
   &.with-pointer {
       &:before {
       content: '';
@@ -606,6 +606,13 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   }
   .js-fileupload-preview-filename {
     word-break: break-word;
+  }
+}
+
+.card {
+  a.tooltipped {
+    position: absolute;
+    top: -20px;
   }
 }
 
