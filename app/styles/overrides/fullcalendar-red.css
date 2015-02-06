@@ -27,7 +27,7 @@ html .fc,
 .fc td,
 .fc th {
   padding: 0;
-  vertical-align: top;
+  vertical-align: top; 
   }
 
 
@@ -211,7 +211,7 @@ html .fc,
   *top: -50%;
   }
 
-
+/*// here*/
 .fc-state-default {
   border-color: #ff3b30;
   color: #ff3b30; 
