@@ -25,7 +25,7 @@ html, body {
 }
 
 .card {
-  overflow: visible;
+  overflow: auto;
   &.with-pointer {
       &:before {
       content: '';

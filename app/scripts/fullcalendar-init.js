@@ -45,45 +45,68 @@
         right: 'prev,next today'
       },
       editable: true,
-      firstDay: 0, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+      firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
       selectable: true,
       defaultView: 'month',
-      axisFormat: 'h:mm',
+      axisFormat: 'hh:mm',
       columnFormat: {
-                month: 'ddd',    // Mon
-                week: 'ddd d', // Mon 7
-                day: 'dddd M/d',  // Monday 9/7
-                agendaDay: 'dddd d'
-            },
-            titleFormat: {
-                month: 'MMMM yyyy', // September 2009
-                week: "MMMM yyyy", // September 2009
-                day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
-            },
+        month: 'ddd',    // Mon
+        week: 'ddd d', // Mon 7
+        day: 'dddd M/d',  // Monday 9/7
+        agendaDay: 'dddd d'
+      },
+      titleFormat: {
+        month: 'MMMM YYYY', // September 2009
+        week: "MMMM YYYY", // September 2009
+        day: 'MMMM YYYY'                  // Tuesday, Sep 8, 2009
+      },
       allDaySlot: false,
       selectHelper: true,
-       start: '8:00', // a start time (10am in this example)
-    end: '12:00', // an end time (6pm in this example)
+      businessHours: {
+        start: '8:00', // a start time (10am in this example)
+        end: '12:00', // an end time (6pm in this example)
+        dow: [ 0, 1, 2, 3, 4, 5, 6 ]
+      },
 
-    dow: [ 0, 1, 2, 3, 4, 5, 6 ],
-    hiddenDays: [ 4, 5 ],
+      hiddenDays: [ 0, 6 ],
+      minTime: '06:00:00',
+      maxTime: '22:00:00',
+      slotEventOverlap: false,
     // days of week. an array of zero-based day of week integers (0=Sunday)
     // (Monday-Thursday in this example)
-      select: function(start, end, allDay) {
-        var title = prompt('Event Title:');
-        if (title) {
-          calendar.fullCalendar('renderEvent',
-            {
-              title: title,
-              start: start,
-              end: end,
-              allDay: allDay
-            },
-            true // make the event "stick"
-          );
+      select: function(start, end) {
+        // var title = prompt('Event Title:');
+        // if (title) {
+        //   calendar.fullCalendar('renderEvent',
+        //     {
+        //       title: title,
+        //       start: start,
+        //       end: end,
+        //       allDay: allDay
+        //     },
+        //     true // make the event "stick"
+        //   );
+        // }
+        // calendar.fullCalendar('unselect');
+        if($('#daily-register-calendar').fullCalendar('getView').type == 'month') {
+          return;
+        } else {
+          window.location.href = "daily-new.html?start=" + start;
         }
-        calendar.fullCalendar('unselect');
       },
+
+      eventClick: function(event, jsEvent, view) {
+        window.location.href = "daily-new.html?event=" + event.start;
+      },
+
+      dayClick: function(date, jsEvent, view) {
+        if(view.name != 'month')
+          return;
+
+        $('#daily-register-calendar').fullCalendar('changeView', 'agendaDay');
+        $('#daily-register-calendar').fullCalendar('gotoDate', date);
+      },
+
       droppable: true, // this allows things to be dropped onto the calendar !!!
       drop: function(date, allDay) { // this function is called when something is dropped
       
@@ -130,14 +153,14 @@
         },
         {
           title: 'Meeting',
-          start: new Date(y, m, d, 10, 30),
+          start: new Date(y, m, d, 08, 30),
           allDay: false,
           className: 'important'
         },
         {
           title: 'Lunch',
-          start: new Date(y, m, d, 12, 0),
-          end: new Date(y, m, d, 14, 0),
+          start: new Date(y, m, d, 09, 0),
+          end: new Date(y, m, d, 10, 0),
           allDay: false,
           className: 'important'
         },
