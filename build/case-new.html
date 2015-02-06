@@ -7,10 +7,10 @@
     <title>CIS | New case</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
-
     <link rel="stylesheet" href="styles/app-rtl.css">
 
     <link rel="stylesheet" href="styles/app-ltr.css">
+
   </head>
   <body class="new-case">
 
@@ -25,8 +25,11 @@
         </script>
       </ul>
       <ul class="side-nav" id="nav-mobile">
+        <li class="right">
+          <a href="#" data-activates="slide-out" class="callSlideout"><i class="mdi-action-search"></i></a>
+        </li>
         <li>
-          <a class="dropdown-button" href="#!" data-activates="contentDropdown">
+          <a class="dropdown-button" href="#!" data-activates="otherPages">
             <i class="page-content mdi-navigation-menu"></i>
             ناوه‌ڕۆك
           </a>
@@ -82,29 +85,8 @@
 </ul>
 
 <!-- content dropdown -->
-<ul id="contentDropdown" class="navbar dropdown-content">
-  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
-  <li><a href="case-list.html">{{List.CaseList}}</a></li>
-  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
-  <li><a href="case-new.html">{{List.NewCase}}</a></li>
-  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
-  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
-  <li class="divider"></li>
-  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
-  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
-  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
-  <li class="divider"></li>
-  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
-  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
-  <li class="divider"></li>
-  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
-  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
-  <li class="divider"></li>
-  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
-  <li class="divider"></li>
-  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
-  </script>
+<ul id="otherPages" class="navbar dropdown-content">
+  <li><a href="#!">Next page</a></li>
 </ul>
 
 <!-- notifications dropdown -->
@@ -134,26 +116,30 @@
   </ul>
 </div>
 
-<!-- slide out panel -->
 <ul id="slide-out" class="side-nav full">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <div class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">First Dropdown Link</a></li>
-              <li><a href="#!">Second Dropdown Link</a></li>
-              <li><a href="#!">Third Dropdown Link</a></li>
-              <li><a href="#!">Fourth Dropdown Link</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
+  <li><a href="case-list.html">{{List.CaseList}}</a></li>
+  <li><a href="case-list-with-walktrough.html">{{List.CaseListWith}}</a></li>
+  <li><a href="case-new.html">{{List.NewCase}}</a></li>
+  <li><a href="case-edit.html">{{List.EditCase}}</a></li>
+  <li><a href="case-assesment.html">{{List.CaseAssesment}}</a></li>
+  <li class="divider"></li>
+  <li><a href="fee-list.html">{{List.FeeList}}</a></li>
+  <li><a href="fee-new.html">{{List.NewFee}}</a></li>
+  <li><a href="fee-edit.html">{{List.EditFee}}</a></li>
+  <li class="divider"></li>
+  <li><a href="audit-list.html">{{List.AuditList}}</a></li>
+  <li><a href="audit-new.html">{{List.NewAudit}}</a></li>
+  <li class="divider"></li>
+  <li><a href="daily-list.html">{{List.DailyList}}</a></li>
+  <li><a href="daily-new.html">{{List.NewDaily}}</a></li>
+  <li class="divider"></li>
+  <li><a href="summons-list.html">{{List.SummonsList}}</a></li>
+  <li class="divider"></li>
+  <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
+  </script>
+</ul>
 
 <main>
 
@@ -528,7 +514,7 @@
 
   <div class="card cyan lighten-5 wow bounceInDown">
     <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.Note}}</span>
+      <span class="card-title grey-text text-darken-4">New  {{Texts.Note}}</span>
       <div class="col s12 m3 check-inline right">
         <input type="checkbox" id="Personal" class="right" />
         <label for="Personal">Personal</label>
@@ -604,11 +590,11 @@
     <script src="scripts/vendor/materialize.min.js"></script>
     <script src="scripts/vendor/jquery.pagepiling.min.js"></script>
     <script src="scripts/vendor/wow.min.js"></script>
-    <script src="scripts/vendor/fullscreen.min.js"></script>
     <script src="scripts/vendor/handlebars.min.js"></script>
     <script src="scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="scripts/vendor/bootstrap.js"></script>
     <script src="scripts/vendor/moment.min.js"></script>
+    <script src="scripts/vendor/jquery-ui.custom.min.js"></script>
     <script src="scripts/vendor/fullcalendar.min.js"></script>
     <script src="scripts/vendor/jquery.joyride-2.1.js"></script>
     <script src="scripts/vendor/picker.time.js"></script>
@@ -619,7 +605,7 @@
     <script src="scripts/init.js"></script>
     <script src="scripts/animate-css.js"></script>
     <script src="scripts/Common.js"></script>
-    <script src="scripts/fullscreen.js"></script>
+    <script src="scripts/fullcalendar-init.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
