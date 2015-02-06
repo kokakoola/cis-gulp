@@ -21,6 +21,7 @@
 
 html .fc {
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .fc {
@@ -38,10 +39,11 @@ html .fc {
 
 .fc-header td {
   white-space: nowrap;
+  padding: 15px 10px 0px;
 }
 
 .fc-header-left {
-  width: 40%;
+  width: 25%;
   text-align: left;
 }
 
@@ -50,7 +52,7 @@ html .fc {
 }
 
 .fc-header-right {
-  width: 40%;
+  width: 25%;
   text-align: right;
 
   .semesters-dropdown {
@@ -65,9 +67,13 @@ html .fc {
 .fc-header-title {
   display: inline-block;
   vertical-align: top;
+  margin-top: -5px;
   h2 {
     margin-top: 0;
     white-space: nowrap;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 10px;
   }
 }
 
@@ -120,38 +126,97 @@ html .fc {
 /* Cell Styles
 ------------------------------------------------------------------------*/
 
-.fc-widget-header, .fc-widget-content {
+.fc-widget-content {
   /* <td>, usually */
-  border: 1px solid red;
+  border: 1px solid #e5e5e5;
 }
+
+.fc-widget-header{
+    border-bottom: 1px solid #EEE; 
+} 
 
 .fc-state-highlight {
   /* <td> today cell */
   /* TODO: add .fc-today to <th> */
-  background: #ffc;
+  // background: #ffc;
+}
+
+.fc-state-highlight > div > div.fc-day-number{
+    background-color: #ff3b30;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 4px;
 }
 
 .fc-cell-overlay {
   /* semi-transparent rectangle while dragging */
-  background: #9cf;
-  opacity: .2;
-  filter: alpha(opacity = 20);
+  background: #bce8f1;
+  opacity: .3;
+  filter: alpha(opacity = 30);
   /* for IE */
 }
 
 /* Buttons
 ------------------------------------------------------------------------*/
 
-.fc-button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
+// .fc-button {
+//   position: relative;
+//   display: inline-block;
+//   padding: 0 .6em;
+//   overflow: hidden;
+//   height: 1.9em;
+//   line-height: 1.9em;
+//   white-space: nowrap;
+//   cursor: pointer;
+// }
 
+
+/*
+  Our default prev/next buttons use HTML entities like &lsaquo; &rsaquo; &laquo; &raquo;
+  and we'll try to make them look good cross-browser.
+*/
+
+.fc-text-arrow {
+  margin: 0 .4em;
+  font-size: 2em;
+  line-height: 23px;
+  vertical-align: baseline; /* for IE7 */
+  }
+
+.fc-button-prev .fc-text-arrow,
+.fc-button-next .fc-text-arrow { /* for &lsaquo; &rsaquo; */
+  font-weight: bold;
+  }
+  
+/* icon (for jquery ui) */
+  
+.fc-button .fc-icon-wrap {
+  position: relative;
+  float: left;
+  top: 50%;
+  }
+  
+.fc-button .ui-icon {
+  position: relative;
+  float: left;
+  margin-top: -50%;
+  *margin-top: 0;
+  *top: -50%;
+  }
+
+// here
 .fc-state-default {
   /* non-theme */
-  border-style: solid;
-  border-width: 1px 0;
+  border-color: color("cyan", "base");
+  color: color("cyan", "base"); 
+  &.fc-corner-left { /* non-theme */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  }
+  &.fc-corner-right { /* non-theme */
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  }
 }
 
 .fc-button-inner {
