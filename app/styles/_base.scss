@@ -609,10 +609,14 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   }
 }
 
-.card {
-  a.tooltipped {
-    position: absolute;
-    top: -20px;
+.header {
+  .tooltipped {
+    font-size: .8em;
+  }
+}
+.card-content {
+  .tooltipped {
+    font-size: 1.2em;
   }
 }
 

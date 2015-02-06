@@ -168,7 +168,7 @@
 <script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
 
 
-<h4 class="header white-text text-darken-2">{{Texts.PrimeRegistry}}</h4>
+<h4 class="header white-text text-darken-2">{{Texts.PrimeRegistry}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Look it's a table"><i class="mdi-action-info-outline"></i></a></h4>
 
 </script>
 
@@ -196,6 +196,7 @@
       <div class="card no-overflow">
         <div class="card-content" >
           <a class="card-title grey-text text-darken-4">Filter</a>
+          <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="This is a filter"><i class="mdi-action-info-outline"></i></a>
           <div class="divider"></div>
           <div class="row">
             <div class="input-field select-label col s12 m2 right">
@@ -314,7 +315,6 @@
   <div id="placeholder-registry-table" class="template-placeholder"></div>
 
   <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
-
     <table class="hoverable bordered data">
         <thead>
           <th data-field="status" class="sorting">{{Texts.Status}}</th>
