@@ -48,24 +48,23 @@
       firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
       selectable: true,
       defaultView: 'month',
-      axisFormat: 'hh:mm',
-      columnFormat: {
-        month: 'ddd',    // Mon
-        week: 'ddd d', // Mon 7
-        day: 'dddd M/d',  // Monday 9/7
-        agendaDay: 'dddd d'
-      },
-      titleFormat: {
-        month: 'MMMM YYYY', // September 2009
-        week: "MMMM YYYY", // September 2009
-        day: 'MMMM YYYY'                  // Tuesday, Sep 8, 2009
-      },
+      // axisFormat: 'hh:mm',
+      // columnFormat: {
+      //   month: 'ddd',    // Mon
+      //   week: 'ddd d', // Mon 7
+      //   day: 'dddd M/d',  // Monday 9/7
+      //   agendaDay: 'dddd d'
+      // },
+      // titleFormat: {
+      //   month: 'MMMM YYYY', // September 2009
+      //   week: "MMMM YYYY", // September 2009
+      //   day: 'MMMM YYYY'                  // Tuesday, Sep 8, 2009
+      // },
       allDaySlot: false,
-      selectHelper: true,
+      // selectHelper: true,
       businessHours: {
         start: '8:00', // a start time (10am in this example)
-        end: '12:00', // an end time (6pm in this example)
-        dow: [ 0, 1, 2, 3, 4, 5, 6 ]
+        end: '12:00' // an end time (6pm in this example)
       },
 
       hiddenDays: [ 0, 6 ],
@@ -74,7 +73,7 @@
       slotEventOverlap: false,
     // days of week. an array of zero-based day of week integers (0=Sunday)
     // (Monday-Thursday in this example)
-      select: function(start, end) {
+      select: function(start, end, jsEvent, view) {
         // var title = prompt('Event Title:');
         // if (title) {
         //   calendar.fullCalendar('renderEvent',
@@ -88,15 +87,14 @@
         //   );
         // }
         // calendar.fullCalendar('unselect');
-        if($('#daily-register-calendar').fullCalendar('getView').type == 'month') {
+        if(view.name == 'month')
           return;
-        } else {
-          window.location.href = "daily-new.html?start=" + start;
-        }
+        
+        window.location.href = "daily-new.html?start=" + start;
       },
 
       eventClick: function(event, jsEvent, view) {
-        window.location.href = "daily-new.html?event=" + event.start;
+        window.location.href = "daily-new.html?start=" + event.start;
       },
 
       dayClick: function(date, jsEvent, view) {

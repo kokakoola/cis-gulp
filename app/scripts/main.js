@@ -129,6 +129,13 @@ $(document).ready(function() {
     });
   }, 800);
 
+  var unix_timestamp = location.search.split('start=')[1] ? location.search.split('start=')[1] : '';
+  var formattedTime = moment.unix(unix_timestamp).format("hh:mm");
+  var formattedDate = moment.unix(unix_timestamp).format("YYYY-MM-DD");
+
+  $('#hearingTime').val(formattedTime);
+  $('#hearingDate').val(formattedDate);
+
 });
 
 
