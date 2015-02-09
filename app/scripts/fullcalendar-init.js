@@ -44,6 +44,7 @@
         center: 'agendaDay,agendaWeek,month',
         right: 'prev,next today'
       },
+      isRTL: $.cookie('cis-language') === 'ku' ? true : false,
       editable: true,
       firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
       selectable: true,
