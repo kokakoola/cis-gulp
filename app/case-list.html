@@ -10,14 +10,12 @@
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/pagepiling.js/jquery.pagepiling.css">
     <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
-    <!-- <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/classic.css">
-    <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/classic.time.css">
-    <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/classic.date.css"> -->
-    <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/rtl.css">
     <!-- endbuild -->
     <!-- build:css styles/app-rtl.css -->
     <link rel="stylesheet" href="styles/app-rtl.css" class="main-style">
     <!-- endbuild -->
+    
+    <!-- <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/rtl.css"> -->
 
     <!-- build:css styles/app-ltr.css -->
     <link rel="stylesheet" href="styles/app-ltr.css" class="main-style">
@@ -417,7 +415,15 @@
     <script src="../bower_components/pickadate/lib/picker.time.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/vendor/ar.js -->
-<!--     // <script src="../bower_components/pickadate/lib/translations/ar.js"></script> -->
+    <script>
+    $(function() {
+        if ($.cookie('cis-language') == 'ku') {
+            $('body').append('<script src="../bower_components/pickadate/lib/translations/ar.js"><\/script>');
+            $('head').append('<link rel="stylesheet" href="../bower_components/pickadate/lib/themes/rtl.css">');
+        }
+    })
+    </script>
+    <!-- // <script src="../bower_components/pickadate/lib/translations/ar.js"></script> -->
     <!-- endbuild -->
     <!-- build:js scripts/vendor/typeahead.js.js -->
     <script src="../bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
