@@ -631,3 +631,14 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   }
 }
 
+.tabs li.tab a {
+  color: color("cyan", "darken-3");
+  &:hover {
+    color: color("cyan", "base");
+  }
+}
+
+.tabs .indicator {
+  background-color: color("cyan", "base");
+}
+

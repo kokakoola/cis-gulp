@@ -29,6 +29,23 @@ $coolors: (
   .bg-beige { background-color: #EFECCA; }
   .bg-light { background-color: #F0F0F0; }
 
+// Fullclaendar
+$widget-light: color("blue-grey", "lighten-5");
+$widget-light-darker: color("blue-grey", "lighten-3");
+$highlight: color("cyan", "base");
+$highlight-dark: color("cyan", "darken-2");
+$highlight-bg-disabled: color("cyan", "lighten-3");
+$status-text: color("gray", "base");
+$event-chill-bg: color("brown", "lighten-4");
+$event-info-bg: color("light-blue", "lighten-4");
+$event-important-bg: color("deep-purple", "lighten-4");
+$event-success-bg: color("lime", "lighten-3");
+$text-color: color("grey", "darken-4");
+$text-disabled-color: color("grey", "darken-1");
+$border-separate: color("grey", "lighten-2");
+$lightest-neutral: color("grey", "lighten-5");
+
+
 /*** Buttons ***/
 // $button-background-disabled: #DFDFDF;
 $button-color: color("lime", "base");
@@ -67,7 +84,6 @@ $success-color: color("green", "base");
 // $disabled-color: rgba(0,0,0, .26) !default;
 // $fill-color: #0f9d58 !default;
 // $radio-border: #5a5a5a !default;
-
 
 
 /*** Global ***/
