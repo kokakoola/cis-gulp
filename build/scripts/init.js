@@ -6,7 +6,7 @@
 
     $('.tooltipped').tooltip({delay: 50});
 
-    // wow.js init
+    // wow.js init 
     new WOW().init();
 
     $('.modal-trigger').leanModal({

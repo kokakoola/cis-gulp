@@ -631,10 +631,21 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   }
 }
 
-.tabs li.tab a {
-  color: color("cyan", "darken-3");
-  &:hover {
-    color: color("cyan", "base");
+.calendar-large {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.tabs {
+  background: transparent;
+  li.tab {
+  background-color: transparent;
+    a {
+      color: color("cyan", "darken-3");
+      &:hover {
+        color: color("cyan", "base");
+      }
+    }
   }
 }
 
