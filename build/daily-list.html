@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/app-rtl.css">
+    
+    <!-- <link rel="stylesheet" href="../bower_components/pickadate/lib/themes/rtl.css"> -->
 
     <link rel="stylesheet" href="styles/app-ltr.css">
 
@@ -148,17 +150,8 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div id="placeholder-round-top-fw  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
-
-
-<h4 class="header white-text text-darken-2">{{Texts.DailyRegister}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Look it's a table"><i class="mdi-action-info-outline"></i></a></h4>
-
-</script>
-
-<!-- <a class="btn-floating btn-large waves-effect waves-light round-top add" href="daily-new.html">
-  <i class="create-case mdi-content-add"></i>
-</a> -->
+      
+      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="This is the calendar in the court"><i class="mdi-action-info-outline"></i></a></h4>
       <div class="row no-marg-bot">
         <div class="col s12">
   <div class="card overflow-visible">
@@ -213,28 +206,24 @@
 </div>
 
       </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s6">
-          <a class="active" href="#calendar">Calendar</a>
-        </li>
-        <li class="tab col s6">
-          <a href="#list">List</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card col s12" id="calendar">
-      <div class="card-content row">
-        <div id="daily-register-calendar" class="fullcalendar"></div>
+      <div >
+        <ul class="tabs col s12">
+          <li class="tab col s6">
+            <a class="active" href="#calendar">Calendar</a>
+          </li>
+          <li class="tab col s6">
+            <a href="#list">List</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="card col s12" id="list">
-      <div class="card-content row with-table">
-        <div id="placeholder-daily-register-table" class="template-placeholder"></div>
+      <div class="card calendar-large" id="calendar">
+        <div class="card-content col s12">
+          <div id="daily-register-calendar" class="fullcalendar"></div>
+        </div>
+      </div>
+      <div class="card row calendar-large" id="list">
+        <div class="card-content col s12 with-table">
+          <div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
 <script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
   <table class="hoverable bordered data">
@@ -258,7 +247,8 @@
     </tbody>
   </table>
 </script>
-        </div>
+          </div>
+      </div>
     </div>
   </div>
 
