@@ -49,7 +49,8 @@
       firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
       selectable: true,
       defaultView: 'month',
-      // axisFormat: 'hh:mm',
+      axisFormat: 'HH:mm',
+      timeFormat: 'HH:mm',
       // columnFormat: {
       //   month: 'ddd',    // Mon
       //   week: 'ddd d', // Mon 7
