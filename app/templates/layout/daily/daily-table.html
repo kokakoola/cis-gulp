@@ -7,6 +7,9 @@
       <th data-field="sum">{{Texts.Defendant}}</th>
       <th data-field="claimants">{{Texts.Claimant}}</th>
       <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+      <th data-field="date" class="sorting">Date</th>
+      <th data-field="starttime" class="sorting">Start time</th>
+      <th data-field="endtime" class="sorting">End time</th>
     </thead>
     <tbody>
       {{#each Cases}}
@@ -17,6 +20,9 @@
         <td>{{Defendant}}</td>
         <td>{{Claimant}} </td>
         <td>{{CaseNumber}}</td>
+        <td>20.05.2015</td>
+        <td>8.00</td>
+        <td>8.15</td>
       </tr>
       {{/each}}
     </tbody>

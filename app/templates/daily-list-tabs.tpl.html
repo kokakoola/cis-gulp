@@ -24,7 +24,22 @@
       <div class="row no-marg-bot">
         @@include('./layout/daily/daily-filter.html')
       </div>
-      <div class="card calendar-large">
+      <div >
+        <ul class="tabs col s12">
+          <li class="tab col s6">
+            <a class="active" href="#calendar">Calendar</a>
+          </li>
+          <li class="tab col s6">
+            <a href="#list">Unassigned cases list</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card calendar-large" id="calendar">
+        <div class="card-content col s12">
+          @@include('./layout/daily/daily-calendar.html')
+        </div>
+      </div>
+      <div class="card row calendar-large" id="list">
         <div class="card-content col s12 with-table">
           @@include('./layout/daily/daily-table.html', {
           "fwTo": "daily-new.html"

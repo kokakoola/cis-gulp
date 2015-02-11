@@ -12,6 +12,19 @@
 //   text-align: left; 
 //   }
   
+.fc-time-grid-event.fc-short .fc-title {
+  font-size: 1rem;
+  color: color("grey", "darken-4");
+}
+
+.fc-time-grid-event .fc-resizer {
+  display: none;
+}
+
+.fc-time-grid-event.fc-short .fc-time {
+  display: none;
+}
+
 .fc table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -667,7 +680,7 @@ table.fc-header{
 }
 
 .fc-unthemed .fc-today.fc-state-highlight {
-    background: $highlight-bg-disabled !important; 
+    background: color("cyan", "lighten-4") !important; 
 }
 
 .fc-view-agendaDay thead tr.fc-first .fc-widget-header{

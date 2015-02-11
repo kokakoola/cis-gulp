@@ -350,6 +350,10 @@ animation: second 30s ease infinite;
   }
 }
 
+.input-field .prefix.active {
+  color: inherit; 
+}
+
 input[type=text].valid,
 input[type=password].valid,
 input[type=email].valid,
@@ -438,6 +442,10 @@ table {
   background: #fff;
 }
 
+tr.belongs-to td:first-child {
+  padding-left: 30px;
+}
+
 // .status.bullet {
 //   display: inline-block;
 //   width: 10px;
@@ -464,33 +472,30 @@ i.status {
     content: "\e7da";
 
   }
-  &.draft {
+  &.draft, &.amber {
     color: color("amber", "darken-3");
   }
-  &.pending {
+  &.pending, &.red {
     color: color("red", "darken-4");
   }
-  &.registered {
+  &.registered, &.blue {
     color: color("light-blue", "lighten-1");
   }
-  &.in-proceedings {
+  &.in-proceedings, &.teal {
     color: color("teal", "lighten-1");
   }
-  &.in-next {
+  &.in-next, &.green {
     color: color("light-green", "base");
   }
-  &.closed {
+  &.closed, &.grey {
     color: color("grey", "base");
   }
-  &.rejected {
+  &.rejected, &.darkgrey {
     color: color("grey", "darken-4");
   }
-  &.audited {
+  &.audited, &.lightblue, &.sent {
     color: color("light-blue", "lighten-1");
   }  
-  &.sent {
-    color: color("light-blue", "lighten-1");
-  }
 
 }
 
@@ -653,3 +658,6 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   background-color: color("cyan", "base");
 }
 
+// .fc-view-container {
+//   height: auto !important;
+// }

@@ -48,7 +48,7 @@
       editable: true,
       firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
       selectable: true,
-      defaultView: 'month',
+      defaultView: 'agendaWeek',
       axisFormat: 'HH:mm',
       timeFormat: 'HH:mm',
       // columnFormat: {
@@ -62,6 +62,7 @@
       //   week: "MMMM YYYY", // September 2009
       //   day: 'MMMM YYYY'                  // Tuesday, Sep 8, 2009
       // },
+      contentHeight: 580,  
       allDaySlot: false,
       // selectHelper: true,
       businessHours: {
@@ -70,9 +71,10 @@
       },
 
       hiddenDays: [ 0, 6 ],
-      minTime: '06:00:00',
-      maxTime: '22:00:00',
+      minTime: '08:00:00',
+      maxTime: '12:00:00',
       slotEventOverlap: false,
+      slotDuration: '00:10:00', 
     // days of week. an array of zero-based day of week integers (0=Sunday)
     // (Monday-Thursday in this example)
       select: function(start, end, jsEvent, view) {
@@ -152,17 +154,25 @@
           className: 'info'
         },
         {
-          title: 'Meeting',
+          title: '2034/455',
           start: new Date(y, m, d, 08, 30),
+          end: new Date(y, m, d, 08, 40),
           allDay: false,
           className: 'important'
         },
         {
-          title: 'Lunch',
-          start: new Date(y, m, d, 09, 0),
-          end: new Date(y, m, d, 10, 0),
+          title: '2134/64',
+          start: new Date(y, m, d, 08, 40),
+          end: new Date(y, m, d, 08, 50),
           allDay: false,
           className: 'important'
+        },
+        {
+          title: '2034/457',
+          start: new Date(y, m, d, 08, 50),
+          end: new Date(y, m, d, 09, 0),
+          allDay: false,
+          className: 'info'
         },
         {
           title: 'Birthday Party',

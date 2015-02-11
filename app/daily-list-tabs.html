@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="daily-new">
+<html lang="" class="daily">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | New daily</title>
+    <title>CIS | Daily</title>
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
@@ -22,7 +22,7 @@
     <!-- endbuild -->
 
   </head>
-  <body class="daily-new">
+  <body class="daily">
 
 
 <div class="navbar-fixed">
@@ -151,236 +151,124 @@
   </script>
 </ul>
 
+
 <main>
 
   <div class="main-banner"></div>
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
-  
-  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="daily-list.html"><i class="mdi-navigation-close"></i></a>
-  <h4 class="header white-text text-darken-2">{{Texts.RegistrateHearing}}</h4>
-  
-</script>
-
-          <div class="row">
-  <div class="col s12">
-    <div class="card">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Case no 219/5312/563 5th hearing</span>
-    <div class="col s12 m2 check-inline right">
-      <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
-    </div> 
-    <div class="divider"></div>
-    <div class="row no-marg-bot ">
-      <div class="input-field col s12 m4">
-        <i class="mdi-notification-event-note prefix"></i>
-        <label for="hearingDate">Date</label>
-        <input id="hearingDate" type="text" class="datepicker">
-      </div>
-      <div class="input-field col s12 m4">
-        <i class="mdi-action-schedule prefix"></i>
-        <label for="hearingTimeStart">Start time</label>
-        <input id="hearingTimeStart" type="text" class="timepicker">
-      </div>
-      <div class="input-field col s12 m4">
-        <i class="mdi-action-schedule prefix"></i>
-        <label for="hearingTimeEnd">End time</label>
-        <input id="hearingTimeEnd" type="text" class="timepicker">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  </div>
-  <div class="col s12 m6">
-    <div class="card">
-  <div class="card-content  wow bounceInDown">
-    <span class="card-title grey-text text-darken-4">Attendees and summons</span>
-    <div class="divider"></div>
-    <div class="row">
-      <div class="col s12">
-      <table>
-        <thead>
-          <tr>
-            <th data-field="price">Full name</th>
-            <th data-field="price">Role</th>
-            <th data-field="name">Send summon <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Check if participant needs to get a written and posted summon"><i class="mdi-action-info-outline"></i></a></th>
-            <th data-field="id">Attend hearing <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Uncheck if participant is not needed"><i class="mdi-action-info-outline"></i></a></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Hookus Pookus</td>
-            <td>Claimant</td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="1"/><label for="1"> </label>
-              </div>
-            </td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="2" checked/><label for="2"> </label>
-              </div>
-            </td>
-          </tr>
-          <tr class="belongs-to">
-            <td>Kookus Pookus</td>
-            <td>Representative</td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="7"/><label for="7"> </label>
-              </div>
-            </td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="2" checked/><label for="2"> </label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Alan Mairmaid</td>
-            <td>Defendant</td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="3" checked/><label for="3"> </label>
-              </div>
-            </td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="4" checked/><label for="4"> </label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Jonathan Misterman</td>
-            <td>Participant</td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="5" checked/><label for="5"> </label>
-              </div>
-            </td>
-            <td class="center-align">
-              <div class="check-inline">
-                <input type="checkbox" id="6" checked/><label for="6"> </label>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
-  <div class="col s12 m6">
-      <div class="card">
-	<div class="card-content">
-		<div id="daily-register-calendar" class="dailycalendar"></div>
-	</div>
-</div>	
-
-
-
-  </div>
       
-  
-  
-<!--   <div class="col s12 m6 trigger-wrapper">
-      <div class="outer-container">
-        <div class="card">
-          <div class="card-content">
-            <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-form-documents-upload-template-1" class="template" data-lang="registry/case-cards/case_form_documents_upload">
-<h5 class="grey-text text-darken-4">{{Texts.Documents}}</h5>
-<div class="divider"></div>
-<div class="row no-marg-bot">
-
-  <div class="col s12">
-    <div class="row">
-    <div class="js-fileupload-plugin col s12 center">
-      <div class="js-fileupload-previews file-previews">
-        <div class="js-fileupload-preview-item row" style="display: block;">
-          <div class="js-fileupload-preview-thumbnail col s5">
-            <img src="http://placehold.it/125x125">
-          </div>
-          <div class="col s7">
-            <span class="js-fileupload-preview-filename">Toimiku otsing paigast ära.png</span>
-            <span class="js-fileupload-preview-filesize">(311.36 KB)</span>
-            <br>
-            <a class="js-fileupload-remove-click waves-effect waves-teal btn-flat"><span><i class="mdi-content-clear"></i></span></a>
-          </div>
-        </div>
-
-        <div class="js-fileupload-preview-item row" style="display: block;">
-          <div class="js-fileupload-preview-thumbnail col s5">
-            <img class="js-fileupload-preview-thumbnail-image" data-src="/CIS/assets/images/thumbnails/" src="http://placehold.it/125x125">
-          </div>
-          <div class="col s7">
-            <span class="js-fileupload-preview-filename">valduse äravõtmise akt_85-2014-45_2014_11_24.docx</span>
-            <span class="js-fileupload-preview-filesize">(37.04 KB)</span>
-            <br>
-            <a class="js-fileupload-remove-click waves-effect waves-teal btn-flat"><span><i class="mdi-content-clear"></i></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="js-fileupload-descriptionarea card-panel bg-light">
-        <h5><i class="@*Some nice upload icon*@"></i>Drag files here to upload</h5> or click to browse
-      </div>
-    </div>
-    </div>
-  </div>
-
-</div>
-</script>  
-          </div>
-        </div>
-      </div> 
-  </div> -->
-   <div class="col s12 m6">
-      <div id="placeholder-case-form-note " class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
-
-  <div class="card cyan lighten-5 wow bounceInDown">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">New  {{Texts.Note}}</span>
-      <div class="col s12 m3 check-inline right">
-        <input type="checkbox" id="Personal" class="right" />
-        <label for="Personal">Personal</label>
-      </div>
-      <a href="#!" class="card-title grey-text text-darken-4">
-        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
-      </a>
-
-      <div class="divider"></div>
+      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case"><i class="mdi-action-info-outline"></i></a></h4>
       <div class="row no-marg-bot">
-        <div class="input-field col s12">
-          <textarea class="materialize-textarea"></textarea>
-          <label><i class="mdi-content-create tiny"></i></label>
-        </div>
-      </div>
+        <div class="col s12">
+  <div class="card overflow-visible">
+    <div class="card-content" > 
+      <a class="card-title grey-text text-darken-4">Filter</a>
+      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Filter and search here"><i class="mdi-action-info-outline"></i></a>
+      <div class="divider"></div>
+      <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
+<div class="row no-marg-bot">
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input class="typeahead-input casenrs" id="caseNumber" type="text">
+    <label for="caseNumber">{{Filter.CaseNumber}}</label>
+  </div>
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input id="claimant" type="text" class="typeahead-input persons">
+    <label for="claimant">{{Filter.Claimant}}</label>
+  </div>
+  <div class="input-field typeahead-container col s12 m3 right">
+    <input id="defendants" type="text" class="typeahead-input persons">
+    <label for="defendants">{{Filter.Defendant}}</label>
+  </div>
+  <div class="input-field select-label col s12 m3 right">
+    <label class="active">{{Filter.SelectStatus}}</label> 
+    <select class="status-select">
+      <option value="" disabled selected>{{Filter.SelectStatus}}</option>
+      <option class="status pending">Pending</option>
+      <option class="status registered">Registered</option>
+    </select>
+  </div>
+</div>
+</script>
     </div>
   </div>
+</div>
+
+<div class="col s12">
+  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
+<div class="filter-action">
+  <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
+    {{Filter.ButtonSearch}}
+    <i class="mdi-navigation-search right"></i>
+  </button>
+  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}" style='display: none;'>
+    {{Filter.ButtonMoreFields}}
+    <i class="filter-toggle mdi-navigation-expand-more right"></i>
+  </button>
+  <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
+    <i class="mdi-content-clear "></i>
+  </button>
+</div>
 </script>
 
-    </div>
 </div>
 
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='daily-list.html'">Save and generate summons</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='daily-list.html'">Save</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='daily-list.html'" ><i class="mdi-content-clear"></i></button>
-
+      </div>
+      <div >
+        <ul class="tabs col s12">
+          <li class="tab col s6">
+            <a class="active" href="#calendar">Calendar</a>
+          </li>
+          <li class="tab col s6">
+            <a href="#list">Unassigned cases list</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card calendar-large" id="calendar">
+        <div class="card-content col s12">
+          <div id="daily-register-calendar" class="fullcalendar"></div>
         </div>
+      </div>
+      <div class="card row calendar-large" id="list">
+        <div class="card-content col s12 with-table">
+          <div id="placeholder-daily-register-table" class="template-placeholder"></div>
+
+<script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
+  <table class="hoverable bordered data">
+    <thead>
+      <th data-field="status" class="sorting">{{Texts.Status}}</th>
+      <th data-field="sum">{{Texts.Defendant}}</th>
+      <th data-field="claimants">{{Texts.Claimant}}</th>
+      <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+      <th data-field="date" class="sorting">Date</th>
+      <th data-field="starttime" class="sorting">Start time</th>
+      <th data-field="endtime" class="sorting">End time</th>
+    </thead>
+    <tbody>
+      {{#each Cases}}
+      <tr onClick="parent.location='daily-new.html'">
+        <td class="center">
+          <i class="status {{Status}}"></i>
+        </td>
+        <td>{{Defendant}}</td>
+        <td>{{Claimant}} </td>
+        <td>{{CaseNumber}}</td>
+        <td>20.05.2015</td>
+        <td>8.00</td>
+        <td>8.15</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>
+          </div>
       </div>
     </div>
   </div>
+
 </main>
 
 <footer class="page-footer blue-grey darken-3">
@@ -487,3 +375,4 @@
     <!-- endbuild -->
   </body>
 </html>
+

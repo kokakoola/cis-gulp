@@ -85,51 +85,51 @@ ul.table-of-contents {
 }
 
 // sidenav
-@media only screen and (max-width: 992px) {
-  ul.side-nav {
-    @include left(-1 * ($sidenav-width + 10));
-    @include rtl {
-      will-change: right;
-    }
-    @include ltr {
-      will-change: left;
-    }
-    // Right Align
-    &.right-aligned {
-    @include rtl {
-      will-change: left;
-    }
-    @include ltr {
-      will-change: right;
-    }
-      @include right( -1 * ($sidenav-width + 10));
-      @include left(auto);
-    }
-  }
-}
+// @media only screen and (max-width: 992px) {
+//   ul.side-nav {
+//     @include left(-1 * ($sidenav-width + 10));
+//     @include rtl {
+//       will-change: right;
+//     }
+//     @include ltr {
+//       will-change: left;
+//     }
+//     // Right Align
+//     &.right-aligned {
+//     @include rtl {
+//       will-change: left;
+//     }
+//     @include ltr {
+//       will-change: right;
+//     }
+//       @include right( -1 * ($sidenav-width + 10));
+//       @include left(auto);
+//     }
+//   }
+// }
 
-ul.side-nav.full,
-ul.side-nav.fixed  {
-  @include left(-1 * ($sidenav-width + 10));
-    @include rtl {
-      will-change: right;
-    }
-    @include ltr {
-      will-change: left;
-    }
+// ul.side-nav.full,
+// ul.side-nav.fixed  {
+//   @include left(-1 * ($sidenav-width + 10));
+//     @include rtl {
+//       will-change: right;
+//     }
+//     @include ltr {
+//       will-change: left;
+//     }
 
-  // Right Align
-  &.right-aligned {
-    @include rtl {
-      will-change: left;
-    }
-    @include ltr {
-      will-change: right;
-    }
-      @include right( -1 * ($sidenav-width + 10));
-    @include left(auto);
-  }
-}
+//   // Right Align
+//   &.right-aligned {
+//     @include rtl {
+//       will-change: left;
+//     }
+//     @include ltr {
+//       will-change: right;
+//     }
+//       @include right( -1 * ($sidenav-width + 10));
+//     @include left(auto);
+//   }
+// }
 
 ul.side-nav.fixed {
   @include left(0);
@@ -145,16 +145,16 @@ ul.side-nav.fixed {
   }
 }
 
-@media #{$medium-and-down} {
-  ul.side-nav.fixed {
-    @include left( -1 * ($sidenav-width + 10));
+// @media #{$medium-and-down} {
+//   ul.side-nav.fixed {
+//     @include left( -1 * ($sidenav-width + 10));
 
-    &.right-aligned {
-      @include right(-1 * ($sidenav-width + 10));
-      @include left(auto);
-    }
-  }
-}
+//     &.right-aligned {
+//       @include right(-1 * ($sidenav-width + 10));
+//       @include left(auto);
+//     }
+//   }
+// }
 
 // navbar
 nav a.button-collapse {

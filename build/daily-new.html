@@ -160,10 +160,40 @@
 </script>
 
           <div class="row">
+  <div class="col s12">
+    <div class="card">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Case no 219/5312/563 5th hearing</span>
+    <div class="col s12 m2 check-inline right">
+      <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
+    </div> 
+    <div class="divider"></div>
+    <div class="row no-marg-bot ">
+      <div class="input-field col s12 m4">
+        <i class="mdi-notification-event-note prefix"></i>
+        <label for="hearingDate">Date</label>
+        <input id="hearingDate" type="text" class="datepicker">
+      </div>
+      <div class="input-field col s12 m4">
+        <i class="mdi-action-schedule prefix"></i>
+        <label for="hearingTimeStart">Start time</label>
+        <input id="hearingTimeStart" type="text" class="timepicker">
+      </div>
+      <div class="input-field col s12 m4">
+        <i class="mdi-action-schedule prefix"></i>
+        <label for="hearingTimeEnd">End time</label>
+        <input id="hearingTimeEnd" type="text" class="timepicker">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
   <div class="col s12 m6">
     <div class="card">
   <div class="card-content  wow bounceInDown">
-    <span class="card-title grey-text text-darken-4">Case 32145</span>
+    <span class="card-title grey-text text-darken-4">Attendees and summons</span>
     <div class="divider"></div>
     <div class="row">
       <div class="col s12">
@@ -172,8 +202,8 @@
           <tr>
             <th data-field="price">Full name</th>
             <th data-field="price">Role</th>
-            <th data-field="name">Send summon</th>
-            <th data-field="id">Attend hearing</th>
+            <th data-field="name">Send summon <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Check if participant needs to get a written and posted summon"><i class="mdi-action-info-outline"></i></a></th>
+            <th data-field="id">Attend hearing <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Uncheck if participant is not needed"><i class="mdi-action-info-outline"></i></a></th>
           </tr>
         </thead>
 
@@ -184,6 +214,20 @@
             <td class="center-align">
               <div class="check-inline">
                 <input type="checkbox" id="1"/><label for="1"> </label>
+              </div>
+            </td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="2" checked/><label for="2"> </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="belongs-to">
+            <td>Kookus Pookus</td>
+            <td>Representative</td>
+            <td class="center-align">
+              <div class="check-inline">
+                <input type="checkbox" id="7"/><label for="7"> </label>
               </div>
             </td>
             <td class="center-align">
@@ -227,27 +271,8 @@
   </div>
 </div>
   </div>
-  
-  <div class="col s12 m6 trigger-wrapper">
-      <div class="card">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Pick a hearing time</span>
-    <div class="divider"></div>
-    <div class="row">
-      <div class="input-field col s12 m6">
-        <label for="hearingDate">Date</label>
-        <input id="hearingDate" type="text" class="datepicker">
-      </div>
-      <div class="input-field col s12 m6">
-        <label for="hearingTime">Time</label>
-        <input id="hearingTime" type="text" class="timepicker">
-      </div>
-    </div>
-  </div>
-</div>
 
-
-  <div class="s12 m6">
+  <div class="col s12 m6">
       <div class="card">
 	<div class="card-content">
 		<div id="daily-register-calendar" class="dailycalendar"></div>
@@ -258,9 +283,9 @@
 
   </div>
       
-  </div>
   
-  <div class="col s12 m6 trigger-wrapper">
+  
+<!--   <div class="col s12 m6 trigger-wrapper">
       <div class="outer-container">
         <div class="card">
           <div class="card-content">
@@ -310,7 +335,8 @@
           </div>
         </div>
       </div> 
-  </div>
+  </div> -->
+   <div class="col s12 m6">
       <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
@@ -336,6 +362,7 @@
   </div>
 </script>
 
+    </div>
 </div>
 
 <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='daily-list.html'">Save and generate summons</button>

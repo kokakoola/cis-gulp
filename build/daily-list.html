@@ -151,11 +151,14 @@
   <div class="card-onbanner">
     <div class="container">
       
-      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="This is the calendar in the court"><i class="mdi-action-info-outline"></i></a></h4>
+      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case"><i class="mdi-action-info-outline"></i></a></h4>
       <div class="row no-marg-bot">
         <div class="col s12">
   <div class="card overflow-visible">
-    <div class="card-content" >
+    <div class="card-content" > 
+      <a class="card-title grey-text text-darken-4">Filter</a>
+      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Filter and search here"><i class="mdi-action-info-outline"></i></a>
+      <div class="divider"></div>
       <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
 <div class="row no-marg-bot">
@@ -206,22 +209,7 @@
 </div>
 
       </div>
-      <div >
-        <ul class="tabs col s12">
-          <li class="tab col s6">
-            <a class="active" href="#calendar">Calendar</a>
-          </li>
-          <li class="tab col s6">
-            <a href="#list">List</a>
-          </li>
-        </ul>
-      </div>
-      <div class="card calendar-large" id="calendar">
-        <div class="card-content col s12">
-          <div id="daily-register-calendar" class="fullcalendar"></div>
-        </div>
-      </div>
-      <div class="card row calendar-large" id="list">
+      <div class="card calendar-large">
         <div class="card-content col s12 with-table">
           <div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
@@ -232,6 +220,9 @@
       <th data-field="sum">{{Texts.Defendant}}</th>
       <th data-field="claimants">{{Texts.Claimant}}</th>
       <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
+      <th data-field="date" class="sorting">Date</th>
+      <th data-field="starttime" class="sorting">Start time</th>
+      <th data-field="endtime" class="sorting">End time</th>
     </thead>
     <tbody>
       {{#each Cases}}
@@ -242,6 +233,9 @@
         <td>{{Defendant}}</td>
         <td>{{Claimant}} </td>
         <td>{{CaseNumber}}</td>
+        <td>20.05.2015</td>
+        <td>8.00</td>
+        <td>8.15</td>
       </tr>
       {{/each}}
     </tbody>
