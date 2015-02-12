@@ -609,6 +609,9 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   @media #{$medium-and-down} {
     width: 80%;
   }
+  h4 {
+    padding-left: 0;
+  }
 }
 
 .file-previews {
