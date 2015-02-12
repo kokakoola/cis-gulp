@@ -13,8 +13,9 @@
 //   }
   
 .fc-time-grid-event.fc-short .fc-title {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: color("grey", "darken-4");
+  padding: 5px;
 }
 
 .fc-time-grid-event .fc-resizer {
@@ -680,7 +681,7 @@ table.fc-header{
 }
 
 .fc-unthemed .fc-today.fc-state-highlight {
-    background: color("cyan", "lighten-4") !important; 
+    background: color("cyan", "lighten-5") !important; 
 }
 
 .fc-view-agendaDay thead tr.fc-first .fc-widget-header{
@@ -704,18 +705,19 @@ table.fc-header{
  /* Events
 -----------------------------------------------------*/
  
-.fc-event {
-  background: #fff !important;
-  color: #000 !important;
-  }
-  
-/* for vertical events */
-  
-.fc-event-bg {
-  display: none !important;
-  }
-  
-.fc-event .ui-resizable-handle {
-  display: none !important;
-  }
-  
+ @media print { 
+  .fc-event {
+    background: #fff !important;
+    color: #000 !important;
+    }
+    
+  /* for vertical events */
+    
+  .fc-event-bg {
+    display: none !important;
+    }
+    
+  .fc-event .ui-resizable-handle {
+    display: none !important;
+    }
+ } 

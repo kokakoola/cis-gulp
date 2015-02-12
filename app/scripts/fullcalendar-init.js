@@ -161,7 +161,7 @@
           className: 'important'
         },
         {
-          title: '2134/64',
+          title: '2134/64, Some text to inidcate we can have longer text here', 
           start: new Date(y, m, d, 08, 40),
           end: new Date(y, m, d, 08, 50),
           allDay: false,
@@ -171,8 +171,7 @@
           title: '2034/457',
           start: new Date(y, m, d, 08, 50),
           end: new Date(y, m, d, 09, 0),
-          allDay: false,
-          className: 'info'
+          allDay: false
         },
         {
           title: 'Birthday Party',
