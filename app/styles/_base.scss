@@ -19,9 +19,22 @@ html, body {
   width: 95%;
 }
 
-.select-wrapper span.select-dropdown {
-  height: 4rem;
-  line-height: 5rem;
+// .select-wrapper span.select-dropdown {
+//   height: 4rem;
+//   line-height: 5rem;
+// }
+
+
+// .select-inline {
+//   .select-wrapper span.select-dropdown {
+//   height: 3rem;
+//   line-height: 3rem;
+//   }
+// }
+
+.select-label .select-wrapper span.select-dropdown {
+  line-height:3rem;
+  height:3rem;
 }
 
 .card {
@@ -398,12 +411,6 @@ textarea.valid {
   height: 3rem;
 }
 
-.select-inline {
-  .select-wrapper span.select-dropdown {
-  height: 3rem;
-  line-height: 3rem;
-  }
-}
 
 .valign-bottom {
   align-self: flex-end;
@@ -591,10 +598,6 @@ span.tt-dropdown-menu{
   color: #03a9f4;
 }
 
-.select-label .select-wrapper span.select-dropdown {
-  line-height:3rem;
-  height:3rem;
-}
 
 table.dataTable.order-column tbody tr > .sorting_1, {
    background-color: whitesmoke;
