@@ -98,7 +98,7 @@
       },
 
       eventClick: function(event, jsEvent, view) {
-        if(view.name == 'agendaWeek') {
+        if(view.name == 'agendaWeek' || view.name == 'month') {
           $('#daily-register-calendar').fullCalendar('changeView', 'agendaDay');
           $('#daily-register-calendar').fullCalendar('gotoDate', date);
         } else if (view.name == 'agendaDay') {
