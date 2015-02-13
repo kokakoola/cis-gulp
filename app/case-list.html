@@ -180,19 +180,22 @@
 <!-- <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
   <i class="create-case mdi-content-add"></i>
 </a> -->
-          <div class="row">
+          <div id="placeholder-list-filter2-action" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="list-filter2-action-template" class="template" data-lang="common/list_filter_action2">
+<div class="row">
 <div class="col s12">
   <div class="filter-action upper">
     <a href="case-new.html" class="btn btn-large waves-effect right waves-light submit" >
-      Add new case
+      {{Filter.ButtonAddNewCase}}
       <i class="mdi-navigation-search right"></i>
     </a>
-    <button class="btn btn-large waves-effect waves-light save right collapsed" type="button" data-toggle="collapse" data-target="#showFilter" data-less-text="Hide filter" @@hidden>
-      Display filter
+    <button class="btn btn-large waves-effect waves-light save right collapsed" type="button" data-toggle="collapse" data-target="#showFilter" data-less-text="{{Filter.ButtonHideFilter}}" @@hidden>
+      {{Filter.ButtonDisplayFilter}}
     </button>
   </div>
 </div>
 </div>
+</script>
           
 
     <div class="collapse" id="showFilter">
