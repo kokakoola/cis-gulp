@@ -1,16 +1,16 @@
 {
   "Texts" : {
-    "Audit" : "Audit",
-    "NewAudit" : "New audit",
-    "CaseAssesment" : "Case assesment",
-    "EditCase" : "Edit case",
-    "PrimeRegistry" : "Prime registry",
-    "NewCase" : "New case",
-    "DailyRegister" : "Daily register",
-    "RegistrateHearing" : "Registrate hearing",
-    "ViewFee" : "View fee",
-    "Fee" : "Fee",
-    "NewFee" : "New fee",
-    "RegisterSummons" : "Register an outgoing summons"
+    "Audit" : "Audit ku",
+    "NewAudit" : "New audit ku",
+    "CaseAssesment" : "Case assesment ku",
+    "EditCase" : "Edit case ku",
+    "PrimeRegistry" : "Prime registry ku",
+    "NewCase" : "New case ku",
+    "DailyRegister" : "Daily register ku",
+    "RegistrateHearing" : "Registrate hearing ku",
+    "ViewFee" : "View fee ku",
+    "Fee" : "Fee ku",
+    "NewFee" : "New fee ku",
+    "RegisterSummons" : "Register an outgoing summons ku"
   }
 }
