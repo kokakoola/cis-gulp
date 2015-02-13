@@ -165,9 +165,12 @@
 
   <div class="card-onbanner">
     <div class="container">
-      
-      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case"><i class="mdi-action-info-outline"></i></a></h4>
-      <div class="row no-marg-bot">
+	    
+		 <div id="placeholder-register_filter_header" class="filtering template-placeholder"></div>
+		<script type="text/x-handlebars-template" id="register_filter_header-template" class="template" data-lang="daily-register/daily_register_filter_header">
+			<h4 class="header white-text text-darken-2">{{DailyRegister}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{DailyRegisterInfo}}"><i class="mdi-action-info-outline"></i></a></h4>
+		</script>
+		 <div class="row no-marg-bot">
         <div class="col s12">
   <div class="card overflow-visible">
     <div class="card-content" > 

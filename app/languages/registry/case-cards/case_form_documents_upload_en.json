@@ -3,7 +3,22 @@
     "Documents" : "Documents",
     "DropFilesHere" : "Drop files here to upload",
     "ClickHere" : "or click here",
-    "ButtonSave" : "Save"
+    "ButtonSave" : "Save",
+	"Author" : "Author",
+	"DateOfArrival" : "Date of arrival",
+	"DateOfRegister" : "Date of registration",
+	"Search" : "Search",
+	"Description" : "Description",
+	"Personal" : "Personal",
+	"Notes" : "Notes",
+	"Type" : {
+	    "FirstValue" : "Type",
+	    "Values" : ["Claim document"]
+	},
+	"Category" : {
+		 "FirstValue" : "Category",
+	    "Values" : ["Incoming", "Outgoing"]
+	}
   },
 
   "Headers" : {

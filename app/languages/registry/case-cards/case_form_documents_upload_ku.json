@@ -3,7 +3,22 @@
     "Documents" : "به‌ڵگه‌نامه‌ ",
     "DropFilesHere" : "فابله‌كان لێره‌ دابنێ بۆ ئه‌پلۆد كردنيان",
     "ClickHere" : "يان كرته‌ بكه‌ لێره‌ ",
-    "ButtonSave" : "هه‌ڵگرتن"
+    "ButtonSave" : "هه‌ڵگرتن",
+	"Author" : "Author ku",
+	"DateOfArrival" : "Date of arrival ku",
+	"DateOfRegister" : "Date of registration ku",
+	"Search" : "Search ku",
+	"Description" : "Description ku",
+	"Personal" : "Personal ku",
+	"Notes" : "Notes ku",
+	"Type" : {
+	    "FirstValue" : "Type ku",
+	    "Values" : ["Claim document ku"]
+	},
+	"Category" : {
+		 "FirstValue" : "Category ku",
+	    "Values" : ["Incoming ku", "Outgoing ku"]
+	}
   },
 
   "Headers" : {

@@ -1,0 +1,11 @@
+{
+	"Texts" : {
+		"Author" : "Author",
+		"DateOfArrival" : "Date of arrival",
+		"Search" : "Search",
+		"Type" : {
+	      "FirstValue" : "Type",
+	      "Values" : ["Claim document"]
+	    }
+	}
+}

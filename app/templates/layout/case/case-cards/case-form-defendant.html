@@ -1,5 +1,5 @@
 <div id="placeholder-case-form-defendant" class="template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="case-form-defendant-template" class="template" data-lang="registry/case-cards/case_form_defendant">
+<script type="text/x-handlebars-template" id="case-form-defendant-template" class="template" data-lang="registry/case-cards/case_form_defendant">
     <div class="card overflow-visible wow bounceInDown">
       <div class="card-content">
         <div>
@@ -30,11 +30,10 @@
           <div class="row">
             <div class="input-field col s12 m6 select-inline left">
               <select>
-                <option value="" disabled selected>Dokumendi liik</option>
-                <option>1</option>
-                <option>1</option>
-                <option>3</option>
-                <option>4</option>
+                <option value="" disabled selected>{{Texts.DocumentType.FirstValue}}</option>
+			  	{{#each DocumentType.Type.Values}}
+			  	<option value="{{@index}}">{{this}}</option>
+			  	{{/each}}
               </select>
             </div>
             <div class="input-field typeahead-container  col s12 m3 left">

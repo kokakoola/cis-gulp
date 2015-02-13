@@ -6,7 +6,11 @@
 		"FullName" : "Defendants full name",
     	"Address" : "Defendants address",
     	"DocumentNumber" : "Document number",
-    	"Phone" : "Claimants phone"
+    	"Phone" : "Claimants phone",
+		"DocumentType" : {
+			"FirstValue" :  "Document type ku",
+			"Values": ["1", "2", "3", "4"]
+		}
 	},
 	"Content" : {
 		"FullName" : "Ronak Abdulkader Muhammed",

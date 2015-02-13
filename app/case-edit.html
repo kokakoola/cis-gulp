@@ -233,21 +233,23 @@
 	<form action="">
 		<div class="col s12 m6 l4">
 			<select name="" id="type-1">
-				<option value="" selected disabled>Type</option>
-				<option value="">Claim document</option>
+				<option value="" selected disabled>{{Texts.Type.FirstValue}}</option>
+				{{#each Texts.Type.Values}}
+				<option value="{{@index}}">{{this}}</option>
+				{{/each}}
 			</select>
 		</div>
 		<div class="input-field col s12 m6 l4">
 			<input type="text" id="author-1">
-			<label for="author-1">Author</label>
+			<label for="author-1">{{Text.Author}}</label>
 		</div>
 		<div class="input-field col s12 m6 l4">
-			<label for="registerDate-1">Date of arrival</label>
+			<label for="registerDate-1">{{Texts.DateOfArrival}}</label>
 			<input id="registerDate-1" type="text" class="datepicker today">
 		</div>
 		<div class="filter-action col s12">
 			<button class="btn waves-effect waves-light submit left" type="button" name="search">
-				Search
+				{{Texts.Search}}
 				<i class="mdi-navigation-search right"></i>
 			</button>
 			<button class="btn waves-effect waves-light btn-flat left" name="clear">
@@ -339,7 +341,7 @@
         </div>
       </div>
       <div class="js-fileupload-descriptionarea card-panel bg-light">
-        <h5><i class="@*Some nice upload icon*@"></i>Drag files here to upload</h5> or click to browse
+	  	<h5><i class="@*Some nice upload icon*@"></i>{{Texts.DropFilesHere}}</h5> {{Texts.ClickHere}}
       </div>
     </div>
     </div>
@@ -350,42 +352,43 @@
       <div class="row">
         <div class="col s12">
           <select>
-            <option value="" disabled selected>Type</option>
-            <option value="1">Claim document</option>
-            <option value="2">Decisioin</option>
-            <option value="3">Option 3</option>
+            <option value="" disabled selected>{{Texts.Type.FirstValue}}</option>
+		  	{{#each Texts.Type.Values}}
+		  	<option value="{{@index}}">{{this}}</option>
+		  	{{/each}}
           </select>
         </div>
         <div class="col s12">
           <select id="category">
-            <option value="" disabled selected>Category</option>
-            <option value="1">Incoming</option>
-            <option value="2">Outgoing</option>
+           <option value="" disabled selected>{{Texts.Category.FirstValue}}</option>
+		  	{{#each Texts.Category.Values}}
+		  	<option value="{{@index}}">{{this}}</option>
+		  	{{/each}}
           </select>
         </div>
         <div class="input-field col s12">
           <input id="author" type="text" class="validate">
-          <label for="author">Author</label>
+          <label for="author">{{Texts.Author}}</label>
         </div>
         <div class="input-field col s12">
-          <label for="registrationDate">Date of registration</label>
+          <label for="registrationDate">{{Texts.Author}}</label>
           <input id="registrationDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
-          <label for="arrivalDate">Date of arrival</label>
+          <label for="arrivalDate">{{Texts.DateOfRegister}}</label>
           <input id="arrivalDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
           <textarea class="materialize-textarea"></textarea>
-          <label>Description</label>
+          <label>{{Texts.Description}}</label>
         </div>
         <div class="input-field col s12">
           <div class="col s12 m4 right">
             <input type="checkbox" id="Personal" class="right" />
-            <label for="Personal">Personal</label>
+            <label for="Personal">{{Texts.Personal}}</label>
           </div>
           <textarea class="materialize-textarea"></textarea>
-          <label>Notes</label>
+          <label>{{Texts.Notes}}</label>
         </div>
       </div>
     </form>

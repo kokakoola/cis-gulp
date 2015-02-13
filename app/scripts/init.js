@@ -41,6 +41,8 @@
     }
 
     function bindFormsUi() {
+
+    	$('ul.tabs').tabs();
       // pickadate init with preset Today
       $('.datepicker.today').pickadate({
         onStart: function ()
