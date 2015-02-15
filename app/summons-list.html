@@ -164,12 +164,12 @@
     <div class="container">
       <div class="row no-marg-bot">
         <div class="col s12">
-          <h4 class="header white-text text-darken-2">Summons</h4>
           <div id="placeholder-summons-filter" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
-	<div class="card overflow-visible">
-	  <div class="card-content" >
-	    <div class="row no-marg-bot">
+  <h4 class="header white-text text-darken-2">{{Filter.Summons}}</h4>
+  <div class="card overflow-visible">
+    <div class="card-content">
+      <div class="row no-marg-bot">
   <div class="input-field select-label col s12 m4 right">
     <label class="active">{{Filter.Status.Label}}</label>  
     <select class="status-select">
@@ -229,8 +229,8 @@
   </div>
 
 </div>
-	  </div>
-	</div>
+    </div>
+  </div>
 </script>
 <div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">

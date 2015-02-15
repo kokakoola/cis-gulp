@@ -34,6 +34,7 @@
     "SelectSummoner" : "Select summoner",
     "SummonsDocument": "Summons document",
     "Pending": "Pending",
-    "Sent": "Sent"
+    "Sent": "Sent",
+    "Summons" : "Summons"
   }
 }

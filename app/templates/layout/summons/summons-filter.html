@@ -1,10 +1,11 @@
 <div id="placeholder-summons-filter" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
-	<div class="card overflow-visible">
-	  <div class="card-content" >
-	    @@include('./summons-filter-content.html')
-	  </div>
-	</div>
+  <h4 class="header white-text text-darken-2">{{Filter.Summons}}</h4>
+  <div class="card overflow-visible">
+    <div class="card-content">
+      @@include('./summons-filter-content.html')
+    </div>
+  </div>
 </script>
 @@include('../common/list-filter-action.html')
 
