@@ -1,49 +1,47 @@
-<div class="card overflow-visible wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
-    <div class="col s12 m3 check-inline">
-      <input type="checkbox" id="grantJudicialAid" checked>
-      <label for="grantJudicialAid">Grant judicial aid</label>
-    </div>
-    <div class="divider"></div>
-    <div class="row no-marg-bot">
-      <div class="col s12 m6">
-        <div class="input-field typeahead-container " @@hiddenCaseNumber>
-          <input id="caseNr" type="text" class="typeahead-input casenrs">
-          <label for="caseNr">Case Nr</label>
+<div id="placeholder-fee-audit-form-general  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="fee-audit-form-general-template" class="template" data-lang="fee/fee_audit_form_general">
+  <div class="card overflow-visible wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4"> {{Texts.CaseNo}} {{Texts.CaseNoValue}}</span>
+      <div class="col s12 m3 check-inline">
+        <input type="checkbox" id="grantJudicialAid" checked>
+        <label for="grantJudicialAid">{{Texts.GrantJudicialAid}}</label>
+      </div>
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="col s12 m6">
+          <div class="input-field typeahead-container " @@hiddencasenumber>
+            <input id="caseNr" type="text" class="typeahead-input casenrs">
+            <label for="caseNr">{{Texts.CaseNr}}</label>
+          </div>
+          <br>
+          <div class="input-field">
+            <input id="courtName" type="text" disabled>
+            <label for="courtName">{{Texts.CourtName}}</label>
+          </div>
+          <br>
+          <div class="input-field">
+            <input id="caseType" type="text" disabled>
+            <label for="caseType">{{Texts.CaseType}}</label>
+          </div>
+          <br>
+          <div class="input-field">
+            <input id="caseValue" type="text" @@casevaluedisabled>
+            <label for="caseValue">{{Texts.CaseValue}}</label>
+          </div>
         </div>
-        <br>
-        <div class="input-field">
-          <input id="courtName" type="text" disabled>
-          <label for="courtName">Court Name</label>
-        </div>
-        <br>
-        <div class="input-field">
-          <input id="caseType" type="text" disabled>
-          <label for="caseType">Case type</label>
-        </div>
-        <br>
-        <div class="input-field">
-          <input id="caseValue" type="text" @@caseValueDisabled>
-          <label for="caseValue">Case value</label>
+
+        <div class="col s12 m6">
+          <br>
+          <h6>{{Texts.Participants}}</h6>
+          <hr>
+          <ul>
+            {{#each Texts.ParticipantsNames}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
         </div>
       </div>
-
-      <div class="col s12 m6">
-        <br>
-        <h6>Participants</h6>
-        <hr>
-        <ul>
-          <li>Forename Middlename Surname,</li>
-          <li>Forename Middlename Surname,</li>
-          <li>Forename Surname,</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
-      </div>
-
-
-
-      
     </div>
   </div>
-</div>
+</script>

@@ -1,60 +1,62 @@
-<div class="card brown lighten-5  wow bounceInDown cont-padding">
-  <div class="card-content">
-    <div class="row no-marg-bot">
+<div id="placeholder-audit-form-add-fees  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-form-add-fees-template" class="template" data-lang="fee/audit_form_add_fees">
+  <div class="card brown lighten-5  wow bounceInDown cont-padding">
+    <div class="card-content">
+      <div class="row no-marg-bot">
         <!-- <div class="col s12">
-        <span class="card-title grey-text text-darken-4">Fees</span>
-        
-        <div class="divider"></div>
-      </div> -->
-      <div class="input-field col s6">
-        <input id="sum" type="text" value="@@sum2" @@disabled>
-        <label for="sum">Sum</label>
-      </div>
-      <!-- <div class="input-field col s6">
-        <input id="feeType" type="text">
-        <label for="feeType">Fee type one</label>
-      </div> -->
-      <div class="input-field col s6 select-inline">
-        <select>
-          <option value="" disabled selected>Fee type</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-      </div>
-    </div>
-    <div class="row no-marg-bot @@hidden">
-      <div class="input-field col s6">
-        <input id="sum1" type="text" value="@@sum1" @@disabled>
-        <label for="sum1">Sum</label>
-      </div>
-      <div class="input-field col s6">
-        <input id="feeType1" type="text">
-        <label for="feeType1">Fee type two</label>
-      </div>
-    </div>
-    <div class="row no-marg-bot">
-      <a href='#!' class="dropdown-button btn white right"  data-activates='addFee'>Add fee</a>
-    </div>
-    <!-- <div class="row no-marg-bot">
-      <hr>
-      <div class="col s6">
-        <h6>
-          <strong>@@total $</strong>
-        </h6>
-      </div>
-      <div class="col s6">
-        <h6>
-          <strong>Total</strong>
-        </h6>
-      </div>
-    </div> -->
-  </div>
-</div>
+          <span class="card-title grey-text text-darken-4">Fees</span>
 
-<!-- Dropdown Structure -->
-<ul id='addFee' class='dropdown-content'>
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li><a href="#!">three</a></li>
-</ul>
+          <div class="divider"></div>
+        </div> -->
+        <div class="input-field col s6">
+          <input id="sum" type="text" value="@@sum2" @@disabled>
+          <label for="sum">{{Texts.Sum}}</label>
+        </div>
+        <!-- <div class="input-field col s6">
+          <input id="feeType" type="text">
+          <label for="feeType">Fee type one</label>
+        </div> -->
+        <div class="input-field col s6 select-inline">
+          <select>
+            {{#each Texts.FeeType.Values}}
+            <option value="{@index}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+      <div class="row no-marg-bot @@hidden">
+        <div class="input-field col s6">
+          <input id="sum1" type="text" value="@@sum1" @@disabled>
+          <label for="sum1">{{Texts.Sum}}</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="feeType1" type="text">
+          <label for="feeType1">{{Texts.FeeTypeTwo}}</label>
+        </div>
+      </div>
+      <div class="row no-marg-bot">
+        <a href='#!' class="dropdown-button btn white right" data-activates='addFee'>{{Texts.AddFee.Label}}</a>
+      </div>
+      <!-- <div class="row no-marg-bot">
+        <hr>
+        <div class="col s6">
+          <h6>
+            <strong>@@total $</strong>
+          </h6>
+        </div>
+        <div class="col s6">
+          <h6>
+            <strong>Total</strong>
+          </h6>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Dropdown Structure -->
+  <ul id='addFee' class='dropdown-content'>
+    {{#each Texts.AddFee.Values}}
+    <li><a href="#!">{{this}}</a></li>
+    {{/each}}
+  </ul>
+</script>

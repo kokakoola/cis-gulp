@@ -1,6 +1,6 @@
 {
-	"DailyRegister" : "Daily register ku",
-	"DailyRegisterInfo" : "Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case ku",
-	"Calendar" : "Calendar ku",
-	"UnassignedCasesList" : "Unassigned cases list ku"
+  "DailyRegister": "Daily register ku",
+  "DailyRegisterInfo": "Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case ku",
+  "Calendar": "Calendar ku",
+  "UnassignedCasesList": "Unassigned cases list ku"
 }

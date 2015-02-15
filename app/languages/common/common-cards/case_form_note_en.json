@@ -1,5 +1,7 @@
 {
-  "Texts" : {
-    "Note" : "Note"
+  "Texts": {
+    "Note": "Note",
+    "NewNote": "New Note",
+    "Personal": "Personal"
   }
 }

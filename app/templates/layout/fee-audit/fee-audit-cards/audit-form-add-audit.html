@@ -1,24 +1,27 @@
-<a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
-<div class="card brown lighten-5  wow bounceInDown">
-  <div class="card-content">
-    <div class="row">
-<!--       <div class="col s12">
-        <span class="card-title grey-text text-darken-4">Fee</span>
-        
-        <div class="divider"></div>
-      </div> -->
-      <div class="input-field col s4">
-        <input id="sum" type="text">
-        <label for="sum">Sum</label>
-      </div>
-      <div class="col s8">
-        <select>
-          <option value="" disabled selected>Fee type</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
+<div id="placeholder-audit-form-add-audit  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-form-add-audit-template" class="template" data-lang="fee/audit_form_add_fees">
+  <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a>
+  <div class="card brown lighten-5  wow bounceInDown">
+    <div class="card-content">
+      <div class="row">
+        <!--       <div class="col s12">
+                <span class="card-title grey-text text-darken-4">Fee</span>
+
+                <div class="divider"></div>
+              </div> -->
+        <div class="input-field col s4">
+          <input id="sum" type="text">
+          <label for="sum">{{Texts.Sum}}</label>
+        </div>
+        <div class="col s8">
+          <select>
+            <option value="" disabled selected>{{Texts.FeeType.Label}}</option>
+            {{#each Texts.FeeType.Values}}
+            <option value="{@index}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</script>

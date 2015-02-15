@@ -3,7 +3,10 @@
     "CaseNumber": "ژماره‌ى داوا",
     "Claimant": "ناوى داواكار",
     "Defendant": "ناوى داواله‌سه‌ر كراو",
-    "Status": "قۆناغ"
+    "Status": "قۆناغ",
+    "Date": "Date ku",
+    "StartTime": "Start time ku",
+    "EndTime": "End time ku"
   },
 
   "Cases": [

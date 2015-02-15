@@ -1,0 +1,33 @@
+{
+  "Texts": {
+    "AttendeesAndSummons": "Attendees and summons",
+    "FullName": "Full name",
+    "Role": "Role",
+    "SendSummon": "Send summon",
+    "SendSummonInfo": "Check if participant needs to get a written and posted summon",
+    "AttendHearing": "Attend hearing",
+    "AttendHearingInfo": "Uncheck if participant is not needed"
+  },
+  "Persons": [
+    {
+      "Name": "Hookus Pookus",
+      "Type": "Claimant",
+      "IsRepresentative" : false
+    },
+    {
+      "Name": "Hookus Pookus",
+      "Type": "Representative",
+      "IsRepresentative" : true
+    },
+    {
+      "Name": "Alan Mairmaid",
+      "Type": "Defendant",
+      "IsRepresentative" : false
+    },
+    {
+      "Name": "Jonathan Misterman",
+      "Type": "Participant",
+      "IsRepresentative" : false
+    }
+  ]
+}

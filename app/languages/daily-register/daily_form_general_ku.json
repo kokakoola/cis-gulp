@@ -1,0 +1,33 @@
+{
+  "Texts": {
+    "AttendeesAndSummons": "Attendees and summons ku",
+    "FullName": "Full name ku",
+    "Role": "Role ku",
+    "SendSummon": "Send summon ku",
+    "SendSummonInfo": "Check if participant needs to get a written and posted summon ku",
+    "AttendHearing": "Attend hearing ku",
+    "AttendHearingInfo": "Uncheck if participant is not needed ku"
+  },
+  "Persons": [
+    {
+      "Name": "Hookus Pookus ku",
+      "Type": "Claimant ku",
+      "IsRepresentative" : false
+    },
+    {
+      "Name": "Hookus Pookus ku",
+      "Type": "Representative ku",
+      "IsRepresentative" : true
+    },
+    {
+      "Name": "Alan Mairmaid ku",
+      "Type": "Defendant ku",
+      "IsRepresentative" : false
+    },
+    {
+      "Name": "Jonathan Misterman ku",
+      "Type": "Participant ku",
+      "IsRepresentative" : false
+    }
+  ]
+}

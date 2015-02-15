@@ -180,30 +180,33 @@
 <div class="row">
 
   <div class="col s12 m6">
-    <div class="card  wow bounceInDown">
-  <div class="card-content">
-   <span class="card-title grey-text text-darken-4">2014 / B / 23</span>
-    <div class="divider"></div>
-    <div class="row">
-      <div class="input-field col s12">
-        <label for="courtname">Court name</label>
-        <input id="courtname" type="text" value="Primary court 1" disabled>
+    <div id="placeholder-summons-card-casenr  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="summons-card-casenr-template" class="template" data-lang="summons/summons_card_casenr">
+  <div class="card  wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.CaseNoValue}}</span>
+      <div class="divider"></div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="courtname" class="active">{{Texts.CourtName}}</label>
+          <input id="courtname" type="text" value="{{Texts.CourtNameValue}}" disabled>
+        </div>
+        <div class="input-field col s12">
+          <input id="judge" type="text" value="{{Texts.JudgeValue}}" disabled >
+          <label for="judge" class="active">{{Texts.Judge}}</label>
+        </div>
+        <div class="input-field col s12">
+          <label for="dateofhearing">{{Texts.DateOfHearing}}</label>
+          <input id="dateofhearing" type="text" class="datepicker today" disabled>
+        </div>
+        <div class="input-field col s12">
+          <input id="addressee" type="text" value="{{Texts.AddresseeValue}}" class="active" disabled >
+          <label for="addressee" class="active">{{Texts.Addressee}}</label>
+        </div>
       </div>
-      <div class="input-field col s12">
-        <input id="judge" type="text" value="Ahmed Khadr Omar" disabled>
-        <label for="judge">Judge</label>
-      </div>      
-      <div class="input-field col s12">
-        <label for="dateofhearing">Date of hearing</label>
-        <input id="dateofhearing" type="text" class="datepicker today" disabled>
-      </div>
-      <div class="input-field col s12">
-        <input id="addressee" type="text" value="Ahmed Khadr Omar" disabled>
-        <label for="addressee">Addressee</label>
-      </div>         
     </div>
   </div>
-</div>
+</script>
   </div>
 
   <div id="placeholder-summons-filter" class="template-placeholder"></div>
@@ -211,7 +214,7 @@
   <div class="col s12 m6">
     <div class="card  wow bounceInDown">
   <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Summons document</span>
+    <span class="card-title grey-text text-darken-4">{{Filter.SummonsDocument}}</span>
     <div class="divider"></div>
     <br>
     <div class="col m6">    
@@ -244,11 +247,12 @@
   </div>
   </script>
 </div>
-
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='summons-list.html'">Register</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='summons-list.html'"><i class="mdi-action-print right"></i>Print</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='summons-list.html'" ><i class="mdi-content-clear"></i></button>
-
+<div id="placeholder-summons-new  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="summons-new-template" class="template" data-lang="summons/summons_new">
+  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='summons-list.html'">{{Texts.Register}}</button>
+  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='summons-list.html'"><i class="mdi-action-print right"></i>{{Texts.Print}}</button>
+  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='summons-list.html'"><i class="mdi-content-clear"></i></button>
+</script>
 
         </div>
       </div>

@@ -31,6 +31,9 @@
     "DateOfDispatch" : "Date of dispatch",
     "SelectStatus" : "Select status",
     "SelectCourt" : "Select court",
-    "SelectSummoner" : "Select summoner"
+    "SelectSummoner" : "Select summoner",
+    "SummonsDocument": "Summons document",
+    "Pending": "Pending",
+    "Sent": "Sent"
   }
 }
