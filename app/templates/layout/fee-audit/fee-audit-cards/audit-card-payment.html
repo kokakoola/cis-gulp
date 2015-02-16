@@ -1,24 +1,27 @@
-<div class="card overflow-visible wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Payment</span>
-    <div class="divider"></div>
-    <div class="row">
-      <div class="input-field typeahead-container col col s12">
-        <label for="payer">Payer</label>
-        <input id="payer" type="text" class="typeahead-input persons" value="This Man Named Somebody, This Man Else"> 
-      </div>
-      <div class="input-field col s12">
-        <label for="paymentDate">Payment date</label>
-        <input id="paymentDate" type="text" class="datepicker today">
-      </div>
-      <div class="input-field col s12">
-        <label for="receiptNo">Receipt No</label>
-        <input id="receiptNo" type="text" value="32525" disabled>
-      </div>
-      <div class="input-field col s12">
-        <label for="sum2">Total</label>
-        <input id="sum2" type="text" value="@@total" disabled>
+<div id="placeholder-audit-card-payment  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-card-payment-template" class="template" data-lang="fee/audit_card_payment">
+  <div class="card overflow-visible wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Payment}}</span>
+      <div class="divider"></div>
+      <div class="row">
+        <div class="input-field typeahead-container col col s12">
+          <label for="payer" class="active">{{Texts.Payer}}</label>
+          <input id="payer" type="text" class="typeahead-input persons" value="{{Texts.PayerValue}}">
+        </div>
+        <div class="input-field col s12">
+          <label for="paymentDate" class="active">{{Texts.PaymentDate}}</label>
+          <input id="paymentDate" type="text" class="datepicker today">
+        </div>
+        <div class="input-field col s12">
+          <label for="receiptNo" class="active">{{Texts.ReceiptNo}}</label>
+          <input id="receiptNo" type="text" value="32525" disabled>
+        </div>
+        <div class="input-field col s12">
+          <label for="sum2" class="active">{{Texts.Total}}</label>
+          <input id="sum2" type="text" value="@@total" disabled>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</script>

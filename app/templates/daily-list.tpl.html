@@ -16,12 +16,15 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <!-- @@include('./layout/common/round-top-fw.html', {
-        "formName": "{{Texts.DailyRegister}}",
-        "fwTo": "daily-new.html"
-      }) -->
-      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case"><i class="mdi-action-info-outline"></i></a></h4>
-      <div class="row no-marg-bot">
+	    <!-- @@include('./layout/common/round-top-fw.html', {
+	    "formName": "{{Texts.DailyRegister}}",
+	    "fwTo": "daily-new.html"
+	    }) -->
+		 <div id="placeholder-register_filter_header" class="filtering template-placeholder"></div>
+		<script type="text/x-handlebars-template" id="register_filter_header-template" class="template" data-lang="daily-register/daily_register_filter_header">
+			<h4 class="header white-text text-darken-2">{{DailyRegister}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{DailyRegisterInfo}}"><i class="mdi-action-info-outline"></i></a></h4>
+		</script>
+		 <div class="row no-marg-bot">
         @@include('./layout/daily/daily-filter.html')
       </div>
       <div class="card calendar-large">

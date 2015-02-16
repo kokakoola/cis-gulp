@@ -1,0 +1,17 @@
+{
+  "Texts": {
+    "CaseNo": "Case No ku",
+    "CaseNoValue": "213/23/255",
+    "GrantJudicialAid": "Grant judicial aid ku",
+    "Court":  {
+      "Label": "Court ku",
+      "Values": [ "1","2","3" ]
+    },
+    "Payer": "Payer ku",
+    "CaseType": {
+      "Label": "Case type ku",
+      "Values": [ "استملاك", "property aquizition ku", "Option 3 ku" ]
+    },
+    "PaymentDate": "Payment date ku"
+  }
+}

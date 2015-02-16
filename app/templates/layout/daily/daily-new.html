@@ -25,7 +25,9 @@
     </div>
 
 </div>
-
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Save and generate summons</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Save</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>
+<div id="placeholder-daily-new  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="daily-new-template" class="template" data-lang="daily-register/daily_new">
+  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">{{Texts.SaveAndGenerateSummons}}</button>
+  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">{{Texts.Save}}</button>
+  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'"><i class="mdi-content-clear"></i></button>
+</script>

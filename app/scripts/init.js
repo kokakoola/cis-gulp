@@ -41,6 +41,8 @@
     }
 
     function bindFormsUi() {
+
+    	$('ul.tabs').tabs();
       // pickadate init with preset Today
       $('.datepicker.today').pickadate({
         onStart: function ()
@@ -73,17 +75,19 @@
           $(this).button('reset');
         }
       });
+
+      $(".dropdown-button").dropdown({
+      	constrain_width: false,
+      	hover: false
+      });
+
+      $(".dropdown-button-simplified").dropdown({
+      	constrain_width: false,
+      	hover: false
+      });
     }
 
-    $(".dropdown-button").dropdown({
-      constrain_width: false,
-      hover: false
-    });
-
-    $(".dropdown-button-simplified").dropdown({
-      constrain_width: false,
-      hover: false
-    });
+  
 
     bindDataTable();
     bindFormsUi();

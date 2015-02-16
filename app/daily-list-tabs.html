@@ -161,20 +161,26 @@
 
 <main>
 
-  <div class="main-banner"></div>
+	<div class="main-banner"></div>
 
-  <div class="card-onbanner">
-    <div class="container">
-      
-      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case"><i class="mdi-action-info-outline"></i></a></h4>
-      <div class="row no-marg-bot">
-        <div class="col s12">
+	<div class="card-onbanner">
+		<div class="container">
+			
+			<div id="placeholder-register_filter_header" class="filtering template-placeholder"></div>
+			<script type="text/x-handlebars-template" id="register_filter_header-template" class="template" data-lang="daily-register/daily_register_filter_header">
+				<h4 class="header white-text text-darken-2">{{DailyRegister}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{DailyRegisterInfo}}"><i class="mdi-action-info-outline"></i></a></h4>
+			</script>
+			<div class="row no-marg-bot">
+				<div class="col s12">
   <div class="card overflow-visible">
-    <div class="card-content" > 
-      <a class="card-title grey-text text-darken-4">Filter</a>
-      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Filter and search here"><i class="mdi-action-info-outline"></i></a>
-      <div class="divider"></div>
-      <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+    <div class="card-content">
+      <div id="placeholder-daily-filter  wow bounceInDown" class="template-placeholder"></div>
+      <script type="text/x-handlebars-template" id="daily-filter-template" class="template" data-lang="daily-register/daily_filter">
+        <a class="card-title grey-text text-darken-4">{{Texts.Filter}}</a>
+        <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{Texts.FilterInfo}}"><i class="mdi-action-info-outline"></i></a>
+      </script>
+        <div class="divider"></div>
+        <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
 <div class="row no-marg-bot">
   <div class="input-field typeahead-container col s12 m3 right">
@@ -193,13 +199,13 @@
     <label class="active">{{Filter.SelectStatus}}</label> 
     <select class="status-select">
       <option value="" disabled selected>{{Filter.SelectStatus}}</option>
-      <option class="status pending">Pending</option>
-      <option class="status registered">Registered</option>
+      <option class="status pending">{{Filter.Pending}}</option>
+      <option class="status registered">{{Filter.Registered}}</option>
     </select>
   </div>
 </div>
 </script>
-    </div>
+</div>
   </div>
 </div>
 
@@ -223,25 +229,28 @@
 
 </div>
 
-      </div>
-      <div >
-        <ul class="tabs col s12">
-          <li class="tab col s6">
-            <a class="active" href="#calendar">Calendar</a>
-          </li>
-          <li class="tab col s6">
-            <a href="#list">Unassigned cases list</a>
-          </li>
-        </ul>
-      </div>
-      <div class="card calendar-large" id="calendar">
-        <div class="card-content col s12">
-          <div id="daily-register-calendar" class="fullcalendar"></div>
-        </div>
-      </div>
-      <div class="card row calendar-large" id="list">
-        <div class="card-content col s12 with-table">
-          <div id="placeholder-daily-register-table" class="template-placeholder"></div>
+			</div>
+			<div>
+				<div id="placeholder-register_filter_header2" class="filtering template-placeholder"></div>
+				<script type="text/x-handlebars-template" id="register_filter_header2-template" class="template" data-lang="daily-register/daily_register_filter_header">
+					<ul class="tabs col s12">
+						<li class="tab col s6">
+							<a class="active" href="#calendar">{{Calendar}}</a>
+						</li>
+						<li class="tab col s6">
+							<a href="#list">{{UnassignedCasesList}}</a>
+						</li>
+					</ul>
+				</script>
+			</div>
+			<div class="card calendar-large" id="calendar">
+				<div class="card-content col s12">
+					<div id="daily-register-calendar" class="fullcalendar"></div>
+				</div>
+			</div>
+			<div class="card row calendar-large" id="list">
+				<div class="card-content col s12 with-table">
+					<div id="placeholder-daily-register-table" class="template-placeholder"></div>
 
 <script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
   <table class="hoverable bordered data">
@@ -250,9 +259,9 @@
       <th data-field="sum">{{Texts.Defendant}}</th>
       <th data-field="claimants">{{Texts.Claimant}}</th>
       <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-      <th data-field="date" class="sorting">Date</th>
-      <th data-field="starttime" class="sorting">Start time</th>
-      <th data-field="endtime" class="sorting">End time</th>
+      <th data-field="date" class="sorting">{{Texts.Date}}</th>
+      <th data-field="starttime" class="sorting">{{Texts.StartTime}}</th>
+      <th data-field="endtime" class="sorting">{{Texts.EndTime}}</th>
     </thead>
     <tbody>
       {{#each Cases}}
@@ -271,19 +280,21 @@
     </tbody>
   </table>
 </script>
-          </div>
-      </div>
-    </div>
-  </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </main>
 
+<div id="placeholder-page-footer" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="page-footer-template" class="template" data-lang="page_footer">
 <footer class="page-footer blue-grey darken-3">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">About</h5>
-        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+        <h5 class="white-text">{{Footer.About}}</h5>
+        <p class="grey-text lighten-4">{{Footer.Description}}</p>
       </div>
       <!-- <div class="col l3 s12">
         <h5 class="white-text">Help center</h5>
@@ -300,10 +311,11 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
+      {{Footer.MadeBy}}<a class="grey-text text-lighten-4 right" href="http://netgroup.ee">{{Footer.Author}}</a>
     </div>
   </div>
 </footer>
+</script>
 
     <!-- build:js scripts/vendor/jquery.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

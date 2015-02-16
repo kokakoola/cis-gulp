@@ -1,0 +1,13 @@
+{
+  "Texts": {
+    "CaseNo": "Case No ku",
+    "CaseNoValue": "213/23/255",
+    "GrantJudicialAid": "Grant judicial aid ku",
+    "CaseNr": "Case Nr ku",
+    "CourtName": "Court Name ku",
+    "CaseType": "Case type ku",
+    "CaseValue": "Case value ku",
+    "Participants": "Participants ku",
+    "ParticipantsNames": ["Forename Middlename Surname ku,","Forename Middlename Surname ku,", "Forename Surname ku,", "Forename Fathers Name Surname ku"]
+  }
+}

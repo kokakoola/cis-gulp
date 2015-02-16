@@ -12,8 +12,9 @@
   </div>
   </script>
 </div>
-
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Register</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'"><i class="mdi-action-print right"></i>Print</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>
-
+<div id="placeholder-summons-new  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="summons-new-template" class="template" data-lang="summons/summons_new">
+  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">{{Texts.Register}}</button>
+  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'"><i class="mdi-action-print right"></i>{{Texts.Print}}</button>
+  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'"><i class="mdi-content-clear"></i></button>
+</script>
