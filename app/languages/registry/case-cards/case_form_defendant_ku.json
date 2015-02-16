@@ -1,43 +1,43 @@
 {
 	"Texts" : {
-		"Defendant" : "Defendant",
-		"NaturalPerson" : "Natural person",
-		"LegalEntity" : "Legal entity",
-		"FullName" : "Defendants full name",
-    	"Address" : "Defendants address",
-    	"DocumentNumber" : "Document number",
-    	"Phone" : "Claimants phone",
+		"Defendant" : "داواله‌سه‌ر كراو",
+		"NaturalPerson" : "كه‌سى  شروستى",
+		"LegalEntity" : "ه‌سى معنوى",
+		"FullName" : "داواله‌سه‌ر كراو",
+    	"Address" : "ناونيشانى داواله‌سه‌ركراو",
+    	"DocumentNumber" : "ژماره‌ى به‌ڵگه‌نامه‌",
+    	"Phone" : "ژماره‌ى  ته‌له‌فۆنى داواكار"
 		"DocumentType" : {
 			"FirstValue" :  "Document type ku",
 			"Values": ["1", "2", "3", "4"]
 		}
 	},
 	"Content" : {
-		"FullName" : "Ronak Abdulkader Muhammed",
-    	"Address" : "sulaimania / Tuymalik / street no. 23/ house no. 2",
+		"FullName" : "ڕووناك عبدالقادر محمد",
+    	"Address" : "سلێمانى /  تووى مه‌ليك / ژماره‌ى شه‌قام : 23 / ژماره‌ى خانوو 2",
     	"DocumentNumber" : "1256",
     	"Phone" : "00964 770 157 0000"
 	},
 	"Representative" : {
-	    "Representative" : "Representative",
+	    "Representative" : "بريكار",
 	    "Type" : {
-	      "Label" : "Select type",
-	      "Values" : ["Lawyer", "Parent", "Legal guardian", "Other"]
+	      "Label" : "جۆر",
+	      "Values" : ["پارێزەر", "باوان", "پارێزەرى ياسايى"]
 	    },
-	    "FullName" : "Representatives full name",
-	    "ID" : "Representatives ID",
-	    "Phone" : "Representatives phone",
-	    "Address" : "Representatives address"
+	    "FullName" : "ناوى بريكار",
+	    "ID" : "ژماره‌ى به‌ڵگه‌نامه‌ ",
+	    "Phone" : "ژماره‌ى ‌ ته‌له‌فۆنى بريكار",
+	    "Address" : "ناونيشانى بريكار "
   	},
   	"RepresentativeContent" : {
-	    "Representative" : "Representative",
+	    "Representative" : "بريكار",
 	    "Type" : {
-	      "Label" : "Select type",
-	      "Values" : ["Lawyer"]
+	      "Label" : "جۆر",
+	      "Values" : ["پارێزەر"]
 	    },
-	    "FullName" : "Ali Ahmed Amin",
+	    "FullName" : "ڕووناك عبدالقادر محمد",
 	    "ID" : "256523651",
 	    "Phone" : "00964 750 000 0000",
-	    "Address" : "sulaimania / Rizgary / street no. 2/ house no.14"
+	    "Address" : "سلێمانى /  تووى مه‌ليك / ژماره‌ى شه‌قام : 23 / ژماره‌ى خانوو 2"
   	}
 }
