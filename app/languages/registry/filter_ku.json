@@ -19,8 +19,8 @@
         "Claimant" : "ناوى داواكار",
         "CaseValue" : {
           "Label" : "به‌هاى داوا ",
-          "From" : "From",
-          "To" : "To"
+          "From" : "له‌",
+          "To" : "بۆ"
         },
         "Urgent" : "به‌په‌له‌ ",
         "JudicialAid" : "هاوكارى دادوه‌رى",
