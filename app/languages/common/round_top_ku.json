@@ -1,16 +1,16 @@
 {
   "Texts" : {
-    "Audit" : "Audit ku",
-    "NewAudit" : "New audit ku",
-    "CaseAssesment" : "Case assesment ku",
-    "EditCase" : "Edit case ku",
-    "PrimeRegistry" : "Prime registry ku",
-    "NewCase" : "New case ku",
-    "DailyRegister" : "Daily register ku",
-    "RegistrateHearing" : "Registrate hearing ku",
-    "ViewFee" : "View fee ku",
-    "Fee" : "Fee ku",
-    "NewFee" : "New fee ku",
-    "RegisterSummons" : "Register an outgoing summons ku"
+    "Audit" : "ليستى ووردبينى",
+    "NewAudit" : "ووردبينى نوێ",
+    "CaseAssesment" : "هه‌ڵسه‌نگاندنى داوا",
+    "EditCase" : "گۆڕانكارى داواى",
+    "PrimeRegistry" : "ليستى داوا",
+    "NewCase" : "داواى نوێ",
+    "DailyRegister" : "تۆمارى ڕۆژانه‌ (ليستى دادبينييه‌كان)",
+    "RegistrateHearing" : "تۆماركردنى كاتى دادبينى",
+    "ViewFee" : "گۆڕانكارى له‌ ڕه‌سم",
+    "Fee" : "ليستى ڕه‌سمه‌كان",
+    "NewFee" : "ڕه‌سمى نوێ",
+    "RegisterSummons" : "ليستى پسووڵه‌ى ئاگادار كردنه‌وه‌ ڕۆشتووه‌كان"
   }
 }
