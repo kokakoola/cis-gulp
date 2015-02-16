@@ -1,6 +1,12 @@
 (function($){
   $(function(){
-    $(".callSlideout").sideNav({edge: 'right', menuWidth: 440, activationWidth: 70});
+    $(".callSlideout").sideNav({
+      edge: 'left', 
+
+
+      closeOnClick: true
+      }
+    );
 
     $('.collapsible').collapsible();
 
@@ -15,83 +21,6 @@
       in_duration: 300, // Transition in duration
       out_duration: 200
     });
-
-    // $('.fullcalendar').fullCalendar({
-    //   header: {
-    //     left: 'prev,next today',
-    //     center: 'title',
-    // right: 'month,agendaWeek,agendaDay'
-    //   },
-    //   isRTL: $.cookie('cis-language') === 'ku',
-    //   defaultView: 'month',
-    //   editable: true,
-    //   events: [
-    //     {
-    //           title: '186/ 2015/ EE6',
-    //           start: '2015-01-29T113:30:00',
-    //           end: '2015-01-29T14:30:00'
-    //     },
-    //     {
-    //           title: '145/ 2015/ EE6',
-    //           start: '2015-01-28T10:30:00',
-    //           end: '2015-01-28T12:30:00'
-    //     },
-    //     {
-    //           title: '199/ 2015/ EE6',
-    //           start: '2015-01-30T10:30:00',
-    //           end: '2015-01-30T12:30:00'
-    //     },
-    //     {
-    //           title: '195/ 2015/ EE6',
-    //           start: '2015-02-02T10:30:00',
-    //           end: '2015-02-03T12:30:00'
-    //     },
-    //     {
-    //           title: '123/ 2015/ EE6',
-    //           start: '2015-02-05T10:30:00',
-    //           end: '2015-02-05T12:30:00'
-    //     }
-    //   ]
-    // });
-
-    // $('.dailycalendar').fullCalendar({
-    //   header: {
-    //     left: 'prev,next today',
-    //     center: 'title',
-    //     right: 'month,agendaWeek,agendaDay'
-    //   },
-    //   isRTL: $.cookie('cis-language') === 'ku',
-    //   defaultView: 'agendaWeek',
-    //   editable: true,
-    //   events: [
-    //     {
-    //           title: '186/ 2015/ EE6',
-    //           start: '2015-01-29T113:30:00',
-    //           end: '2015-01-29T14:30:00'
-    //     },
-    //     {
-    //           title: '145/ 2015/ EE6',
-    //           start: '2015-01-28T10:30:00',
-    //           end: '2015-01-28T12:30:00'
-    //     },
-    //     {
-    //           title: '199/ 2015/ EE6',
-    //           start: '2015-01-30T10:30:00',
-    //           end: '2015-01-30T12:30:00'
-    //     },
-    //     {
-    //           title: '195/ 2015/ EE6',
-    //           start: '2015-02-02T10:30:00',
-    //           end: '2015-02-03T12:30:00'
-    //     },
-    //     {
-    //           title: '123/ 2015/ EE6',
-    //           start: '2015-02-05T10:30:00',
-    //           end: '2015-02-05T12:30:00'
-    //     }
-   
-    //   ]
-    // });
 
     $('ul.tabs').tabs();
 

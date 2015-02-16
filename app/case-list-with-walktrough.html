@@ -184,13 +184,13 @@
     <div class="collapse" id="showFilter">
         <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
-      <div class="card no-overflow">
+      <div class="card overflow-visible">
         <div class="card-content" >
           <a class="card-title grey-text text-darken-4">{{Filter.Title}}</a>
           <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="This is a filter"><i class="mdi-action-info-outline"></i></a>
           <div class="divider"></div>
           <div class="row">
-            <div class="input-field select-label col s12 m2 right">
+            <div class="input-field col s12 m2 right">
               <label class="active">{{Filter.Status.Label}}</label>
               <select class="status-select">
                 <option value="" disabled selected>{{Filter.SelectStatus}}</option>
@@ -207,14 +207,14 @@
               <input id="caseNumber" class="typeahead-input casenrs" type="text">
               <label for="caseNumber">{{Filter.CaseNumber}}</label>
             </div>
-            <div class="input-field select-label col s12 m2 right">
+            <div class="input-field col s12 m2 right">
               <label class="active">{{Filter.CaseType.Label}}</label> 
               <select>
                 <option value="" selected disabled>{{Filter.SelectCasetype}}</option>   
-                {{#each Filter.CaseType.Values}}
-                  <option value="{{@index}}">{{this}}</option>
-                {{/each}}
-              </select>
+                 {{#each Filter.CaseType.Values}}
+                     <option value="{{@index}}">{{this}}</option>
+                 {{/each}}
+               </select>
             </div>
             <div class="input-field col s12 m2 right">
               <input id="claimant" type="text" >

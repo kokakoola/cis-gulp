@@ -118,7 +118,7 @@ $(document).ready(function() {
       $(this).find('label').removeClass(' filled');
     });
 
-    $('.typeahead-input').focusout(function(event){
+    $('.typeahead-container').focusout(function(event){
 
       if(!($('#'+event.target.id).val())){
         $('label[for="'+(event.target.id)+'"]').removeClass(' active');
