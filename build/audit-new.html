@@ -24,7 +24,7 @@
       <ul class="left ">
         <div id="placeholder-courtname" class="filtering template-placeholder"></div>
         <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
-        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a> {{Texts.Audit}}</li>
+        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30"></a></li>
         </script>
       </ul>
 
@@ -47,8 +47,8 @@
         </li>
         <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
-            <i class="mdi-navigation-arrow-drop-down right"></i>
             ڕۆژه‌ كمال احمد حسن
+            <i class="mdi-navigation-arrow-drop-down"></i>
           </a>
         </li>
         <!-- <li>
@@ -173,132 +173,138 @@
   </a>
   
   <div class="col s12">
-    <div class="card overflow-visible wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
-    <div class="col s12 m3 check-inline">
-      <input type="checkbox" id="grantJudicialAid" checked>
-      <label for="grantJudicialAid">Grant judicial aid</label>
-    </div>
-    <div class="divider"></div>
-    <div class="row no-marg-bot">
-      <div class="col s12 m6">
-        <div class="input-field typeahead-container " hiddenCaseNumber>
-          <input id="caseNr" type="text" class="typeahead-input casenrs">
-          <label for="caseNr">Case Nr</label>
+    <div id="placeholder-fee-audit-form-general  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="fee-audit-form-general-template" class="template" data-lang="fee/fee_audit_form_general">
+  <div class="card overflow-visible wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4"> {{Texts.CaseNo}} {{Texts.CaseNoValue}}</span>
+      <div class="col s12 m3 check-inline">
+        <input type="checkbox" id="grantJudicialAid" checked>
+        <label for="grantJudicialAid">{{Texts.GrantJudicialAid}}</label>
+      </div>
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="col s12 m6">
+          <div class="input-field typeahead-container " hiddencasenumber>
+            <input id="caseNr" type="text" class="typeahead-input casenrs">
+            <label for="caseNr">{{Texts.CaseNr}}</label>
+          </div>
+          <br>
+          <div class="input-field">
+            <input id="courtName" type="text" disabled>
+            <label for="courtName">{{Texts.CourtName}}</label>
+          </div>
+          <br>
+          <div class="input-field">
+            <input id="caseType" type="text" disabled>
+            <label for="caseType">{{Texts.CaseType}}</label>
+          </div>
+          <br>
+          <div class="input-field">
+            <input id="caseValue" type="text" @@casevaluedisabled>
+            <label for="caseValue">{{Texts.CaseValue}}</label>
+          </div>
         </div>
-        <br>
-        <div class="input-field">
-          <input id="courtName" type="text" disabled>
-          <label for="courtName">Court Name</label>
-        </div>
-        <br>
-        <div class="input-field">
-          <input id="caseType" type="text" disabled>
-          <label for="caseType">Case type</label>
-        </div>
-        <br>
-        <div class="input-field">
-          <input id="caseValue" type="text" disabled>
-          <label for="caseValue">Case value</label>
+
+        <div class="col s12 m6">
+          <br>
+          <h6>{{Texts.Participants}}</h6>
+          <hr>
+          <ul>
+            {{#each Texts.ParticipantsNames}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
         </div>
       </div>
-
-      <div class="col s12 m6">
-        <br>
-        <h6>Participants</h6>
-        <hr>
-        <ul>
-          <li>Forename Middlename Surname,</li>
-          <li>Forename Middlename Surname,</li>
-          <li>Forename Surname,</li>
-          <li>Forename Fathers Name Surname</li>
-        </ul>
-      </div>
-
-
-
-      
     </div>
   </div>
-</div>
+</script>
   </div>
 
   <div class="col s12 m6">
-    <div class="card overflow-visible wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Payment</span>
-    <div class="divider"></div>
-    <div class="row">
-      <div class="input-field typeahead-container col col s12">
-        <label for="payer">Payer</label>
-        <input id="payer" type="text" class="typeahead-input persons" value="This Man Named Somebody, This Man Else"> 
-      </div>
-      <div class="input-field col s12">
-        <label for="paymentDate">Payment date</label>
-        <input id="paymentDate" type="text" class="datepicker today">
-      </div>
-      <div class="input-field col s12">
-        <label for="receiptNo">Receipt No</label>
-        <input id="receiptNo" type="text" value="32525" disabled>
-      </div>
-      <div class="input-field col s12">
-        <label for="sum2">Total</label>
-        <input id="sum2" type="text" value="0.00" disabled>
+    <div id="placeholder-audit-card-payment  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-card-payment-template" class="template" data-lang="fee/audit_card_payment">
+  <div class="card overflow-visible wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Payment}}</span>
+      <div class="divider"></div>
+      <div class="row">
+        <div class="input-field typeahead-container col col s12">
+          <label for="payer" class="active">{{Texts.Payer}}</label>
+          <input id="payer" type="text" class="typeahead-input persons" value="{{Texts.PayerValue}}">
+        </div>
+        <div class="input-field col s12">
+          <label for="paymentDate" class="active">{{Texts.PaymentDate}}</label>
+          <input id="paymentDate" type="text" class="datepicker today">
+        </div>
+        <div class="input-field col s12">
+          <label for="receiptNo" class="active">{{Texts.ReceiptNo}}</label>
+          <input id="receiptNo" type="text" value="32525" disabled>
+        </div>
+        <div class="input-field col s12">
+          <label for="sum2" class="active">{{Texts.Total}}</label>
+          <input id="sum2" type="text" value="0.00" disabled>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</script>
   </div>
 
   <div class="col s12 m6">
-    <div class="card  wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Claim document</span>
-    <div class="divider"></div>
-    <br>
-    <div class="col s12 m10 offset-m2">
-       <div class="row valign-wrapper">
-         <div class="col s2">
-           <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
-         </div>
-         <div class="col s10">
-           <span class="black-text">
-             This is a pdf preview of the claim. 
-           </span>
-         </div>
-       </div>
+    <div id="placeholder-fee-audit-card-claim-pdf  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="fee-audit-card-claim-pdf-template" class="template" data-lang="fee/fee_audit_card_claim_pdf">
+  <div class="card  wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.ClaimDocument}}</span>
+      <div class="divider"></div>
+      <br>
+      <div class="col s12 m10 offset-m2">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img">
+          </div>
+          <div class="col s10">
+            <span class="black-text">
+              {{Texts.ThisIsPreview}}
+            </span>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
-</div>
+</script>
   </div>
 
   <div class="col s12 m6  trigger-wrapper">
     <!-- <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a> -->
-    <div class="card brown lighten-5  wow bounceInDown cont-padding">
-  <div class="card-content">
-    <div class="row">
-  <!--       <div class="col s12">
-        <span class="card-title grey-text text-darken-4">Fee</span>
-        
-        <div class="divider"></div>
-      </div> -->
-      <div class="input-field col s4">
-        <input id="sum" type="text">
-        <label for="sum">Sum</label>
-      </div>
-      <div class="col s8">
-        <select>
-          <option value="" disabled selected>Fee type</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
+    <div id="placeholder-audit-form-add-fee  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-form-add-fee-template" class="template" data-lang="fee/audit_form_add_fees">
+  <div class="card brown lighten-5  wow bounceInDown cont-padding">
+    <div class="card-content">
+      <div class="row">
+        <!--       <div class="col s12">
+              <span class="card-title grey-text text-darken-4">Fee</span>
+
+              <div class="divider"></div>
+            </div> -->
+        <div class="input-field col s4">
+          <input id="sum" type="text">
+          <label for="sum">{{Texts.Sum}}</label>
+        </div>
+        <div class="col s8">
+          <select>
+            <option value="" disabled selected>{{Texts.FeeType.Label}}</option>
+            {{#each Texts.FeeType.Values}}
+            <option value="{@index}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+</script>
 
   </div>
 
@@ -310,18 +316,17 @@
     <ul id="add" class="dropdown-content">
       <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
     </ul>
-
-    <!-- DataCol models -->
-    <div class="col s12 m6" data-datacol-model="note">
-      <div id="placeholder-case-form-note " class="template-placeholder"></div>
+      <!-- DataCol models -->
+      <div class="col s12 m6" data-datacol-model="note">
+        <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
   <div class="card cyan lighten-5 wow bounceInDown">
     <div class="card-content">
-      <span class="card-title grey-text text-darken-4">New  {{Texts.Note}}</span>
+      <span class="card-title grey-text text-darken-4">{{Texts.NewNote}}</span>
       <div class="col s12 m3 check-inline right">
         <input type="checkbox" id="Personal" class="right" />
-        <label for="Personal">Personal</label>
+        <label for="Personal">{{Texts.Personal}}</label>
       </div>
       <a href="#!" class="card-title grey-text text-darken-4">
         <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
@@ -338,28 +343,31 @@
   </div>
 </script>
 
-    </div>
-
-  </div>
+      </div>
 
 </div>
 
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='audit-list.html'">Confirm</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='audit-list.html'">Reject</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='audit-list.html'" ><i class="mdi-content-clear"></i></button>
-
+</div>
+<div id="placeholder-audit-new  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-new-template" class="template" data-lang="fee/audit_new">
+  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='audit-list.html'">{{Texts.Confirm}}</button>
+  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='audit-list.html'">{{Texts.Reject}}</button>
+  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='audit-list.html'"><i class="mdi-content-clear"></i></button>
+</script>
         </div>
       </div>
     </div>
   </div>
 </main>
 
+<div id="placeholder-page-footer" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="page-footer-template" class="template" data-lang="page_footer">
 <footer class="page-footer blue-grey darken-3">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">About</h5>
-        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+        <h5 class="white-text">{{Footer.About}}</h5>
+        <p class="grey-text lighten-4">{{Footer.Description}}</p>
       </div>
       <!-- <div class="col l3 s12">
         <h5 class="white-text">Help center</h5>
@@ -376,10 +384,11 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
+      {{Footer.MadeBy}}<a class="grey-text text-lighten-4 right" href="http://netgroup.ee">{{Footer.Author}}</a>
     </div>
   </div>
 </footer>
+</script>
 
     <script src="scripts/vendor/jquery.js"></script>
     <script src="scripts/vendor/jquery.cookie.js"></script>

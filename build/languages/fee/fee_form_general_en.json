@@ -1,0 +1,18 @@
+{
+  "Texts": {
+    "CaseNo": "Case No",
+    "CaseNoValue": "213/23/255",
+    "GrantJudicialAid": "Grant judicial aid",
+      "Court":  {
+      "Label": "Court",
+      "Values": [ "1","2","3" ]
+    },
+    "Payer": "Payer",
+    "PayerValue": "This Man Named Somebody, This Man Else",
+    "CaseType": {
+      "Label": "Case type",
+      "Values": [ "استملاك", "property aquizition", "Option 3" ]
+    },
+    "PaymentDate": "Payment date"
+  }
+}

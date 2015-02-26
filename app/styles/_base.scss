@@ -664,7 +664,7 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   background-color: color("cyan", "base");
 }
 
-.select-wrapper span.select-dropdown {
+.select-wrapper input.select-dropdown {
   position: relative;
   cursor: pointer;
   color: #444;
@@ -681,7 +681,7 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   display: block;
 }
 
-.select-wrapper{
+label + .select-wrapper{
   margin-top:0px;
 }
 

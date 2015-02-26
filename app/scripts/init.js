@@ -63,7 +63,7 @@
 
       $('.timepicker').pickatime();
 
-      $('select').material_select_override();
+      $('select').material_select();
     
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {

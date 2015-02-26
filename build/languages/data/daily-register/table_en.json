@@ -3,7 +3,10 @@
     "CaseNumber": "Case number",
     "Claimant": "Claimant",
     "Defendant": "Defendant",
-    "Status": "Status"
+    "Status": "Status",
+    "Date": "Date",
+    "StartTime": "Start time",
+    "EndTime": "End time"
   },
 
   "Cases": [

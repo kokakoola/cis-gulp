@@ -17,17 +17,19 @@
   <body class="daily">
 
 
+
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
-      <ul>
+      <ul class="left ">
         <div id="placeholder-courtname" class="filtering template-placeholder"></div>
         <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
-        <li>{{Texts.DailyRegister}}</li>
+        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a> {{Texts.DailyRegister}}</li>
         </script>
       </ul>
-      <ul class="side-nav" id="nav-mobile">
-        <li class="right">
+
+      <ul class="right">
+        <li >
           <a href="#" data-activates="slide-out" class="callSlideout"><i class="mdi-action-search"></i></a>
         </li>
         <li>
@@ -36,12 +38,7 @@
             ناوه‌ڕۆك
           </a>
         </li>
-        <li>
-          <a class="dropdown-button" href="#!" data-activates="languageDropdown">
-            <i class="mdi-action-language"></i>
-            زمان
-          </a>
-        </li>
+
         <li>
           <a class="dropdown-button notificationLink" href="#!" data-activates="notificationsDropdown">
             <i class="mdi-social-notifications"></i>
@@ -54,9 +51,9 @@
             ڕۆژه‌ كمال احمد حسن
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a>
-        </li>
+        </li> -->
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
@@ -65,15 +62,7 @@
 
 <!-- Dropdown Structure -->
 
-<!-- language dropdown -->
-<ul id="languageDropdown" class="navbar dropdown-content">
-  <li class="active">
-    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
-  </li>
-  <li>
-    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
-  </li>
-</ul>
+
 
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
@@ -119,6 +108,7 @@
 </div>
 
 <ul id="slide-out" class="side-nav full">
+
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
@@ -141,6 +131,23 @@
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
   </script>
+  <li class="divider"></li>
+  <li>
+    <a class="dropdown-button" href="#!" data-activates="languageDropdown">
+      <i class="mdi-action-language"></i>
+      زمان
+    </a>
+  </li>
+</ul>
+
+<!-- language dropdown -->
+<ul id="languageDropdown" class="navbar dropdown-content">
+  <li class="active">
+    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
+  </li>
+  <li>
+    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
+  </li>
 </ul>
 
 
@@ -150,16 +157,22 @@
 
   <div class="card-onbanner">
     <div class="container">
-      
-      <h4 class="header white-text text-darken-2">Daily register <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Klick on the day in the calendar tab to add a hearing. Klick on the case in the list tab to assign a hearing to the case"><i class="mdi-action-info-outline"></i></a></h4>
-      <div class="row no-marg-bot">
+	    
+		 <div id="placeholder-register_filter_header" class="filtering template-placeholder"></div>
+		<script type="text/x-handlebars-template" id="register_filter_header-template" class="template" data-lang="daily-register/daily_register_filter_header">
+			<h4 class="header white-text text-darken-2">{{DailyRegister}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{DailyRegisterInfo}}"><i class="mdi-action-info-outline"></i></a></h4>
+		</script>
+		 <div class="row no-marg-bot">
         <div class="col s12">
   <div class="card overflow-visible">
-    <div class="card-content" > 
-      <a class="card-title grey-text text-darken-4">Filter</a>
-      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Filter and search here"><i class="mdi-action-info-outline"></i></a>
-      <div class="divider"></div>
-      <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
+    <div class="card-content">
+      <div id="placeholder-daily-filter  wow bounceInDown" class="template-placeholder"></div>
+      <script type="text/x-handlebars-template" id="daily-filter-template" class="template" data-lang="daily-register/daily_filter">
+        <a class="card-title grey-text text-darken-4">{{Texts.Filter}}</a>
+        <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{Texts.FilterInfo}}"><i class="mdi-action-info-outline"></i></a>
+      </script>
+        <div class="divider"></div>
+        <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
 <div class="row no-marg-bot">
   <div class="input-field typeahead-container col s12 m3 right">
@@ -178,13 +191,13 @@
     <label class="active">{{Filter.SelectStatus}}</label> 
     <select class="status-select">
       <option value="" disabled selected>{{Filter.SelectStatus}}</option>
-      <option class="status pending">Pending</option>
-      <option class="status registered">Registered</option>
+      <option class="status pending">{{Filter.Pending}}</option>
+      <option class="status registered">{{Filter.Registered}}</option>
     </select>
   </div>
 </div>
 </script>
-    </div>
+</div>
   </div>
 </div>
 
@@ -220,9 +233,9 @@
       <th data-field="sum">{{Texts.Defendant}}</th>
       <th data-field="claimants">{{Texts.Claimant}}</th>
       <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-      <th data-field="date" class="sorting">Date</th>
-      <th data-field="starttime" class="sorting">Start time</th>
-      <th data-field="endtime" class="sorting">End time</th>
+      <th data-field="date" class="sorting">{{Texts.Date}}</th>
+      <th data-field="starttime" class="sorting">{{Texts.StartTime}}</th>
+      <th data-field="endtime" class="sorting">{{Texts.EndTime}}</th>
     </thead>
     <tbody>
       {{#each Cases}}
@@ -248,12 +261,14 @@
 
 </main>
 
+<div id="placeholder-page-footer" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="page-footer-template" class="template" data-lang="page_footer">
 <footer class="page-footer blue-grey darken-3">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">About</h5>
-        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+        <h5 class="white-text">{{Footer.About}}</h5>
+        <p class="grey-text lighten-4">{{Footer.Description}}</p>
       </div>
       <!-- <div class="col l3 s12">
         <h5 class="white-text">Help center</h5>
@@ -270,10 +285,11 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
+      {{Footer.MadeBy}}<a class="grey-text text-lighten-4 right" href="http://netgroup.ee">{{Footer.Author}}</a>
     </div>
   </div>
 </footer>
+</script>
 
     <script src="scripts/vendor/jquery.js"></script>
     <script src="scripts/vendor/jquery.cookie.js"></script>
