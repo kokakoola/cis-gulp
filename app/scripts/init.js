@@ -76,17 +76,11 @@
         }
       });
 
-<<<<<<< HEAD
     $(".dropdown-button").dropdown({
       constrain_width: false,
        belowOrigin: true 
     });
-=======
-      $(".dropdown-button").dropdown({
-      	constrain_width: false,
-      	hover: false
-      });
->>>>>>> 4e164a679e518d7c8276fb0ec6ad1a825b8cdadd
+
 
       $(".dropdown-button-simplified").dropdown({
       	constrain_width: false,
