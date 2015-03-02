@@ -91,14 +91,20 @@
         //   );
         // }
         // calendar.fullCalendar('unselect');
-        if(view.name == 'month')
-          return;
+        // if(view.name == 'month')
+        //   return;
         
-        window.location.href = "daily-new.html?start=" + start;
+        // window.location.href = "daily-new.html?start=" + start;
       },
 
       eventClick: function(event, jsEvent, view) {
-        window.location.href = "daily-new.html?start=" + event.start;
+        if(view.name == 'agendaWeek' || view.name == 'month') {
+          $('#daily-register-calendar').fullCalendar('changeView', 'agendaDay');
+          $('#daily-register-calendar').fullCalendar('gotoDate', date);
+        } else if (view.name == 'agendaDay') {
+          $('#confirm-modal').openModal();
+        }
+        // window.location.href = "daily-new.html?start=" + event.start;
       },
 
       dayClick: function(date, jsEvent, view) {
@@ -161,7 +167,7 @@
           className: 'important'
         },
         {
-          title: '2134/64',
+          title: '2134/64, Some text to inidcate we can have longer text here', 
           start: new Date(y, m, d, 08, 40),
           end: new Date(y, m, d, 08, 50),
           allDay: false,
@@ -171,8 +177,7 @@
           title: '2034/457',
           start: new Date(y, m, d, 08, 50),
           end: new Date(y, m, d, 09, 0),
-          allDay: false,
-          className: 'info'
+          allDay: false
         },
         {
           title: 'Birthday Party',

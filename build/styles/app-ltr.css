@@ -10996,8 +10996,9 @@ Default Styles
  * (c) 2013 Adam Shaw
  */
 .fc-time-grid-event.fc-short .fc-title {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #212121;
+  padding: 5px;
 }
 
 .fc-time-grid-event .fc-resizer {
@@ -11662,7 +11663,7 @@ table.fc-header {
 }
 
 .fc-unthemed .fc-today.fc-state-highlight {
-  background: #b2ebf2 !important;
+  background: #e0f7fa !important;
 }
 
 .fc-view-agendaDay thead tr.fc-first .fc-widget-header {
@@ -11682,20 +11683,21 @@ table.fc-header {
  */
  /* Events
 -----------------------------------------------------*/
-.fc-event {
-  background: #fff !important;
-  color: #000 !important;
-}
+@media print {
+  .fc-event {
+    background: #fff !important;
+    color: #000 !important;
+  }
 
-/* for vertical events */
-.fc-event-bg {
-  display: none !important;
-}
+  /* for vertical events */
+  .fc-event-bg {
+    display: none !important;
+  }
 
-.fc-event .ui-resizable-handle {
-  display: none !important;
+  .fc-event .ui-resizable-handle {
+    display: none !important;
+  }
 }
-
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11715,9 +11717,9 @@ html, body {
   width: 95%;
 }
 
-.select-wrapper span.select-dropdown {
-  height: 4rem;
-  line-height: 5rem;
+.select-label .select-wrapper span.select-dropdown {
+  line-height: 3rem;
+  height: 3rem;
 }
 
 .card {
@@ -12006,11 +12008,6 @@ textarea.materialize-textarea.input-validation-error {
   height: 3rem;
 }
 
-.select-inline .select-wrapper span.select-dropdown {
-  height: 3rem;
-  line-height: 3rem;
-}
-
 .valign-bottom {
   -webkit-align-self: flex-end;
           align-self: flex-end;
@@ -12159,11 +12156,6 @@ span.tt-dropdown-menu {
   color: #03a9f4;
 }
 
-.select-label .select-wrapper span.select-dropdown {
-  line-height: 3rem;
-  height: 3rem;
-}
-
 table.dataTable.order-column tbody tr > .sorting_1 {
   background-color: whitesmoke;
 }
@@ -12181,6 +12173,9 @@ table.dataTable.order-column tbody tr > .sorting_1 {
   .modal {
     width: 80%;
   }
+}
+.modal h4 {
+  padding-left: 0;
 }
 
 .file-previews {

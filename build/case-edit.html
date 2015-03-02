@@ -17,17 +17,19 @@
   <body class="case-edit">
 
 
+
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
-      <ul>
+      <ul class="left ">
         <div id="placeholder-courtname" class="filtering template-placeholder"></div>
         <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
-        <li>{{Texts.Civil}}</li>
+        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a> {{Texts.Civil}}</li>
         </script>
       </ul>
-      <ul class="side-nav" id="nav-mobile">
-        <li class="right">
+
+      <ul class="right">
+        <li >
           <a href="#" data-activates="slide-out" class="callSlideout"><i class="mdi-action-search"></i></a>
         </li>
         <li>
@@ -36,12 +38,7 @@
             ناوه‌ڕۆك
           </a>
         </li>
-        <li>
-          <a class="dropdown-button" href="#!" data-activates="languageDropdown">
-            <i class="mdi-action-language"></i>
-            زمان
-          </a>
-        </li>
+
         <li>
           <a class="dropdown-button notificationLink" href="#!" data-activates="notificationsDropdown">
             <i class="mdi-social-notifications"></i>
@@ -54,9 +51,9 @@
             ڕۆژه‌ كمال احمد حسن
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a>
-        </li>
+        </li> -->
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
@@ -65,15 +62,7 @@
 
 <!-- Dropdown Structure -->
 
-<!-- language dropdown -->
-<ul id="languageDropdown" class="navbar dropdown-content">
-  <li class="active">
-    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
-  </li>
-  <li>
-    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
-  </li>
-</ul>
+
 
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
@@ -119,6 +108,7 @@
 </div>
 
 <ul id="slide-out" class="side-nav full">
+
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
@@ -141,6 +131,23 @@
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
   </script>
+  <li class="divider"></li>
+  <li>
+    <a class="dropdown-button" href="#!" data-activates="languageDropdown">
+      <i class="mdi-action-language"></i>
+      زمان
+    </a>
+  </li>
+</ul>
+
+<!-- language dropdown -->
+<ul id="languageDropdown" class="navbar dropdown-content">
+  <li class="active">
+    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
+  </li>
+  <li>
+    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
+  </li>
 </ul>
 
 <main>
@@ -172,7 +179,7 @@
       <div class="col s12 m2 check-inline">
         <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
       </div> 
-      
+
       <div class="divider"></div>
       <div class="row">
         <div class="col s12 m6 right">

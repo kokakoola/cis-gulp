@@ -77,7 +77,7 @@
 
     $(".dropdown-button").dropdown({
       constrain_width: false,
-      hover: false
+       belowOrigin: true 
     });
 
     $(".dropdown-button-simplified").dropdown({

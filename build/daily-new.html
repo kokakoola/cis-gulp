@@ -17,17 +17,19 @@
   <body class="daily-new">
 
 
+
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
-      <ul>
+      <ul class="left ">
         <div id="placeholder-courtname" class="filtering template-placeholder"></div>
         <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
-        <li>{{Texts.DailyRegister}}</li>
+        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a> {{Texts.DailyRegister}}</li>
         </script>
       </ul>
-      <ul class="side-nav" id="nav-mobile">
-        <li class="right">
+
+      <ul class="right">
+        <li >
           <a href="#" data-activates="slide-out" class="callSlideout"><i class="mdi-action-search"></i></a>
         </li>
         <li>
@@ -36,12 +38,7 @@
             ناوه‌ڕۆك
           </a>
         </li>
-        <li>
-          <a class="dropdown-button" href="#!" data-activates="languageDropdown">
-            <i class="mdi-action-language"></i>
-            زمان
-          </a>
-        </li>
+
         <li>
           <a class="dropdown-button notificationLink" href="#!" data-activates="notificationsDropdown">
             <i class="mdi-social-notifications"></i>
@@ -54,9 +51,9 @@
             ڕۆژه‌ كمال احمد حسن
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a>
-        </li>
+        </li> -->
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
@@ -65,15 +62,7 @@
 
 <!-- Dropdown Structure -->
 
-<!-- language dropdown -->
-<ul id="languageDropdown" class="navbar dropdown-content">
-  <li class="active">
-    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
-  </li>
-  <li>
-    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
-  </li>
-</ul>
+
 
 <!-- profile dropdown -->
 <ul id="personDropdown" class="navbar dropdown-content">
@@ -119,6 +108,7 @@
 </div>
 
 <ul id="slide-out" class="side-nav full">
+
   <div id="placeholder-content-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="content-dropdown-template" class="template" data-lang="general/content_dropdown">
   <li><a href="case-list.html">{{List.CaseList}}</a></li>
@@ -141,6 +131,23 @@
   <li class="divider"></li>
   <li><a href="index.html"><i class="mdi-action-exit-to-app right"></i>{{List.LogOut}}</a></li>
   </script>
+  <li class="divider"></li>
+  <li>
+    <a class="dropdown-button" href="#!" data-activates="languageDropdown">
+      <i class="mdi-action-language"></i>
+      زمان
+    </a>
+  </li>
+</ul>
+
+<!-- language dropdown -->
+<ul id="languageDropdown" class="navbar dropdown-content">
+  <li class="active">
+    <a href="#!" id="Kurdish" data-value="ku" class="btn-medium waves-effect language">sorani</a>
+  </li>
+  <li>
+    <a href="#!" id="English" data-value="en" class="btn-medium waves-effect language">english</a>
+  </li>
 </ul>
 
 <main>
@@ -270,20 +277,60 @@
     </div>
   </div>
 </div>
-  </div>
 
-  <div class="col s12 m6">
+      <div id="placeholder-case-card-documents  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-card-documents-template" class="template" data-lang="common/common-cards/case_card_documents">
+</script>
+<div class="card  wow bounceInDown">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Upload documents</span>
+    <div class="divider"></div>
+    <br>
+    <div class="col s12 ">
+        <form action="#">
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>File upload</span>
+        <input type="file" />
+      </div>
+    </div>
+  </form>
+       <!-- <div class="row valign-wrapper">
+         <div class="col s2 valign">
+           <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
+         </div>
+         <div class="col s8">
+           <span class="black-text">
+             Document this and that
+           </span>
+         </div>
+       </div> -->
+      </div>
+  </div>
+</div>
+
+
+  </div>
+    <div class="col s12 m6">
       <div class="card">
 	<div class="card-content">
 		<div id="daily-register-calendar" class="dailycalendar"></div>
 	</div>
 </div>	
 
-
+<div id="confirm-modal" class="modal">
+	<div class="modal-content">
+		<h4>Are you sure you want to go to case nr 2034/234?</h4>
+		<p>Your current changes will be saved to draft.</p>
+	</div>
+	<div class="modal-footer">
+		<a href="daily-new.html" class="btn waves-effect waves-light save right modal-action">Agree</a>
+		<a href="#" class="waves-effect waves-green btn-flat modal-action modal-close right"><i class="mdi-content-clear"></i></a>
+	</div>
+</div>
 
   </div>
-      
-  
   
 <!--   <div class="col s12 m6 trigger-wrapper">
       <div class="outer-container">
@@ -363,6 +410,7 @@
 </script>
 
     </div>
+
 </div>
 
 <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='daily-list.html'">Save and generate summons</button>
