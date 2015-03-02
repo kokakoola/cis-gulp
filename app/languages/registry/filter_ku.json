@@ -1,6 +1,7 @@
 {
     "Filter" :
     {
+        "Title" : "Filter ku",
         "To" : "بۆ",
         "From" : "له‌",
         "Judge" : "ناوى دادوه‌ر",
@@ -18,8 +19,8 @@
         "Claimant" : "ناوى داواكار",
         "CaseValue" : {
           "Label" : "به‌هاى داوا ",
-          "From" : "From",
-          "To" : "To"
+          "From" : "له‌",
+          "To" : "بۆ"
         },
         "Urgent" : "به‌په‌له‌ ",
         "JudicialAid" : "هاوكارى دادوه‌رى",

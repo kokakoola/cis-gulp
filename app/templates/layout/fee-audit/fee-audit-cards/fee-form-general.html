@@ -1,36 +1,39 @@
-<div class="card  wow bounceInDown">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4"> Case No 213/23/255</span>
-    <div class="col s12 m3 check-inline">
-      <input type="checkbox" id="grantJudicialAid" />
-      <label for="grantJudicialAid">Grant judicial aid</label>
-    </div>
-    <div class="divider"></div>
-    <div class="row no-marg-bot">
-      <div class="col s12 m6">
-        <select required>
-          <option value="" disabled selected>Court</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
+<div id="placeholder-fee-form-general  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="fee-form-general-template" class="template" data-lang="fee/fee_form_general">
+  <div class="card  wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4"> {{Texts.CaseNo}} {{Texts.CaseNoValue}}</span>
+      <div class="col s12 m3 check-inline">
+        <input type="checkbox" id="grantJudicialAid" />
+        <label for="grantJudicialAid">{{Texts.GrantJudicialAid}}</label>
       </div>
-      <div class="input-field col s12 m6">
-        <input id="payer" type="text" value="This Man Named Somebody, This Man Else"> 
-        <label for="payer">Payer</label>
-      </div>
-      <div class="col s12 m6">
-        <select required>
-          <option value="" disabled selected>Case type </option>
-          <option value="1">استملاك</option>
-          <option value="2">property aquizition </option>
-          <option value="3">Option 3</option>
-        </select>
-      </div>
-      <div class="input-field col s12 m6">
-        <label for="paymentDate">Payment date</label>
-        <input id="paymentDate" type="text" class="datepicker today">
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="col s12 m6">
+          <select required>
+            <option value="" disabled selected>{{Texts.Court.Label}}</option>
+            {{#each Texts.Court.Values}}
+            <option value="@index">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="payer" type="text" value="{{Texts.PayerValue}}">
+          <label for="payer" class="active">{{Texts.Payer}}</label>
+        </div>
+        <div class="col s12 m6">
+          <select required>
+            <option value="" disabled selected>{{Texts.CaseType.Label}} </option>
+            {{#each Texts.CaseType.Values}}
+            <option value="@index">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <label for="paymentDate">{{Texts.PaymentDate}}</label>
+          <input id="paymentDate" type="text" class="datepicker today">
+        </div>
       </div>
     </div>
   </div>
-</div>
+</script>

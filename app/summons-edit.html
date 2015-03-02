@@ -32,7 +32,7 @@
       <ul class="left ">
         <div id="placeholder-courtname" class="filtering template-placeholder"></div>
         <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
-        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a> {{Texts.NotificationDepartment}}</li>
+        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30"></a></li>
         </script>
       </ul>
 
@@ -55,9 +55,14 @@
         </li>
         <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
+<<<<<<< HEAD
             
             ڕۆژه‌ كمال احمد حسن
             <i class="mdi-navigation-arrow-drop-down right"></i>
+=======
+            ڕۆژه‌ كمال احمد حسن
+            <i class="mdi-navigation-arrow-drop-down"></i>
+>>>>>>> 4e164a679e518d7c8276fb0ec6ad1a825b8cdadd
           </a>
         </li>
         
@@ -180,30 +185,33 @@
 <div class="row">
 
   <div class="col s12 m6">
-    <div class="card  wow bounceInDown">
-  <div class="card-content">
-   <span class="card-title grey-text text-darken-4">2014 / B / 23</span>
-    <div class="divider"></div>
-    <div class="row">
-      <div class="input-field col s12">
-        <label for="courtname">Court name</label>
-        <input id="courtname" type="text" value="Primary court 1" disabled>
+    <div id="placeholder-summons-card-casenr  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="summons-card-casenr-template" class="template" data-lang="summons/summons_card_casenr">
+  <div class="card  wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.CaseNoValue}}</span>
+      <div class="divider"></div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="courtname" class="active">{{Texts.CourtName}}</label>
+          <input id="courtname" type="text" value="{{Texts.CourtNameValue}}" disabled>
+        </div>
+        <div class="input-field col s12">
+          <input id="judge" type="text" value="{{Texts.JudgeValue}}" disabled >
+          <label for="judge" class="active">{{Texts.Judge}}</label>
+        </div>
+        <div class="input-field col s12">
+          <label for="dateofhearing">{{Texts.DateOfHearing}}</label>
+          <input id="dateofhearing" type="text" class="datepicker today" disabled>
+        </div>
+        <div class="input-field col s12">
+          <input id="addressee" type="text" value="{{Texts.AddresseeValue}}" class="active" disabled >
+          <label for="addressee" class="active">{{Texts.Addressee}}</label>
+        </div>
       </div>
-      <div class="input-field col s12">
-        <input id="judge" type="text" value="Ahmed Khadr Omar" disabled>
-        <label for="judge">Judge</label>
-      </div>      
-      <div class="input-field col s12">
-        <label for="dateofhearing">Date of hearing</label>
-        <input id="dateofhearing" type="text" class="datepicker today" disabled>
-      </div>
-      <div class="input-field col s12">
-        <input id="addressee" type="text" value="Ahmed Khadr Omar" disabled>
-        <label for="addressee">Addressee</label>
-      </div>         
     </div>
   </div>
-</div>
+</script>
   </div>
 
   <div id="placeholder-summons-filter" class="template-placeholder"></div>
@@ -211,7 +219,7 @@
   <div class="col s12 m6">
     <div class="card  wow bounceInDown">
   <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Summons document</span>
+    <span class="card-title grey-text text-darken-4">{{Filter.SummonsDocument}}</span>
     <div class="divider"></div>
     <br>
     <div class="col m6">    
@@ -244,11 +252,12 @@
   </div>
   </script>
 </div>
-
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='summons-list.html'">Register</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='summons-list.html'"><i class="mdi-action-print right"></i>Print</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='summons-list.html'" ><i class="mdi-content-clear"></i></button>
-
+<div id="placeholder-summons-new  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="summons-new-template" class="template" data-lang="summons/summons_new">
+  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='summons-list.html'">{{Texts.Register}}</button>
+  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='summons-list.html'"><i class="mdi-action-print right"></i>{{Texts.Print}}</button>
+  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='summons-list.html'"><i class="mdi-content-clear"></i></button>
+</script>
 
         </div>
       </div>
@@ -256,12 +265,14 @@
   </div>
 </main>
 
+<div id="placeholder-page-footer" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="page-footer-template" class="template" data-lang="page_footer">
 <footer class="page-footer blue-grey darken-3">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">About</h5>
-        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+        <h5 class="white-text">{{Footer.About}}</h5>
+        <p class="grey-text lighten-4">{{Footer.Description}}</p>
       </div>
       <!-- <div class="col l3 s12">
         <h5 class="white-text">Help center</h5>
@@ -278,10 +289,11 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
+      {{Footer.MadeBy}}<a class="grey-text text-lighten-4 right" href="http://netgroup.ee">{{Footer.Author}}</a>
     </div>
   </div>
 </footer>
+</script>
 
     <!-- build:js scripts/vendor/jquery.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

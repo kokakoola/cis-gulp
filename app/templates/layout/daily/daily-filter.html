@@ -1,11 +1,14 @@
 <div class="col s12">
   <div class="card overflow-visible">
-    <div class="card-content" > 
-      <a class="card-title grey-text text-darken-4">Filter</a>
-      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Filter and search here"><i class="mdi-action-info-outline"></i></a>
-      <div class="divider"></div>
-      @@include('./daily-filter-content.html')
-    </div>
+    <div class="card-content">
+      <div id="placeholder-daily-filter  wow bounceInDown" class="template-placeholder"></div>
+      <script type="text/x-handlebars-template" id="daily-filter-template" class="template" data-lang="daily-register/daily_filter">
+        <a class="card-title grey-text text-darken-4">{{Texts.Filter}}</a>
+        <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{Texts.FilterInfo}}"><i class="mdi-action-info-outline"></i></a>
+      </script>
+        <div class="divider"></div>
+        @@include('./daily-filter-content.html')
+</div>
   </div>
 </div>
 

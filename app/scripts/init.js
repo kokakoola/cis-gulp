@@ -41,6 +41,8 @@
     }
 
     function bindFormsUi() {
+
+    	$('ul.tabs').tabs();
       // pickadate init with preset Today
       $('.datepicker.today').pickadate({
         onStart: function ()
@@ -61,7 +63,7 @@
 
       $('.timepicker').pickatime();
 
-      $('select').material_select_override();
+      $('select').material_select();
     
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {
@@ -73,17 +75,26 @@
           $(this).button('reset');
         }
       });
-    }
 
+<<<<<<< HEAD
     $(".dropdown-button").dropdown({
       constrain_width: false,
        belowOrigin: true 
     });
+=======
+      $(".dropdown-button").dropdown({
+      	constrain_width: false,
+      	hover: false
+      });
+>>>>>>> 4e164a679e518d7c8276fb0ec6ad1a825b8cdadd
 
-    $(".dropdown-button-simplified").dropdown({
-      constrain_width: false,
-      hover: false
-    });
+      $(".dropdown-button-simplified").dropdown({
+      	constrain_width: false,
+      	hover: false
+      });
+    }
+
+  
 
     bindDataTable();
     bindFormsUi();

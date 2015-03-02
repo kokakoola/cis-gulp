@@ -1,5 +1,7 @@
 {
-  "Texts" : {
-    "Note" : "تێبینی"
+  "Texts": {
+    "Note": "تێبینی",
+    "NewNote": "نوێ تێبینی",
+    "Personal": "Personal ku"
   }
 }

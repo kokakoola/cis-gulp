@@ -1,27 +1,29 @@
-<div class="card">
-  <div class="card-content">
-    <span class="card-title grey-text text-darken-4">Case no 219/5312/563 5th hearing</span>
-    <div class="col s12 m2 check-inline right">
-      <input type="checkbox" id="confidential" /><label for="confidential">Confidential</label>
-    </div> 
-    <div class="divider"></div>
-    <div class="row no-marg-bot ">
-      <div class="input-field col s12 m4">
-        <i class="mdi-notification-event-note prefix"></i>
-        <label for="hearingDate">Date</label>
-        <input id="hearingDate" type="text" class="datepicker">
+<div id="placeholder-daily-form-timepicker  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="daily-form-timepicker-template" class="template" data-lang="daily-register/daily_form_timepicker">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Title}}</span>
+      <div class="col s12 m2 check-inline right">
+        <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
       </div>
-      <div class="input-field col s12 m4">
-        <i class="mdi-action-schedule prefix"></i>
-        <label for="hearingTimeStart">Start time</label>
-        <input id="hearingTimeStart" type="text" class="timepicker">
-      </div>
-      <div class="input-field col s12 m4">
-        <i class="mdi-action-schedule prefix"></i>
-        <label for="hearingTimeEnd">End time</label>
-        <input id="hearingTimeEnd" type="text" class="timepicker">
+      <div class="divider"></div>
+      <div class="row no-marg-bot ">
+        <div class="input-field col s12 m4">
+          <i class="mdi-notification-event-note prefix"></i>
+          <label for="hearingDate">{{Texts.Date}}</label>
+          <input id="hearingDate" type="text" class="datepicker">
+        </div>
+        <div class="input-field col s12 m4">
+          <i class="mdi-action-schedule prefix"></i>
+          <label for="hearingTimeStart">{{Texts.StartTime}}</label>
+          <input id="hearingTimeStart" type="text" class="timepicker">
+        </div>
+        <div class="input-field col s12 m4">
+          <i class="mdi-action-schedule prefix"></i>
+          <label for="hearingTimeEnd">{{Texts.EndTime}}</label>
+          <input id="hearingTimeEnd" type="text" class="timepicker">
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+</script>

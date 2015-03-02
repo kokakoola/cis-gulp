@@ -1,27 +1,29 @@
 <div class="col s12 blue-grey lighten-5 marg-bot-20">
-	<form action="">
-		<div class="col s12 m6 l4">
-			<select name="" id="type-1">
-				<option value="" selected disabled>Type</option>
-				<option value="">Claim document</option>
-			</select>
-		</div>
-		<div class="input-field col s12 m6 l4">
-			<input type="text" id="author-1">
-			<label for="author-1">Author</label>
-		</div>
-		<div class="input-field col s12 m6 l4">
-			<label for="registerDate-1">Date of arrival</label>
-			<input id="registerDate-1" type="text" class="datepicker today">
-		</div>
-		<div class="filter-action col s12">
-			<button class="btn waves-effect waves-light submit left" type="button" name="search">
-				Search
-				<i class="mdi-navigation-search right"></i>
-			</button>
-			<button class="btn waves-effect waves-light btn-flat left" name="clear">
-				<i class="mdi-content-clear "></i>
-			</button>
-		</div>
-	</form>
+  <form action="">
+    <div class="col s12 m6 l4">
+      <select name="" id="type-1">
+        <option value="" selected disabled>{{Texts.Type.FirstValue}}</option>
+        {{#each Texts.Type.Values}}
+        <option value="{{@index}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="input-field col s12 m6 l4">
+      <input type="text" id="author-1">
+      <label for="author-1">{{Text.Author}}</label>
+    </div>
+    <div class="input-field col s12 m6 l4">
+      <label for="registerDate-1">{{Texts.DateOfArrival}}</label>
+      <input id="registerDate-1" type="text" class="datepicker today">
+    </div>
+    <div class="filter-action col s12">
+      <button class="btn waves-effect waves-light submit left" type="button" name="search">
+        {{Texts.Search}}
+        <i class="mdi-navigation-search right"></i>
+      </button>
+      <button class="btn waves-effect waves-light btn-flat left" name="clear">
+        <i class="mdi-content-clear "></i>
+      </button>
+    </div>
+  </form>
 </div>

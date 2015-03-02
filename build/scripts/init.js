@@ -41,6 +41,8 @@
     }
 
     function bindFormsUi() {
+
+    	$('ul.tabs').tabs();
       // pickadate init with preset Today
       $('.datepicker.today').pickadate({
         onStart: function ()
@@ -61,7 +63,7 @@
 
       $('.timepicker').pickatime();
 
-      $('select').material_select_override();
+      $('select').material_select();
     
       // sample text change
       $('button[data-toggle="collapse"]').click(function () {
@@ -73,17 +75,19 @@
           $(this).button('reset');
         }
       });
+
+      $(".dropdown-button").dropdown({
+      	constrain_width: false,
+      	hover: false
+      });
+
+      $(".dropdown-button-simplified").dropdown({
+      	constrain_width: false,
+      	hover: false
+      });
     }
 
-    $(".dropdown-button").dropdown({
-      constrain_width: false,
-      hover: false
-    });
-
-    $(".dropdown-button-simplified").dropdown({
-      constrain_width: false,
-      hover: false
-    });
+  
 
     bindDataTable();
     bindFormsUi();

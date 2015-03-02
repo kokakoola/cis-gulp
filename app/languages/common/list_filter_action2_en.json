@@ -1,0 +1,8 @@
+{
+    "Filter" :
+    {
+        "ButtonAddNewCase" : "Add new case",
+        "ButtonDisplayFilter" : "Display filter",
+        "ButtonHideFilter" : "Hide filter"
+    }
+}

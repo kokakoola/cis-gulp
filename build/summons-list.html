@@ -156,18 +156,18 @@
     <div class="container">
       <div class="row no-marg-bot">
         <div class="col s12">
-          <h4 class="header white-text text-darken-2">Summons</h4>
           <div id="placeholder-summons-filter" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="summons-filter-template" class="template" data-lang="summons/filter">
-	<div class="card overflow-visible">
-	  <div class="card-content" >
-	    <div class="row no-marg-bot">
+  <h4 class="header white-text text-darken-2">{{Filter.Summons}}</h4>
+  <div class="card overflow-visible">
+    <div class="card-content">
+      <div class="row no-marg-bot">
   <div class="input-field select-label col s12 m4 right">
     <label class="active">{{Filter.Status.Label}}</label>  
     <select class="status-select">
       <option value="" disabled selected>{{Filter.SelectStatus}}</option>
-      <option class="status pending">Pending</option>
-      <option class="status sent">Sent</option>
+      <option class="status pending">{{Filter.Pending}}</option>
+      <option class="status sent">{{Filter.Sent}}</option>
     </select>
   </div>
 
@@ -221,8 +221,8 @@
   </div>
 
 </div>
-	  </div>
-	</div>
+    </div>
+  </div>
 </script>
 <div id="placeholder-list-filter-action" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
@@ -298,12 +298,14 @@
   </div>
 </main>
 
+<div id="placeholder-page-footer" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="page-footer-template" class="template" data-lang="page_footer">
 <footer class="page-footer blue-grey darken-3">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">About</h5>
-        <p class="grey-text lighten-4">This is a prototype for the Court Info System project. In case you find something to improve, push the blue Feedback-button here and write your improvements. In this way you will help us to build better tool for you.</p>
+        <h5 class="white-text">{{Footer.About}}</h5>
+        <p class="grey-text lighten-4">{{Footer.Description}}</p>
       </div>
       <!-- <div class="col l3 s12">
         <h5 class="white-text">Help center</h5>
@@ -320,10 +322,11 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="grey-text text-lighten-4 right" href="http://netgroup.ee"> Netgroup</a>
+      {{Footer.MadeBy}}<a class="grey-text text-lighten-4 right" href="http://netgroup.ee">{{Footer.Author}}</a>
     </div>
   </div>
 </footer>
+</script>
 
     <script src="scripts/vendor/jquery.js"></script>
     <script src="scripts/vendor/jquery.cookie.js"></script>

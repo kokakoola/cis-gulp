@@ -29,16 +29,17 @@
     <ul id="add" class="dropdown-content">
       <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
     </ul>
-
-    <!-- DataCol models -->
-    <div class="col s12 m6" data-datacol-model="note">
-      @@include('../common/common-cards/case-form-note.html')
-    </div>
-
-  </div>
+      <!-- DataCol models -->
+      <div class="col s12 m6" data-datacol-model="note">
+        @@include('../common/common-cards/case-form-note.html')
+      </div>
 
 </div>
 
-<button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Confirm</button>
-<button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">Reject</button>
-<button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'" ><i class="mdi-content-clear"></i></button>
+</div>
+<div id="placeholder-audit-new  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="audit-new-template" class="template" data-lang="fee/audit_new">
+  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">{{Texts.Confirm}}</button>
+  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='@@backTo'">{{Texts.Reject}}</button>
+  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'"><i class="mdi-content-clear"></i></button>
+</script>

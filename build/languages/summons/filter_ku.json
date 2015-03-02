@@ -28,6 +28,10 @@
     "ButtonMoreFields" : "خانه‌ى زياتر",
     "ButtonSearch" : "گه‌ڕان ",
     "Judge" : "ناوى دادوه‌ر",
-    "DateOfDispatch" : "به‌روارى ناردن "
+    "DateOfDispatch" : "به‌روارى ناردن ",
+    "SummonsDocument": "Summons document ku",
+    "Pending": "Pending ku",
+    "Sent": "Sent ku",
+    "Summons" : "Summons ku"
   }
 }

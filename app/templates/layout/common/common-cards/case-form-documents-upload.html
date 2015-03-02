@@ -1,5 +1,6 @@
 <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+<div class="modal-content">
 <h5 class="grey-text text-darken-4">{{Texts.Documents}}</h5>
 <div class="divider"></div>
 <div class="row no-marg-bot">
@@ -13,7 +14,7 @@
             <img src="http://placehold.it/125x125">
           </div>
           <div class="col s7">
-            <span class="js-fileupload-preview-filename">Toimiku otsing paigast ära.png</span>
+            <span class="js-fileupload-preview-filename">{{Texts.FileName1}}</span>
             <span class="js-fileupload-preview-filesize">(311.36 KB)</span>
             <br>
             <a class="js-fileupload-remove-click waves-effect waves-teal btn-flat"><span><i class="mdi-content-clear"></i></span></a>
@@ -25,7 +26,7 @@
             <img class="js-fileupload-preview-thumbnail-image" data-src="/CIS/assets/images/thumbnails/" src="http://placehold.it/125x125">
           </div>
           <div class="col s7">
-            <span class="js-fileupload-preview-filename">valduse äravõtmise akt_85-2014-45_2014_11_24.docx</span>
+            <span class="js-fileupload-preview-filename">{{Texts.FileName2}}</span>
             <span class="js-fileupload-preview-filesize">(37.04 KB)</span>
             <br>
             <a class="js-fileupload-remove-click waves-effect waves-teal btn-flat"><span><i class="mdi-content-clear"></i></span></a>
@@ -33,7 +34,7 @@
         </div>
       </div>
       <div class="js-fileupload-descriptionarea card-panel bg-light">
-        <h5><i class="@*Some nice upload icon*@"></i>Drag files here to upload</h5> or click to browse
+	  	<h5><i class="@*Some nice upload icon*@"></i>{{Texts.DropFilesHere}}</h5> {{Texts.ClickHere}}
       </div>
     </div>
     </div>
@@ -44,50 +45,54 @@
       <div class="row">
         <div class="col s12">
           <select>
-            <option value="" disabled selected>Type</option>
-            <option value="1">Claim document</option>
-            <option value="2">Decisioin</option>
-            <option value="3">Option 3</option>
+            <option value="" disabled selected>{{Texts.Type.FirstValue}}</option>
+		  	{{#each Texts.Type.Values}}
+		  	<option value="{{@index}}">{{this}}</option>
+		  	{{/each}}
           </select>
         </div>
         <div class="col s12">
           <select id="category">
-            <option value="" disabled selected>Category</option>
-            <option value="1">Incoming</option>
-            <option value="2">Outgoing</option>
+           <option value="" disabled selected>{{Texts.Category.FirstValue}}</option>
+		  	{{#each Texts.Category.Values}}
+		  	<option value="{{@index}}">{{this}}</option>
+		  	{{/each}}
           </select>
         </div>
         <div class="input-field col s12">
           <input id="author" type="text" class="validate">
-          <label for="author">Author</label>
+          <label for="author">{{Texts.Author}}</label>
         </div>
         <div class="input-field col s12">
-          <label for="registrationDate">Date of registration</label>
+          <label for="registrationDate">{{Texts.Author}}</label>
           <input id="registrationDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
-          <label for="arrivalDate">Date of arrival</label>
+          <label for="arrivalDate">{{Texts.DateOfRegister}}</label>
           <input id="arrivalDate" type="text" class="datepicker today">
         </div>
         <div class="input-field col s12">
           <textarea class="materialize-textarea"></textarea>
-          <label>Description</label>
+          <label>{{Texts.Description}}</label>
         </div>
         <div class="input-field col s12">
           <div class="col s12 m4 right">
             <input type="checkbox" id="Personal" class="right" />
-            <label for="Personal">Personal</label>
+            <label for="Personal">{{Texts.Personal}}</label>
           </div>
           <textarea class="materialize-textarea"></textarea>
-          <label>Notes</label>
+          <label>{{Texts.Notes}}</label>
         </div>
       </div>
     </form>
   </div>
+</div>
 
 </div>
+<div class="modal-footer">
 <div class="action-bar">
   <button class="btn waves-effect waves-light save-light right modal-action modal-close">{{Texts.ButtonSave}}</button>
   <button class="btn btn-flat lighten-4 waves-effect waves-light cancel right modal-action modal-close"><i class="mdi-content-clear"></i></button>
+</div>
 </div>
 </script>

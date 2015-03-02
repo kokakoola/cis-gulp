@@ -2,6 +2,8 @@
   "Filter" : {
     "CaseNumber" : "ژماره‌ى داوا",
     "Claimant" : "ناوى داواكار",
-    "Defendant" : "ناوى داواله‌سه‌ر كراو"
+    "Defendant" : "ناوى داواله‌سه‌ر كراو",
+    "Pending" : "Pending ku",
+    "Registered" : "Registered ku"
   }
 }

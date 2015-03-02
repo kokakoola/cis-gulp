@@ -3,7 +3,24 @@
     "Documents" : "Documents",
     "DropFilesHere" : "Drop files here to upload",
     "ClickHere" : "or click here",
-    "ButtonSave" : "Save"
+    "ButtonSave" : "Save",
+	"Author" : "Author",
+	"DateOfArrival" : "Date of arrival",
+	"DateOfRegister" : "Date of registration",
+	"Search" : "Search",
+	"Description" : "Description",
+	"Personal" : "Personal",
+	"Notes" : "Notes",
+	"Type" : {
+	    "FirstValue" : "Type",
+	    "Values" : ["Claim document"]
+	},
+	"Category" : {
+		 "FirstValue" : "Category",
+	    "Values" : ["Incoming", "Outgoing"]
+	},
+	"FileName1" : "Toimiku_otsing_paigast_ära.png",
+	"FileName2" : "valduse_äravõtmise_akt_85-2014-45_2014_11_24.docx"
   },
 
   "Headers" : {

@@ -1,0 +1,10 @@
+{
+    "Texts" : {
+      "Payment":  "Payment",
+      "Payer":  "Payer",
+      "PayerValue":  "This Man Named Somebody, This Man Else",
+      "PaymentDate":  "Payment date",
+      "ReceiptNo":  "Receipt No",
+      "Total":  "Total"
+    }
+}

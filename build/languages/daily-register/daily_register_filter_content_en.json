@@ -3,6 +3,8 @@
     "CaseNumber" : "Case number",
     "Claimant" : "Claimant",
     "Defendant" : "Defendant",
-    "SelectStatus" : "Select status"
+    "SelectStatus" : "Select status",
+    "Pending" : "Pending",
+    "Registered" : "Registered"
   }
 }

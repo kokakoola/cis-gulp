@@ -1,8 +1,8 @@
 {
 	"Texts" : {
 		"Participant" : "به‌شدار بوو",
-		"NaturalPerson" : "Natural person",
-		"LegalEntity" : "Legal entity",
+		"NaturalPerson" : "كه‌سى شروستى",
+		"LegalEntity" : "ه‌سى معنوى",
 		"FullName" : "ناوى به‌شداربوو ",
 		"Type" : {
       	"Label" : "جۆرى",

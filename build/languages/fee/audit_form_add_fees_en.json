@@ -1,0 +1,14 @@
+{
+    "Texts" : {
+      "Sum" : "Sum",
+      "FeeType" : {
+        "Label" :  "Fee type",
+        "Values" :  ["Option 1","Option 2","Option 3"]
+      },
+      "FeeTypeTwo" : "Fee type two",
+      "AddFee" : {
+        "Label": "Add fee",
+        "Values": ["one", "two", "three"]
+      }
+    }
+}
