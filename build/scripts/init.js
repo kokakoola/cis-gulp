@@ -76,10 +76,11 @@
         }
       });
 
-      $(".dropdown-button").dropdown({
-      	constrain_width: false,
-      	hover: false
-      });
+    $(".dropdown-button").dropdown({
+      constrain_width: false,
+       belowOrigin: true 
+    });
+
 
       $(".dropdown-button-simplified").dropdown({
       	constrain_width: false,

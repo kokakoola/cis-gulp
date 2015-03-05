@@ -24,7 +24,7 @@
       <ul class="left ">
         <div id="placeholder-courtname" class="filtering template-placeholder"></div>
         <script type="text/x-handlebars-template" id="courtname-template" class="template" data-lang="header/courtname">
-        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a> {{Texts.Civil}}</li>
+        <li><a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30"></a></li>
         </script>
       </ul>
 
@@ -47,10 +47,13 @@
         </li>
         <li class="user-profile">
           <a class="dropdown-button" href="#!" data-activates="personDropdown">
-            <i class="mdi-navigation-arrow-drop-down right"></i>
+            
             ڕۆژه‌ كمال احمد حسن
+            <i class="mdi-navigation-arrow-drop-down right"></i>
+
           </a>
         </li>
+        
         <!-- <li>
           <a href="index.html"><img class="responsive-img" src="images/cis-logo.svg" alt="" height="30" width="30" style="padding-top: 5px;"></a>
         </li> -->
@@ -60,12 +63,10 @@
   </nav>
 </div>
 
-<!-- Dropdown Structure -->
-
 
 
 <!-- profile dropdown -->
-<ul id="personDropdown" class="navbar dropdown-content">
+<ul id="personDropdown" class=" dropdown-content">
   <div id="placeholder-profile-dropdown" class="filtering template-placeholder"></div>
   <script type="text/x-handlebars-template" id="profile-dropdown-template" class="template" data-lang="header/person_dropdown">
   <li><a href="#!">{{List.Profile}}</a></li>
@@ -76,12 +77,12 @@
 </ul>
 
 <!-- content dropdown -->
-<ul id="otherPages" class="navbar dropdown-content">
+<ul id="otherPages" class=" dropdown-content">
   <li><a href="#!">Next page</a></li>
 </ul>
 
 <!-- notifications dropdown -->
-<div class="navbar dropdown-content notification-container" id="notificationsDropdown">
+<div class="dropdown-content notification-container" id="notificationsDropdown">
   <ul class="collection with-header">
     <li class="collection-header"><h5>Notifications</h5></li>
     <li class="collection-item">
@@ -214,7 +215,7 @@
   </div>
 
   <!-- DataCol form group -->
-  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="4" data-datacol-group>
+  <div class="panel-group" id="caseForm" data-datacol-models-show="3" data-datacol-models-count="4" data-datacol-group> 
 
     <!-- Dropdown Structure -->
     <!-- DataCol clone triggers -->
@@ -229,6 +230,7 @@
     <div id="modal1" class="modal">
       <div id="placeholder-case-form-documents-upload  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-documents-upload-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+<div class="modal-content">
 <h5 class="grey-text text-darken-4">{{Texts.Documents}}</h5>
 <div class="divider"></div>
 <div class="row no-marg-bot">
@@ -314,11 +316,14 @@
       </div>
     </form>
   </div>
+</div>
 
 </div>
+<div class="modal-footer">
 <div class="action-bar">
   <button class="btn waves-effect waves-light save-light right modal-action modal-close">{{Texts.ButtonSave}}</button>
   <button class="btn btn-flat lighten-4 waves-effect waves-light cancel right modal-action modal-close"><i class="mdi-content-clear"></i></button>
+</div>
 </div>
 </script>
     </div>
@@ -330,8 +335,8 @@
     <div class="card overflow-visible wow bounceInDown">
       <div class="card-content">
         <div>
-          <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4">
-            <i class="mdi-hardware-keyboard-arrow-down"></i>
+          <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4 collapsable">
+            
            {{Texts.Claimant}}
           </a>
           <div class="switch col s6 right">
