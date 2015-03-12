@@ -56,6 +56,7 @@ nav .responsive-img {
 
 .navbar.dropdown-content {
   top: $navbar-height !important;
+  overflow: hidden !important;
 }
 
 :-webkit-full-screen .mdi-navigation-fullscreen:before {
