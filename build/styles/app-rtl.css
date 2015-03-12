@@ -11502,7 +11502,7 @@ html {
 }
 
 html, body {
-  overflow: auto !important;
+  overflow: auto;
 }
 
 .container {
@@ -11515,7 +11515,7 @@ html, body {
 }
 
 .card {
-  overflow: visible;
+  overflow: initial;
 }
 .card.with-pointer:before {
   content: '';

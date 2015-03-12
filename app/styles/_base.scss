@@ -7,7 +7,7 @@ html {
 }
 
 html, body {
-  overflow: auto !important;
+  overflow: auto;
 }
 
 .container {
@@ -40,7 +40,7 @@ html, body {
 // }
 
 .card {
-  overflow: visible;
+  overflow: initial;
 
   &.with-pointer {
       &:before {
