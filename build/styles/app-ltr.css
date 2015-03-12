@@ -12028,6 +12028,9 @@ table.dataTable.order-column tbody tr > .sorting_1 {
   background-color: #00bcd4;
 }
 
+.select-wrapper {
+  position: relative;
+}
 .select-wrapper input.select-dropdown {
   position: relative;
   cursor: pointer;
@@ -12043,6 +12046,13 @@ table.dataTable.order-column tbody tr > .sorting_1 {
   margin: 0 0 15px 0;
   padding: 0;
   display: block;
+}
+.select-wrapper .mdi-navigation-arrow-drop-down {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 23px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 label + .select-wrapper {
