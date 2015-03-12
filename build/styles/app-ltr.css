@@ -11550,7 +11550,7 @@ textarea.materialize-textarea {
   padding-top: 30px;
   padding-bottom: 20px;
   overflow-y: auto;
-  height: 400px;
+  max-height: 400px;
 }
 
 .identicon {
