@@ -12068,6 +12068,9 @@ label + .select-wrapper {
 /*Year selector in datepicker*/
 .picker__select--year.browser-default {
   padding: 0;
+  display: inline;
+  background-color: #fff;
+  width: 25%;
 }
 
 /*Disabled dropdown arrow hidden*/

@@ -710,25 +710,28 @@ label + .select-wrapper{
 //TODO: move to another locations.
 /*Dropdowns in filter fix*/
 .select-label {
-	position: relative;
+  position: relative;
 }
 
 /*Fullcalendar events background color*/
 .fc-event {
-	background-color: #3a87ad;
+  background-color: #3a87ad;
 }
 
 /*Datatables save button*/
 .btn.waves-effect.waves-light.save {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /*Year selector in datepicker*/
 .picker__select--year.browser-default {
-	padding: 0;
+  padding: 0;
+  display: inline;
+  background-color: #fff;
+  width: 25%;
 }
 
 /*Disabled dropdown arrow hidden*/
 .select-wrapper .select-dropdown:disabled + .mdi-navigation-arrow-drop-down {
-	display: none;
+  display: none;
 }
