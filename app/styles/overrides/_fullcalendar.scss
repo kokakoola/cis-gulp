@@ -132,8 +132,8 @@ html .fc {
 }
 
 .fc-widget-header{
-    border-bottom: 1px solid #EEE; 
-} 
+    border-bottom: 1px solid #EEE;
+}
 
 .fc-state-highlight {
   /* <td> today cell */
@@ -187,15 +187,15 @@ html .fc {
 .fc-button-next .fc-text-arrow { /* for &lsaquo; &rsaquo; */
   font-weight: bold;
   }
-  
+
 /* icon (for jquery ui) */
-  
+
 .fc-button .fc-icon-wrap {
   position: relative;
   float: left;
   top: 50%;
   }
-  
+
 .fc-button .ui-icon {
   position: relative;
   float: left;
@@ -208,7 +208,7 @@ html .fc {
 .fc-state-default {
   /* non-theme */
   border-color: color("cyan", "base");
-  color: color("cyan", "base"); 
+  color: color("cyan", "base");
   &.fc-corner-left { /* non-theme */
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -337,6 +337,7 @@ html .fc {
   border-width: 0;
   font-size: .85em;
   cursor: default;
+  background: #3a87ad;
 }
 
 a.fc-event, .fc-event-draggable {

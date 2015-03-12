@@ -77,9 +77,9 @@ textarea.materialize-textarea {
 }
 
 .row .col .card.wrapping-notes {
-  padding-top: 30px; 
-  padding-bottom: 20px; 
-  overflow-y: auto; 
+  padding-top: 30px;
+  padding-bottom: 20px;
+  overflow-y: auto;
   height: 400px;
 }
 
@@ -149,7 +149,7 @@ body {
 
 .list-inline li {
   display: inline;
-  @include padding-right(10px); 
+  @include padding-right(10px);
 
 
   &:after {
@@ -196,7 +196,7 @@ width: 100vw;
  top: 20px;
  left: 40px;
  font-size: 2.5rem;
- 
+
  li {
   padding: 15px;
   display: inline;
@@ -381,7 +381,7 @@ animation: second 30s ease infinite;
 }
 
 .input-field .prefix.active {
-  color: inherit; 
+  color: inherit;
 }
 
 input[type=text].valid,
@@ -405,21 +405,20 @@ textarea.valid {
   @include box-shadow(0 1px 0 0 $error-color);
   }
 
-.input-field label {
+.input-field {
   // color: #444;
-  &span.field-validation-error,
-  &.success {
-    display: none;
+  span.field-validation-error,
+  label.success {
     @include right(0.75rem);
     @include left(auto);
     top: 50px;
     font-weight: strong;
     font-size: 12px;
   }
-  &span.field-validation-error {
+  span.field-validation-error {
     color: $error-color;
   }
-  &.success {
+  label.success {
     color: $success-color;
   }
 }
@@ -519,7 +518,7 @@ i.status {
   }
   &.audited, &.lightblue, &.sent {
     color: color("light-blue", "lighten-1");
-  }  
+  }
 
 }
 
@@ -623,6 +622,8 @@ table.dataTable.order-column tbody tr > .sorting_1, {
 .modal {
   background-color: #fff;
   max-height: 90%;
+  transform: none;
+
   @media (max-width: $large-screen) {
     width: 70%;
   }
@@ -705,3 +706,29 @@ label + .select-wrapper{
 // .fc-view-container {
 //   height: auto !important;
 // }
+
+//TODO: move to another locations.
+/*Dropdowns in filter fix*/
+.select-label {
+	position: relative;
+}
+
+/*Fullcalendar events background color*/
+.fc-event {
+	background-color: #3a87ad;
+}
+
+/*Datatables save button*/
+.btn.waves-effect.waves-light.save {
+	margin-bottom: 0;
+}
+
+/*Year selector in datepicker*/
+.picker__select--year.browser-default {
+	padding: 0;
+}
+
+/*Disabled dropdown arrow hidden*/
+.select-wrapper .select-dropdown:disabled + .mdi-navigation-arrow-drop-down {
+	display: none;
+}
