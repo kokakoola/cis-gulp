@@ -40,7 +40,8 @@ html, body {
 // }
 
 .card {
-  overflow: auto;
+  overflow: visible;
+
   &.with-pointer {
       &:before {
       content: '';

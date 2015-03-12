@@ -11514,7 +11514,7 @@ html, body {
 }
 
 .card {
-  overflow: auto;
+  overflow: visible;
 }
 .card.with-pointer:before {
   content: '';
