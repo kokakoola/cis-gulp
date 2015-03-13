@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="case-list">
+<html lang="" class="unify-case">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Case list</title>
+    <title>CIS | Unification of cases</title>
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
@@ -22,7 +22,7 @@
     <!-- endbuild -->
 
   </head>
-  <body class="case-list">
+  <body class="unify-case">
 
 
 
@@ -161,203 +161,283 @@
   </li>
 </ul>
 
-
 <main>
 
   <div class="main-banner"></div>
 
-  <div class="container">
-    <div class="card-onbanner">
-      <div class="row no-marg-bot">
+  <div class="card-onbanner">
+    <div class="container">
+      <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
+  
+  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+  <h4 class="header white-text text-darken-2">Unification of cases</h4>
+  
+</script> 
+      <div class="row">
+  <!-- DataCol trigger -->
+  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+    <i class="mdi-content-add animated rotateIn"></i>
+  </a>
+  
+  <div class="col s12">
+    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">Save</button>
+    <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='case-list.html'"><i class="mdi-content-clear"></i></button>
+  </div>
+
+  <div class="col s12">
+    
+  <div class="card  wow cont-padding">
+    <div class="card-content">
+      <div class="card-title grey-text text-darken-4">Select primary case for unification</div>
+      <div class="divider"></div>
+      <p>
+        <input type="radio" id="primary1" name="primary" /><label for="primary1">2015/13/137</label>
+      </p>
+
+      <p>
+        <input type="radio" id="primary2"  name="primary" /><label for="primary2">2015/13/139</label>
+      </p> 
+      </div>
+    </div>
+      <div id="placeholder-daily-form-general  wow bounceInDown" class="template-placeholder"></div>
+      <script type="text/x-handlebars-template" id="daily-form-general-template" class="template" data-lang="daily-register/daily_form_general">
+
+    
+    <div class="card  wow cont-padding">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">Select proceeding members</span>
+      <div class="divider"></div>
+      <div class="row">
         <div class="col s12">
-           
-
-          <div id="placeholder-round-top-fw  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="round-top-fw-template" class="template" data-lang="common/round_top">
-
-
-<h4 class="header white-text text-darken-2">{{Texts.PrimeRegistry}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Look it's a table"><i class="mdi-action-info-outline"></i></a></h4>
-
-</script>
-
-<!-- <a class="btn-floating btn-large waves-effect waves-light round-top add" href="case-new.html">
-  <i class="create-case mdi-content-add"></i>
-</a> -->
-          <div id="placeholder-list-filter2-action" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="list-filter2-action-template" class="template" data-lang="common/list_filter_action2">
-<div class="row">
-<div class="col s12">
-  <div class="filter-action upper">
-    <a href="case-new.html" class="btn btn-large waves-effect right waves-light submit" >
-      {{Filter.ButtonAddNewCase}}
-      <i class="mdi-navigation-search right"></i>
-    </a>
-    <button class="btn btn-large waves-effect waves-light save right collapsed" type="button" data-toggle="collapse" data-target="#showFilter" data-less-text="{{Filter.ButtonHideFilter}}" @@hidden>
-      {{Filter.ButtonDisplayFilter}}
-    </button>
+          <table>
+            <thead>
+              <tr>
+                <th data-field="price">Participants full name</th>
+                <th data-field="price">Participants role</th>
+                <th data-field="name">Defendants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+                <th data-field="id">Claimants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each Persons}}
+              <tr>
+                <td>
+                <span class="check-inline">
+                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+                  </span> {{this.Name}}</td>
+                <td>{{this.Type}}</td>
+                <td >
+                  <span class="check-inline">
+                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+                  </span> {{this.Name}}</td>
+                </td>
+                <td >
+                  <span class="check-inline">
+                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+                  </span> {{this.Name}}</td>
+                </td>
+              </tr>
+              {{/each}}
+              <tr class="divided">
+                <td>
+                <span class="check-inline">
+                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+                  </span> Select all</td>
+                <td>{{this.Type}}</td>
+                <td >
+                  <span class="check-inline">
+                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+                  </span> Select all</td>
+                </td>
+                <td >
+                  <span class="check-inline">
+                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+                  </span> Select all</td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</script>
-          
-    <div class="collapse" id="showFilter">
-        <div id="placeholder-registry-filter" class="filtering template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="registry-filter-template" class="template" data-lang="registry/filter">
-      <div class="card overflow-visible">
-        <div class="card-content" >
-          <a class="card-title grey-text text-darken-4">{{Filter.Title}}</a>
-          <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="This is a filter"><i class="mdi-action-info-outline"></i></a>
-          <div class="divider"></div>
-          <div class="row">
-            <div class="input-field col s12 m2 right">
-              <label class="active">{{Filter.Status.Label}}</label>
-              <select class="status-select">
-                <option value="" disabled selected>{{Filter.SelectStatus}}</option>
-                <option class="status draft">Drafts</option>
-                <option class="status pending">Pending</option>
-                <option class="status registered">Registered</option>
-                <option class="status closed">Closed</option>
-                <option class="status in-proceedings">In proceedings</option>
-                <option class="status in-next">In next what</option>
-                <option class="status rejected">Rejected</option>
-              </select>
-            </div>
-            <div class="input-field typeahead-container col s12 m2 right">
-              <input id="caseNumber" class="typeahead-input casenrs" type="text">
-              <label for="caseNumber">{{Filter.CaseNumber}}</label>
-            </div>
-            <div class="input-field col s12 m2 right">
-              <label class="active">{{Filter.CaseType.Label}}</label> 
-              <select>
-                <option value="" selected disabled>{{Filter.SelectCasetype}}</option>   
-                 {{#each Filter.CaseType.Values}}
-                     <option value="{{@index}}">{{this}}</option>
-                 {{/each}}
-               </select>
-            </div>
-            <div class="input-field col s12 m2 right">
-              <input id="claimant" type="text" >
-              <label for="claimant">{{Filter.Judge}}</label>
-            </div>
-            <div class="input-field col s12 m2 right">
-              <i class="mdi-notification-event-note prefix"></i>
-              <input id="startDate" type="date" class="datepicker">
-              <label for="startDate">{{Filter.From}}</label>
-            </div>
-            <div class="input-field col s12 m2 right">
-              <i class="mdi-notification-event-note prefix"></i>
-              <label for="endDate">{{Filter.To}}</label>
-              <input id="endDate" type="text" class="datepicker">
-            </div>
-          </div>
-          
-          <div class="row collapse" id="moreFields">
-            <div class="col s12 m2 right">
-            <div class="check-inline">
-              <input type="checkbox" id="urgent" /><label for="urgent">{{Filter.Urgent}}</label>
-            </div>
-            <br>
-            <div class="check-inline">
-              <input type="checkbox" id="aid" /><label for="aid">{{Filter.JudicialAid}}</label>
-            </div>
-            </div>
-          
-            <div class="col s12 m3 right">
-              <div class="row">
-                <div class="input-field col s12 m6">
-                  <input id="fromSum" type="text">
-                  <label for="fromSum">{{Filter.CaseValue.From}}</label>
-                </div>
-                <div class="input-field col s12 m6">
-                  <input id="toSum" type="text" >
-                  <label for="toSum">{{Filter.CaseValue.To}}</label>
-                </div>
-              </div>
-            </div>
-            <div class="input-field typeahead-container col s12 m3 right">
-              <input id="claimant" class="typeahead-input persons" type="text">
-              <label for="claimant">{{Filter.Claimant}}</label>
-            </div>
-            <div class="input-field typeahead-container col s12 m2 right">
-              <input id="defendant" class="typeahead-input persons" type="text">
-              <label for="defendant">{{Filter.Defendant}}</label>
-            </div>
-            <div class="input-field typeahead-container col s12 m2 right">
-              <input id="participant" class="typeahead-input persons" type="text">
-              <label for="participant">{{Filter.Participant}}</label>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-      </script>
-          <div id="placeholder-list-filter-action" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
-<div class="filter-action">
-  <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
-    {{Filter.ButtonSearch}}
-    <i class="mdi-navigation-search right"></i>
-  </button>
-  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}" @@hidden>
-    {{Filter.ButtonMoreFields}}
-    <i class="filter-toggle mdi-navigation-expand-more right"></i>
-  </button>
-  <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
-    <i class="mdi-content-clear "></i>
-  </button>
-</div>
-</script>
-
-    </div>
-
-
-
-
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content with-table">
-            <form action="">
-  <div id="placeholder-registry-table" class="template-placeholder"></div>
-
-  <script type="text/x-handlebars-template" id="registry-table-template" class="template" data-lang="data/registry/table">
-    <table class="hoverable bordered data">
-        <thead>
-          <th data-field="status" class="sorting">{{Texts.Status}}</th>
-          <th data-field="date" class="sorting">{{Texts.Date}}</th>
-          <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-          <th data-field="casetype" class="sorting proceeding-table">{{Texts.CaseType}}</th>
-          <th data-field="claimants">{{Texts.Claimant}}</th>
-          <th data-field="defendants">{{Texts.Defendant}}</th>
-          <th data-field="judge">{{Texts.Judge}}</th>
-        </thead>
-        <tbody>
-        {{#each Cases}}
-          <tr onClick="parent.location='case-edit.html'">
-            <td class="center"><i class="status {{Status}}"></i></td>
-            <td>{{Date}}</td>
-            <td>{{CaseNumber}}</td>
-            <td>{{CaseType}}</td>
-            <td>{{Claimant}}</td>
-            <td>{{Defendant}} </td>
-            <td>{{Judge}}</td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
   </script>
-</form>
 
+
+<div id="placeholder-case-form-general-2" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+  <div class="card  wow cont-padding" style="padding: 20px">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.Documents}}</span>
+      
+
+      
+      <table class="hoverable bordered data">
+	<thead>
+    <th data-field="type" class="sorting">{{Headers.Type}}</th>
+    <th data-field="category" class="sorting">{{Headers.Category}}</th>
+    <th data-field="author" class="sorting">{{Headers.Author}}</th>
+    <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+    <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+    <th data-field="notes">{{Headers.Notes}}</th>
+  </thead>
+  <tbody>
+  {{#each Cases}}
+    <tr onClick="$('#modal1').openModal();">
+      <td>{{Type}}</td>
+      <td>{{Category}}</td>
+      <td>{{Author}}</td>
+      <td class="center">{{DateOfRegister}}</td>
+      <td>{{Files}}</td>
+      <td class="center">{{Notes}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+  </div>
+</script>
+      
+
+  </div>
+
+  <!-- DataCol form group -->
+  <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
+
+<!--     <a class="dropdown-button btn-large btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
+
+    <ul id="add" class="dropdown-content">
+      <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
+      <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
+      <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+      <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
+      <li><a href="#modal1" class="modal-trigger">Add a document</a></li>
+    </ul> -->
+
+    <div class="col s12 m6" > 
+      <div id="placeholder-case-form-claimant" class="template-placeholder"></div>
+  <script type="text/x-handlebars-template" id="case-form-claimant-template" class="template" data-lang="registry/case-cards/case_form_claimant">
+    <div class="card overflow-visible wow bounceInDown">
+      <div class="card-content">
+        <div>
+          <a data-toggle="collapse" href="#collapseClaimant_0" class="card-title grey-text text-darken-4 collapsable">
+            <i class="mdi-navigation-more-vert"></i>
+           {{Texts.Claimant}}
+          </a>
+          <div class="switch col s6 right">
+            <span>{{Texts.NaturalPerson}}</span>
+
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+            <span>{{Texts.LegalEntity}}</span>
           </div>
+          <a href="#!" class="card-title grey-text text-darken-4">
+            <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+          </a>
+          <div class="divider"></div>
+      </div>
+
+        <div class="row">
+
+          <div class="input-field typeahead-container col s12 right"  id="the-basics">
+            <input id="Claimant_0" type="text" class="typeahead-input persons validate"  value="{{Content.FullName}}">
+            <label for="Claimant_0" class="active">{{Texts.FullName}}</label>
+          </div>
+        </div>
+        <div class="collapse in" id="collapseClaimant_0">
+          <div class="row">
+            <div class="input-field typeahead-container col s12 right">
+              <input id="ClaimantId_0" class="validate typeahead-input documents" type="text" value="{{Content.DocumentNumber}}">
+              <label for="ClaimantId_0" class="active">{{Texts.DocumentNumber}}</label>
+            </div>
+            <div class="input-field typeahead-container  col s12 right">
+              <input id="ClaimantAddress_0" type="text" class="validate typeahead-input aadresses" value="{{Content.Address}}">
+              <label for="ClaimantAddress_0" class="active">{{Texts.Address}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="ClaimantPhone_0" type="text" value="{{Content.Phone}}">
+              <label for="ClaimantPhone_0" class="active">{{Texts.Phone}}</label>
+            </div>
+            <div class="input-field col s12 right">
+              <input id="ClaimantRepresentative_0" type="text" value="{{RepresentativeContent.FullName}}">
+              <label for="ClaimantRepresentative_0" class="active">{{Representative.Representative}}</label>
+            </div>
+          </div>
+        </div>
+    </div>
+  </script>
+
+
+
+
+
+
+    </div>
+    <div class="col s12"><!--  data-datacol-model="noteForm" -->
+      <div id="placeholder-case-form-note " class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.NewNote}}</span>
+      <div class="col s12 m3 check-inline right">
+        <input type="checkbox" id="Personal" class="right" />
+        <label for="Personal">{{Texts.Personal}}</label>
+      </div>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
         </div>
       </div>
     </div>
   </div>
+</script>
 
+
+    </div>
+
+  </div>
+  
+<!--   <div class="col s12 m6">
+    <div id="placeholder-case-card-documents  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-card-documents-template" class="template" data-lang="common/common-cards/case_card_documents">
+<div class="card  wow bounceInDown">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">{{Texts.Title}}</span>
+    <div class="divider"></div>
+    <br>
+    <div class="col s12 m10 offset-m2">
+       <div class="row valign-wrapper">
+         <div class="col s2">
+           <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img"> 
+         </div>
+         <div class="col s8">
+           <span class="black-text">
+             {{Texts.Preview}}
+           </span>
+         </div>
+       </div>
+      </div>
+  </div>
+</div>
+</script>
+  </div> -->
+
+</div>
+
+    </div>
+  </div>
 </main>
 
 <div id="placeholder-page-footer" class="template-placeholder"></div>
@@ -467,3 +547,4 @@
     <!-- endbuild -->
   </body>
 </html>
+

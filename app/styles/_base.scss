@@ -373,16 +373,24 @@ animation: second 30s ease infinite;
 }
 
 .check-inline {
-  [type="checkbox"]:not(:checked) + label:before {
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="radio"]:not(:checked) + label:before {
     top: 15px;
   }
   [type="checkbox"]:not(:checked) + label,
-  [type="checkbox"]:checked + label {
+  [type="checkbox"]:checked + label,
+  [type="radio"]:not(:checked) + label,
+  [type="radio"]:checked + label {
     padding-top: 15px;
   }
-  [type="checkbox"]:checked + label:before {
+  [type="checkbox"]:checked + label:before,
+  [type="radio"]:checked + label:before {
     top: 7px;
   }
+}
+
+td .check-inline {
+  display: inline;
 }
 
 .input-field .prefix.active {
@@ -462,6 +470,9 @@ table {
   }
   &.dataTable tr:hover {
     cursor: pointer;
+  }
+  tr.divided {
+    border-top: 1px solid inherit;
   }
 }
 

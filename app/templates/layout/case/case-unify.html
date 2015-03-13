@@ -1,0 +1,45 @@
+<div class="row">
+  <!-- DataCol trigger -->
+  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+    <i class="mdi-content-add animated rotateIn"></i>
+  </a>
+  
+  <div class="col s12">
+    <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='@@backTo'">Save</button>
+    <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='@@backTo'"><i class="mdi-content-clear"></i></button>
+  </div>
+
+  <div class="col s12">
+    @@include('./case-cards/case-card-members-unify.html')
+  </div>
+
+  <!-- DataCol form group -->
+  <div class="panel-group" id="caseForm" data-datacol-models-show="4" data-datacol-models-count="5" data-datacol-group>
+
+<!--     <a class="dropdown-button btn-large btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
+      <i class="mdi-content-add animated rotateIn"></i>
+    </a>
+
+    <ul id="add" class="dropdown-content">
+      <li><a href="#!" data-datacol-clone="claimant">Add a claimant</a></li>
+      <li><a href="#!" data-datacol-clone="defendant">Add a defendant</a></li>
+      <li><a href="#!" data-datacol-clone="participant">Add a participant</a></li>
+      <li><a href="#!" data-datacol-clone="noteForm">Add a note</a></li>
+      <li><a href="#modal1" class="modal-trigger">Add a document</a></li>
+    </ul> -->
+
+    <div class="col s12 m6" > 
+      @@include('./case-cards/case-card-claimant.html', {"person":"Claimant" })
+    </div>
+    <div class="col s12"><!--  data-datacol-model="noteForm" -->
+      @@include('../common/common-cards/case-form-note.html')
+
+    </div>
+
+  </div>
+  
+<!--   <div class="col s12 m6">
+    @@include('../common/common-cards/case-card-documents.html')
+  </div> -->
+
+</div>
