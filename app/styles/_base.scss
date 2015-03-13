@@ -8,6 +8,10 @@ html {
 
 html, body {
   overflow: auto;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -620,19 +624,30 @@ table.dataTable.order-column tbody tr > .sorting_1, {
    background-color: whitesmoke;
   }
 
-.modal {
-  background-color: #fff;
-  max-height: 90%;
-  transform: none;
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
 
-  @media (max-width: $large-screen) {
-    width: 70%;
-  }
-  @media #{$medium-and-down} {
-    width: 80%;
-  }
-  h4 {
-    padding-left: 0;
+  .modal {
+    background-color: #fff;
+    max-height: 90%;
+    transform: none;
+    position: relative;
+
+    @media (max-width: $large-screen) {
+      width: 70%;
+    }
+    @media #{$medium-and-down} {
+      width: 80%;
+    }
+    h4 {
+      padding-left: 0;
+    }
   }
 }
 
