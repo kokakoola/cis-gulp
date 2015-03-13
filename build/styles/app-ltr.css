@@ -11503,6 +11503,9 @@ html {
 html, body {
   overflow: auto;
 }
+html.modal-open, body.modal-open {
+  overflow: hidden;
+}
 
 .container {
   width: 80%;
@@ -11964,23 +11967,33 @@ table.dataTable.order-column tbody tr > .sorting_1 {
   background-color: whitesmoke;
 }
 
-.modal {
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.modal-wrapper .modal {
   background-color: #fff;
   max-height: 90%;
   -webkit-transform: none;
           transform: none;
+  position: relative;
 }
 @media (max-width: 1200px) {
-  .modal {
+  .modal-wrapper .modal {
     width: 70%;
   }
 }
 @media only screen and (max-width: 992px) {
-  .modal {
+  .modal-wrapper .modal {
     width: 80%;
   }
 }
-.modal h4 {
+.modal-wrapper .modal h4 {
   padding-left: 0;
 }
 
