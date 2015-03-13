@@ -634,6 +634,8 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   overflow-y: auto;
 
   .modal {
+    top: 0 !important;
+    margin: 30px auto;
     background-color: #fff;
     max-height: none;
     transform: none;
