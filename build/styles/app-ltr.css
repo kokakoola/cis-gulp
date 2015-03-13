@@ -11978,7 +11978,7 @@ table.dataTable.order-column tbody tr > .sorting_1 {
 }
 .modal-wrapper .modal {
   background-color: #fff;
-  max-height: 90%;
+  max-height: none;
   -webkit-transform: none;
           transform: none;
   position: relative;
