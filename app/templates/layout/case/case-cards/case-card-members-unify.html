@@ -79,13 +79,39 @@
 
 <div id="placeholder-case-form-general-2" class="template-placeholder"></div>
   <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
-  <div class="card  wow cont-padding" style="padding: 20px">
+  <div class="card  wow cont-padding">
     <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.Documents}}</span>
+      <span class="card-title grey-text text-darken-4">Documents of case 2015/B/371</span>
       
-
-      
-      @@include('case-card-documents-table-table.html')
+      <table class="hoverable bordered">
+        <thead>
+          <th>Select / Select all <span class="check-inline">
+            <input type="checkbox" id="b" /><label for="b"> </label>
+          </span></th>
+          <th data-field="type" class="sorting">{{Headers.Type}}</th>
+          <th data-field="category" class="sorting">{{Headers.Category}}</th>
+          <th data-field="author" class="sorting">{{Headers.Author}}</th>
+          <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+          <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+          <th data-field="notes">{{Headers.Notes}}</th>
+        </thead>
+        <tbody>
+        {{#each Cases}}
+          <tr>
+              <td>
+                <span class="check-inline">
+                    <input type="checkbox" id="b" /><label for="b"> </label>
+                  </span> </td>
+            <td>{{Type}}</td>
+            <td>{{Category}}</td>
+            <td>{{Author}}</td>
+            <td class="center">{{DateOfRegister}}</td>
+            <td>{{Files}}</td>
+            <td class="center">{{Notes}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
   </div>
 </script>

@@ -472,7 +472,10 @@ table {
     cursor: pointer;
   }
   tr.divided {
-    border-top: 1px solid inherit;
+    border-top: 1px solid #ccc;
+  }
+  .check-inline {
+    margin-top: -7px;
   }
 }
 
