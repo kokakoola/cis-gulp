@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="fee-new">
+<html lang="" class="unify-case">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | New fee</title>
+    <title>CIS | Unification of cases</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/app-rtl.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/app-ltr.css">
 
   </head>
-  <body class="fee-new">
+  <body class="unify-case">
 
 
 
@@ -159,205 +159,205 @@
 
   <div class="card-onbanner">
     <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
+      <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
   
-  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="fee-list.html"><i class="mdi-navigation-close"></i></a>
-  <h4 class="header white-text text-darken-2">{{Texts.NewFee}}</h4>
+  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+  <h4 class="header white-text text-darken-2">Unification of cases</h4>
   
-</script>
+</script> 
+      <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">Save</button>
+<div class="row">
 
-          <div class="row">
-  <!-- DataCol trigger -->
-  <a class="dropdown-button btn-floating btn-large waves-effect waves-light cyan base trigger trigger-add" href="#!" data-activates="add" data-datacol-trigger>
-    <i class="mdi-content-add animated rotateIn"></i>
-  </a>
-  
   <div class="col s12">
-    <div id="placeholder-fee-audit-form-general  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-audit-form-general-template" class="template" data-lang="fee/fee_audit_form_general">
-  <div class="card overflow-visible wow bounceInDown">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4"> {{Texts.CaseNo}} {{Texts.CaseNoValue}}</span>
-      <div class="col s12 m3 check-inline">
-        <input type="checkbox" id="grantJudicialAid" checked>
-        <label for="grantJudicialAid">{{Texts.GrantJudicialAid}}</label>
-      </div>
-      <div class="divider"></div>
-      <div class="row no-marg-bot">
-        <div class="col s12 m6">
-          <div class="input-field typeahead-container " hiddencasenumber>
-            <input id="caseNr" type="text" class="typeahead-input casenrs">
-            <label for="caseNr">{{Texts.CaseNr}}</label>
-          </div>
-          <br>
-          <div class="input-field">
-            <input id="courtName" type="text" disabled>
-            <label for="courtName">{{Texts.CourtName}}</label>
-          </div>
-          <br>
-          <div class="input-field">
-            <input id="caseType" type="text" disabled>
-            <label for="caseType">{{Texts.CaseType}}</label>
-          </div>
-          <br>
-          <div class="input-field">
-            <input id="caseValue" type="text" @@casevaluedisabled>
-            <label for="caseValue">{{Texts.CaseValue}}</label>
-          </div>
-        </div>
+    
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div class="card-title grey-text text-darken-4">Select primary case for unification</div>
+    <div class="divider"></div>
+    <p>
+      <input type="radio" id="primary1" name="primary" /><label for="primary1">2015/13/137</label>
+    </p>
 
-        <div class="col s12 m6">
-          <br>
-          <h6>{{Texts.Participants}}</h6>
-          <hr>
-          <ul>
-            {{#each Texts.ParticipantsNames}}
-            <li>{{this}}</li>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
+    <p>
+      <input type="radio" id="primary2"  name="primary" /><label for="primary2">2015/13/139</label>
+    </p> 
+  </div>
+</div>
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div id="placeholder-daily-form-general  wow bounceInDown" class="template-placeholder"></div>
+  </div>
+</div>
+<script type="text/x-handlebars-template" id="daily-form-general-template" class="template" data-lang="daily-register/daily_form_general">
+  <span class="card-title grey-text text-darken-4">Select proceeding members</span>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="col s12">
+      <table>
+        <thead>
+          <tr>
+            <th data-field="price">Participants full name</th>
+            <th data-field="price">Participants role</th>
+            <th data-field="name">Defendants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+            <th data-field="id">Claimants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each Persons}}
+          <tr>
+            <td>
+            <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            <td>{{this.Type}}</td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            </td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            </td>
+          </tr>
+          {{/each}}
+          <tr class="divided">
+            <td>
+            <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            <td>{{this.Type}}</td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            </td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </script>
-  </div>
 
-  <div class="col s12 m6">
-    <div id="placeholder-audit-card-payment  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="audit-card-payment-template" class="template" data-lang="fee/audit_card_payment">
-  <div class="card overflow-visible wow bounceInDown">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.Payment}}</span>
-      <div class="divider"></div>
-      <div class="row">
-        <div class="input-field typeahead-container col col s12">
-          <label for="payer" class="active">{{Texts.Payer}}</label>
-          <input id="payer" type="text" class="typeahead-input persons" value="{{Texts.PayerValue}}">
-        </div>
-        <div class="input-field col s12">
-          <label for="paymentDate" class="active">{{Texts.PaymentDate}}</label>
-          <input id="paymentDate" type="text" class="datepicker today">
-        </div>
-        <div class="input-field col s12">
-          <label for="receiptNo" class="active">{{Texts.ReceiptNo}}</label>
-          <input id="receiptNo" type="text" value="32525" disabled>
-        </div>
-        <div class="input-field col s12">
-          <label for="sum2" class="active">{{Texts.Total}}</label>
-          <input id="sum2" type="text" value="0.00" disabled>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
-  </div>
-
-  <div class="col s12 m6">
-    <div id="placeholder-fee-audit-card-claim-pdf  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-audit-card-claim-pdf-template" class="template" data-lang="fee/fee_audit_card_claim_pdf">
-  <div class="card  wow bounceInDown">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">{{Texts.ClaimDocument}}</span>
-      <div class="divider"></div>
-      <br>
-      <div class="col s12 m10 offset-m2">
-        <div class="row valign-wrapper">
-          <div class="col s2">
-            <img src="http://lorempixel.com/200/200/abstract/" alt="" class="circle responsive-img">
+<!-- Based on Bootstrap accordion -->
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <a class="collapsable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <span class="card-title grey-text text-darken-4">Documents of case 2015/B/373</span>
+          </a>
+          <div class="col s3 check-inline right">
+             <input type="checkbox" id="b" /><label for="b"> </label>Select all
           </div>
-          <div class="col s10">
-            <span class="black-text">
-              {{Texts.ThisIsPreview}}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
-  </div>
-
-  <div class="col s12 m6  trigger-wrapper">
-<!--     <a class="dropdown-button btn-floating waves-effect waves-light cyan lighten-2 trigger trigger-add" href="#!" data-activates='add'><i class="mdi-content-add animated rotateIn"></i></a> -->
-    <div id="placeholder-audit-form-add-fees  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="audit-form-add-fees-template" class="template" data-lang="fee/audit_form_add_fees">
-  <div class="card brown lighten-5  wow bounceInDown cont-padding">
-    <div class="card-content">
-      <div class="row no-marg-bot">
-        <!-- <div class="col s12">
-          <span class="card-title grey-text text-darken-4">Fees</span>
-
           <div class="divider"></div>
-        </div> -->
-        <div class="input-field col s6">
-          <input id="sum" type="text" value=""  >
-          <label for="sum">{{Texts.Sum}}</label>
         </div>
-        <!-- <div class="input-field col s6">
-          <input id="feeType" type="text">
-          <label for="feeType">Fee type one</label>
-        </div> -->
-        <div class="input-field col s6 select-inline">
-          <select>
-            {{#each Texts.FeeType.Values}}
-            <option value="{@index}">{{this}}</option>
-            {{/each}}
-          </select>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+           <div id="placeholder-case-form-general-3" class="template-placeholder"></div>
+          <!-- Table two -->
+
+            <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+              <table class="hoverable bordered">
+                <thead>
+                  <th>Select</th>
+                  <th data-field="type" class="sorting">{{Headers.Type}}</th>
+                  <th data-field="category" class="sorting">{{Headers.Category}}</th>
+                  <th data-field="author" class="sorting">{{Headers.Author}}</th>
+                  <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+                  <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+                  <th data-field="notes">{{Headers.Notes}}</th>
+                </thead>
+                <tbody>
+                {{#each Cases}}
+                  <tr>
+                      <td>
+                        <span class="check-inline">
+                            <input type="checkbox" id="b" /><label for="b"> </label>
+                          </span> </td>
+                    <td>{{Type}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Author}}</td>
+                    <td class="center">{{DateOfRegister}}</td>
+                    <td>{{Files}}</td>
+                    <td class="center">{{Notes}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </script>
+
+          </div>
         </div>
       </div>
-      <div class="row no-marg-bot hidden">
-        <div class="input-field col s6">
-          <input id="sum1" type="text" value=""  >
-          <label for="sum1">{{Texts.Sum}}</label>
+       <div class="panel panel-default pad-top-20">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <a class="collapsable collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           <span class="card-title grey-text text-darken-4">Documents of case 2015/B/371</span>
+          </a>
+          <div class="col s3 check-inline right">
+             <input type="checkbox" id="c" /><label for="c"> </label>Select all
+          </div>
+          <div class="divider"></div>
         </div>
-        <div class="input-field col s6">
-          <input id="feeType1" type="text">
-          <label for="feeType1">{{Texts.FeeTypeTwo}}</label>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+           <div id="placeholder-case-form-general-2" class="template-placeholder"></div> 
+           <!-- Table one -->
+
+            <script type="text/x-handlebars-template" id="case-form-general-template1" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+              <table class="hoverable bordered">
+                <thead>
+                  <th>Select</th>
+                  <th data-field="type" class="sorting">{{Headers.Type}}</th>
+                  <th data-field="category" class="sorting">{{Headers.Category}}</th>
+                  <th data-field="author" class="sorting">{{Headers.Author}}</th>
+                  <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+                  <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+                  <th data-field="notes">{{Headers.Notes}}</th>
+                </thead>
+                <tbody>
+                {{#each Cases}}
+                  <tr>
+                      <td>
+                        <span class="check-inline">
+                            <input type="checkbox" id="b" /><label for="b"> </label>
+                          </span> </td>
+                    <td>{{Type}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Author}}</td>
+                    <td class="center">{{DateOfRegister}}</td>
+                    <td>{{Files}}</td>
+                    <td class="center">{{Notes}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </script>
+          </div>
         </div>
       </div>
-      <div class="row no-marg-bot">
-        <a href='#!' class="dropdown-button btn white right" data-activates='addFee'>{{Texts.AddFee.Label}}</a>
-      </div>
-      <!-- <div class="row no-marg-bot">
-        <hr>
-        <div class="col s6">
-          <h6>
-            <strong>0.00 $</strong>
-          </h6>
-        </div>
-        <div class="col s6">
-          <h6>
-            <strong>Total</strong>
-          </h6>
-        </div>
-      </div> -->
     </div>
   </div>
+</div>
 
-  <!-- Dropdown Structure -->
-  <ul id='addFee' class='dropdown-content'>
-    {{#each Texts.AddFee.Values}}
-    <li><a href="#!">{{this}}</a></li>
-    {{/each}}
-  </ul>
-</script>
+
+
+
+
+
   </div>
-  
-  <!-- DataCol form group -->
-  <div class="panel-group" id="noteForm" data-datacol-models-show="1" data-datacol-models-count="1" data-datacol-group>
 
-    <!-- Dropdown Structure -->
-    <!-- DataCol clone triggers -->
-    <ul id="add" class="dropdown-content">
-      <li><a href="#!" data-datacol-clone="note">Add a note</a></li>
-    </ul>
-
-    <!-- DataCol models -->
-    <div class="col s12 m6" data-datacol-model="note">
-      <div id="placeholder-case-form-note " class="template-placeholder"></div>
+  <div class="col s12">
+    <div id="placeholder-case-form-note " class="template-placeholder"></div>
 <script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
 
   <div class="card cyan lighten-5 wow bounceInDown">
@@ -382,19 +382,11 @@
   </div>
 </script>
 
-    </div>
-
   </div>
-  
+
+
 </div>
-<div id="placeholder-fee-new  wow bounceInDown" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="fee-new-template" class="template" data-lang="fee/fee_new">
-  <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='fee-list.html'">{{Texts.AcceptPayment}}</button>
-  <button class="btn btn-large waves-effect waves-light save right" onclick="window.location.href='fee-list.html'"><i class="mdi-action-print right"></i>{{Texts.Print}}</button>
-  <button class="btn btn-flat btn-large lighten-4 waves-effect waves-light cancel right" onclick="window.location.href='fee-list.html'"><i class="mdi-content-clear"></i></button>
-</script>
-        </div>
-      </div>
+
     </div>
   </div>
 </main>
@@ -452,3 +444,4 @@
     <script src="scripts/main.js"></script>
   </body>
 </html>
+

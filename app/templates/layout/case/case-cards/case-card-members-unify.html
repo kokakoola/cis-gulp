@@ -1,118 +1,183 @@
 
-  <div class="card  wow cont-padding">
-    <div class="card-content">
-      <div class="card-title grey-text text-darken-4">Select primary case for unification</div>
-      <div class="divider"></div>
-      <p>
-        <input type="radio" id="primary1" name="primary" /><label for="primary1">2015/13/137</label>
-      </p>
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div class="card-title grey-text text-darken-4">Select primary case for unification</div>
+    <div class="divider"></div>
+    <p>
+      <input type="radio" id="primary1" name="primary" /><label for="primary1">2015/13/137</label>
+    </p>
 
-      <p>
-        <input type="radio" id="primary2"  name="primary" /><label for="primary2">2015/13/139</label>
-      </p> 
-      </div>
-    </div>
-      <div id="placeholder-daily-form-general  wow bounceInDown" class="template-placeholder"></div>
-      <script type="text/x-handlebars-template" id="daily-form-general-template" class="template" data-lang="daily-register/daily_form_general">
-
-    
-    <div class="card  wow cont-padding">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Select proceeding members</span>
-      <div class="divider"></div>
-      <div class="row">
-        <div class="col s12">
-          <table>
-            <thead>
-              <tr>
-                <th data-field="price">Participants full name</th>
-                <th data-field="price">Participants role</th>
-                <th data-field="name">Defendants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
-                <th data-field="id">Claimants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each Persons}}
-              <tr>
-                <td>
-                <span class="check-inline">
-                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
-                  </span> {{this.Name}}</td>
-                <td>{{this.Type}}</td>
-                <td >
-                  <span class="check-inline">
-                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
-                  </span> {{this.Name}}</td>
-                </td>
-                <td >
-                  <span class="check-inline">
-                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
-                  </span> {{this.Name}}</td>
-                </td>
-              </tr>
-              {{/each}}
-              <tr class="divided">
-                <td>
-                <span class="check-inline">
-                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
-                  </span> Select all</td>
-                <td>{{this.Type}}</td>
-                <td >
-                  <span class="check-inline">
-                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
-                  </span> Select all</td>
-                </td>
-                <td >
-                  <span class="check-inline">
-                    <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
-                  </span> Select all</td>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    <p>
+      <input type="radio" id="primary2"  name="primary" /><label for="primary2">2015/13/139</label>
+    </p> 
   </div>
-  </script>
-
-
-<div id="placeholder-case-form-general-2" class="template-placeholder"></div>
-  <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
-  <div class="card  wow cont-padding">
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Documents of case 2015/B/371</span>
-      
-      <table class="hoverable bordered">
+</div>
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div id="placeholder-daily-form-general  wow bounceInDown" class="template-placeholder"></div>
+  </div>
+</div>
+<script type="text/x-handlebars-template" id="daily-form-general-template" class="template" data-lang="daily-register/daily_form_general">
+  <span class="card-title grey-text text-darken-4">Select proceeding members</span>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="col s12">
+      <table>
         <thead>
-          <th>Select / Select all <span class="check-inline">
-            <input type="checkbox" id="b" /><label for="b"> </label>
-          </span></th>
-          <th data-field="type" class="sorting">{{Headers.Type}}</th>
-          <th data-field="category" class="sorting">{{Headers.Category}}</th>
-          <th data-field="author" class="sorting">{{Headers.Author}}</th>
-          <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
-          <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
-          <th data-field="notes">{{Headers.Notes}}</th>
+          <tr>
+            <th data-field="price">Participants full name</th>
+            <th data-field="price">Participants role</th>
+            <th data-field="name">Defendants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+            <th data-field="id">Claimants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+          </tr>
         </thead>
         <tbody>
-        {{#each Cases}}
+          {{#each Persons}}
           <tr>
-              <td>
-                <span class="check-inline">
-                    <input type="checkbox" id="b" /><label for="b"> </label>
-                  </span> </td>
-            <td>{{Type}}</td>
-            <td>{{Category}}</td>
-            <td>{{Author}}</td>
-            <td class="center">{{DateOfRegister}}</td>
-            <td>{{Files}}</td>
-            <td class="center">{{Notes}}</td>
+            <td>
+            <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            <td>{{this.Type}}</td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            </td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            </td>
           </tr>
           {{/each}}
+          <tr class="divided">
+            <td>
+            <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            <td>{{this.Type}}</td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            </td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </script>
-      
+
+<!-- Based on Bootstrap accordion -->
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <a class="collapsable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <span class="card-title grey-text text-darken-4">Documents of case 2015/B/373</span>
+          </a>
+          <div class="col s3 check-inline right">
+             <input type="checkbox" id="b" /><label for="b"> </label>Select all
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+           <div id="placeholder-case-form-general-3" class="template-placeholder"></div>
+          <!-- Table two -->
+
+            <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+              <table class="hoverable bordered">
+                <thead>
+                  <th>Select</th>
+                  <th data-field="type" class="sorting">{{Headers.Type}}</th>
+                  <th data-field="category" class="sorting">{{Headers.Category}}</th>
+                  <th data-field="author" class="sorting">{{Headers.Author}}</th>
+                  <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+                  <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+                  <th data-field="notes">{{Headers.Notes}}</th>
+                </thead>
+                <tbody>
+                {{#each Cases}}
+                  <tr>
+                      <td>
+                        <span class="check-inline">
+                            <input type="checkbox" id="b" /><label for="b"> </label>
+                          </span> </td>
+                    <td>{{Type}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Author}}</td>
+                    <td class="center">{{DateOfRegister}}</td>
+                    <td>{{Files}}</td>
+                    <td class="center">{{Notes}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </script>
+
+          </div>
+        </div>
+      </div>
+       <div class="panel panel-default pad-top-20">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <a class="collapsable collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           <span class="card-title grey-text text-darken-4">Documents of case 2015/B/371</span>
+          </a>
+          <div class="col s3 check-inline right">
+             <input type="checkbox" id="c" /><label for="c"> </label>Select all
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+           <div id="placeholder-case-form-general-2" class="template-placeholder"></div> 
+           <!-- Table one -->
+
+            <script type="text/x-handlebars-template" id="case-form-general-template1" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+              <table class="hoverable bordered">
+                <thead>
+                  <th>Select</th>
+                  <th data-field="type" class="sorting">{{Headers.Type}}</th>
+                  <th data-field="category" class="sorting">{{Headers.Category}}</th>
+                  <th data-field="author" class="sorting">{{Headers.Author}}</th>
+                  <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+                  <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+                  <th data-field="notes">{{Headers.Notes}}</th>
+                </thead>
+                <tbody>
+                {{#each Cases}}
+                  <tr>
+                      <td>
+                        <span class="check-inline">
+                            <input type="checkbox" id="b" /><label for="b"> </label>
+                          </span> </td>
+                    <td>{{Type}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Author}}</td>
+                    <td class="center">{{DateOfRegister}}</td>
+                    <td>{{Files}}</td>
+                    <td class="center">{{Notes}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

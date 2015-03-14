@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="" class="daily">
+<html lang="" class="detach-case">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>CIS | Daily</title>
+    <title>CIS | Detachment of cases</title>
 
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/app-rtl.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/app-ltr.css">
 
   </head>
-  <body class="daily">
+  <body class="detach-case">
 
 
 
@@ -153,133 +153,221 @@
   </li>
 </ul>
 
-
 <main>
 
-	<div class="main-banner"></div>
+  <div class="main-banner"></div>
 
-	<div class="card-onbanner">
-		<div class="container">
-			
-			<div id="placeholder-register_filter_header" class="filtering template-placeholder"></div>
-			<script type="text/x-handlebars-template" id="register_filter_header-template" class="template" data-lang="daily-register/daily_register_filter_header">
-				<h4 class="header white-text text-darken-2">{{DailyRegister}} <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{DailyRegisterInfo}}"><i class="mdi-action-info-outline"></i></a></h4>
-			</script>
-			<div class="row no-marg-bot">
-				<div class="col s12">
-  <div class="card overflow-visible">
+  <div class="card-onbanner">
+    <div class="container">
+      <div id="placeholder-round-top-back  wow bounceInDown" class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="round-top-back-template" class="template" data-lang="common/round_top">
+  
+  <a class="btn-floating btn-large waves-effect waves-light round-top remove" href="case-list.html"><i class="mdi-navigation-close"></i></a>
+  <h4 class="header white-text text-darken-2">Detachment of cases</h4>
+  
+</script> 
+      <button class="btn btn-large waves-effect waves-light submit right" onclick="window.location.href='case-list.html'">Save</button>
+<div class="row">
+
+  <div class="col s12">
+    <div id="placeholder-case-form-general" class="template-placeholder"></div>
+
+  <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_general">
+  <div class="card  wow cont-padding">
+
     <div class="card-content">
-      <div id="placeholder-daily-filter  wow bounceInDown" class="template-placeholder"></div>
-      <script type="text/x-handlebars-template" id="daily-filter-template" class="template" data-lang="daily-register/daily_filter">
-        <a class="card-title grey-text text-darken-4">{{Texts.Filter}}</a>
-        <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{Texts.FilterInfo}}"><i class="mdi-action-info-outline"></i></a>
-      </script>
-        <div class="divider"></div>
-        <div id="placeholder-daily-register-filter-content" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="daily-register-filter-content-template" class="template" data-lang="daily-register/daily_register_filter_content">
-<div class="row no-marg-bot">
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input class="typeahead-input casenrs" id="caseNumber" type="text">
-    <label for="caseNumber">{{Filter.CaseNumber}}</label>
+      <span class="card-title grey-text text-darken-4">{{Texts.Case}}  </span>
+      <div class="col s12 m2 check-inline">
+        <input type="checkbox" id="confidential" /><label for="confidential">{{Texts.Confidential}}</label>
+      </div> 
+      
+      <div class="divider"></div>
+      <div class="row">
+        <div class="col s12 m6 right">
+          <select>
+            <option value="" selected disabled>{{Texts.CaseType.Label}}</option>
+            {{#each Texts.CaseType.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6 right">
+          <label for="paymentDate">{{Texts.RegisteredAt}}</label>
+          <input id="paymentDate" type="text" class="datepicker today">
+        </div>
+        <div class="col s12 m6 right">
+          <select>
+            <option value="" selected>{{Texts.Judge.Label}}</option>
+            {{#each Texts.Judge.Values}}
+              <option value="{{@index}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12 m6 right">
+          <input id="claimValue" type="text" class="validate">
+          <label for="claimValue">{{Texts.CaseValue}}</label>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="claimant" type="text" class="typeahead-input persons">
-    <label for="claimant">{{Filter.Claimant}}</label>
-  </div>
-  <div class="input-field typeahead-container col s12 m3 right">
-    <input id="defendants" type="text" class="typeahead-input persons">
-    <label for="defendants">{{Filter.Defendant}}</label>
-  </div>
-  <div class="input-field select-label col s12 m3 right">
-    <label class="active">{{Filter.SelectStatus}}</label> 
-    <select class="status-select">
-      <option value="" disabled selected>{{Filter.SelectStatus}}</option>
-      <option class="status pending">{{Filter.Pending}}</option>
-      <option class="status registered">{{Filter.Registered}}</option>
-    </select>
-  </div>
-</div>
 </script>
+  </div>
+
+
+  <div class="col s12">
+    <!-- <div class="card  wow cont-padding">
+  <div class="card-content">
+    <div class="card-title grey-text text-darken-4">Select primary case for unification</div>
+    <div class="divider"></div>
+    <p>
+      <input type="radio" id="primary1" name="primary" /><label for="primary1">2015/13/137</label>
+    </p>
+
+    <p>
+      <input type="radio" id="primary2"  name="primary" /><label for="primary2">2015/13/139</label>
+    </p> 
+  </div>
 </div>
+ -->
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <div id="placeholder-daily-form-general  wow bounceInDown" class="template-placeholder"></div>
+  </div>
+</div>
+<script type="text/x-handlebars-template" id="daily-form-general-template" class="template" data-lang="daily-register/daily_form_general">
+  <span class="card-title grey-text text-darken-4">Select proceeding members</span>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="col s12">
+      <table>
+        <thead>
+          <tr>
+            <th data-field="price">Participants full name</th>
+            <th data-field="price">Participants role</th>
+            <th data-field="name">Defendants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+            <th data-field="id">Claimants <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Say something"><i class="mdi-action-info-outline"></i></a></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each Persons}}
+          <tr>
+            <td>
+            <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            <td>{{this.Type}}</td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            </td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> {{this.Name}}</td>
+            </td>
+          </tr>
+          {{/each}}
+          <tr class="divided">
+            <td>
+            <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            <td>{{this.Type}}</td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            </td>
+            <td >
+              <span class="check-inline">
+                <input type="checkbox" id="a{{@index}}" /><label for="a{{@index}}"> </label>
+              </span> Select all</td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</script>
+
+
+<div class="card  wow cont-padding">
+  <div class="card-content">
+    <span class="card-title grey-text text-darken-4">Select proceeding documents</span>
+    <div class="divider"></div>
+    <div id="placeholder-case-form-general-3" class="template-placeholder"></div>
+        <!-- Table -->
+     
+     <script type="text/x-handlebars-template" id="case-form-general-template" class="template" data-lang="registry/case-cards/case_form_documents_upload">
+       <table class="hoverable bordered">
+         <thead>
+           <th>Select</th>
+           <th data-field="type" class="sorting">{{Headers.Type}}</th>
+           <th data-field="category" class="sorting">{{Headers.Category}}</th>
+           <th data-field="author" class="sorting">{{Headers.Author}}</th>
+           <th data-field="date" class="sorting">{{Headers.DateOfRegister}}</th>
+           <th data-field="files" class="sorting proceeding-table">{{Headers.Files}}</th>
+           <th data-field="notes">{{Headers.Notes}}</th>
+         </thead>
+         <tbody>
+         {{#each Cases}}
+           <tr>
+             <td><span class="check-inline"><input type="checkbox" id="b" /><label for="b"> </label></span> </td>
+             <td>{{Type}}</td>
+             <td>{{Category}}</td>
+             <td>{{Author}}</td>
+             <td class="center">{{DateOfRegister}}</td>
+             <td>{{Files}}</td>
+             <td class="center">{{Notes}}</td>
+           </tr>
+           {{/each}}
+         </tbody>
+       </table>
+     </script>
   </div>
 </div>
 
-<div class="col s12">
-  <div id="placeholder-list-filter-action" class="template-placeholder"></div>
-<script type="text/x-handlebars-template" id="list-filter-action-template" class="template" data-lang="common/list_filter_action">
-<div class="filter-action">
-  <button class="btn btn-large waves-effect waves-light submit left" type="button" name="search">
-    {{Filter.ButtonSearch}}
-    <i class="mdi-navigation-search right"></i>
-  </button>
-  <button class="btn btn-large waves-effect waves-light save left collapsed" type="button" data-toggle="collapse" data-target="#moreFields" data-less-text="{{Filter.ButtonLessFields}}" style='display: none;'>
-    {{Filter.ButtonMoreFields}}
-    <i class="filter-toggle mdi-navigation-expand-more right"></i>
-  </button>
-  <button class="btn btn-large waves-effect waves-light btn-flat left" name="clear">
-    <i class="mdi-content-clear "></i>
-  </button>
-</div>
+
+
+
+
+
+  </div>
+
+  <div class="col s12">
+    <div id="placeholder-case-form-note " class="template-placeholder"></div>
+<script type="text/x-handlebars-template" id="case-form-note-template" class="template" data-lang="common/common-cards/case_form_note">
+
+  <div class="card cyan lighten-5 wow bounceInDown">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">{{Texts.NewNote}}</span>
+      <div class="col s12 m3 check-inline right">
+        <input type="checkbox" id="Personal" class="right" />
+        <label for="Personal">{{Texts.Personal}}</label>
+      </div>
+      <a href="#!" class="card-title grey-text text-darken-4">
+        <i class="mdi-navigation-close left" data-datacol-delete="Item deleted"></i>
+      </a>
+
+      <div class="divider"></div>
+      <div class="row no-marg-bot">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"></textarea>
+          <label><i class="mdi-content-create tiny"></i></label>
+        </div>
+      </div>
+    </div>
+  </div>
 </script>
 
+  </div>
+
+
 </div>
 
-			</div>
-			<div>
-				<div id="placeholder-register_filter_header2" class="filtering template-placeholder"></div>
-				<script type="text/x-handlebars-template" id="register_filter_header2-template" class="template" data-lang="daily-register/daily_register_filter_header">
-					<ul class="tabs col s12">
-						<li class="tab col s6">
-							<a class="active" href="#calendar">{{Calendar}}</a>
-						</li>
-						<li class="tab col s6">
-							<a href="#list">{{UnassignedCasesList}}</a>
-						</li>
-					</ul>
-				</script>
-			</div>
-			<div class="card calendar-large" id="calendar">
-				<div class="card-content col s12">
-					<div id="daily-register-calendar" class="fullcalendar"></div>
-				</div>
-			</div>
-			<div class="card row calendar-large" id="list">
-				<div class="card-content col s12 with-table">
-					<div id="placeholder-daily-register-table" class="template-placeholder"></div>
-
-<script type="text/x-handlebars-template" id="daily-register-table-template" class="template" data-lang="data/daily-register/table">
-  <table class="hoverable bordered data">
-    <thead>
-      <th data-field="status" class="sorting">{{Texts.Status}}</th>
-      <th data-field="sum">{{Texts.Defendant}}</th>
-      <th data-field="claimants">{{Texts.Claimant}}</th>
-      <th data-field="casenumber" class="sorting">{{Texts.CaseNumber}}</th>
-      <th data-field="date" class="sorting">{{Texts.Date}}</th>
-      <th data-field="starttime" class="sorting">{{Texts.StartTime}}</th>
-      <th data-field="endtime" class="sorting">{{Texts.EndTime}}</th>
-    </thead>
-    <tbody>
-      {{#each Cases}}
-      <tr onClick="parent.location='daily-new.html'">
-        <td class="center">
-          <i class="status {{Status}}"></i>
-        </td>
-        <td>{{Defendant}}</td>
-        <td>{{Claimant}} </td>
-        <td>{{CaseNumber}}</td>
-        <td>20.05.2015</td>
-        <td>8.00</td>
-        <td>8.15</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-</script>
-				</div>
-			</div>
-		</div>
-	</div>
-
+    </div>
+  </div>
 </main>
 
 <div id="placeholder-page-footer" class="template-placeholder"></div>

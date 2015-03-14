@@ -1,0 +1,33 @@
+@@include('./base/header.tpl.html',
+{
+  "bodyClass": "detach-case",
+  "htmlClass": "detach-case",
+  "title": "Detachment of cases"
+})
+
+@@include('./layout/header.html', {
+  "courtName": "{{Texts.Civil}}"
+})
+
+<main>
+
+  <div class="main-banner"></div>
+
+  <div class="card-onbanner">
+    <div class="container">
+      @@include('./layout/common/round-top-back.html') 
+      @@include('./layout/case/case-detach.html',
+      {
+        "formName": "Detachment of cases",
+        "backTo": "case-list.html",
+        "collapse": "in",
+        "caseNo": " "
+      })
+    </div>
+  </div>
+</main>
+
+@@include('./layout/footer.html')
+
+@@include('./base/footer.tpl.html')
+
