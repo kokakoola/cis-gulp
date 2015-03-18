@@ -375,68 +375,8 @@ animation: second 30s ease infinite;
   }
 }
 
-.check-inline input {
-  &[type="checkbox"]:not(:checked) + label:before,
-  &[type="radio"]:not(:checked) + label:before {
-    top: 9px;
-  }
-  &[type="checkbox"]:not(:checked) + label,
-  &[type="checkbox"]:checked + label,
-  &[type="radio"]:not(:checked) + label,
-  &[type="radio"]:checked + label {
-    padding-top: 15px;
-  }
-  &[type="checkbox"]:checked + label:before,
-  &[type="radio"]:checked + label:before {
-    top: 7px;
-  }
-}
-
 td .check-inline {
   display: inline;
-}
-
-.input-field .prefix.active {
-  color: inherit;
-}
-
-input[type=text].valid,
-input[type=password].valid,
-input[type=email].valid,
-input[type=date].valid,
-textarea.valid {
-  border-bottom: 1px solid $success-color;
-  @include box-shadow(0 1px 0 0 $success-color);
-}
-
-  input[type=text].input-validation-error,
-  input[type=password].input-validation-error,
-  input[type=email].input-validation-error,
-  input[type=date].input-validation-error,
-  input[type=tel].input-validation-error,
-  input[type=number].input-validation-error,
-  textarea.input-validation-error,
-  textarea.materialize-textarea.input-validation-error {
-  border-bottom: 1px solid $error-color;
-  @include box-shadow(0 1px 0 0 $error-color);
-  }
-
-.input-field {
-  // color: #444;
-  span.field-validation-error,
-  label.success {
-    @include right(0.75rem);
-    @include left(auto);
-    top: 50px;
-    font-weight: strong;
-    font-size: 12px;
-  }
-  span.field-validation-error {
-    color: $error-color;
-  }
-  label.success {
-    color: $success-color;
-  }
 }
 
 .switch.col {
@@ -568,10 +508,6 @@ i.status {
 
 .filter-action.upper .btn{
   margin-bottom: -10px;
-}
-
-.input-field .prefix {
-  opacity: 0.8;
 }
 
 
@@ -717,38 +653,6 @@ table.dataTable.order-column tbody tr > .sorting_1, {
   background-color: color("cyan", "base");
 }
 
-.select-wrapper {
-  position: relative;
-
-  input.select-dropdown {
-    position: relative;
-    cursor: pointer;
-    color: #444;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #9e9e9e;
-    outline: none;
-    height: 3rem;
-    line-height: 3rem;
-    width: 100%;
-    font-size: 1rem;
-    margin: 0 0 15px 0;
-    padding: 0;
-    display: block;
-  }
-
-  .mdi-navigation-arrow-drop-down {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 23px;
-    color: rgba(0, 0, 0, 0.3);
-  }
-}
-
-label + .select-wrapper{
-  margin-top:0px;
-}
 
 // .fc-view-container {
 //   height: auto !important;
