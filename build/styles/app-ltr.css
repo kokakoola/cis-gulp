@@ -11785,6 +11785,15 @@ table.fc-header {
     display: none !important;
   }
 }
+.twitter-typehead {
+  display: block !important;
+}
+.twitter-typehead .tt-dropdown-menu {
+  width: 100%;
+  margin-top: 0;
+  top: 3rem;
+}
+
 .input-field input[type=text].valid, .input-field input[type=password].valid, .input-field input[type=email].valid, .input-field input[type=date].valid, .input-field textarea.valid {
   border-bottom: 1px solid #4CAF50;
   box-shadow: 0 1px 0 0 #4CAF50;
@@ -11859,10 +11868,6 @@ table.fc-header {
   top: 0;
   font-size: 23px;
   color: rgba(0, 0, 0, 0.3);
-}
-
-label + .select-wrapper {
-  margin-top: 0px;
 }
 
 .check-inline input[type="checkbox"]:not(:checked) + label:before, .check-inline input[type="radio"]:not(:checked) + label:before {
