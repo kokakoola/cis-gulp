@@ -11786,10 +11786,10 @@ table.fc-header {
     display: none !important;
   }
 }
-.twitter-typehead {
+.twitter-typeahead {
   display: block !important;
 }
-.twitter-typehead .tt-dropdown-menu {
+.twitter-typeahead .tt-dropdown-menu {
   width: 100%;
   margin-top: 0;
   top: 3rem;
