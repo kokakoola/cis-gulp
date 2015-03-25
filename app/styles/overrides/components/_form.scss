@@ -1,5 +1,15 @@
 .input-field {
-  input[type=text].valid, input[type=password].valid, input[type=email].valid, input[type=date].valid, textarea.valid {
+  &[type="checkbox"],
+  &[type="radio"] {
+    top: 0;
+    left: 0;
+  }
+
+  input[type=text].valid,
+  input[type=password].valid,
+  input[type=email].valid,
+  input[type=date].valid,
+  textarea.valid {
     border-bottom: 1px solid $success-color;
     @include box-shadow(0 1px 0 0 $success-color);
   }

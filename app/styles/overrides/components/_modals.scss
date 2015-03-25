@@ -1,0 +1,32 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0 !important;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+
+  .preloader {
+    margin: 50px 100px;
+  }
+
+  .modal {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: #fff;
+    max-height: none;
+
+    @media (max-width: $large-screen) {
+      width: 70%;
+    }
+    @media #{$medium-and-down} {
+      width: 80%;
+    }
+    h4 {
+      padding-left: 0;
+    }
+  }
+}
