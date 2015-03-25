@@ -11968,6 +11968,16 @@ table.fc-header {
   padding-left: 0;
 }
 
+.pagination {
+  margin: 0;
+}
+.pagination li a {
+  margin: 0;
+}
+.pagination li.active {
+  background-color: #00ACC1;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
