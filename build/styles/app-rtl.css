@@ -11919,8 +11919,49 @@ table.fc-header {
     width: 80%;
   }
 }
-.modal-wrapper .modal h4 {
+.modal-wrapper .modal .modal-header {
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 20px;
+  height: 75px;
+}
+.modal-wrapper .modal .modal-header h4 {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
   padding-left: 0;
+  font-size: 1.8rem;
+}
+.modal-wrapper .modal .modal-header .modal-actions {
+  display: table-cell;
+}
+.modal-wrapper .modal .modal-content {
+  padding: 30px;
+}
+.modal-wrapper .modal .modal-actions .btn, .modal-wrapper .modal .modal-actions .btn-large {
+  margin-bottom: 0;
+}
+.modal-wrapper .modal .modal-actions .js-btn-container {
+  display: inline-block;
+}
+.modal-wrapper .modal .modal-body {
+  padding: 25px 0;
+}
+.modal-wrapper .modal .modal-body .row {
+  margin-left: -0.75em;
+  margin-right: -0.75em;
+}
+.modal-wrapper .modal .modal-footer {
+  padding: 0;
+  height: auto;
+  background: none;
+  border-top: 1px solid #E0E0E0;
+  padding-top: 20px;
+}
+.modal-wrapper .modal .modal-footer .btn, .modal-wrapper .modal .modal-footer .btn-large, .modal-wrapper .modal .modal-footer .btn-large, .modal-wrapper .modal .modal-footer .btn-flat {
+  margin: 0;
+  float: none;
 }
 
 .pagination {

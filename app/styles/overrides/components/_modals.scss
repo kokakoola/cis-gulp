@@ -25,8 +25,60 @@
     @media #{$medium-and-down} {
       width: 80%;
     }
-    h4 {
-      padding-left: 0;
+    .modal-header {
+      display: table;
+      width: 100%;
+      border-bottom: 1px solid #E0E0E0;
+      padding-bottom: 20px;
+      height: 75px;
+
+      h4 {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        padding-left: 0;
+        font-size: 1.8rem;
+      }
+
+      .modal-actions {
+        display: table-cell;
+      }
+    }
+
+    .modal-content {
+      padding: 30px;
+    }
+
+    .modal-actions {
+      .btn {
+        margin-bottom: 0;
+      }
+
+      .js-btn-container {
+	    display: inline-block;
+	   }
+    }
+
+    .modal-body {
+      padding: 25px 0;
+
+      .row {
+	    margin-left: -0.75em;
+	    margin-right: -0.75em;
+      }
+    }
+
+    .modal-footer {
+      padding: 0;
+      height: auto;
+      background: none;
+      border-top: 1px solid #E0E0E0;
+      padding-top: 20px;
+
+      .btn, .btn-large, .btn-flat {
+        margin: 0;
+        float: none;
+      }
     }
   }
 }
