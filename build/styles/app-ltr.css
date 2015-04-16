@@ -11659,6 +11659,7 @@ table.fc-header {
           transform: translate(0, -50%);
   background-color: #fff;
   max-height: none;
+  overflow: initial;
 }
 @media (max-width: 1200px) {
   .modal-wrapper .modal {
