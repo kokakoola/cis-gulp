@@ -43,38 +43,6 @@ html, body {
 //   height:3rem;
 // }
 
-.card {
-  overflow: initial;
-
-  &.with-pointer {
-      &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 0;
-      height: 0;
-      color: transparent;
-      border: 15px solid black;
-      border-color: transparent #E0F7FA  transparent transparent;
-      top: 40%;
-      @include margin-left(-30px);
-    }
-  }
-  .card-content {
-    a.collapsable:before {
-      font-family: "Material-Design-Icons";
-      content: "\e7b7";
-    }
-    a.collapsable.collapsed:before {
-      font-family: "Material-Design-Icons";
-      content: "\e7b4";
-    }
-    .panel-heading a.collapsable:before {
-      font-size: 1.8rem;
-    }
-  }
-}
-
 .field-validation-error {
   color: red;
   display: block;
@@ -94,15 +62,6 @@ textarea.materialize-textarea {
 .identicon {
   width: 64px;
   margin-left: 10px;
-}
-
-.card a {
-  color: inherit;
-  @include margin-right(inherit);
-  text-transform: inherit;
-  &:hover {
-    color: inherit;
-  }
 }
 
 .dropdown-content {

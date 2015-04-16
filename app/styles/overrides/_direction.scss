@@ -200,73 +200,6 @@ nav .input-field {
 
 }
 
-// grid
-.row {
-  .col {
-    @include float(left);
-    $i: 1;
-    @while $i <= $num-cols {
-      $perc: unquote((100 / ($num-cols / $i)) + "%");
-      &.s#{$i} {
-        width: $perc;
-        @include margin-left(0);
-      }
-      $i: $i + 1;
-    }
-    $i: 1;
-    @while $i <= $num-cols {
-      $perc: unquote((100 / ($num-cols / $i)) + "%");
-      &.offset-s#{$i} {
-        @include margin-left($perc);
-      }
-      $i: $i + 1;
-    }
-
-    @media #{$medium-and-up} {
-
-      $i: 1;
-      @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
-        &.m#{$i} {
-          width: $perc;
-          @include margin-left(0);
-        }
-        $i: $i + 1;
-      }
-      $i: 1;
-      @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
-        &.offset-m#{$i} {
-          @include margin-left($perc);
-        }
-        $i: $i + 1;
-      }
-
-    }
-
-    @media #{$large-and-up} {
-
-      $i: 1;
-      @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
-        &.l#{$i} {
-          width: $perc;
-          @include margin-left(0);
-        }
-        $i: $i + 1;
-      }
-      $i: 1;
-      @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
-        &.offset-l#{$i} {
-          @include margin-left($perc);
-        }
-        $i: $i + 1;
-      }
-    }
-  }
-}
-
 // global
 .left-align {
   @include text-align(left);
@@ -362,6 +295,12 @@ span.badge {
 
 
 // form
+.row.right-align {
+  .input-field label {
+    @include left(0);
+  }
+}
+
 .input-field label {
     @include left($gutter-width / 2);
   }

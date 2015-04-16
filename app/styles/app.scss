@@ -9,7 +9,7 @@
 // OVERRIDES
 //**********************************
 @import "overrides/direction";
-@import "overrides/datata";
+@import "overrides/_datatables";
 @import "overrides/joyride";
 @import "overrides/fullcalendar-pretty";
 @import "overrides/typeahead";
@@ -17,6 +17,7 @@
 @import "overrides/components/form";
 @import "overrides/components/modals";
 @import "overrides/components/pagination";
+@import "overrides/components/card";
 
 // MIXINS
 //**********************************

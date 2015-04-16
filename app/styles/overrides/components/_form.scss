@@ -53,7 +53,7 @@
     color: $input-border-color;
     position: absolute;
     top: 0;
-    left: $gutter-width / 2;
+    @include left($gutter-width / 2);
     font-size: $label-font-size;
     cursor: text;
     @include transition(.2s ease-out);
@@ -101,5 +101,14 @@
   &[type="checkbox"]:checked + label:before,
   &[type="radio"]:checked + label:before {
     top: 7px;
+  }
+}
+
+.btn-container {
+  text-align: right;
+  direction: ltr;
+
+  .btn {
+    @include margin-left(-4px);
   }
 }

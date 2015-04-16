@@ -1,0 +1,86 @@
+.card {
+  overflow: initial;
+
+  &.with-pointer {
+      &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      color: transparent;
+      border: 15px solid black;
+      border-color: transparent #E0F7FA  transparent transparent;
+      top: 40%;
+      @include margin-left(-30px);
+    }
+  }
+  .card-header {
+    display: table;
+    width: 100%;
+
+    .card-title {
+      display: table-cell;
+      vertical-align: middle;
+      line-height: normal !important;
+
+      h4, h5 {
+        font-weight: 300;
+      }
+
+      h5, h5 + .tooltipped {
+        font-size: 24px;
+      }
+
+      h5 + .tooltipped {
+        font-size: 24px;
+      }
+
+      .tooltipped, h4, h5 {
+        color: color("blue-grey", "darken-4");
+        display: inline-block;
+      }
+
+      .tooltipped:hover {
+        color: color("blue-grey", "darken-4");
+      }
+    }
+  }
+
+  .card-actions {
+    display: table-cell;
+    vertical-align: middle;
+
+    .btn-container {
+      @include text-align(right);
+    }
+
+    a {
+      @include margin-right(0);
+    }
+  }
+  .card-content {
+    a.collapsable:before {
+      font-family: "Material-Design-Icons";
+      content: "\e7b7";
+    }
+    a.collapsable.collapsed:before {
+      font-family: "Material-Design-Icons";
+      content: "\e7b4";
+    }
+    .panel-heading a.collapsable:before {
+      font-size: 1.8rem;
+    }
+  }
+  a {
+    color: inherit;
+    @include margin-right(inherit);
+    text-transform: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+  .card-divider {
+    margin: 10px 0 20px 0;
+  }
+}
