@@ -180,6 +180,7 @@
 <script type="text/x-handlebars-template" id="fee-audit-form-general-template" class="template" data-lang="fee/fee_audit_form_general">
   <div class="card overflow-visible wow bounceInDown">
     <div class="card-content">
+
       <span class="card-title grey-text text-darken-4"> {{Texts.CaseNo}} {{Texts.CaseNoValue}}</span>
       <div class="col s12 m3 check-inline">
         <input type="checkbox" id="grantJudicialAid" checked>
@@ -189,6 +190,7 @@
       <div class="row no-marg-bot">
         <div class="col s12 m6">
           <div class="input-field typeahead-container " hiddencasenumber>
+
             <input id="caseNr" type="text" class="typeahead-input casenrs">
             <label for="caseNr">{{Texts.CaseNr}}</label>
           </div>
@@ -230,6 +232,36 @@
 <script type="text/x-handlebars-template" id="audit-card-payment-template" class="template" data-lang="fee/audit_card_payment">
   <div class="card overflow-visible wow bounceInDown">
     <div class="card-content">
+
+            <form action="#">
+          <p>
+            <input type="checkbox" id="test9" />
+            <label for="test9">Red</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test6" checked="checked" />
+            <label for="test6">Yellow</label>
+          </p>
+          <p>
+            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+            <label for="filled-in-box">Filled in</label>
+          </p>
+          <p>
+            <input type="checkbox" id="indeterminate-checkbox" />
+            <label for="indeterminate-checkbox">Indeterminate Style</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+            <label for="test7">Green</label>
+          </p>
+            <p>
+              <input type="checkbox" id="test8" disabled="disabled" />
+              <label for="test8">Brown</label>
+          </p>
+        </form>
+
+        <div class="s12 m4 input-field col"><input id="IsConfidential" name="IsConfidential" type="hidden" value="False"><input data-val="true" data-val-required="The Confidential field is required." disabled="disabled" checked="checked"  id="IsConfidential" name="IsConfidential" type="checkbox" value="true"><label for="IsConfidential">Confidential</label><input name="IsConfidential" type="hidden" value="false"></div>
+
       <span class="card-title grey-text text-darken-4">{{Texts.Payment}}</span>
       <div class="divider"></div>
       <div class="row">

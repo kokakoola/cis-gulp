@@ -10,11 +10,6 @@ jQuery.extend( jQuery.fn.pickadate.defaults, {
     format: 'yyyy mmmm dd',
     formatSubmit: 'yyyy/mm/dd'
 });
-
-jQuery.extend( jQuery.fn.pickatime.defaults, {
-    clear: 'مسح'
-});
-
 /*!
  * Styling for RTL (right-to-left) languages using pickadate.js
  */
