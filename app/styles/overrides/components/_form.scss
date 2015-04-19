@@ -46,6 +46,23 @@
   }
 }
 
+// disabled
+input[disabled] {
+  border-bottom: none;
+}
+
+.select-wrapper input.select-dropdown:disabled,
+[type="checkbox"]:disabled:checked + label
+ {
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: none;
+}
+
+[type="checkbox"]:disabled:checked + label:before {
+  border-right: 2px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.26);
+}
+
 .select-field {
   position: relative;
 
@@ -111,4 +128,9 @@
   .btn {
     @include margin-left(-4px);
   }
+}
+
+.card button.save,
+.card a.save {
+  color: #fff;
 }

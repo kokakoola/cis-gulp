@@ -23,6 +23,30 @@ html, body {
   width: 95%;
 }
 
+.js-fileupload-preview-thumbnail {
+    font-size: 1.5rem;
+    color: color("cyan", "darken-2");
+    font-family: "Material-Design-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 0.3s;
+  &:before {
+    content: "\e78f";
+  }
+  &:hover {
+    color: color("cyan", "darken-3");
+  }
+  img {
+    display: none;
+  }
+}
+
 // .select-wrapper span.select-dropdown {
 //   height: 4rem;
 //   line-height: 5rem;
