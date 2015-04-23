@@ -11774,10 +11774,10 @@ input[disabled] {
 .card .card-header .card-title h4, .card .card-header .card-title h5 {
   font-weight: 300;
 }
-.card .card-header .card-title h5, .card .card-header .card-title h5 + .tooltipped {
-  font-size: 24px;
+.card .card-header .card-title h4 > span, .card .card-header .card-title h5 > span {
+  font-size: 20px;
 }
-.card .card-header .card-title h5 + .tooltipped {
+.card .card-header .card-title h4 + .tooltipped, .card .card-header .card-title h5 + .tooltipped {
   font-size: 24px;
 }
 .card .card-header .card-title .tooltipped, .card .card-header .card-title h4, .card .card-header .card-title h5 {
